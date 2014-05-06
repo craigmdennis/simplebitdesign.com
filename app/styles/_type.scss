@@ -1,0 +1,34 @@
+// ===================================================
+// Typography (Complementing Typeplate)
+// ===================================================
+
+html {
+  // Default is 112.5% set in `vars/_vars-type.scss`
+  @include breakpoint( $medium ) {
+    font-size: 150%;
+  }
+}
+
+.weight-thin {
+  font-weight: $weight-thin;
+}
+
+.weight-light {
+  font-weight: $weight-light;
+}
+
+.weight-default {
+  font-weight: $weight-default;
+}
+
+.weight-medium {
+  font-weight: $weight-medium;
+}
+
+.weight-bold {
+  font-weight: $weight-bold;
+}
+
+strong, b {
+  @extend .weight-bold; // Ensure the weights always match
+}

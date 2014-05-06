@@ -1,0 +1,14 @@
+{
+  "name": "simplebitdesig-com",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.4.2",
+    "normalize-css": "~3.0.1",
+    "fontawesome": "~4.0.3",
+    "typeplate": "~1.1.3"
+  }
+}

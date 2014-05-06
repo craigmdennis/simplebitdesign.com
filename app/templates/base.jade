@@ -1,0 +1,54 @@
+block vars
+  -var bodyClass = "";
+
+doctype
+html.no-js
+  head
+    title Simple Bit Design
+    meta(name="description", content="We make intuitive interfaces for complex systems")
+    meta(name="keywords", content="UX, UI, User Experience, Interface, Design")
+    meta(name="author" content="Craig Dennis")
+
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    // build:css({app,.tmp}) styles/main.css
+    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+    //- build:js scripts/vendor/modernizr.js
+    //- script(src='../bower_components/modernizr/modernizr.js')
+    //- endbuild
+
+  body(class='#{bodyClass}')
+    include _browseHappy
+
+    header
+      //- Add a div as older browsers don't understand HTML5 elements
+      .header
+        block header
+          include _mainmenu
+
+    block content
+
+    footer
+      .footer
+        block footer
+          .container
+            p &copy; Copyright Simple Bit Design LTD 2014
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='../bower_components/modernizr/modernizr.js')
+    // endbower
+    // endbuild
+
+    include _analytics
+
+    // build:js({app,.tmp}) scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild

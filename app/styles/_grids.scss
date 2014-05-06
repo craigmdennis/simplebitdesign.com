@@ -1,0 +1,12 @@
+// ===================================================
+// Grids
+// ===================================================
+
+.container {
+  @extend .center-block;
+
+  max-width: $max-page-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  position: relative;
+}
