@@ -23,8 +23,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    modular-scale (2.0.4)
-      compass (>= 0.12.0)
     multi_json (1.9.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
@@ -35,8 +33,7 @@ GEM
     sassy-maps (0.3.2)
       compass (~> 1.0.0.alpha.13)
       sass (~> 3.3.0.rc.2)
-    singularitygs (1.2.0)
-      breakpoint (~> 2.4)
+    susy (2.1.2)
       sass (~> 3.3.0)
 
 PLATFORMS
@@ -45,5 +42,4 @@ PLATFORMS
 DEPENDENCIES
   breakpoint (~> 2.4.2)
   compass (~> 1.0.0.alpha.19)
-  modular-scale (~> 2.0)
-  singularitygs (~> 1.2)
+  susy (~> 2)

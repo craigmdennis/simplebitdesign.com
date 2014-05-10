@@ -1,39 +1,29 @@
 extends templates/base.jade
 
 block header
-  .container
+  .hero
+    .container
+      include templates/_mainmenu
 
-    include templates/_mainmenu
-
-    h1 Simple Bit
-    h2.gamma We make intuitive interfaces for complex systems.
-
-    p.delta More and more services are moving to the web and there is now more data than ever before.
-    p.delta People demand more control over apps they use but also expect an easy-to-use interface. The trouble is, a lot of interfaces are clumsy and difficult to use; meaning frustrated customers, negative feedback, loss of revenue and damage to the brand.
-
-    blockquote
-      q Simplicity is the ultimate sophistication.
-      cite &mdash; Da Vinci
+      h1.hero-title We make intuitive interfaces for complex apps and services.
 
 block content
-  section
-    .section
-      .container
-        h2 We can help
-        p We want to make peoples’ lives easier. Simple Bit has a proven track record in designing beautiful interfaces for very complex systems including analytics dashboards and recruitment systems. The more intuitive something is to use, the less you have to explain.
 
   section
     .section
       .container
-        h2 What we do
-        h3 Information Design:
-        p Presenting information in a way that fosters efficient and effective understanding.
+        h2.section-title Our expertise
+        .subsection
+          h3.subsection-title Information Design:
+          p Presenting information in a way that fosters efficient and effective understanding.
 
-        h3 User Experience Design:
-        p Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
+        .subsection
+          h3.subsection-title User Experience Design:
+          p Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
 
-        h3 Interface Design:
-        p Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
+        .subsection
+          h3.subsection-title Interface Design:
+          p Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
 
     section
       .section

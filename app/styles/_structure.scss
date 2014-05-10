@@ -1,3 +1,18 @@
 * {
   box-sizing: border-box;
 }
+
+.hero {
+  padding-top: $baseline/2;
+}
+
+.container {
+  @extend .center-block;
+  max-width: $max-page-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.logo {
+  padding-bottom: $baseline*2;
+}

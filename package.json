@@ -1,13 +1,13 @@
 {
-  "name": "craigmdennis-com",
-  "version": "0.0.0",
+  "name": "simplebitdesign-com",
+  "version": "0.0.1",
   "bugs": {
-    "url": "https://bitbucket.org/craigmdennis/craigmdennis.com/issues",
-    "email": "support@craigmdennis.com"
+    "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com/issues",
+    "email": "support@simplebitdesign.com"
   },
   "repository": {
     "type": "git",
-    "url": "git clone git@bitbucket.org:craigmdennis/craigmdennis.com.git"
+    "url": "https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,9 +35,7 @@
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.2.0",
     "jshint-stylish": "~0.1.3",
-    "grunt-contrib-jade": "~0.11.0",
-    "uncss": "~0.8.0",
-    "grunt-uncss": "~0.3.2"
+    "grunt-contrib-jade": "~0.11.0"
   },
   "engines": {
     "node": ">=0.8.0"

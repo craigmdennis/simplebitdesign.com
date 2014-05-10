@@ -7,7 +7,6 @@
 @import "compass";
 @import "memo";
 @import "breakpoint";
-// @import "singularitygs";
 
 
 /** VARIABLES **/
@@ -25,13 +24,11 @@
 
 /** LIBRARIES & FRAMEWORKS **/
 @import "../bower_components/typeplate/scss/typeplate";
-@import "../bower_components/fontawesome/scss/font-awesome";
 
 
 /** PARTIALS **/
 @import "fonts";
 @import "type";
-@import "grids";
 @import "structure";
 @import "navigation";
 @import "img";

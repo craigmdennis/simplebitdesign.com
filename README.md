@@ -1,2 +1,2 @@
 # Simple Bit
-## We make intuitive interfaces for complex systems
+## We make intuitive interfaces

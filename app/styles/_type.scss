@@ -9,6 +9,10 @@ html {
   }
 }
 
+body {
+  color: $gray-dark;
+}
+
 .weight-thin {
   font-weight: $weight-thin;
 }
@@ -32,3 +36,38 @@ html {
 strong, b {
   @extend .weight-bold; // Ensure the weights always match
 }
+
+// Content blocks
+body {
+  background: url("../images/splatter.png") no-repeat top center;
+  background-size: 100%;
+}
+
+.hero {}
+  .hero-title {
+    @extend .gamma;
+    font-weight: $weight-thin;
+    padding-bottom: $baseline;
+  }
+
+.section {}
+  .section-title {
+    @extend .gamma;
+    font-weight: $weight-bold;
+  }
+  .section-subtitle {
+    @extend .epsilon;
+  }
+
+.subsection {}
+  .subsection-title {
+    @extend .epsilon;
+    display: inline-block; // So we can get the border to play nicely with the title
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: $baseline/2;
+  }
+
+  p,
+  .subsection-body {
+    color: $gray-light;
+  }

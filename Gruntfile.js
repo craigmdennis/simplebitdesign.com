@@ -327,11 +327,6 @@ module.exports = function (grunt) {
               "images/{,*/}*.webp",
               "fonts/{,*/}*.*"
             ]
-          },{
-            expand: true,
-            cwd: "<%= config.app %>/bower_components/fontawesome/fonts",
-            src: "*.*",
-            dest: "<%= config.dist %>/fonts/fontawesome"
           }
         ]
       },
@@ -343,11 +338,6 @@ module.exports = function (grunt) {
             cwd: "<%= config.app %>/styles",
             dest: ".tmp/styles/",
             src: "{,*/}*.css"
-          },{
-            expand: true,
-            cwd: "<%= config.app %>/bower_components/fontawesome/fonts",
-            src: "*.*",
-            dest: ".tmp/fonts/fontawesome"
           }
         ]
       }
@@ -439,14 +429,13 @@ module.exports = function (grunt) {
     "concurrent:dist",
     "autoprefixer",
     "concat",
-    // "uncss",
     "cssmin",
     "uglify",
     "copy:dist",
     // "modernizr",
-    // "rev", // Not needed as CMS will handle
+    "rev",
     "usemin",
-    "htmlmin" // Not needed will be templated
+    "htmlmin"
   ]);
 
   grunt.registerTask("default", [

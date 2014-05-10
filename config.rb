@@ -1,6 +1,5 @@
 require "breakpoint"
-require "singularitygs"
-require "modular-scale"
+require "susy"
 
 http_path = "/"
 sass_dir = 'app/styles'

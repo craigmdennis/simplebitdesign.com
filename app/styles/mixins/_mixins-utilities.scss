@@ -23,10 +23,6 @@
   }
 }
 
-@mixin rhythm( $multiplier: 1 ) {
-  margin-bottom: $baseline * $multiplier;
-}
-
 // Center objects
 .center-block {
   margin-left:auto;
