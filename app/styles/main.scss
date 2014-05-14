@@ -7,11 +7,12 @@
 @import "compass";
 @import "memo";
 @import "breakpoint";
+@import "susy";
 
 
 /** VARIABLES **/
 @import "vars/vars-brand";
-@import "vars/vars-structure";
+@import "vars/vars-grid";
 @import "vars/vars-type";
 @import "vars/vars-buttons";
 @import "vars/vars-symbols";
@@ -37,6 +38,7 @@
 @import "lists";
 @import "alerts";
 @import "helpers";
+@import "forms";
 
 
 /** INBOX - Styles that are yet to be organised **/

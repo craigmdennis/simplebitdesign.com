@@ -1,0 +1,13 @@
+// ===================================================
+// Mixins
+// ===================================================
+
+
+// Display client logos
+mixin clients( logos )
+  ul.list-clients
+    - each logo in logos
+      li.list-client-item
+        .img-thumb
+          .rwd-media-container(data-ratio="306-82")
+            img.rwd-media-object(src="./images/#{logo}.png", alt="Logo for #{logo}")

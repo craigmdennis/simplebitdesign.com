@@ -15,3 +15,16 @@ a {
 p a {
   color: $brand-primary;
 }
+
+.note-link {
+  color: inherit;
+}
+
+.footer {
+  &:hover,
+  &:focus {
+    .note-link {
+      color: #FFF;
+    }
+  }
+}

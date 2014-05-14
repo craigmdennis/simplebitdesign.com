@@ -2,11 +2,6 @@
 // Lists
 // ===================================================
 
-.divided {
-  @extend .unstyled;
-
-  & > .divided-item {
-    border-bottom:1px solid $gray-light;
-  }
-
+.list-clients {
+  @extend %unstyled;
 }

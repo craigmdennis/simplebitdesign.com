@@ -5,8 +5,17 @@
 html {
   // Default is 112.5% set in `vars/_vars-type.scss`
   @include breakpoint( $medium ) {
+    // font-size: 130%;
+  }
+
+  @include breakpoint( $large ) {
+    // font-size: 150%;
+  }
+
+  @include breakpoint( $xlarge ) {
     font-size: 150%;
   }
+
 }
 
 body {
@@ -46,25 +55,63 @@ body {
 .hero {}
   .hero-title {
     @extend .gamma;
-    font-weight: $weight-thin;
+    line-height: 1.3333333333;
+
+    br {
+      display: none;
+
+      @include breakpoint( $medium ) {
+        display: block;
+      }
+    }
+
+    font-weight: $weight-light;
     padding-bottom: $baseline;
+
+    @include breakpoint( $medium ) {
+      padding-bottom: $baseline*3;
+    }
+
   }
 
 .section {}
   .section-title {
     @extend .gamma;
+
     font-weight: $weight-bold;
+
+    &+.rwd-media-container {
+      @include breakpoint( $medium ) {
+        margin-top: $baseline;
+      }
+    }
   }
+
   .section-subtitle {
     @extend .epsilon;
+  }
+
+  // Make sure text is readbale on dark backgrounds
+  .bg-dark,
+  .bg-secondary {
+    .section-title {
+      color:#FFF;
+    }
   }
 
 .subsection {}
   .subsection-title {
     @extend .epsilon;
-    display: inline-block; // So we can get the border to play nicely with the title
-    border-bottom: 1px solid $gray-lightest;
-    padding-bottom: $baseline/2;
+
+    @include breakpoint( $small ) {
+      border-bottom: 1px solid $gray-lighter;
+      padding-bottom: $baseline/2;
+      margin-bottom: $baseline/2;
+    }
+  }
+
+  .rwd-media-container + .subsection-title {
+    padding-top: $baseline/2;
   }
 
   p,

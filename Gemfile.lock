@@ -42,4 +42,4 @@ PLATFORMS
 DEPENDENCIES
   breakpoint (~> 2.4.2)
   compass (~> 1.0.0.alpha.19)
-  susy (~> 2)
+  susy

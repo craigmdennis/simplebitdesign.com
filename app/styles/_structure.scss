@@ -2,17 +2,129 @@
   box-sizing: border-box;
 }
 
+// Horrizontal
+.container {
+  @include clearfix();
+  @include container(95%);
+
+  @include breakpoint( $large ) {
+    @include container(90%);
+  }
+}
+
 .hero {
   padding-top: $baseline/2;
+
+  @include breakpoint( $medium ) {
+    padding-top: $baseline;
+  }
 }
 
-.container {
-  @extend .center-block;
-  max-width: $max-page-width;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
+// Vertical
+.section {
+  padding-bottom: $baseline;
+  padding-top: $baseline;
+
+  @include breakpoint( $medium ) {
+    padding-bottom: $baseline*4;
+    padding-top: $baseline*4;
+  }
+
 }
 
-.logo {
-  padding-bottom: $baseline*2;
+// Only allow section headers to extend 3/4
+.section-header {
+  @include span(12 of 12);
+
+  @include breakpoint( $medium ) {
+    @include span(8 of 12);
+    float: none;
+  }
+}
+
+// Ensure each section within the grid has outer gutters
+.inner {
+  @include span(12 of 12);
+}
+
+.subsection {
+  @include span(12 of 12);
+
+  @include breakpoint( $small ) {
+    @include span(6 of 12);
+  }
+
+  @include breakpoint( $medium ) {
+    @include span(4 of 12);
+    padding-bottom: $baseline*3;
+  }
+
+  .subsection-body {
+    @include breakpoint( max-width $up-to-small ) {
+      border-bottom: 1px solid $gray-lighter;
+      margin-bottom: $baseline/2;
+    }
+  }
+
+  &:last-child {
+    .subsection-body {
+      border-bottom: 0;
+    }
+  }
+
+}
+
+// Client logos
+.list-client-item {
+  @include span(12 of 12);
+
+  @include breakpoint( $xsmall ) {
+    @include span(6 of 12);
+  }
+
+  margin-bottom: $baseline/2;
+
+  @include breakpoint( $small ) {
+    @include span(3 of 12);
+  }
+}
+
+// Contact form positioning
+.form-contact {
+  @include span(12 of 12);
+
+  @include breakpoint( $medium ) {
+    @include span(8 of 12);
+  }
+
+  @include breakpoint( $large ) {
+    @include span(6 of 12);
+  }
+}
+
+.footer {
+  @include clearfix();
+  padding-bottom: $baseline;
+  padding-top: $baseline;
+
+  blockquote {
+    margin:0;
+
+    @include breakpoint( $medium ) {
+      text-align:right;
+    }
+
+    cite {
+      @include clearfix();
+    }
+  }
+
+  .note {
+    @include span(12 of 12);
+
+    @include breakpoint( $medium ) {
+      @include span(6 of 12);
+    }
+
+  }
 }

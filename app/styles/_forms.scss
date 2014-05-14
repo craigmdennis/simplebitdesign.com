@@ -1,0 +1,25 @@
+// ===================================================
+// Forms
+// ===================================================
+
+fieldset {
+  border:0;
+  padding:0;
+}
+
+.form-row {
+  margin-bottom: $baseline/2;
+
+  input,
+  textarea {
+    padding: $baseline/4 $baseline/2;
+    border:0;
+    display:block;
+    width:100%;
+    border-radius: $radius;
+  }
+}
+
+textarea {
+  resize: vertical; 
+}

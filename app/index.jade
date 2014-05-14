@@ -1,59 +1,52 @@
 extends templates/base.jade
 
 block header
-  .hero
-    .container
+  .hero.container
+    .inner
       include templates/_mainmenu
 
-      h1.hero-title We make intuitive interfaces for complex apps and services.
+      h1.hero-title We make intuitive interfaces<br> for complex apps and services.
 
 block content
 
   section
-    .section
-      .container
-        h2.section-title Our expertise
-        .subsection
-          h3.subsection-title Information Design:
+    .container
+      header
+        .section-header
+          h2.section-title Our expertise
+
+      .subsection
+        .rwd-media-container(data-ratio="560-300")
+          img.rwd-media-object(src="http://placehold.it/560x300")
+        h3.subsection-title Information Design:
+        .subsection-body
           p Presenting information in a way that fosters efficient and effective understanding.
 
-        .subsection
-          h3.subsection-title User Experience Design:
+      .subsection
+        .rwd-media-container(data-ratio="560-300")
+          img.rwd-media-object(src="http://placehold.it/560x300")
+        h3.subsection-title User Experience Design:
+        .subsection-body
           p Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
 
-        .subsection
-          h3.subsection-title Interface Design:
+      .subsection
+        .rwd-media-container(data-ratio="560-300")
+          img.rwd-media-object(src="http://placehold.it/560x300")
+        h3.subsection-title User Interface Design:
+        .subsection-body
           p Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
 
-    section
-      .section
-        .container
-          h2 Our experience covers many sectors
-          p We have worked with small and large teams; startups and well-known brands.
+  section
+    .section.bg-gray
+      .container
+        header
+          .section-header
+            h2.section-title Our experience
+            p.section-subtitle We have experience working with start-ups and well-known brands; creating initial concepts as well as complete UI redesigns.
 
-          ul
-            li BBC
-            li Admiral
-            li Smashing Magazine
-            li ASOS
-            li Knowsis
+        mixin clients(['bbc', 'asos', 'smashing', 'confused'])
 
-    section
-      .section
-        .container
-          h2 We work <em>with</em> you
-          p Design work is a partnership. You know more about your business than anyone and that knowledge is valuable. We will work with you to understand the problems you face and create solutions that suit both your users and your business.
-
-          ul
-            li Discovery
-            li Wireframes
-            li User tests
-            li Prototypes
-            li Mockups
-            li Documentation
-
-    section
-      .section
-        .container
-          h2 We don't do everything, and that's a good thing
-          p We're specialists, not a one-stop-shop. If we can’t help with a particular part of your project, we’ll let you know up front. However we probably know someone who can.
+  section
+    .section.bg-secondary
+      .container
+        include templates/_contactForm

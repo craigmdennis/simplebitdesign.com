@@ -23,40 +23,35 @@
   }
 }
 
-// Center objects
-.center-block {
-  margin-left:auto;
-  margin-right:auto;
-}
+// Responsive embeds
+@mixin intrinsic-ratio($width, $height) {
 
-// Only display content to screen readers
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
+    &[data-ratio="#{$width}-#{$height}"] {
+      position: relative;
+      padding-bottom: percentage($height / $width);
+      height: 0;
 
-// Use in conjunction with .sr-only to only display content when it's focused.
-.sr-only-focusable {
-  &:active,
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-  }
+      // Make an object fill it's container
+      .rwd-media-object {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
 }
 
 // Remove styling from a list
-.unstyled {
+%unstyled {
   margin:0;
   padding:0;
   list-style:none;
+}
+
+// Center objects
+%center-block {
+  margin-left:auto;
+  margin-right:auto;
 }

@@ -2,6 +2,44 @@
 // Images
 // ===================================================
 
-.bg-img {
+img,
+.img-responsive {
+  max-width:100%;
+}
+
+.img-thumb {
+  background-color: #FFF;
+  border:1px solid $gray-light;
+  box-shadow: 0 2px 0 $shadow;
+  padding: $baseline;
+  position: relative;
+  border-radius: $radius;
+
+  @include breakpoint( $small ) {
+    padding: $baseline/2;
+  }
+
+  @include breakpoint( $medium ) {
+    padding: $baseline;
+  }
+
+  @include breakpoint( $large ) {
+    padding: $baseline*2;
+  }
+}
+
+// Responsive images
+.rwd-media-container {
+  @include intrinsic-ratio(560,300);
+  @include intrinsic-ratio(306,82);
+}
+
+.logo {
+  padding-bottom: $baseline*2;
+  max-width:197px;
+
+  @include breakpoint( $medium ) {
+    padding-bottom: $baseline*4;
+  }
 
 }
