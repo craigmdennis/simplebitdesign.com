@@ -2,9 +2,6 @@
 // Typography Variables
 // ===================================================
 
-/** FONT AWESOME **/
-// $fa-font-path: "../fonts/fontawesome" !default;
-
 // Font weights
 $weight-thin: 100;
 $weight-light: 300;
@@ -12,107 +9,49 @@ $weight-default: 400;
 $weight-medium: 500;
 $weight-bold: 700;
 
-// $BaseType
-// -------------------------------------//
+$ms-base: 16 24;
+$ms-ratio: $golden;
 
+// Base Type
 $font-weight: $weight-light;
 $line-height: 1.5;
-$font-size: 112.5; // percentage value (16 * 150% = 24px)
-$font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
-$font-family: serif; // Non-font-face font-stack
+$font-size: 100; // percentage value (16 * 112.5% = 18px)
+
+$font-family: sans-serif; // Non-font-face font-stack
 
 $custom-font-family: "Clear Sans"; // Custom font-face stack, if set will be added to the $font-family
 
-
-// $Paragraphs
-// -------------------------------------//
-
-// Text Indentation Value
-$indent-val: $baseline;
-
-// Paragraph Styling Boolean
-// 'false' means no vertical whitespace
-// between subsequent paragraphs.
+$indent-val: 1.5em;
 $paragraph-vertical-whitespace: true;
-
-
-// $Small Print
-// -------------------------------------//
-
 $small-print-size: 65%;
 
+$body-copy-color: $gray-dark;
+$heading-color: $gray-dark;
 
-// $Color
-// -------------------------------------//
+$tera: ms(8);
+$giga: ms(7);
+$mega: ms(6);
+$alpha: ms(5);
+$beta: ms(4);
+$gamma: ms(3);
+$delta: ms(2);
+$epsilon: ms(1);
+$zeta: ms(0);
 
-$body-copy-color: #444;
-$heading-color: #222;
-
-
-// $Ampersand
-// -------------------------------------//
-
-$amp-fontface-name: Ampersand;
-$amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
-$amp-fontface-fallback: local('Georgia');
-
-// Allows for our ampersand element to have differing
-// font-family from the ampersand unicode font-family.
-$amp-font-family: Verdana, sans-serif;
-
-
-// $Icon-Font-Helper
-// -------------------------------------//
-// ex.1) $icon-fonts: (icon-name);
-// ex.2) $icon-fonts: (icon-name1, icon-name2, icon-name3);
-$icon-fonts: null;
-
-
-// $TypeScale
-// -------------------------------------//
-
-$tera: 117;
-$giga: 90;
-$mega: 72;
-$alpha: 60;
-$beta: 48;
-$gamma: 36;
-$delta: 24;
-$epsilon: 21;
-$zeta: 18;
-
-
-// $TypeScale-Unit
-// -------------------------------------//
+$baseline: ms(0, 1em 1.5em);
 
 $type-scale-unit-value: rem;
-
-
-// $Pull-Quotes
-// -------------------------------------//
 
 $pull-quote-fontsize: 4em;
 $pull-quote-opacity: 0.5;
 $pull-quote-color: #dc976e;
 
-
-// $Citation
-// -------------------------------------//
-
 $cite-display: block;
 $cite-text-align: right;
 $cite-font-size: inherit;
 
-
-// $SmallCaps
-// -------------------------------------//
-
-$small-caps-color: inherit;
-$small-caps-weight: normal;
-
-
-// $DropCap
-// -------------------------------------//
+$small-caps-color: gray;
+$small-caps-weight: 600;
 
 $dropcap-float-position: left;
 $dropcap-font-size: 4em;

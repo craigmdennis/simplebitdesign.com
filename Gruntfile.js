@@ -42,6 +42,10 @@ module.exports = function (grunt) {
             files: ["<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}"],
             tasks: ["coffee:dist"]
           },
+          js: {
+            files: ["<%= config.app %>/scripts/{,*/}*.js"],
+            tasks: ["newer:copy:server"]
+          },
           coffeeTest: {
             files: ["test/spec/{,*/}*.{coffee,litcoffee,coffee.md}"],
             tasks: ["coffee:test", "test:watch"]
@@ -143,18 +147,6 @@ module.exports = function (grunt) {
               src: "*.jade",
               ext: ".html"
             }]
-          }
-        },
-
-        uncss: {
-          dist: {
-            files: [{
-              src: "<%= config.dist %>{,*/}*.html",
-              dest: ".tmp/concat/styles/main.css"
-            }]
-          },
-          options: {
-            csspath: "../.tmp/concat/"
           }
         },
 
@@ -338,6 +330,13 @@ module.exports = function (grunt) {
             cwd: "<%= config.app %>/styles",
             dest: ".tmp/styles/",
             src: "{,*/}*.css"
+          },{
+            // Copy any javascript files to the temo directory
+            expand: true,
+            dot: true,
+            cwd: "<%= config.app %>/scripts",
+            dest: ".tmp/scripts/",
+            src: "{,*/}*.js"
           }
         ]
       }

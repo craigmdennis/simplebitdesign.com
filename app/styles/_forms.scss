@@ -8,11 +8,11 @@ fieldset {
 }
 
 .form-row {
-  margin-bottom: $baseline/2;
+  margin-bottom: baseline(0);
 
   input,
   textarea {
-    padding: $baseline/4 $baseline/2;
+    padding: baseline(-3);
     border:0;
     display:block;
     width:100%;
@@ -21,5 +21,5 @@ fieldset {
 }
 
 textarea {
-  resize: vertical; 
+  resize: vertical;
 }

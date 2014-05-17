@@ -3,92 +3,47 @@
 // ===================================================
 
 html {
-  // Default is 112.5% set in `vars/_vars-type.scss`
-  @include breakpoint( $medium ) {
-    // font-size: 130%;
-  }
 
   @include breakpoint( $large ) {
-    // font-size: 150%;
+    font-size: 125%;
   }
 
-  @include breakpoint( $xlarge ) {
-    font-size: 150%;
-  }
-
-}
-
-body {
-  color: $gray-dark;
-}
-
-.weight-thin {
-  font-weight: $weight-thin;
-}
-
-.weight-light {
-  font-weight: $weight-light;
-}
-
-.weight-default {
-  font-weight: $weight-default;
-}
-
-.weight-medium {
-  font-weight: $weight-medium;
-}
-
-.weight-bold {
-  font-weight: $weight-bold;
-}
-
-strong, b {
-  @extend .weight-bold; // Ensure the weights always match
 }
 
 // Content blocks
-body {
-  background: url("../images/splatter.png") no-repeat top center;
-  background-size: 100%;
-}
-
 .hero {}
   .hero-title {
-    @extend .gamma;
-    line-height: 1.3333333333;
+    @extend .beta;
+    @extend %break;
 
-    br {
-      display: none;
-
-      @include breakpoint( $medium ) {
-        display: block;
-      }
-    }
-
+    text-align:center;
     font-weight: $weight-light;
-    padding-bottom: $baseline;
-
-    @include breakpoint( $medium ) {
-      padding-bottom: $baseline*3;
-    }
-
+    padding-bottom: baseline(2);
   }
 
 .section {}
   .section-title {
-    @extend .gamma;
-
+    @extend .beta;
+    text-align:center;
+    margin-bottom: baseline(-2);
     font-weight: $weight-bold;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &+.rwd-media-container {
       @include breakpoint( $medium ) {
-        margin-top: $baseline;
+        // margin-top: baseline(0);
       }
     }
   }
 
   .section-subtitle {
     @extend .epsilon;
+    @extend %break;
+    margin-bottom: 0;
+    text-align:center;
   }
 
   // Make sure text is readbale on dark backgrounds
@@ -105,13 +60,13 @@ body {
 
     @include breakpoint( $small ) {
       border-bottom: 1px solid $gray-lighter;
-      padding-bottom: $baseline/2;
-      margin-bottom: $baseline/2;
+      padding-bottom: baseline(0);
+      margin-bottom: baseline(0);
     }
   }
 
   .rwd-media-container + .subsection-title {
-    padding-top: $baseline/2;
+    padding-top: baseline(0);
   }
 
   p,

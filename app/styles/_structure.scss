@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.header {
+  border-bottom:1px solid $gray-lighter;
+}
+
 // Horrizontal
 .container {
   @include clearfix();
@@ -13,21 +17,19 @@
 }
 
 .hero {
-  padding-top: $baseline/2;
-
   @include breakpoint( $medium ) {
-    padding-top: $baseline;
+    padding-top: baseline(0);
   }
 }
 
 // Vertical
 .section {
-  padding-bottom: $baseline;
-  padding-top: $baseline;
+  padding-bottom: baseline(0);
+  padding-top: baseline(1);
 
   @include breakpoint( $medium ) {
-    padding-bottom: $baseline*4;
-    padding-top: $baseline*4;
+    padding-bottom: baseline(6);
+    padding-top: baseline(6);
   }
 
 }
@@ -35,9 +37,11 @@
 // Only allow section headers to extend 3/4
 .section-header {
   @include span(12 of 12);
+  margin-bottom: baseline(2);
 
   @include breakpoint( $medium ) {
-    @include span(8 of 12);
+    @include span(isolate 10 of 12 at 2);
+    margin-bottom: baseline(4);
     float: none;
   }
 }
@@ -56,13 +60,12 @@
 
   @include breakpoint( $medium ) {
     @include span(4 of 12);
-    padding-bottom: $baseline*3;
   }
 
   .subsection-body {
-    @include breakpoint( max-width $up-to-small ) {
+    @include breakpoint( max-width $small ) {
       border-bottom: 1px solid $gray-lighter;
-      margin-bottom: $baseline/2;
+      margin-bottom: baseline(0);
     }
   }
 
@@ -82,7 +85,7 @@
     @include span(6 of 12);
   }
 
-  margin-bottom: $baseline/2;
+  // margin-bottom: baseline(0);
 
   @include breakpoint( $small ) {
     @include span(3 of 12);
@@ -94,18 +97,18 @@
   @include span(12 of 12);
 
   @include breakpoint( $medium ) {
-    @include span(8 of 12);
+    @include span(isolate 8 of 12 at 2);
   }
 
   @include breakpoint( $large ) {
-    @include span(6 of 12);
+    @include span(isolate 6 of 12 at 4);
   }
 }
 
 .footer {
   @include clearfix();
-  padding-bottom: $baseline;
-  padding-top: $baseline;
+  padding-bottom: baseline(0);
+  padding-top: baseline(0);
 
   blockquote {
     margin:0;

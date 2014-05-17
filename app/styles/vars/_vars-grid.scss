@@ -2,23 +2,14 @@
 // Grid Variables
 // ===================================================
 
-$baseline: 1.5em;
-
 // Breakpoint Variables
 $breakpoint-to-ems: true;
-$xsmall: 320px;
-$small: 480px;
-$medium: 768px;
-$large: 1024px;
-$xlarge: 1280px;
-$xxlarge: 1440px;
-
-$up-to-xsmall: 319px;
-$up-to-small: 479px;
-$up-to-medium: 767px;
-$up-to-large: 1023px;
-$up-to-xlarge: 1279px;
-$up-to-xxlarge: 1439px;
+$xsmall: ms(6);
+$small: ms(7);
+$medium: ms(8);
+$large: ms(9);
+$xlarge: ms(10);
+$xxlarge: ms(11);
 
 // SUSY Variables
 $susy: (

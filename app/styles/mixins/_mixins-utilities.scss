@@ -55,3 +55,24 @@
   margin-left:auto;
   margin-right:auto;
 }
+
+// Only show a break when the page is wide enough for it to make sense.
+%break {
+  br {
+    display: none;
+
+    @include breakpoint( $medium ) {
+      display: block;
+    }
+  }
+}
+
+// Remove units
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Generate a baseline multiplier from the modular scale
+@function baseline( $val ) {
+  @return ms( $val, 1em 1.5em);
+}

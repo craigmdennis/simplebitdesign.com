@@ -2,8 +2,16 @@
 // Images
 // ===================================================
 
-img,
-.img-responsive {
+body {
+  background: url("../images/splatter.png") fixed no-repeat top right;
+  background-size: 100%;
+
+  @include breakpoint( $medium ) {
+    background-size: auto;
+  }
+}
+
+img {
   max-width:100%;
 }
 
@@ -11,20 +19,20 @@ img,
   background-color: #FFF;
   border:1px solid $gray-light;
   box-shadow: 0 2px 0 $shadow;
-  padding: $baseline;
+  padding: baseline(0);
   position: relative;
   border-radius: $radius;
 
   @include breakpoint( $small ) {
-    padding: $baseline/2;
+    padding: baseline(0);
   }
 
   @include breakpoint( $medium ) {
-    padding: $baseline;
+    padding: baseline(0);
   }
 
   @include breakpoint( $large ) {
-    padding: $baseline*2;
+    padding: baseline(1) // $baseline * 2
   }
 }
 
@@ -35,11 +43,12 @@ img,
 }
 
 .logo {
-  padding-bottom: $baseline*2;
-  max-width:197px;
+  margin: baseline(8) auto baseline(4);
+  max-width: baseline(12);
 
-  @include breakpoint( $medium ) {
-    padding-bottom: $baseline*4;
+  .logo-img {
+    display: block;
+    width: 100%;
   }
 
 }

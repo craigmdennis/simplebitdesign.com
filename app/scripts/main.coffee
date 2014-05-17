@@ -1,24 +1,38 @@
-# console.log "'Allo from CoffeeScript!"
+console.log "'Allo from CoffeeScript!"
 
 # Avoid `console` errors in browsers that lack a console.
-# (function() {
-#     var method;
-#     var noop = function () {};
-#     var methods = [
-#         'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-#         'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-#         'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-#         'timeStamp', 'trace', 'warn'
-#     ];
-#     var length = methods.length;
-#     var console = (window.console = window.console || {});
+(->
+  method = undefined
+  noop = ->
 
-#     while (length--) {
-#         method = methods[length];
+  methods = [
+    "assert",
+    "clear",
+    "count",
+    "debug",
+    "dir",
+    "dirxml",
+    "error",
+    "exception",
+    "group",
+    "groupCollapsed",
+    "groupEnd",
+    "info",
+    "log",
+    "markTimeline",
+    "profile",
+    "profileEnd",
+    "table",
+    "time",
+    "timeEnd",
+    "timeStamp",
+    "trace",
+    "warn" ]
+  length = methods.length
+  console = (window.console = window.console or {})
+  while length--
+    method = methods[length]
 
-#         // Only stub undefined methods.
-#         if (!console[method]) {
-#             console[method] = noop;
-#         }
-#     }
-# }());
+    # Only stub undefined methods.
+    console[method] = noop  unless console[method]
+)();

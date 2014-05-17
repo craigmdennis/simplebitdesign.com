@@ -5,9 +5,10 @@
 
 // Base button class modified from Bootstrap
 
-.btn {
-  padding: $baseline/2 $baseline;
-  display: inline-block;
+%btn {
+  padding: baseline(-3) baseline(-1);
+  line-height:normal;
+  display: block;
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
   text-align: center;
@@ -15,11 +16,10 @@
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 0;
-  // white-space: nowrap;
+  white-space: nowrap;
   user-select: none;
-  border-radius: $default-border-radius;
+  border-radius: $radius;
 
-  &,
   &:active,
   &.active {
     &:focus {
@@ -55,40 +55,38 @@
 
 // Default appears as blue
 .btn-default {
+  @extend %btn;
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
 
 // Primary appears as red
 .btn-primary {
+  @extend %btn;
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
 // Success appears as green
 .btn-success {
+  @extend %btn;
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
 }
 
 // Info appears as blue-green
 .btn-info {
+  @extend %btn;
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 
 // Warning appears as orange
 .btn-warning {
+  @extend %btn;
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
 
 // Danger and error appear as red
 .btn-danger {
+  @extend %btn;
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-}
-
-// Full width buttons
-.btn-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 // Vertically space out multiple block buttons
@@ -96,39 +94,17 @@
   margin-top: 5px;
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
+%btn-square {
+  padding: baseline(0);
+}
+
+// Custom button styles
+.btn-primary[type="submit"] {
+    @include breakpoint( max-width $xsmall) {
     width: 100%;
   }
 }
 
-/** BUTTON GROUPS **/
-.btn-group {
-  .btn {
-    @include rhythm(0.5);
-  }
-}
-
-.btn-group-spaced {
-  .btn {
-    margin-right:$baseline/2;
-
-    &:last-child {
-      margin-right:0;
-    }
-  }
-}
-
-.btn-square {
-  padding:$baseline;
-}
-
-.has-text {
-  .fa {
-    padding-left:$baseline/2;
-    vertical-align: middle;
-  }
+.btn-next {
+  float:right;
 }

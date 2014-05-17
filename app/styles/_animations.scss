@@ -1,0 +1,9 @@
+.js-rotate-3d {
+  transition: all 0.5s ease;
+}
+
+.hero.hover {
+  .js-rotate-3d {
+    transition: none;
+  }
+}

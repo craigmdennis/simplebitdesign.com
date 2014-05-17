@@ -2,6 +2,10 @@
 // Helpers
 // ===================================================
 
+.bg-light {
+  background-color: #FFF;
+}
+
 .bg-dark {
   background-color: $brand-dark;
 }
@@ -24,6 +28,10 @@
 
 .text-success {
   color: $brand-success;
+}
+
+.bordered-light {
+  border-top: 1px solid $gray-lighter;
 }
 
 // Only display content to screen readers

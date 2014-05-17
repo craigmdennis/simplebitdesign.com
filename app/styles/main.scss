@@ -8,6 +8,7 @@
 @import "memo";
 @import "breakpoint";
 @import "susy";
+@import "modular-scale";
 
 
 /** VARIABLES **/
@@ -22,10 +23,8 @@
 @import "mixins/_mixins-buttons";
 @import "mixins/_mixins-utilities";
 
-
-/** LIBRARIES & FRAMEWORKS **/
-@import "../bower_components/typeplate/scss/typeplate";
-
+/** BOWER **/
+@import "../bower_components/typeplate/scss/_typeplate";
 
 /** PARTIALS **/
 @import "fonts";
@@ -39,6 +38,8 @@
 @import "alerts";
 @import "helpers";
 @import "forms";
+@import "animations";
+@import "icons";
 
 
 /** INBOX - Styles that are yet to be organised **/
