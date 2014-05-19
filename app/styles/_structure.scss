@@ -3,7 +3,9 @@
 }
 
 .header {
-  border-bottom:1px solid $gray-lighter;
+  @extend .section;
+  // border-bottom:1px solid $gray-light;
+  // border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 // Horrizontal
@@ -16,16 +18,15 @@
   }
 }
 
-.hero {
-  @include breakpoint( $medium ) {
-    padding-top: baseline(0);
-  }
-}
-
 // Vertical
 .section {
   padding-bottom: baseline(0);
   padding-top: baseline(1);
+
+  @include breakpoint( $small ) {
+    padding-bottom: baseline(3);
+    padding-top: baseline(4);
+  }
 
   @include breakpoint( $medium ) {
     padding-bottom: baseline(6);
@@ -52,6 +53,7 @@
 }
 
 .subsection {
+  position: relative;
   @include span(12 of 12);
 
   @include breakpoint( $small ) {
@@ -77,21 +79,6 @@
 
 }
 
-// Client logos
-.list-client-item {
-  @include span(12 of 12);
-
-  @include breakpoint( $xsmall ) {
-    @include span(6 of 12);
-  }
-
-  // margin-bottom: baseline(0);
-
-  @include breakpoint( $small ) {
-    @include span(3 of 12);
-  }
-}
-
 // Contact form positioning
 .form-contact {
   @include span(12 of 12);
@@ -106,28 +93,12 @@
 }
 
 .footer {
-  @include clearfix();
-  padding-bottom: baseline(0);
-  padding-top: baseline(0);
-
-  blockquote {
-    margin:0;
-
-    @include breakpoint( $medium ) {
-      text-align:right;
-    }
-
-    cite {
-      @include clearfix();
-    }
-  }
+  @include clearfix;
+  padding-top: baseline(1);
+  text-align: center;
 
   .note {
-    @include span(12 of 12);
-
-    @include breakpoint( $medium ) {
-      @include span(6 of 12);
-    }
-
+    @include clearfix;
+    margin:0 auto;
   }
 }

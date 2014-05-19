@@ -35,22 +35,18 @@ html.no-js
       .footer.bg-dark
         .container
           block footer
-            .note
-              p &copy; Copyright <a class="note-link" href="http://simplebitdesign.com">Simple Bit Design LTD</a> 2014
-            .note
-              blockquote
-                q Simplicity is the ultimate sophistication.
-                cite &mdash; Da Vinci
+            p &copy; Copyright <a class="inherit" href="http://simplebitdesign.com">Simple Bit Design LTD</a> 2014
 
     // build:js scripts/vendor.js
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='scripts/happy.js')
+    script(src='scripts/happy.methods.js')
     // endbower
     // endbuild
 
     include _analytics
 
     // build:js({app,.tmp}) scripts/main.js
-    script(src='scripts/main.js')
-    //- script(src='scripts/rotate3d.js')
+    script(src='scripts/app.js')
     // endbuild

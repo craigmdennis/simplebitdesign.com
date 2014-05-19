@@ -4,4 +4,21 @@
 
 .list-clients {
   @extend %unstyled;
+  @include clearfix;
+  text-align: center;
+  margin-top: baseline(3);
+
+  @include breakpoint( $medium ) {
+    margin-top: baseline(5);
+  }
+}
+
+.list-client-item {
+  width: 153px;
+  display: inline-block;
+  padding:0 baseline(0) baseline(2);
+
+  @include breakpoint( $medium ) {
+    padding-bottom: 0;
+  }
 }

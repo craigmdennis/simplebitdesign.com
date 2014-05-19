@@ -10,47 +10,73 @@ html {
 
 }
 
+
 // Content blocks
-.hero {}
+.hero {
+  text-align:center;
+}
+
   .hero-title {
     @extend .beta;
     @extend %break;
-
-    text-align:center;
     font-weight: $weight-light;
-    padding-bottom: baseline(2);
+    padding-bottom: baseline(-1);
+  }
+
+  blockquote {
+    margin:0;
+  }
+
+  .hero-quote {
+    @extend .delta;
+
+    cite {
+      display: block;
+
+      @include breakpoint( $medium ) {
+        display: inline;
+      }
+    }
   }
 
 .section {}
   .section-title {
     @extend .beta;
-    text-align:center;
     margin-bottom: baseline(-2);
     font-weight: $weight-bold;
+
+    @include breakpoint( $small ) {
+      text-align:center;
+    }
 
     &:last-child {
       margin-bottom: 0;
     }
 
-    &+.rwd-media-container {
-      @include breakpoint( $medium ) {
-        // margin-top: baseline(0);
-      }
-    }
   }
 
   .section-subtitle {
     @extend .epsilon;
     @extend %break;
     margin-bottom: 0;
-    text-align:center;
+    color: rgba(0,0,0,0.5);
+
+    @include breakpoint( $small ) {
+      text-align:center;
+    }
   }
 
   // Make sure text is readbale on dark backgrounds
   .bg-dark,
-  .bg-secondary {
-    .section-title {
+  .bg-secondary,
+  .bg-primary {
+    .section-title,
+    .subsection-title {
       color:#FFF;
+    }
+    .section-subtitle {
+      color: #FFF;
+      color: rgba(255,255,255,0.6);
     }
   }
 
@@ -60,16 +86,13 @@ html {
 
     @include breakpoint( $small ) {
       border-bottom: 1px solid $gray-lighter;
-      padding-bottom: baseline(0);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
       margin-bottom: baseline(0);
+      padding-bottom: baseline(0);
+      padding-top: baseline(0);
     }
   }
-
-  .rwd-media-container + .subsection-title {
-    padding-top: baseline(0);
-  }
-
-  p,
   .subsection-body {
-    color: $gray-light;
+    color: #FFF;
+    color: rgba(255,255,255,0.8);
   }

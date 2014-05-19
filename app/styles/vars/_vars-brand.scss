@@ -2,13 +2,15 @@
 // Brand Variables
 // ===================================================
 
-$brand-primary:         #4A90E2;
+// $brand-primary:         #4A90E2;
+$brand-primary:         #315A8B;
 $brand-secondary:       #343B44;
 $brand-dark:            #22282F;
 $brand-success:         #5cb85c;
-$brand-info:            #5bc0de;
+$brand-info:            $brand-primary;
+$brand-help:            $brand-success;
 $brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
+$brand-danger:          #D0021B;
 
 $gray-lightest:         #F8F8F8;
 $gray-lighter:          #DDDDDD;

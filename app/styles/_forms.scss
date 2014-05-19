@@ -4,20 +4,52 @@
 
 fieldset {
   border:0;
+  margin:0;
   padding:0;
 }
 
 .form-row {
+  @include clearfix;
   margin-bottom: baseline(0);
 
-  input,
-  textarea {
+  .text-input {
+    @extend %round;
     padding: baseline(-3);
-    border:0;
+    border: 0;
     display:block;
     width:100%;
-    border-radius: $radius;
   }
+
+  &.has-additional {
+    .additional-content {
+      display:block;
+    }
+    .text-input {
+      @extend %round-top;
+    }
+  }
+}
+
+// Help text, info text, error messages etc.
+.additional-content {
+  @extend %round-bottom;
+  display: none;
+  padding: baseline(-3);
+}
+
+.block-help {
+  background-color: $brand-help;
+  color: lighten($brand-help, 50%);
+}
+
+.block-danger {
+  background-color: $brand-danger;
+  color: lighten($brand-danger, 50%);
+}
+
+.block-info {
+  background-color: $brand-info;
+  color: lighten($brand-info, 50%);
 }
 
 textarea {

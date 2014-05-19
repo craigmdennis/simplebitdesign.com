@@ -36,3 +36,21 @@ console.log "'Allo from CoffeeScript!"
     # Only stub undefined methods.
     console[method] = noop  unless console[method]
 )();
+
+$(document).ready ->
+  $('#form-contact').isHappy ->
+    fields:
+
+      "#name":
+        required: true,
+        message: "Please let us know what to call you."
+
+      "#email":
+        required: true,
+        message: "Please tell us your email address so we can get in touch.",
+        test: happy.email
+
+      "#message":
+        required: true,
+        message: "We need a little more information than that",
+        test: happy.email

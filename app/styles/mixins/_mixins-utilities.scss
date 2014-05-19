@@ -67,6 +67,27 @@
   }
 }
 
+// Border Radius
+%round-top {
+  border-radius: $radius $radius 0 0;
+}
+
+%round-bottom {
+  border-radius: 0 0 $radius $radius;
+}
+
+%round-left {
+  border-radius: $radius 0 0 $radius;
+}
+
+%round-right {
+  border-radius: 0 $radius $radius 0;
+}
+
+%round {
+  border-radius: $radius;
+}
+
 // Remove units
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);

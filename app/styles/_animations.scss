@@ -1,9 +1,3 @@
-.js-rotate-3d {
-  transition: all 0.5s ease;
-}
-
-.hero.hover {
-  .js-rotate-3d {
-    transition: none;
-  }
+.logo {
+  transition: width 0.2s ease;
 }

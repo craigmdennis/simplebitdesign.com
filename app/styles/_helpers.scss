@@ -2,6 +2,7 @@
 // Helpers
 // ===================================================
 
+// Backgrounds
 .bg-light {
   background-color: #FFF;
 }
@@ -22,6 +23,7 @@
   background-color: $gray-lightest;
 }
 
+// Text helpers
 .text-primary {
   color: $brand-primary;
 }
@@ -30,8 +32,9 @@
   color: $brand-success;
 }
 
-.bordered-light {
-  border-top: 1px solid $gray-lighter;
+// Misc helpers
+.rounded {
+  @extend %round;
 }
 
 // Only display content to screen readers

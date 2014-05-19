@@ -259,7 +259,7 @@ module.exports = function (grunt) {
       options: {
         dest: "<%= config.dist %>"
       },
-      html: "<%= config.dist %>/index.html",
+      html: ["<%= config.dist %>/{,*/}*.html"]
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -316,7 +316,7 @@ module.exports = function (grunt) {
             src: [
               "*.{ico,png,txt,svg}",
               ".htaccess",
-              "images/{,*/}*.webp",
+              "images/{,*/}*.{webp,svg}",
               "fonts/{,*/}*.*"
             ]
           }
@@ -432,7 +432,7 @@ module.exports = function (grunt) {
     "uglify",
     "copy:dist",
     // "modernizr",
-    "rev",
+    // "rev",
     "usemin",
     "htmlmin"
   ]);
