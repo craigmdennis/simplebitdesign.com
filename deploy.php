@@ -7,8 +7,6 @@ $options = array(
   'remote' => 'origin',
 );
 
-$_directory = 'domains/dev.simplebitdesign.com/html';
-
 date_default_timezone_set('America/Los_Angeles');
 
 class Deploy {
@@ -149,12 +147,12 @@ class Deploy {
 }
 
 // This is just an example
-$deploy = new Deploy('/var/www/foobar.com');
+$deploy = new Deploy('/domains/dev.simplebitdesign.com/html');
 
 $deploy->post_deploy = function() use ($deploy) {
   // hit the wp-admin page to update any db changes
-  exec('curl http://www.foobar.com/wp-admin/upgrade.php?step=upgrade_db');
-  $deploy->log('Updating wordpress database... ');
+  // exec('curl http://www.foobar.com/wp-admin/upgrade.php?step=upgrade_db');
+  // $deploy->log('Updating wordpress database... ');
 };
 
 $deploy->execute();
