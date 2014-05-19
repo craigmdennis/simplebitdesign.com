@@ -17,7 +17,9 @@ html.no-js
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
     // build:css({app,.tmp}) styles/main.css
-    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+    // bower:css
+    link(rel='stylesheet', href='../bower_components/normalize-css/normalize.css')
+    // endbower
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
 
@@ -37,11 +39,10 @@ html.no-js
           block footer
             p &copy; Copyright <a class="inherit" href="http://simplebitdesign.com">Simple Bit Design LTD</a> 2014
 
-    // build:js scripts/vendor.js
+    // build:js({app,.tmp}) scripts/vendor.js
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')
-    script(src='scripts/happy.js')
-    script(src='scripts/happy.methods.js')
+    script(src='../bower_components/jquery-validation/dist/jquery.validate.js')
     // endbower
     // endbuild
 

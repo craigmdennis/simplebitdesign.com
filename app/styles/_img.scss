@@ -2,15 +2,6 @@
 // Images
 // ===================================================
 
-// body {
-//   background: url("../images/splatter.png") fixed no-repeat top right;
-//   background-size: 100%;
-//
-//   @include breakpoint( $medium ) {
-//     background-size: auto;
-//   }
-// }
-
 img {
   max-width:100%;
 }
@@ -48,6 +39,7 @@ figure {
   margin:0;
 }
 
+// Specific to the UX subsection
 .scribble {
   position: absolute;
   opacity: 0;

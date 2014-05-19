@@ -1,26 +1,26 @@
-form#form-contact
+form#contactForm(method="POST", novalidate)
   .form-contact
     fieldset
       //- .form-row.has-additional
       .form-row
-        label.sr-only(for="#message") Message
+        label.sr-only(for="message") Message
         textarea.text-input#message(rows="5", name="message", placeholder="Tell us a little about your project", required aria-required="true", autocomplete="off")
-        .additional-content.block-danger Come on, just a little?
-          i.icon-danger
+        //- .additional-content.block-danger Come on, just a little?
+        //-   i.icon-danger
 
       //- .form-row.has-additional
       .form-row
-        label.sr-only(for="#name") Name
+        label.sr-only(for="name") Name
         input.text-input#name(type="text", name="name", placeholder="Name", required aria-required="true")
-        .additional-content.block-danger Please tell us your name so we know what to call you.
-          i.icon-danger
+        //- .additional-content.block-danger Please tell us your name so we know what to call you.
+        //-   i.icon-danger
 
       //- .form-row.has-additional
       .form-row
-        label.sr-only(for="#email") Email
+        label.sr-only(for="email") Email
         input.text-input#email(type="email", name="email", placeholder="Email", required aria-required="true", autocapitalize="off")
-        .additional-content.block-danger Please tell us your email address so we can get in touch.
-          i.icon-danger
+        //- .additional-content.block-danger Please tell us your email address so we can get in touch.
+        //-   i.icon-danger
 
       .form-row
         button.btn-primary.btn-next(type="submit")

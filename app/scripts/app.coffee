@@ -1,4 +1,4 @@
-console.log "'Allo from CoffeeScript!"
+# console.log "'Allo from CoffeeScript!"
 
 # Avoid `console` errors in browsers that lack a console.
 (->
@@ -38,19 +38,23 @@ console.log "'Allo from CoffeeScript!"
 )();
 
 $(document).ready ->
-  $('#form-contact').isHappy ->
-    fields:
 
-      "#name":
-        required: true,
-        message: "Please let us know what to call you."
+  # Call the validation plugin on the contact form
+  $("#contactForm").validate
 
-      "#email":
-        required: true,
-        message: "Please tell us your email address so we can get in touch.",
-        test: happy.email
+    highlight: (element, errorClass) ->
+      $(element).parent().addClass("has-additional")
 
-      "#message":
-        required: true,
-        message: "We need a little more information than that",
-        test: happy.email
+    unhighlight: (element, errorClass) ->
+      $(element).parent().removeClass("has-additional")
+
+    errorPlacement: (error, element) ->
+      $wrap = $("<div class='additional-content block-danger'>")
+      $wrap.html(error).insertAfter(element);
+
+    messages:
+      message: "We need to know what would you like our help you with."
+      name: "Please tell us your name so we know what to call you."
+      email:
+        required: "Please tell us your email address so we can get in touch."
+        email: "That doesn't look like an email address."
