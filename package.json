@@ -1,6 +1,7 @@
 {
   "name": "simplebitdesign-com",
-  "version": "0.0.1",
+  "description": "We make intuitive interfaces for complex app & services",
+  "version": "0.0.2",
   "bugs": {
     "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com/issues",
     "email": "support@simplebitdesign.com"
@@ -35,7 +36,9 @@
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.2.0",
     "jshint-stylish": "~0.1.3",
-    "grunt-contrib-jade": "~0.11.0"
+    "grunt-contrib-jade": "~0.11.0",
+    "grunt-conventional-changelog": "~1.1.0",
+    "grunt-bump": "0.0.14"
   },
   "engines": {
     "node": ">=0.8.0"
