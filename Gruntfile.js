@@ -34,10 +34,6 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/{,*/}*.jade'],
         tasks: ['jade']
       },
-      bower: {
-        files: ['bower.json'],
-        tasks: ['bowerInstall']
-      },
       coffee: {
         files: ['<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['coffee:dist', 'jshint:all']
@@ -343,7 +339,6 @@ module.exports = function (grunt) {
       ]
     }
   });
-
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
