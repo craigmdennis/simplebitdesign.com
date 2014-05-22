@@ -1,4 +1,4 @@
-include _mixins
+include templates/_mixins
 
 block vars
   -var bodyClass = "";
@@ -18,18 +18,19 @@ html.no-js
 
     // build:css({app,.tmp}) styles/main.css
     // bower:css
-    link(rel='stylesheet', href='../bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='bower_components/animate.css/animate.css')
     // endbower
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
 
   body(class='#{bodyClass}')
-    include _browseHappy
+    include templates/_browseHappy
 
     header
       .header
         block header
-          include _mainmenu
+          include templates/_mainmenu
 
     block content
 
@@ -41,12 +42,13 @@ html.no-js
 
     // build:js(app) scripts/vendor.js
     // bower:js
-    script(src='../bower_components/jquery/dist/jquery.js')
-    script(src='../bower_components/jquery-validation/dist/jquery.validate.js')
+    script(src='bower_components/jquery/dist/jquery.js')
+    script(src='bower_components/jquery-validation/dist/jquery.validate.js')
+    script(src='bower_components/animateCSS/dist/jquery.animatecss.js')
     // endbower
     // endbuild
 
-    include _analytics
+    include templates/_analytics
 
     // build:js({app,.tmp}) scripts/main.js
     script(src='scripts/app.js')

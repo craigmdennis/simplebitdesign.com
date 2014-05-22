@@ -118,7 +118,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
-          src: '*.jade',
+          src: 'index.jade',
           ext: '.html'
         }]
       },
@@ -203,10 +203,6 @@ module.exports = function (grunt) {
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: '<%= config.app %>/bower_components/'
-      },
-      replace: {
-        js: '<script src="{{filePath}}"></script>',
-        scss: '<link rel="stylesheet" href="{{filePath}}" />'
       }
     },
 

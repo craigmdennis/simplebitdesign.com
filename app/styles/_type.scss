@@ -10,6 +10,10 @@ html {
 
 }
 
+body {
+  text-align: center;
+}
+
 
 // Content blocks
 .hero {
@@ -39,60 +43,35 @@ html {
     }
   }
 
+
+// .section
+// .section-title
+// .section-subtitle
+// .section-body
+
+// .subsection
+// .subsection-title
+// .subsection-subtitle
+// .subsection-body
+
+// Sections
 .section {}
+
   .section-title {
     @extend .beta;
     margin-bottom: baseline(-2);
     font-weight: $weight-bold;
-
-    @include breakpoint( $small ) {
-      text-align:center;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
   }
 
   .section-subtitle {
     @extend .epsilon;
     @extend %break;
-    margin-bottom: 0;
-    color: rgba(0,0,0,0.5);
-
-    @include breakpoint( $small ) {
-      text-align:center;
-    }
   }
 
-  // Make sure text is readbale on dark backgrounds
-  .bg-dark,
-  .bg-secondary,
-  .bg-primary {
-    .section-title,
-    .subsection-title {
-      color:#FFF;
-    }
-    .section-subtitle {
-      color: #FFF;
-      color: rgba(255,255,255,0.6);
-    }
-  }
-
+// Subsections
 .subsection {}
+
   .subsection-title {
     @extend .epsilon;
-
-    @include breakpoint( $small ) {
-      border-bottom: 1px solid $gray-lighter;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      margin-bottom: baseline(0);
-      padding-bottom: baseline(0);
-      padding-top: baseline(0);
-    }
-  }
-  .subsection-body {
-    color: #FFF;
-    color: rgba(255,255,255,0.8);
   }

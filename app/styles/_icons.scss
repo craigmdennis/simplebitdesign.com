@@ -26,7 +26,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  vertical-align: middle;
+  vertical-align: bottom;
   font-family: "simple-bit" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -37,8 +37,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.btn-text + [class^="icon-"]:before {
-  padding-left: baseline(0);
+.subsection [class^="icon-"] {
+  @extend .giga;
+  @extend %center;
+  margin-bottom: baseline(-8);
+  display:block;
+}
+
+.icon-left {
+  padding-right: baseline(-5);
+}
+
+.icon-right {
+  padding-left: baseline(-5);
 }
 
 .icon-twitter:before {
@@ -47,6 +58,15 @@
 .icon-menu:before {
   content: "\e002";
 }
-.icon-mail:before {
+.icon-love:before {
+  content: "\e005";
+}
+.icon-settings:before {
   content: "\e003";
+}
+.icon-mail:before {
+  content: "\e000";
+}
+.icon-browser:before {
+  content: "\e004";
 }

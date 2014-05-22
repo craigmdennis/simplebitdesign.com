@@ -3,8 +3,12 @@
 // ===================================================
 
 // Backgrounds
-.bg-light {
+.bg-white {
   background-color: #FFF;
+}
+
+.bg-light {
+  background-color: $gray-lightest;
 }
 
 .bg-dark {
@@ -19,17 +23,23 @@
   background-color: $brand-secondary;
 }
 
-.bg-gray {
-  background-color: $gray-lightest;
+// Text helpers
+.text-white {
+  color: #FFF;
 }
 
-// Text helpers
+.text-light {
+  @extend .text-white;
+  color: rgba(255,255,255,0.6);
+}
+
 .text-primary {
   color: $brand-primary;
 }
 
-.text-success {
-  color: $brand-success;
+.text-dark {
+  color: $brand-dark;
+  color: rgba(0,0,0,0.5);
 }
 
 // Misc helpers

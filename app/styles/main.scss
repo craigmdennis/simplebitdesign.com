@@ -25,10 +25,12 @@
 @import "mixins/_mixins-forms";
 
 /** BOWER **/
+// bower:scss
 @import "../bower_components/typeplate/scss/_typeplate";
+// endbower
 
 /** PARTIALS **/
-@import "fonts";
+@import "helpers";
 @import "type";
 @import "structure";
 @import "navigation";
@@ -37,7 +39,6 @@
 @import "buttons";
 @import "lists";
 @import "alerts";
-@import "helpers";
 @import "forms";
 @import "animations";
 @import "icons";

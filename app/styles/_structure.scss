@@ -2,16 +2,26 @@
   box-sizing: border-box;
 }
 
+// Ensure each section within the grid has outer gutters
+%inner {
+  padding-left: gutter();
+  padding-right: gutter();
+}
+
+%center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .header {
   @extend .section;
-  // border-bottom:1px solid $gray-light;
-  // border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 // Horrizontal
 .container {
   @include clearfix();
   @include container(95%);
+  @extend %inner;
 
   @include breakpoint( $large ) {
     @include container(90%);
@@ -37,27 +47,22 @@
 
 // Only allow section headers to extend 3/4
 .section-header {
-  @include span(12 of 12);
+  @extend %center;
   margin-bottom: baseline(2);
 
   @include breakpoint( $medium ) {
-    @include span(isolate 10 of 12 at 2);
     margin-bottom: baseline(4);
-    float: none;
+    max-width: span(10);
   }
 }
 
-// Ensure each section within the grid has outer gutters
-.inner {
-  @include span(12 of 12);
-}
-
 .subsection {
+  @extend %center;
   position: relative;
-  @include span(12 of 12);
 
   @include breakpoint( $small ) {
-    @include span(6 of 12);
+    text-align: center;
+    max-width: span(8);
   }
 
   @include breakpoint( $medium ) {
@@ -81,14 +86,25 @@
 
 // Contact form positioning
 .form-contact {
-  @include span(12 of 12);
+  @extend %center;
 
-  @include breakpoint( $medium ) {
-    @include span(isolate 8 of 12 at 2);
+  @include breakpoint( $small ) {
+    max-width: span(10);
   }
 
-  @include breakpoint( $large ) {
-    @include span(isolate 6 of 12 at 4);
+  @include breakpoint( $medium ) {
+    max-width: span(6);
+  }
+}
+
+.has-divider {
+  border-bottom:1px solid #FFF;
+  border-bottom:1px solid rgba(255,255,255,0.5);
+  padding-bottom: baseline(0);
+  margin-bottom: baseline(4);
+
+  @include breakpoint( $medium ) {
+    padding-bottom: baseline(0);
   }
 }
 
@@ -96,9 +112,4 @@
   @include clearfix;
   padding-top: baseline(1);
   text-align: center;
-
-  .note {
-    @include clearfix;
-    margin:0 auto;
-  }
 }
