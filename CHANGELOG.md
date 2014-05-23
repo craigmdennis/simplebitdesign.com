@@ -1,3 +1,20 @@
+<a name="0.0.7"></a>
+### 0.0.7 (2014-05-23)
+
+
+#### Bug Fixes
+
+* allow multiple jade files to be compiled, ignoring the base ([0b697eff](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/0b697effa32a2583567e25029ec2a492df5eba6f))
+* rename partial to better reflect its contents ([cc5f35cc](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/cc5f35ccaa6218b528609b812f0cd57c68daed03))
+
+
+#### Features
+
+* add animations to hero ([6ab15181](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/6ab151814606649083415f9b80c62488b1cecf0b))
+* add thank you page with custom alerts from Bootstrap ([598f15c6](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/598f15c69af7cd6492c791f706ef8f38f68db523))
+* redirect back to site when deply triggered manually ([491e762b](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/491e762b78761a12b5159490d66af602997f9fa6))
+
+
 <a name="0.0.6"></a>
 ### 0.0.6 (2014-05-23)
 
