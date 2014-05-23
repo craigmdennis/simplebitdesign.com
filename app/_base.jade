@@ -39,6 +39,8 @@ html.no-js
         .container
           block footer
             p &copy; Copyright <a class="inherit" href="http://simplebitdesign.com">Simple Bit Design LTD</a> 2014
+            .social-buttons
+              a(href="https://twitter.com/SimpleBitDesign", class="twitter-follow-button", data-show-count="false") Follow @SimpleBitDesign
 
     // build:js(app) scripts/vendor.js
     // bower:js
@@ -52,4 +54,6 @@ html.no-js
 
     // build:js({app,.tmp}) scripts/main.js
     script(src='scripts/app.js')
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     // endbuild
