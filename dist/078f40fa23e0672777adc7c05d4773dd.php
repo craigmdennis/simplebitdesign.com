@@ -153,6 +153,9 @@ $deploy->post_deploy = function() use ($deploy) {
   // hit the wp-admin page to update any db changes
   // exec('curl http://www.foobar.com/wp-admin/upgrade.php?step=upgrade_db');
   // $deploy->log('Updating wordpress database... ');
+
+  // Redirect back to the site if successful
+  header( 'Location: http://dev.simplebitdesign.com' );
 };
 
 $deploy->execute();
