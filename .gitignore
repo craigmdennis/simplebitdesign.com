@@ -7,3 +7,4 @@ test/bower_components
 
 .DS_Store
 .sublime-workspace
+.deployments.log
