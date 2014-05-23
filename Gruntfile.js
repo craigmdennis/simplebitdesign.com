@@ -40,7 +40,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:copy:server']
+        tasks: ['newer:copy:server', 'jshint:all']
       },
       gruntfile: {
         files: ['Gruntfile.js'],
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
-          src: 'index.jade',
+          src: ['*.jade', '!_base.jade'],
           ext: '.html'
         }]
       },
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>',
           dest: '.tmp',
-          src: 'index.jade',
+          src: ['*.jade', '!_base.jade'],
           ext: '.html'
         }]
       }
@@ -146,10 +146,7 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       },
       all: [
-        '<%= config.app %>/scripts/{,*/}*.js',
         '.tmp/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        '!<%= config.app %>/bower_components/*',
       ]
     },
 
