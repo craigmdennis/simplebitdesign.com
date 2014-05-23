@@ -1,0 +1,30 @@
+.close {
+  @extend .zeta;
+  @include opacity(.5);
+  float: right;
+  font-weight: $weight-bold;
+  line-height: 1;
+  color: $brand-dark;
+  margin-bottom: 0;
+
+  &:hover,
+  &:focus {
+    @include opacity(.9);
+    color: $brand-dark;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  // [converter] extracted button& to button.close
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}

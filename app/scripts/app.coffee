@@ -40,6 +40,10 @@
 
 $(document).ready ->
 
+  $('.logo').animateCSS('fadeInUp', {delay: 800})
+  $('.hero-title').animateCSS('fadeInUp', {delay:1000})
+  $('.hero-quote').animateCSS('fadeIn', {delay:1400})
+
   # Call the validation plugin on the contact form
   $('#contactForm').validate
 
