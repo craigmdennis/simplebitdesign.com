@@ -127,7 +127,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>',
           dest: '.tmp',
-          src: '*.jade',
+          src: 'index.jade',
           ext: '.html'
         }]
       }
@@ -190,6 +190,23 @@ module.exports = function (grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
+      }
+    },
+
+    validation: {
+      options: {
+        relaxerror: [ //ignores these errors
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Attribute autocomplete not allowed on element textarea at this point.',
+          'Attribute autocapitalize not allowed on element input at this point.'
+        ],
+        reset: true,
+        reportpath: false
+      },
+      files: {
+        src: [
+          '<%= config.dist %>/*.html'
+        ]
       }
     },
 
@@ -356,11 +373,19 @@ module.exports = function (grunt) {
     grunt.task.run([target ? ('serve:' + target) : 'serve']);
   });
 
+  grunt.registerTask('test', [
+    'jade:dist',
+    'coffee',
+    'jshint:all',
+    'validation'
+  ]);
+
   grunt.registerTask('default', [
     'clean:dist',
     'jade:dist',
     'useminPrepare',
     'concurrent:dist',
+    'validation',
     'jshint:all',
     'autoprefixer',
     'concat',
