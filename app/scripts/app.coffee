@@ -50,11 +50,13 @@ $(document).ready ->
       $(element).parent().removeClass('has-additional')
 
     errorPlacement: (error, element) ->
-      $wrap = $('<div class="additional-content block-danger">')
-      $wrap.html(error).insertAfter(element);
+      $wrap = $('<div class="additional-content block-danger">');
+      $icon = $('<i class="icon-warning icon-left">').appendTo( $wrap );
+      error.appendTo($wrap);
+      $wrap.insertAfter(element);
 
     messages:
-      message: 'We need to know what would you like our help you with.'
+      message: 'Please tells us what would you like our help with.'
       name: 'Please tell us your name so we know what to call you.'
       email:
         required: 'Please tell us your email address so we can get in touch.'
