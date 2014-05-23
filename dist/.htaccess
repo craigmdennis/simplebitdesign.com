@@ -190,11 +190,6 @@ AddDefaultCharset utf-8
   # RewriteBase /
 </IfModule>
 
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_URI} !^/simplebitdesign.com/dist/
-    RewriteRule ^(.*)$ simplebitdesign.com/dist/$1 [L]
-</IfModule>
-
 # ------------------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs                  |
 # ------------------------------------------------------------------------------
