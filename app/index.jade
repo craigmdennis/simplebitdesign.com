@@ -1,8 +1,9 @@
 extends _base.jade
 
 block header
+
   .hero.container
-    include templates/_mainmenu
+    include templates/_logo
 
     h1.hero-title We make intuitive interfaces<br> for complex apps and services.
     blockquote.hero-quote
@@ -48,6 +49,7 @@ block content
 
         mixin clients(['bbc', 'asos', 'smashing', 'confused'])
 
+block contact
   section
     .section.bg-secondary
       .container
