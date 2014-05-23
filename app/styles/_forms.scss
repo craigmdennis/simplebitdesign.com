@@ -33,8 +33,14 @@ fieldset {
 // Help text, info text, error messages etc.
 .additional-content {
   @extend %round-bottom;
+  text-align:left;
   display: none;
   padding: baseline(-3);
+}
+
+.block-success {
+  background-color: $brand-success;
+  color: lighten($brand-success, 50%);
 }
 
 .block-help {

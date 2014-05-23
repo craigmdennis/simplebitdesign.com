@@ -1,6 +1,6 @@
 a {
+  @include transition(color 0.2s ease);
   text-decoration: none;
-  transition: color 0.2s ease;
 
   &:hover {
     text-decoration: underline;
