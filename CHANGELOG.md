@@ -1,3 +1,13 @@
+<a name="0.0.6"></a>
+### 0.0.6 (2014-05-23)
+
+
+#### Bug Fixes
+
+* copy php files to dist ([aa737cf5](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/aa737cf58350bbfba62e59b73dfe0fe62e363309))
+* moved deploy script to a browser accessibly location ([0f486fb8](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/0f486fb8902730b5ed298c8da60ca0160b607ade))
+
+
 <a name="0.0.5"></a>
 ### 0.0.5 (2014-05-23)
 
