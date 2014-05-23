@@ -1,3 +1,19 @@
+<a name="0.0.5"></a>
+### 0.0.5 (2014-05-23)
+
+
+#### Bug Fixes
+
+* fixed validation warning about h1 ([d50d8601](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/d50d86013482fb1e19e542d8e328c767c03fe397))
+* stop twitter script being compiled and concatenated ([8301edf3](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/8301edf330e26fbcefbbfa3f6b2dff92feee8551))
+* remove rewrite rule and moved to root directory ([79de1e04](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/79de1e04d9c63c4fde964ae1c0a4c6accf3512d9))
+
+
+#### Features
+
+* add html validation ([53e73707](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/53e737072d0340c3f65a674b367178c00ce66234))
+
+
 <a name="0.0.4"></a>
 ### 0.0.4 (2014-05-23)
 
