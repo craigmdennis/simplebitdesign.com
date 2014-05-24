@@ -1,3 +1,17 @@
+<a name="0.0.8"></a>
+### 0.0.8 (2014-05-24)
+
+
+#### Bug Fixes
+
+* email form now posts and thank you page no longer has alerts ([9a800928](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/9a800928eb48a79729f0f34871bacf10516feeaf))
+
+
+#### Features
+
+* add email form ([9acc2e8b](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/9acc2e8b623cb5132c7e5febecb62e6edf330a0a))
+
+
 <a name="0.0.7"></a>
 ### 0.0.7 (2014-05-23)
 
