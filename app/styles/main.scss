@@ -24,10 +24,13 @@
 @import "mixins/_mixins-utilities";
 @import "mixins/_mixins-forms";
 
-/** BOWER **/
-// bower:scss
-@import "../bower_components/typeplate/scss/_typeplate";
-// endbower
+
+//- bower:scss
+@import "../bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "../bower_components/typeplate/scss/_typeplate.scss";
+//- endbower
+
 
 /** PARTIALS **/
 @import "helpers";
