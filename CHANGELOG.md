@@ -1,3 +1,12 @@
+<a name="0.1.0"></a>
+## 0.1.0 (2014-05-24)
+
+
+#### Bug Fixes
+
+* add google hosted web fonts ([9251ff1c](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/9251ff1ceeaf97fb7e1f2730422e27920e0f392b))
+
+
 <a name="0.0.11"></a>
 ### 0.0.11 (2014-05-24)
 
