@@ -15,7 +15,9 @@ $ms-ratio: $golden;
 // Base Type
 $font-weight: $weight-light;
 $line-height: 1.5;
-$font-size: 100; // percentage value (16 * 112.5% = 18px)
+$font-size: 100;
+$font-base: 16 * ($font-size/100);
+$cap-height: 0.68;
 
 $font-family: sans-serif; // Non-font-face font-stack
 

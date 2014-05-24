@@ -12,20 +12,19 @@ figure {
 
 // Responsive images
 .rwd-media-container {
-  @include intrinsic-ratio(280,224);
   @include intrinsic-ratio(153,41);
 }
 
 .logo {
   margin: 0 auto baseline(3);
-  max-width: baseline(10);
+  max-width: 65%;
 
-  @include breakpoint( $medium ) {
-    margin-bottom: baseline(5);
-    max-width: baseline(12);
+  @include breakpoint( $small ) {
+    max-width: 292px;
   }
 
   .logo-img {
+    display: block;
     width: 100%;
   }
 

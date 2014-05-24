@@ -9,7 +9,7 @@
   @include transition(background-color 0.2s ease);
   padding: baseline(-3) baseline(-1);
   line-height: normal;
-  display: block;
+  display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
   text-align: center;
@@ -20,6 +20,7 @@
   white-space: nowrap;
   user-select: none;
   border-radius: $radius;
+  vertical-align: baseline; // Allow text to flow properly when used in a paragraph
 
   &:active,
   &.active {
@@ -64,7 +65,18 @@
 }
 
 .btn-next {
-  float:right;
+  display: block;
+  float: right;
+
+  @include breakpoint( $small ) {
+    display: inline-block;
+  }
+}
+
+// Add space when buttons are used in a paragraph
+p > [class^="btn-"] {
+  margin-left: baseline(-7);
+  margin-right: baseline(-7);
 }
 
 .social-buttons {

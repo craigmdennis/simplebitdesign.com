@@ -4,6 +4,8 @@
 
 html {
 
+  // background-image: url(http://basehold.it/i/12);
+
   @include breakpoint( $large ) {
     font-size: 125%;
   }
