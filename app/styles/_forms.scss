@@ -8,9 +8,14 @@ fieldset {
   padding:0;
 }
 
+.placeholder label {
+  @extend .sr-only;
+}
+
 .form-row {
   @include clearfix;
   margin-bottom: baseline(0);
+  text-align: left;
 
   .text-input {
     @extend %round;

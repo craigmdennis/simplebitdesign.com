@@ -28,6 +28,7 @@ html.no-js
     //- Change no-js to js
     script.
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+      if (document.createElement("input").placeholder !== undefined) { document.documentElement.className += " placeholder"; }
 
   body(class='#{bodyClass}')
     include templates/_browseHappy
@@ -63,6 +64,7 @@ html.no-js
     // endbuild
 
     // build:js({app,.tmp}) scripts/main.js
+    script(src='scripts/modernizrTests.js')
     script(src='scripts/animations.js')
     script(src='scripts/validation.js')
     script(src='scripts/consolefix.js')
