@@ -1,3 +1,12 @@
+<a name="0.0.9"></a>
+### 0.0.9 (2014-05-24)
+
+
+#### Features
+
+* added file revving for cachebusting ([ba339b26](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/ba339b26fe9da930944addc30fc30ef485d26411))
+
+
 <a name="0.0.8"></a>
 ### 0.0.8 (2014-05-24)
 
