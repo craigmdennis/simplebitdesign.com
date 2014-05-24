@@ -1,3 +1,12 @@
+<a name="0.0.10"></a>
+### 0.0.10 (2014-05-24)
+
+
+#### Bug Fixes
+
+* prevent grunt from revving specific svg images to allow fallback to png using svgeezy ([b6a0c0ed](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/b6a0c0edc4c48564ab124d367bbcb9aa5086be39))
+
+
 <a name="0.0.9"></a>
 ### 0.0.9 (2014-05-24)
 
