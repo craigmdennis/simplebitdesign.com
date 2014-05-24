@@ -1,3 +1,12 @@
+<a name="0.0.11"></a>
+### 0.0.11 (2014-05-24)
+
+
+#### Bug Fixes
+
+* include svgeezy script ([47acba7f](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/47acba7f816a23363c21caf07f8ca5482eb1d9a9))
+
+
 <a name="0.0.10"></a>
 ### 0.0.10 (2014-05-24)
 
