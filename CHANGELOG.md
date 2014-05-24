@@ -1,3 +1,17 @@
+<a name="0.1.1"></a>
+### 0.1.1 (2014-05-24)
+
+
+#### Bug Fixes
+
+* removed incorrect favicon ([825e63ca](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/825e63ca85207949858db517633ab06d8c6234ef))
+
+
+#### Features
+
+* add testing for placeholder and hide the labels if present ([7984793f](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/7984793f0cc3cac36d301fcf722f9cb1625c8882))
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2014-05-24)
 
