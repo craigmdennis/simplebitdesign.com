@@ -36,11 +36,11 @@ module.exports = function (grunt) {
       },
       coffee: {
         files: ['<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['coffee:dist', 'jshint:all']
+        tasks: ['coffee', 'jshint:server']
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:copy:server', 'jshint:all']
+        tasks: ['newer:copy:server', 'jshint:server']
       },
       gruntfile: {
         files: ['Gruntfile.js'],
@@ -145,13 +145,26 @@ module.exports = function (grunt) {
         },
         src: 'Gruntfile.js'
       },
-      all: [
-        '.tmp/scripts/{,*/}*.js',
-      ]
+      server: {
+        options: {
+          force: true
+        },
+        src: [
+          '.tmp/scripts/{,*/}*.js',
+        ]
+      },
+      dist: {
+        src: [
+          '<%= jshint.server.src %>'
+        ]
+      }
     },
 
     // Compiles CoffeeScript to JavaScript
     coffee: {
+      options: {
+        bare: true
+      },
       dist: {
         files: [{
           expand: true,
@@ -374,7 +387,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'jade:dist',
     'coffee',
-    'jshint:all',
+    'jshint:server',
     'validation'
   ]);
 
@@ -384,7 +397,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'validation',
-    'jshint:all',
+    'jshint:dist',
     'autoprefixer',
     'concat',
     'cssmin',
