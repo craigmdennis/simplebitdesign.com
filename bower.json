@@ -12,5 +12,7 @@
     "animate.css": "~3.1.1",
     "animateCSS": "~1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "svgeezy": "~1.0.0"
+  }
 }
