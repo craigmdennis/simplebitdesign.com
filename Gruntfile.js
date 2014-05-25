@@ -181,6 +181,11 @@ module.exports = function (grunt) {
       options: {
         config: 'config.rb'
       },
+      dist: {
+        options: {
+          debugInfo: false
+        }
+      },
       server: {
         options: {
           debugInfo: true
@@ -299,6 +304,7 @@ module.exports = function (grunt) {
               '*.{ico,png,txt,svg}',
               '.htaccess',
               '*.php',
+              '*.html',
               'images/{,*/}*.{webp,svg}',
               'fonts/{,*/}*.*'
             ]
@@ -374,7 +380,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'coffee',
-        'compass',
+        'compass:dist',
         'copy:server',
         'imagemin'
       ]
