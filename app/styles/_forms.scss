@@ -8,7 +8,7 @@ fieldset {
   padding:0;
 }
 
-.placeholder label {
+.placeholder .polyfill-placeholder {
   @extend .sr-only;
 }
 

@@ -3,15 +3,15 @@ form#contactForm(method="POST", novalidate, action="email.php")
     fieldset
 
       .form-row
-        label.text-light(for="message") Message
+        label.text-light.polyfill-placeholder(for="message") Message
         textarea.text-input#message(rows="5", name="message", placeholder="Tell us a little about your project", required aria-required="true", autocomplete="off")
 
       .form-row
-        label.text-light(for="name") Name
+        label.text-light.polyfill-placeholder(for="name") Name
         input.text-input#name(type="text", name="name", placeholder="Name", required aria-required="true")
 
       .form-row
-        label.text-light(for="email") Email
+        label.text-light.polyfill-placeholder(for="email") Email
         input.text-input#email(type="email", name="email", placeholder="Email", required aria-required="true", autocapitalize="off")
 
       .form-row
