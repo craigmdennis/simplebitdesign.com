@@ -1,3 +1,12 @@
+<a name="0.1.1-1"></a>
+### 0.1.1-1 (2014-05-25)
+
+
+#### Bug Fixes
+
+* added analytics ([e923cfcb](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/e923cfcb511955ea4b41601181918597c76d664f))
+
+
 <a name="0.1.1"></a>
 ### 0.1.1 (2014-05-24)
 
