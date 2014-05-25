@@ -1,3 +1,18 @@
+<a name="0.1.2-0"></a>
+### 0.1.2-0 (2014-05-25)
+
+
+#### Bug Fixes
+
+* only run test compilation tasks when newer files are detected ([c0577400](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/c0577400071b56d80da4dccc4d4253df553e58ac))
+* prevent validation when running default task ([36f1ae97](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/36f1ae977797beda17fdc440aae339d814c256d5))
+
+
+#### Features
+
+* add google webmaster tools ([2f9eb81a](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/2f9eb81ad0238cd46e16bc31c0cf22e1ebecb45a))
+
+
 <a name="0.1.1-1"></a>
 ### 0.1.1-1 (2014-05-25)
 
