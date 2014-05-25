@@ -413,7 +413,6 @@ module.exports = function (grunt) {
     'jade:dist',
     'useminPrepare',
     'concurrent:dist',
-    'validation',
     'jshint:dist',
     'autoprefixer',
     'concat',
