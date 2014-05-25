@@ -73,19 +73,6 @@
     @include span(4 of 12);
   }
 
-  .subsection-body {
-    @include breakpoint( max-width $small ) {
-      border-bottom: 1px solid $gray-lighter;
-      margin-bottom: baseline(0);
-    }
-  }
-
-  &:last-child {
-    .subsection-body {
-      border-bottom: 0;
-    }
-  }
-
 }
 
 // Contact form positioning
