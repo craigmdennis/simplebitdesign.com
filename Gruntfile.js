@@ -402,8 +402,8 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', [
-    'jade:dist',
-    'coffee',
+    'newer:jade:dist',
+    'newer:coffee',
     'jshint:server',
     'validation'
   ]);
