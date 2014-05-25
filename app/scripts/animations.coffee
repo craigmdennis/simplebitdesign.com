@@ -8,9 +8,9 @@ animations = {}
 
     init: ->
 
-      $('.logo').animateCSS('fadeInUp', {delay: 800})
-      $('.hero-title').animateCSS('fadeInUp', {delay:1000})
-      $('.hero-subtitle').animateCSS('fadeIn', {delay:1400})
+      $('.hero-title').animateCSS('fadeIn', {delay:800})
+      $('.logo').animateCSS('flipInY', {delay: 2000})
+      $('.hero-subtitle').animateCSS('fadeIn', {delay:2000})
 
   return
 
