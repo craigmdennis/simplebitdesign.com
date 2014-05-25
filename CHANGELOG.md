@@ -1,3 +1,12 @@
+<a name="0.1.3-0"></a>
+### 0.1.3-0 (2014-05-26)
+
+
+#### Bug Fixes
+
+* fixed issue #2 by adding custom polyfill class ([cb11c68c](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/cb11c68cd93cfd73f2ef8ea9bdf7035e0ebf670c))
+
+
 <a name="0.1.2-0"></a>
 ### 0.1.2-0 (2014-05-25)
 
