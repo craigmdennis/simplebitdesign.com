@@ -8,21 +8,25 @@ fieldset {
   padding:0;
 }
 
-.polyfill-placeholder {
+textarea {
+  resize: vertical;
+}
+
+.form__polyfill--placeholder {
   display: block;
   padding-bottom: baseline(-5);
 }
 
-.mustard .polyfill-placeholder {
+.mustard .form__polyfill--placeholder {
   @extend .sr-only;
 }
 
-.form-row {
+.form__row {
   @include clearfix;
   margin-bottom: baseline(0);
   text-align: left;
 
-  .text-input {
+  .form__input--text {
     @extend %round;
     padding: baseline(-3);
     border: 0;
@@ -31,43 +35,42 @@ fieldset {
   }
 
   &.has-additional {
-    .additional-content {
+
+    .form__additional-content {
       display:block;
     }
-    .text-input {
+
+    .form__input--text {
       @extend %round-top;
     }
+
   }
 }
 
 // Help text, info text, error messages etc.
-.additional-content {
+.form__additional-content {
   @extend %round-bottom;
   text-align:left;
   display: none;
   padding: baseline(-3);
 }
 
-.block-success {
+.block--success {
   background-color: $brand-success;
   color: lighten($brand-success, 50%);
 }
 
-.block-help {
+.block--help {
   background-color: $brand-help;
   color: lighten($brand-help, 50%);
 }
 
-.block-danger {
+.block--danger {
   background-color: $brand-danger;
   color: lighten($brand-danger, 50%);
 }
 
-.block-info {
+.block--info {
   background-color: $brand-info;
   color: lighten($brand-info, 50%);
-}
-
-textarea {
-  resize: vertical;
 }

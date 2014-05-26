@@ -52,19 +52,19 @@
   }
 }
 
-.btn-primary {
+.btn--primary {
   @extend %btn;
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
 // Custom button styles
-.btn-primary[type="submit"] {
+.btn--primary[type="submit"] {
   @include breakpoint( max-width $xsmall) {
     width: 100%;
   }
 }
 
-.btn-next {
+.btn--next {
   display: block;
   float: right;
 
@@ -74,11 +74,7 @@
 }
 
 // Add space when buttons are used in a paragraph
-p > [class^="btn-"] {
+.copy__btn {
   margin-left: baseline(-7);
   margin-right: baseline(-7);
-}
-
-.social-buttons {
-  padding-bottom: baseline(0);
 }

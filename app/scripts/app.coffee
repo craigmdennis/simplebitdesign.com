@@ -7,6 +7,6 @@ $(document).ready ->
   window.validation.init('#contactForm');
   window.svgeezy.init(false, 'png');
   window.fullscreen.init ->
-    $('.bg-primary').removeClass('js-is-hidden');
+    $('#expertise').removeClass('js-is-hidden');
 
   return

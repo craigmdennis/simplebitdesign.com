@@ -3,41 +3,41 @@
 // ===================================================
 
 // Backgrounds
-.bg-white {
+.bg--white {
   background-color: #FFF;
 }
 
-.bg-light {
+.bg--light {
   background-color: $gray-lightest;
 }
 
-.bg-dark {
+.bg--dark {
   background-color: $brand-dark;
 }
 
-.bg-primary {
+.bg--primary {
   background-color: $brand-primary;
 }
 
-.bg-secondary {
+.bg--secondary {
   background-color: $brand-secondary;
 }
 
 // Text helpers
-.text-white {
+.text--white {
   color: #FFF;
 }
 
-.text-light {
-  @extend .text-white;
+.text--light {
+  @extend .text--white;
   color: rgba(255,255,255,0.6);
 }
 
-.text-primary {
+.text--primary {
   color: $brand-primary;
 }
 
-.text-dark {
+.text--dark {
   color: $brand-dark;
   color: rgba(0,0,0,0.5);
 }
@@ -60,7 +60,7 @@
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
-.sr-only-focusable {
+.sr-only--focusable {
   &:active,
   &:focus {
     position: static;
@@ -69,5 +69,12 @@
     margin: 0;
     overflow: visible;
     clip: auto;
+  }
+}
+
+// Only hide elements when js is enabled
+.js {
+  .js-is-hidden {
+    visibility: hidden;
   }
 }

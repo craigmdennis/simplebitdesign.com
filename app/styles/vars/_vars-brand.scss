@@ -2,7 +2,6 @@
 // Brand Variables
 // ===================================================
 
-// $brand-primary:         #4A90E2;
 $brand-primary:         #315A8B;
 $brand-secondary:       #343B44;
 $brand-dark:            #22282F;
@@ -19,4 +18,8 @@ $gray-med:              #979797;
 $gray-dark:             #4A4A4A;
 
 $shadow:                rgba(0,0,0,0.05);
-$radius:                0.25em
+$radius:                0.25em;
+
+$copy-body:             $gray-dark;
+$copy-header:           $brand-dark;
+$copy-link:             $brand-primary;

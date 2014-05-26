@@ -5,9 +5,9 @@ block header
   .hero.container
     include templates/_logo
 
-    h1.hero-title.js-is-hidden We make intuitive interfaces
+    h1.hero__title.js-is-hidden We make intuitive interfaces
     //- h1.hero-title We make intuitive interfaces for complex apps and services.
-    blockquote.hero-subtitle.js-is-hidden
+    blockquote.hero__subtitle.js-is-hidden
       q Simplicity is the ultimate sophistication.
       cite &mdash; &nbsp;
         a.inherit(href="http://en.wikipedia.org/wiki/Simplicity#Quotes_about_simplicity", target="_blank") Da Vinci
@@ -15,47 +15,47 @@ block header
 block content
 
   section
-    .section.bg-primary.js-is-hidden
+    #expertise.section.bg--primary.js-is-hidden
       .container
         header
-          .section-header.has-divider
-            h2.section-title.text-white Our expertise
-            p.section-subtitle.text-light We have a range of skills to help you get the most out of your product
+          .section--header.has-divider
+            h2.section__title.text--white Our expertise
+            p.section__subtitle.text--light We have a range of skills to help you get the most out of your product
 
         .subsection
-          h3.subsection-title.text-white
-            i.icon-settings
+          h3.subsection__title.text--white
+            i.icon--settings.copy__icon--before
             span Information Design
-          p.text-light Presenting information in a way that fosters efficient and effective understanding.
+          p.text--light Presenting information in a way that fosters efficient and effective understanding.
 
         .subsection
-          h3.subsection-title.text-white
-            i.icon-love
-            span User Experience Design
-          p.text-light Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
+          h3.subsection__title.text--white
+            i.icon--love.copy__icon--before
+            span UX Design
+          p.text--light Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
 
         .subsection
-          h3.subsection-title.text-white
-            i.icon-browser
-            span User Interface Design
-          p.text-light Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
+          h3.subsection__title.text--white
+            i.icon--browser.copy__icon--before
+            span Interface Design
+          p.text--light Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
 
   section
-    .section.bg-light
+    #experience.section.bg--light
       .container
         header
-          .section-header
-            h2.section-title Our experience
-            p.section-subtitle.text-dark We have experience working with start-ups and well-known brands; <br>creating beautiful concepts as well as complete UI redesigns.
+          .section__header
+            h2.section__title Our experience
+            p.section__subtitle.text--dark We have experience working with start-ups and well-known brands; <br>creating beautiful concepts as well as complete UI redesigns.
 
         mixin clients(['bbc', 'asos', 'smashing', 'confused'])
 
 block contact
   section
-    .section.bg-secondary
+    #contact.section.bg--secondary
       .container
         header
-          .section-header
-            h2.section-title.text-white Let's work together
-            p.section-subtitle.text-light <strong>Design is a partnership.</strong> We work <em>with</em> you to achieve your goals and create solutions to suit both your users and your business.
+          .section__header
+            h2.section__title.text--white Let's work together
+            p.section__subtitle.text--light <strong>Design is a partnership.</strong> We work <em>with</em> you to achieve your goals and create solutions to suit both your users and your business.
         include templates/_contactForm

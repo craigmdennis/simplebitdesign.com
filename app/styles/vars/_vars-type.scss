@@ -9,26 +9,25 @@ $weight-default: 400;
 $weight-medium: 500;
 $weight-bold: 700;
 
-$ms-base: 16 24;
-$ms-ratio: $golden;
-
 // Base Type
 $font-weight: $weight-light;
 $line-height: 1.5;
 $font-size: 100;
 $font-base: 16 * ($font-size/100);
-$cap-height: 0.68;
 
 $font-family: sans-serif; // Non-font-face font-stack
 
 $custom-font-family: "Lato"; // Custom font-face stack, if set will be added to the $font-family
 
+$ms-base: 16 24;
+$ms-ratio: $golden;
+
 $indent-val: 1.5em;
 $paragraph-vertical-whitespace: true;
 $small-print-size: 65%;
 
-$body-copy-color: $gray-dark;
-$heading-color: $gray-dark;
+$body-copy-color: $copy-body;
+$heading-color: $copy-header;
 
 $tera: ms(8);
 $giga: ms(7);

@@ -1,5 +1,7 @@
 a {
   @include transition(color 0.2s ease);
+  background: transparent;
+  color: $copy-link;
   text-decoration: none;
 
   &:hover {
@@ -9,10 +11,6 @@ a {
   &:focus {
     @include tab-focus;
   }
-}
-
-p a {
-  color: $brand-primary;
 }
 
 .inherit {

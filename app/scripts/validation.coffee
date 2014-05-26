@@ -13,7 +13,7 @@ validation = {}
       form.validate
 
         invalidHandler: ->
-          $('.btn-next').animateCSS('shake')
+          $('#submit').animateCSS('shake')
 
         highlight: (element) ->
           $(element).parent().addClass('has-additional')
@@ -22,8 +22,8 @@ validation = {}
           $(element).parent().removeClass('has-additional')
 
         errorPlacement: (error, element) ->
-          $wrap = $('<div class="additional-content block-danger">');
-          $icon = $('<i class="icon-warning icon-left">').appendTo( $wrap );
+          $wrap = $('<div class="form__additional-content block--danger">');
+          $icon = $('<i class="icon--warning copy__icon--before">').appendTo( $wrap );
           error.appendTo($wrap);
           $wrap.insertAfter(element);
 

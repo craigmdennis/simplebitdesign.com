@@ -50,7 +50,7 @@
 }
 
 // Only allow section headers to extend 3/4
-.section-header {
+.section__header {
   @extend %center;
   margin-bottom: baseline(2);
 
@@ -61,13 +61,7 @@
 }
 
 .subsection {
-  @extend %center;
   position: relative;
-
-  @include breakpoint( $small ) {
-    text-align: center;
-    max-width: span(8);
-  }
 
   @include breakpoint( $medium ) {
     @include span(4 of 12);
@@ -76,7 +70,7 @@
 }
 
 // Contact form positioning
-.form-contact {
+.form--contact {
   @extend %center;
 
   @include breakpoint( $small ) {
@@ -105,18 +99,22 @@
   text-align: center;
 }
 
-.social-button {
+.social {
+  padding-bottom: baseline(-5);
+}
+
+%social__button {
   display: inline-block;
   overflow:hidden;
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
 
-.social-button--twitter {
-  @extend .social-button;
+.social__button--twitter {
+  @extend %social__button;
 }
 
-.social-button--facebook {
-  @extend .social-button;
-  top:-7px;
+.social__button--facebook {
+  @extend %social__button;
+  top: -7px;
 }

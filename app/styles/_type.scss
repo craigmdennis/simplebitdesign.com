@@ -4,8 +4,6 @@
 
 html {
 
-  // background-image: url(http://basehold.it/i/12);
-
   @include breakpoint( $large ) {
     font-size: 125%;
   }
@@ -13,17 +11,13 @@ html {
 }
 
 body {
-  text-align: center;
+  @include css-hyphens( none );
+  margin: 0;
+  min-height: 100%;
 }
 
-.hero-title,
-.hero-subtitle,
-.section-title,
-.section-subtitle,
-.subsection-title,
-.subsection-body,
-.additional-content {
-  @include css-hyphens( none );
+blockquote {
+  margin:0;
 }
 
 // Content blocks
@@ -31,63 +25,45 @@ body {
   text-align:center;
 }
 
-  .hero-title {
+  .hero__title {
     @extend .beta;
-    @extend %break;
     font-weight: $weight-light;
-  }
 
-  blockquote {
-    margin:0;
-  }
-
-  .hero-subtitle {
-    @extend .delta;
-    color: $gray-light;
-
-    cite {
-      display: block;
-
-      @include breakpoint( $medium ) {
-        display: inline;
-      }
+    @include breakpoint( max-width $small ) {
+      padding-bottom: baseline(0);
     }
+
   }
 
+  .hero__subtitle {
+    @extend .zeta;
+    color: $gray-light;
+  }
 
-// .section
-// .section-title
-// .section-subtitle
-// .section-body
-
-// .subsection
-// .subsection-title
-// .subsection-subtitle
-// .subsection-body
 
 // Sections
 .section {}
 
-  .section-title {
+  .section__title {
     @extend .beta;
     margin-bottom: baseline(-2);
     font-weight: $weight-bold;
-
+    text-align:center;
   }
 
-  .section-subtitle {
+  .section__subtitle {
     @extend .epsilon;
-    @extend %break;
+    text-align:center;
   }
 
 // Subsections
 .subsection {}
 
-  .subsection-title {
+  .subsection__title {
     @extend .epsilon;
   }
 
-  .subsection-body {
+  .subsection__body {
     @include breakpoint( max-width $small ) {
       border-bottom: 1px solid $gray-lighter;
       margin-bottom: baseline(0);

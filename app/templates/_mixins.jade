@@ -5,8 +5,8 @@
 
 //- Display client logos
 mixin clients( logos )
-  ul.list-clients
+  ul.clients
     - each logo in logos
-      li.list-client-item
-        .rwd-media-container(data-ratio="153-41")
-          img.rwd-media-object(src="./images/#{logo}_bw.png", alt="Logo for #{logo}")
+      li.clients__item
+        .rwd-media__container(data-ratio="153-41")
+          img.rwd-media__object(src="./images/#{logo}_bw.png", alt="Logo for #{logo}")

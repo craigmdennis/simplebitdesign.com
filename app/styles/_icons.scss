@@ -1,16 +1,3 @@
-@font-face {
-  font-family: "simple-bit";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/simplebit/simple-bit.eot");
-  src:
-    url("../fonts/simplebit/simple-bit.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/simplebit/simple-bit.woff") format("woff"),
-    url("../fonts/simplebit/simple-bit.ttf") format("truetype"),
-    url("../fonts/simplebit/simple-bit.svg#simple-bit") format("svg");
-
-}
-
 [data-icon]:before {
   font-family: "simple-bit" !important;
   content: attr(data-icon);
@@ -37,40 +24,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.subsection [class^="icon-"] {
-  @extend .giga;
-  @extend %center;
-  margin-bottom: baseline(-8);
-  display:block;
+// Space icons in copy or headings
+.copy__icon--before {
+  margin-right: baseline(-5);
 }
 
-.icon-left {
-  padding-right: baseline(-5);
+.copy__icon--after {
+  margin-left: baseline(-5);
 }
 
-.icon-right {
-  padding-left: baseline(-5);
+.copy__icon {
+  @extend .copy__icon--before;
+  @extend .copy__icon--after;
 }
 
-.icon-twitter:before {
-  content: "\e001";
-}
-.icon-menu:before {
-  content: "\e002";
-}
-.icon-love:before {
+// Icons classes
+.icon--love:before {
   content: "\e005";
 }
-.icon-settings:before {
+.icon--settings:before {
   content: "\e003";
 }
-.icon-mail:before {
+.icon--mail:before {
   content: "\e000";
 }
-.icon-browser:before {
+.icon--browser:before {
   content: "\e004";
 }
-
-.icon-warning:before {
+.icon--warning:before {
   content: "\e007";
 }

@@ -11,7 +11,7 @@ figure {
 }
 
 // Responsive images
-.rwd-media-container {
+.rwd-media {
   @include intrinsic-ratio(153,41);
 }
 
@@ -23,7 +23,7 @@ figure {
     max-width: 292px;
   }
 
-  .logo-img {
+  .logo__img {
     display: block;
     width: 100%;
   }
