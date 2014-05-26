@@ -1,3 +1,12 @@
+<a name="0.1.6-0"></a>
+### 0.1.6-0 (2014-05-26)
+
+
+#### Bug Fixes
+
+* typo ([2d872b7e](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/2d872b7e7967d983cd52b68994ca768d925f0bb5))
+
+
 <a name="0.1.5-0"></a>
 ### 0.1.5-0 (2014-05-26)
 
