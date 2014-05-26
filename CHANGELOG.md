@@ -1,3 +1,15 @@
+<a name="0.1.4-0"></a>
+### 0.1.4-0 (2014-05-26)
+
+
+#### Features
+
+* make hero full screen ([7ec1d672](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/7ec1d672da1e7505b689c789daab4ed27a20ee61))
+* add shake animation when form is invalid ([c49ae9ef](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/c49ae9ef03908eedda76bc49b05cc272c1747114))
+* add flexbox rules for vertical center heading ([42f6e49d](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/42f6e49d24f20b1e156e3beb8775c3633cef6377))
+* define simple rule for whether a browser gets all the cool stuff - cutting the mu ([4560c654](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/4560c654415f4835a242eccac16d0a906ead494e))
+
+
 <a name="0.1.3-0"></a>
 ### 0.1.3-0 (2014-05-26)
 
