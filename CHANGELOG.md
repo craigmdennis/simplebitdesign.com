@@ -1,3 +1,12 @@
+<a name="0.1.5-0"></a>
+### 0.1.5-0 (2014-05-26)
+
+
+#### Bug Fixes
+
+* fixed issue #3 with callback added to fullscreen function ([7a26b5fe](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/7a26b5fe9a16f7ab30638cbdd4a6bf9773ba6bb6))
+
+
 <a name="0.1.4-0"></a>
 ### 0.1.4-0 (2014-05-26)
 
