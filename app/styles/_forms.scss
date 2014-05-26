@@ -8,6 +8,11 @@ fieldset {
   padding:0;
 }
 
+.polyfill-placeholder {
+  display: block;
+  padding-bottom: baseline(-5);
+}
+
 .mustard .polyfill-placeholder {
   @extend .sr-only;
 }
