@@ -6,9 +6,14 @@ validation = {}
 
   validation =
 
-    init: (form) ->
+    init: (param) ->
+
+      form = $(param)
       # Call the validation plugin on the contact form
-      $(form).validate
+      form.validate
+
+        invalidHandler: ->
+          $('.btn-next').animateCSS('shake')
 
         highlight: (element) ->
           $(element).parent().addClass('has-additional')
