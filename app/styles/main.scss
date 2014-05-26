@@ -20,9 +20,9 @@
 
 
 /** MIXINS **/
-@import "mixins/_mixins-buttons";
-@import "mixins/_mixins-utilities";
-@import "mixins/_mixins-forms";
+@import "mixins/mixins-buttons";
+@import "mixins/mixins-utilities";
+@import "mixins/mixins-forms";
 
 
 //- bower:scss
@@ -45,6 +45,9 @@
 @import "forms";
 @import "animations";
 @import "icons";
+
+/* MUSTARD - http://responsivenews.co.uk/post/18948466399/cutting-the-mustard */
+@import "mustard/mustard_flex";
 
 
 /** INBOX - Styles that are yet to be organised **/
