@@ -1,3 +1,12 @@
+<a name="0.1.9-0"></a>
+### 0.1.9-0 (2014-05-26)
+
+
+#### Features
+
+* add apple and windows images as well as fix #1 favicon. ([c7344dd7](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/c7344dd76e881b15ea0ded936fdeee37ced1f131))
+
+
 <a name="0.1.8-0"></a>
 ### 0.1.8-0 (2014-05-26)
 
