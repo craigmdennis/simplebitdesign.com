@@ -16,6 +16,12 @@ fullscreen = {}
     bind: ->
       $(window).on 'resize', fullscreen.setHeight
 
+      # When scrolling on a touchscreen, prevent further resizes
+      $(window).on 'touchstart', fullscreen.unbind
+
+      # Trigger resize once when rotating device
+      $(window).on 'orientationchange', fullscreen.setHeight
+
     getHeight: ( element ) ->
       $(element).height()
 
@@ -29,8 +35,12 @@ fullscreen = {}
         # Execute the callback and return the origin element as `this`
         callback.call( this )
 
-    destroy: ->
+    unbind: ->
+      # Unbind the resize event handler
       $(window).off 'resize', fullscreen.setHeight
+
+    destroy: ->
+      fullscreen.unbind();
       $(fullscreen.targetClass).attr('style','')
 
   return
