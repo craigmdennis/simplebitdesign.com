@@ -2,12 +2,14 @@ include templates/_mixins
 
 block vars
   -var bodyClass = "";
+  -var title = "Simple Bit: We make intuitive interfaces";
+  -var desc = "We specialise in interface design for complex apps and services. Get in touch to see how we could help you.";
 
 doctype
 html.no-js
   head
-    title Simple Bit: We make intuitive interfaces
-    meta(name="description", content="We specialise in interface design for complex apps and services. Get in touch to see how we could help you.")
+    title #{title}
+    meta(name="description", content="#{desc}")
     meta(name="keywords", content="UX, UI, User Experience, Interface, Design, Information Design")
     meta(name="author" content="Craig Dennis")
 
@@ -31,6 +33,12 @@ html.no-js
     meta(name="msapplication-square70x70logo", content="images/icons/icon-70.png")
     meta(name="msapplication-square150x150logo", content="images/icons/icon-150.png")
     meta(name="msapplication-square310x310logo", content="images/icons/icon-310.png")
+
+    //- Facebook tags
+    meta(property="og:image", content="images/icons/icon-310.png")
+    meta(property="og:url", content="http://simplebitdesign.com")
+    meta(property="og:title", content="#{title}")
+    meta(property="og:description", content="#{description}")
 
     // build:css({app,.tmp}) styles/main.css
     // bower:css
