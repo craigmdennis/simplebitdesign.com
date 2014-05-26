@@ -21,7 +21,8 @@ body {
 .section-title,
 .section-subtitle,
 .subsection-title,
-.subsection-body {
+.subsection-body,
+.additional-content {
   @include css-hyphens( none );
 }
 

@@ -28,7 +28,7 @@ validation = {}
           $wrap.insertAfter(element);
 
         messages:
-          message: 'Come on, you need to tell us somehing...'
+          message: 'Come on, you need to tell us something...'
           name: 'How do we know what to call you?'
           email:
             required: 'We need to be able to contact you'
