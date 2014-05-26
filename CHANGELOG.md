@@ -1,3 +1,12 @@
+<a name="0.1.8-0"></a>
+### 0.1.8-0 (2014-05-26)
+
+
+#### Bug Fixes
+
+* prevent resize event firing on touch devices but allow for orientation change ([42c21708](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/42c21708f604d215bd6d50740419fdb98752f151))
+
+
 <a name="0.1.7-0"></a>
 ### 0.1.7-0 (2014-05-26)
 
