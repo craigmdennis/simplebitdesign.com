@@ -104,3 +104,19 @@
   padding-top: baseline(1);
   text-align: center;
 }
+
+.social-button {
+  display: inline-block;
+  overflow:hidden;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.social-button--twitter {
+  @extend .social-button;
+}
+
+.social-button--facebook {
+  @extend .social-button;
+  top:-7px;
+}

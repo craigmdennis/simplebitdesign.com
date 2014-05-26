@@ -34,7 +34,6 @@ body {
     @extend .beta;
     @extend %break;
     font-weight: $weight-light;
-    padding-bottom: baseline(-1);
   }
 
   blockquote {
@@ -43,6 +42,7 @@ body {
 
   .hero-subtitle {
     @extend .delta;
+    color: $gray-light;
 
     cite {
       display: block;
