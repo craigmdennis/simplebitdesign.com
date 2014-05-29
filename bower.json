@@ -1,7 +1,7 @@
 {
   "name": "simplebitdesig-com",
   "description": "We make intuitive interfaces for complex app & services",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "dependencies": {
     "jquery": "1.11.0",

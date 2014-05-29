@@ -1,3 +1,12 @@
+<a name="0.3.1"></a>
+### 0.3.1 (2014-05-29)
+
+
+#### Bug Fixes
+
+* contact form width now correct ([2682767d](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/2682767dabcd96f0cb868e68835c62cec1951751))
+
+
 <a name="0.3.0"></a>
 ### 0.3.0-0 (2014-05-29)
 
