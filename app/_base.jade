@@ -40,23 +40,19 @@ html.no-js
     meta(property="og:title", content="#{title}")
     meta(property="og:description", content="#{desc}")
 
-    // build:css({app,.tmp}) styles/main.css
-    // bower:css
-    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css', type='text/css')
-    link(rel='stylesheet', href='bower_components/animate.css/animate.css', type='text/css')
-    // endbower
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic', type='text/css')
-    link(rel='stylesheet', href='styles/main.css')
+    // build:js(app) scripts/vendor/modernizr.js
+    script(src='bower_components/modernizr/modernizr.js')
     // endbuild
 
-    //- Change no-js to js
-    script.
-      //- Swap no-js for js
-      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
-      //- Cut the mustard
-      if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-        document.documentElement.className += " mustard";
-      }
+    // build:css({app,.tmp}) styles/main.css
+    // bower:css
+    link(rel="stylesheet", href="bower_components/normalize-css/normalize.css", type="text/css")
+    link(rel="stylesheet", href="bower_components/animate.css/animate.css", type="text/css")
+    // endbower
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic", type="text/css")
+    link(rel="stylesheet", href="styles/main.css")
+    // endbuild
+
 
   body(class='#{bodyClass}')
     include templates/_browseHappy
@@ -74,7 +70,7 @@ html.no-js
     block alerts
 
     header
-      .header.js-fullscreen-target
+      .header.js__fullscreen--target
         block header
           include templates/_logo
 
@@ -109,6 +105,7 @@ html.no-js
     // endbuild
 
     // build:js({app,.tmp}) scripts/main.js
+    script(src='scripts/helpers.js')
     script(src='scripts/fullscreen.js')
     script(src='scripts/animations.js')
     script(src='scripts/validation.js')

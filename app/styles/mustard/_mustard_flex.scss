@@ -2,7 +2,7 @@
 // Flexbox
 // ===================================================
 
-.mustard {
+.flexbox {
 
   // Vertical center align
   .header {
@@ -12,7 +12,15 @@
   }
 
   .hero {
-    margin-top: - baseline(3);
+    @include breakpoint( min-height 480px ) {
+      margin-top: - baseline(3);
+    }
   }
+
+  // Only hide elements when flexbox is enabled
+  .flex--is-hidden {
+    visibility: hidden;
+  }
+
 
 }
