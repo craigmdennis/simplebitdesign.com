@@ -1,3 +1,28 @@
+<a name="0.3.0"></a>
+### 0.3.0-0 (2014-05-29)
+
+
+#### Bug Fixes
+
+* only trigger certain layout options if Modernizr tests are true ([5630d94b](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/5630d94b718b3c043b4fa4ac7927c9d052470b6f))
+* moved media queries to allow for IE to behave ([4c1a2843](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/4c1a28435583893819c9b292da4a0a3bc7279337))
+
+
+#### Features
+
+* add modernizr tests ([121d2e0b](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/121d2e0b38c1370ce6555ecd97f67ba47571b9bd))
+
+
+<a name="0.2.0"></a>
+### 0.2.0 (2014-05-27)
+
+
+#### Bug Fixes
+
+* fix for fb graph info ([43c1ac0e](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/43c1ac0e8ecfda9f161fd85aff0f4e5135fb56e2))
+* absolute url for fb:image url ([a9d591da](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/a9d591dae8afb821757623713dd5119d2bcc1a7f))
+
+
 <a name="0.1.9-0"></a>
 ### 0.1.9-0 (2014-05-26)
 
