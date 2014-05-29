@@ -11,7 +11,7 @@
       $from    = "From: $name<$email>\r\nReturn-path: $email";
       $subject = "Possible lead";
       mail("info@simplebitdesign.com", $subject, $message, $from);
-      header( 'Location: http://dev.simplebitdesign.com/thankyou.html' );
+      header( 'Location: http://simplebitdesign.com/thankyou.html' );
     }
 
 ?>
