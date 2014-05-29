@@ -42,6 +42,10 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:copy:server', 'jshint:server']
       },
+      jshint: {
+        files: ['.jshintrc'],
+        tasks: ['jshint:server']
+      },
       gruntfile: {
         files: ['Gruntfile.js'],
         tasks: ['jshint:gruntfile']
@@ -252,7 +256,10 @@ module.exports = function (grunt) {
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+        assetsDirs: [
+          '<%= config.dist %>',
+          '<%= config.dist %>/images'
+        ]
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
@@ -348,6 +355,23 @@ module.exports = function (grunt) {
       }
     },
 
+    // Generates a custom Modernizr build that includes only the tests you
+    // reference in your app
+    modernizr: {
+      devFile: '<%= config.app %>/bower_components/modernizr/modernizr.js',
+      outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
+      files: [
+        '<%= config.dist %>/scripts/{,*/}*.js',
+        '<%= config.dist %>/styles/{,*/}*.css',
+        '!<%= config.dist %>/scripts/vendor/*'
+      ],
+      uglify: true,
+      extra: {
+        shiv: false,
+        load: false
+      }
+    },
+
     bump: {
       options: {
         files: ['package.json', 'bower.json'],
@@ -425,6 +449,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
+    'modernizr',
     'rev',
     'usemin',
     'htmlmin'

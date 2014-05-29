@@ -3,24 +3,25 @@ extends _base.jade
 block header
 
   .hero.container
-    include templates/_logo
+    .logo.flex--is-hidden(itemscope, itemtype="http://schema.org/Organization")
+      img.logo__img(src="./images/simple-bit-design-logo.svg", itemprop="logo", alt="Logo for Simple Bit Design")
 
-    h1.hero__title.js-is-hidden We make intuitive interfaces
-    //- h1.hero-title We make intuitive interfaces for complex apps and services.
-    blockquote.hero__subtitle.js-is-hidden
+    h1.hero__title.flex--is-hidden We make intuitive interfaces
+    
+    blockquote.hero__subtitle.flex--is-hidden
       q Simplicity is the ultimate sophistication.
       cite &mdash; &nbsp;
         a.inherit(href="http://en.wikipedia.org/wiki/Simplicity#Quotes_about_simplicity", target="_blank") Da Vinci
 
-    i.icon--down-open-big.section__icon--more.js-is-hidden
+    i.icon--down-open-big.section__icon--more.flex--is-hidden
 
 block content
 
   section
-    #expertise.section.bg--primary.js-is-hidden
+    #expertise.section.bg--primary.flex--is-hidden
       .container
         header
-          .section--header.has-divider
+          .section--header.has-divider--bottom
             h2.section__title.text--white Our expertise
             p.section__subtitle.text--light We have a range of skills to help you get the most out of your product
 
@@ -28,19 +29,23 @@ block content
           h3.subsection__title.text--white
             i.icon--settings.copy__icon--before
             span Information Design
-          p.text--light Presenting information in a way that fosters efficient and effective understanding.
+          p.subsection__body.text--light Presenting information in a way that fosters efficient and effective understanding.
 
         .subsection
           h3.subsection__title.text--white
             i.icon--love.copy__icon--before
             span UX Design
-          p.text--light Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
+          p.subsection__body.text--light Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
 
         .subsection
           h3.subsection__title.text--white
             i.icon--browser.copy__icon--before
             span Interface Design
-          p.text--light Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
+          p.subsection__body.text--light Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
+
+        //- footer
+        //-   .section--header.has-divider--top
+        //-     p.section__subtitle.text--light Our portfolio is available upon request
 
   section
     #experience.section.bg--light
