@@ -18,6 +18,12 @@ body {
 
 blockquote {
   margin:0;
+
+  cite {
+    @include breakpoint( max-width $small ) {
+      display:block;
+    }
+  }
 }
 
 // Content blocks
@@ -54,6 +60,11 @@ blockquote {
   .section__subtitle {
     @extend .epsilon;
     text-align:center;
+    margin-bottom: baseline(0);
+
+    @include breakpoint( max-width $small) {
+      margin-bottom: 0;
+    }
   }
 
 // Subsections
@@ -61,11 +72,15 @@ blockquote {
 
   .subsection__title {
     @extend .epsilon;
+
+    @include breakpoint( max-width $medium ) {
+      text-align:center;
+    }
+
   }
 
   .subsection__body {
-    @include breakpoint( max-width $small ) {
-      border-bottom: 1px solid $gray-lighter;
-      margin-bottom: baseline(0);
+    @include breakpoint( max-width $medium ) {
+      text-align:center;
     }
   }

@@ -14,11 +14,25 @@
 }
 
 .browsehappy {
+  text-align: center;
   padding-top: baseline(0);
 }
 
 .header {
-  @extend .section;
+
+  // Without media queries
+  padding-bottom: baseline(8);
+  padding-top: baseline(3);
+
+  @include breakpoint( max-width $small ) {
+    padding-bottom: baseline(0);
+    padding-top: baseline(1);
+  }
+
+  @include breakpoint( $medium ) {
+    padding-bottom: baseline(6);
+    padding-top: baseline(6);
+  }
 }
 
 // Horrizontal
@@ -34,8 +48,15 @@
 
 // Vertical
 .section {
-  padding-bottom: baseline(0);
-  padding-top: baseline(1);
+
+  // No media queries
+  padding-bottom: baseline(6);
+  padding-top: baseline(6);
+
+  @include breakpoint( max-width $small ) {
+    padding-bottom: baseline(0);
+    padding-top: baseline(1);
+  }
 
   @include breakpoint( $small ) {
     padding-bottom: baseline(3);
@@ -63,6 +84,12 @@
 .subsection {
   position: relative;
 
+  @include span(4 of 12);
+
+  @include breakpoint( max-width $medium ) {
+    @include span(12 of 12);
+  }
+
   @include breakpoint( $medium ) {
     @include span(4 of 12);
   }
@@ -73,23 +100,22 @@
 .form--contact {
   @extend %center;
 
+  // No media queries
+  max-width: span(6);
+  margin-top: baseline(4);
+
+  @include breakpoint( max-width $small ) {
+    max-width: auto;
+    margin-top:0;
+  }
+
   @include breakpoint( $small ) {
     max-width: span(10);
+    margin-top:0;
   }
 
   @include breakpoint( $medium ) {
     max-width: span(6);
-  }
-}
-
-.has-divider {
-  border-bottom:1px solid #FFF;
-  border-bottom:1px solid rgba(255,255,255,0.5);
-  padding-bottom: baseline(0);
-  margin-bottom: baseline(4);
-
-  @include breakpoint( $medium ) {
-    padding-bottom: baseline(0);
   }
 }
 

@@ -16,8 +16,14 @@ figure {
 }
 
 .logo {
-  margin: 0 auto baseline(3);
-  max-width: 65%;
+  margin: baseline(4) auto baseline(0);
+  width: 292px;
+
+  @include breakpoint( max-width $small ) {
+    margin:0 auto baseline(3);
+    max-width: 65%;
+    width: auto;
+  }
 
   @include breakpoint( $small ) {
     max-width: 292px;

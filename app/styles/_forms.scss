@@ -17,10 +17,6 @@ textarea {
   padding-bottom: baseline(-5);
 }
 
-.mustard .form__polyfill--placeholder {
-  @extend .sr-only;
-}
-
 .form__row {
   @include clearfix;
   margin-bottom: baseline(0);
