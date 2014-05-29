@@ -29,6 +29,10 @@ figure {
     max-width: 292px;
   }
 
+  @include breakpoint( max-height $landscape) {
+    margin-top: baseline(-2);
+  }
+
   .logo__img {
     display: block;
     width: 100%;

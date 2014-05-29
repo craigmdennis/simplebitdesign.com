@@ -76,5 +76,10 @@
   border-bottom:1px solid #97ACC4;
   border-bottom:1px solid rgba(255,255,255,0.5);
   padding-bottom: baseline(0);
+
   margin-bottom: baseline(4);
+
+  @include breakpoint( max-width $small ) {
+    margin-bottom: baseline(1);
+  }
 }
