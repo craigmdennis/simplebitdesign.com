@@ -6,7 +6,7 @@ fullscreen = {}
 
   fullscreen =
 
-    targetClass: '.js-fullscreen-target'
+    targetClass: '.js__fullscreen--target'
 
     init: ( callback ) ->
       fullscreen.bind()
