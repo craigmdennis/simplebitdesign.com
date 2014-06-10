@@ -2,6 +2,11 @@
 ## 0.5.0 (2014-06-10)
 
 
+#### Bug Fixes
+
+* remove all comments from css files ([175ee3c8](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/175ee3c8e396bce4b56789e22529cc4330d47cb7))
+
+
 <a name="0.4.0"></a>
 ### 0.4.0 (2014-06-04)
 
