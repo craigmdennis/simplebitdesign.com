@@ -253,6 +253,19 @@ module.exports = function (grunt) {
       html: ['<%= config.dist %>/{,*/}*.html']
     },
 
+    uglify: {
+      options: {
+        compress: true,
+        preserveComments: false
+      }
+    },
+
+    cssmin: {
+      options: {
+        keepSpecialComments: 0
+      }
+    },
+
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
