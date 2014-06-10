@@ -354,6 +354,8 @@ AddDefaultCharset utf-8
                                       text/plain \
                                       text/x-component \
                                       text/xml
+                                      
+        AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript image/svg+xml
     </IfModule>
 
 </IfModule>

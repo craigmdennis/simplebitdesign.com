@@ -1,3 +1,16 @@
+<a name="0.5.0"></a>
+## 0.5.0 (2014-06-10)
+
+
+<a name="0.4.0"></a>
+### 0.4.0 (2014-06-04)
+
+
+#### Bug Fixes
+
+* make sure email form redirects to production ([582ac0e9](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/582ac0e97d864650fb331758c7158464b6e66865))
+
+
 <a name="0.3.1"></a>
 ### 0.3.1 (2014-05-29)
 
