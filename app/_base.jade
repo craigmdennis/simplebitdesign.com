@@ -41,10 +41,6 @@ html.no-js
     meta(property="og:description", content="#{desc}")
     meta(property="fb:admins", content="504495402")
 
-    // build:js(app) scripts/vendor/modernizr.js
-    script(src='bower_components/modernizr/modernizr.js')
-    // endbuild
-
     // build:css({app,.tmp}) styles/main.css
     // bower:css
     link(rel="stylesheet", href="bower_components/normalize-css/normalize.css", type="text/css")
@@ -54,6 +50,9 @@ html.no-js
     link(rel="stylesheet", href="styles/main.css")
     // endbuild
 
+    // build:js(app) scripts/vendor/modernizr.js
+    script(src='bower_components/modernizr/modernizr.js')
+    // endbuild
 
   body(class='#{bodyClass}')
     include templates/_browseHappy

@@ -19,6 +19,15 @@ body {
 blockquote {
   margin:0;
 
+  q {
+    &:before {
+      content: "“";
+    }
+    &:after {
+      content: "”";
+    }
+  }
+
   cite {
     @include breakpoint( max-width $small ) {
       display:block;
