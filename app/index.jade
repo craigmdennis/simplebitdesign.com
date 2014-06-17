@@ -6,8 +6,8 @@ block header
     .logo.flex--is-hidden(itemscope, itemtype="http://schema.org/Organization")
       img.logo__img(src="./images/simple-bit-design-logo.svg", itemprop="logo", alt="Logo for Simple Bit Design")
 
-    h1.hero__title.flex--is-hidden We make intuitive interfaces
-    
+    h1.hero__title.flex--is-hidden We're a small design team who make intuitive interfaces.
+
     blockquote.hero__subtitle.flex--is-hidden
       q Simplicity is the ultimate sophistication.
       cite &mdash; &nbsp;
@@ -23,29 +23,32 @@ block content
         header
           .section--header.has-divider--bottom
             h2.section__title.text--white Our expertise
-            p.section__subtitle.text--light We have a range of skills to help you get the most out of your product
+            p.section__subtitle.text--light We're passionate about what we do and can help you make the <strong>most</strong> of your product becuase we genuinley care.
 
-        .subsection
-          h3.subsection__title.text--white
-            i.icon--settings.copy__icon--before
-            span Information Design
-          p.subsection__body.text--light Presenting information in a way that fosters efficient and effective understanding.
+        .section__subsection-wrapper
+          .subsection
+            h3.subsection__title.text--white
+              i.icon--settings.copy__icon--before
+              span Information Design
+            p.subsection__body.text--light The internet is all about data, but it's no good if your users can't make sense of it. We have the skills make your data <strong>easy to understand</strong> and control.
 
-        .subsection
-          h3.subsection__title.text--white
-            i.icon--love.copy__icon--before
-            span UX Design
-          p.subsection__body.text--light Enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction.
+          .subsection
+            h3.subsection__title.text--white
+              i.icon--love.copy__icon--before
+              span UX Design
+            p.subsection__body.text--light Do your users <strong>love</strong> your product? We can encourage them by making sure they enjoy each interaction, not matter how small.
 
-        .subsection
-          h3.subsection__title.text--white
-            i.icon--browser.copy__icon--before
-            span Interface Design
-          p.subsection__body.text--light Make the user's interaction as simple and efficient as possible; finishing the task at hand without drawing unnecessary attention.
+          .subsection
+            h3.subsection__title.text--white
+              i.icon--browser.copy__icon--before
+              span Interface Design
+            p.subsection__body.text--light We're experts in creating <strong>effortless interfaces</strong> that let people do their jobs and without any unnecessary distrations.
 
-        //- footer
-        //-   .section--header.has-divider--top
-        //-     p.section__subtitle.text--light Our portfolio is available upon request
+        footer
+          .section__footer.has-divider--top
+            p.section__subtitle.text--light Please &nbsp;
+              a.link--bg-primary(href="#contact") get in touch
+              | &nbsp; and ask for our portolio.
 
   section
     #experience.section.bg--light
@@ -53,7 +56,7 @@ block content
         header
           .section__header
             h2.section__title Our experience
-            p.section__subtitle.text--dark We have experience working with start-ups and well-known brands; creating beautiful concepts as well as complete UI redesigns.
+            p.section__subtitle.text--dark We have worked with start-ups and well-known brands alike; creating <strong>beautiful</strong>, <strong>simple</strong> and <strong>intuitive</strong> interfaces as well as meeting their business objectives.
 
         mixin clients(['bbc', 'asos', 'smashing', 'confused'])
 
@@ -63,6 +66,6 @@ block contact
       .container
         header
           .section__header
-            h2.section__title.text--white Let's work together
-            p.section__subtitle.text--light <strong>Design is a partnership.</strong> We work <em>with</em> you to achieve your goals and create solutions to suit both your users and your business.
+            h2.section__title.text--white Get in touch
+            p.section__subtitle.text--light Together, all things are possible.
         include templates/_contactForm

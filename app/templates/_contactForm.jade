@@ -3,7 +3,7 @@ form#contactForm(method="POST", novalidate, action="email.php")
     fieldset
 
       .form__row
-        label.text--light.form__polyfill--placeholder(for="message") Tell us a little about your project
+        label.text--light.form__polyfill--placeholder(for="message") Tell us a little about your project.
         textarea.form__input--text#message(rows="5", name="message", placeholder="Tell us a little about your project", required aria-required="true", autocomplete="off")
 
       .form__row
@@ -13,6 +13,10 @@ form#contactForm(method="POST", novalidate, action="email.php")
       .form__row
         label.text--light.form__polyfill--placeholder(for="email") Email
         input.form__input--text#email(type="email", name="email", placeholder="Email", required aria-required="true", autocapitalize="off")
+
+      .form__row
+        label.text--light.form__polyfill--placeholder(for="budget") Budget (optional)
+        input.form__input--text#budget(type="text", name="Budget", placeholder="Budget (optional)")
 
       .form__row
         button#submit.btn--primary.btn--next(type="submit")

@@ -2,14 +2,15 @@
     $name    = $_REQUEST['name'];
     $email   = $_REQUEST['email'];
     $message = $_REQUEST['message'];
+    $budget = $_REQUEST['budget'];
 
     if (($name=="")||($email=="")||($message=="")) {
-      echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+      echo "All fields except budget are required, please fill <a href=\"\">the form</a> again.";
     }
 
     else {
       $from    = "From: $name<$email>\r\nReturn-path: $email";
-      $subject = "Possible lead";
+      $subject = "Possible lead - " . $budget;
       mail("info@simplebitdesign.com", $subject, $message, $from);
       header( 'Location: http://simplebitdesign.com/thankyou.html' );
     }

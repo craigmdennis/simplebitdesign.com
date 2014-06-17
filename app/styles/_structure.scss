@@ -18,6 +18,14 @@
   padding-top: baseline(0);
 }
 
+.hero__title {
+  max-width: 15em;
+}
+
+.section__subtitle {
+  max-width: 25em;
+}
+
 .header {
 
   // Without media queries
@@ -79,6 +87,14 @@
     margin-bottom: baseline(4);
     max-width: span(10);
   }
+}
+
+.section__footer {
+  clear: left;
+}
+
+.section__subsection-wrapper {
+  overflow: hidden;
 }
 
 .subsection {

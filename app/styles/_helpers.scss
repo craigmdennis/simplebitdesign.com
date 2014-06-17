@@ -83,3 +83,11 @@
     margin-bottom: baseline(1);
   }
 }
+
+.has-divider--top {
+  border-top:1px solid #97ACC4;
+  border-top:1px solid rgba(255,255,255,0.5);
+  padding-top: baseline(4);
+
+  margin-top: baseline(0);
+}
