@@ -404,6 +404,21 @@ module.exports = function (grunt) {
       }
     },
 
+    shell: {
+      prod: {
+        options: {
+          stderr: false
+        },
+        command: 'bundle exec cap production deploy'
+      },
+      staging: {                      // Target
+        options: {                      // Options
+          stderr: false
+        },
+        command: 'bundle exec cap staging deploy'
+      }
+    },
+
     // Run some tasks in parallel to speed up build process
     concurrent: {
       options: {
@@ -466,6 +481,13 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('stage', [
+    'bump-only:minor',
+    'changelog',
+    'bump-commit',
+    'shell:staging'
   ]);
 
 };
