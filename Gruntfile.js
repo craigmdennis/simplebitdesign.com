@@ -483,11 +483,11 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
-  grunt.registerTask('stage', [
+  grunt.registerTask('deploy', [
     'bump-only:minor',
     'changelog',
     'bump-commit',
-    'shell:staging'
+    'shell:prod'
   ]);
 
 };
