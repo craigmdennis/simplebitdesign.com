@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond $1 !^dist/
+    RewriteRule ^(.*)$ dist/$1 [L]
+</IfModule>
