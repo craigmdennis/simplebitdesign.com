@@ -11,7 +11,7 @@
     else {
       $from    = "From: $name<$email>\r\nReturn-path: $email";
       $subject = "Possible lead";
-      $message = $message . "\n Budget: " . $budget; 
+      $message = $message . "\r\nBudget: " . $budget; 
       mail("info@simplebitdesign.com", $subject, $message, $from);
       header( 'Location: http://simplebitdesign.com/thankyou.html' );
     }
