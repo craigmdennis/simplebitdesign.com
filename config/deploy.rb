@@ -1,14 +1,17 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'dev.simplebitdesign.com'
+# set :application, 'dev.simplebitdesign.com'
 set :repo_url, 'git@bitbucket.org:simplebitdesign/simplebitdesign.com.git'
 
+
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+
+server 'simplebitdesign.com', user: 'simplebitdesign.com', roles: %w{web app}
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/152547/users/.home/domains/dev.simplebitdesign.com/html'
+# set :deploy_to, '/home/152547/users/.home/domains/dev.simplebitdesign.com/'
 
 # Default value for :scm is :git
 # set :scm, :git
