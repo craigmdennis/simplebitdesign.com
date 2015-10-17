@@ -1,0 +1,10 @@
+.media
+  - if data.thumb != nil
+    = link_to path, class: "media__figure" do
+      = image_tag data.thumb.url, alt: (data.thumb.alt ? data.thumb.alt : "Thumbnail"), class: "media__image"
+  .media__body
+    - if data.title
+      %h4.media__title
+        = link_to data.title, path
+    - if data.summary
+      %p= data.summary

@@ -1,0 +1,86 @@
+.copy {
+  table,
+  dl {
+    margin-bottom: $baseline;
+  }
+
+  dt {
+    font-family: $global__heading;
+    font-weight: bold;
+  }
+
+  dd {
+    padding-left: $baseline;
+    margin-bottom: $baseline;
+  }
+
+  td {
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.15);
+  }
+
+  th {
+    border: 1px solid rgba(0,0,0,0.15);
+    background-color: #CCC;
+  }
+
+  p > a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    display: block;
+    margin-bottom: $baseline;
+  }
+
+  figcaption {
+    @include height( 12px );
+    display: block;
+    margin-top: $baseline-half;
+    color: $blue;
+    text-align: right;
+    letter-spacing: 0.5pt;
+  }
+
+  blockquote {
+    padding-left: $baseline-double;
+    padding-right: $baseline-double;
+    margin-left: 0;
+    text-align: center;
+
+    > p {
+      @include height( 24px );
+      font-weight: 700;
+      // font-style: italic; // No italic font
+      font-family: $global__heading;
+
+      @include mq( $tablet ) {
+        @include height( 40px );
+      }
+    }
+  }
+
+  cite {
+    display: block;
+    font-style: normal;
+  }
+
+  ul, ol {
+    margin: 0 0 $baseline 0;
+    padding-left: $baseline-double.5;
+    list-style: none;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+}

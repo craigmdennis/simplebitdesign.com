@@ -1,0 +1,16 @@
+- if data != nil
+  %ul.navigation
+    - data.each do |nav|
+    
+      -# - if nav.icon        
+      -#   %li.navigation__item
+      -#     .vishid= nav.title
+      -#     %i{class: nav.icon, "aria-hidden" => true, role: "presentation"}
+
+    
+      -# - else
+      %li.navigation__item
+        - if nav.url
+          = link_to nav.title, nav.url, class: "navigation__text"
+        - else
+          .navigation__text= nav.title

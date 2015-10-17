@@ -1,0 +1,23 @@
+// Type
+$type__fontsize: 100%;
+$type__lineheight: strip-unit( $baseline ); // So everything relates
+$type__color: #4A4A4A;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $global__body;
+  font-size: $type__fontsize;
+  line-height: $type__lineheight;
+  font-weight: 300;
+  color: $type__color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $global__heading;
+  font-weight: 700;
+  margin-bottom: $baseline;
+}

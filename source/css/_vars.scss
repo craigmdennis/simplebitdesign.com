@@ -1,0 +1,41 @@
+// Colors
+$blue:                    #0085c3;
+
+// Animations
+$global__fast:            200ms;
+$global__slow:            500ms;
+$global__easing:          cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Spacing
+$baseline-half:           0.75rem;
+$baseline:                1.5rem;
+$baseline-double:         3rem;
+
+// Misc
+$global__radius:          3px;
+$global__maxwidth:        74em;
+
+// Type
+$global__fontpath:        "/fonts";
+$global__heading:         "Museo Sans", sans-serif;
+$global__body:            "Museo Sans", sans-serif;
+
+// Breakpoints
+$mobile:                  "(max-width: 49.9375em)"; // 799px
+$tablet:                  "(min-width: 50em)"; // 800px
+$tablet-desktop:          "(min-width: 48em) and (max-width: 62em)";
+$desktop:                 "(min-width: 62em)"; // 992px
+$hd:                      "(min-width: 75em)"; // 1200px
+
+// z-index
+$z: (
+  ground: -3000,
+  basement: -2000,
+  floor: -1000,
+  table: 0,
+  bottom_bun: 1000,
+  condiment: 2000,
+  cheese: 3000,
+  meat: 4000,
+  top_bun: 5000
+);

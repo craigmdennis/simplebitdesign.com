@@ -1,0 +1,8 @@
+-# %picture.background.background--overlayed{class: classes }
+-#   - if data.url.tablet
+-#     %source{srcset: data.url.tablet, media: "(min-width: 48em)"}
+-#   - if data.url.desktop
+-#     %source{srcset: data.url.desktop, media: "(min-width: 62em)"}
+-#   - if data.url.hd
+-#     %source{srcset: data.url.hd, media: "(min-width: 75em)"}
+-#   = image_tag data.url.deskop, alt: data.alt

@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "name": "simplebitdesig-com",
   "description": "We make intuitive interfaces for complex app & services",
   "version": "0.6.1",
@@ -12,8 +13,29 @@
     "animate.css": "~3.1.1",
     "animateCSS": "~1.1"
   },
+=======
+  "name": "Simple Bit Design",
+  "version": "1.0.0",
+  "authors": [
+    "Craig Dennis <craig@simplebitdesign.com>"
+  ],
+  "description": "We design and build beautiful interfaces",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+>>>>>>> Stashed changes
   "devDependencies": {
-    "svgeezy": "~1.0.0",
-    "modernizr": "~2.8.2"
+    "fastclick": "~1.0.6",
+    "sass-height": ">=2.0.2",
+    "what-input": "~1.0.0",
+    "flexiblegs-scss-plus": "~5.4.0",
+    "picturefill": "~3.0.1",
+    "jquery": "~2.1.4"
   }
 }

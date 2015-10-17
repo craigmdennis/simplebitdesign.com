@@ -1,0 +1,13 @@
+- unless data.site.try(:heroImage).nil?
+  - content_for :meta do
+    - if current_page.data.heroImage.url.mobile != nil
+      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.mobile)}
+    - elsif current_page.data.heroImage.url.tablet != nil
+      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.tablet)}/
+    - elsif current_page.data.heroImage.url.desktop != nil
+      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.desktop)}/
+
+
+= wrap_layout :layout do
+  %article
+    = yield

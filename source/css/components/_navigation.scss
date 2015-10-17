@@ -1,0 +1,43 @@
+/*
+Navigation
+
+Markup:
+<ul class="navigation {$modifiers}">
+  <li class="navigation__item navigation__item--brand">
+    <a href="/"><img srcset="http://placehold.it/80 2x" src="http://placehold.it/40" alt="Dell Logo"></a></li>
+  <li class="navigation__item">
+    <a href="/tour.html" class="navigation__link navigation__link--text">Future Ready Workforce</a></li>
+  <li class="navigation__item">
+    <a href="/solutions.html" class="navigation__link navigation__link--text">Why Refresh</a></li>
+  <li class="navigation__item">
+    <a href="/company.html" class="navigation__link navigation__link--text">Devices Matter</a></li>
+  <li class="navigation__item">
+    <a href="/partners.html" class="navigation__link navigation__link--text">Must Haves</a></li>
+  <li class="navigation__item">
+    <a href="/resources.html" class="navigation__link navigation__link--text">Start The Conversation</a></li>
+</ul>
+
+*/
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__text {
+    @include height( 12px, 48px );
+    background: none;
+    border: 0;
+    font-weight: 500;
+    padding-left: $baseline-half;
+    padding-right: $baseline-half;
+    display: block;
+    color: inherit;
+  }
+}

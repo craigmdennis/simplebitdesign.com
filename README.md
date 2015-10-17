@@ -1,2 +1,2 @@
 # Simple Bit
-## We make intuitive interfaces
+## We design and build beautiful interfaces

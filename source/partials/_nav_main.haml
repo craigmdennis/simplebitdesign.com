@@ -1,0 +1,18 @@
+%nav
+  .block.block--primary.block--fixed{"data-scroll-offset" => true }
+    .container
+      -# Hard code the logo
+      = link_to "/", class: "brand" do
+        = image_tag "logo.png", alt: "Dell Logo", height: "40", width: "40"
+      #nav
+        %ul.navigation.navigation--responsive
+
+          - if data.site.nav != nil && current_page.data.extranav != nil
+            - navigation = data.site.nav | current_page.data.extranav
+          - else
+            - navigation = data.site.nav
+            
+          -# Iterate over the navigation
+          - if navigation != nil
+            - data.site.nav.each do |nav|
+              = partial 'partials/navigation_item', locals: {nav: nav}

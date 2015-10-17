@@ -1,0 +1,14 @@
+#skiplink {
+  @extend %vishid;
+
+  &:focus,
+  &:active {
+    position: static;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+  }
+}

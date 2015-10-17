@@ -1,0 +1,55 @@
+!!!
+%html.no-js{lang: "en"}
+
+  %head
+    %meta{charset: "utf-8"}
+
+    -if content_for? :meta
+      = yield_content :meta
+
+    :javascript
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+
+    = javascript_include_tag "picturefill.min.js"
+    = partial 'partials/modernizr'
+
+    %title= "#{current_page.data.title} &mdash; #{data.site.title}"
+    %meta{name: "description", content: (current_page.data.summary || data.site.summary)}
+
+    %meta{"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %meta{name: "HandheldFriendly", content: "true"}
+
+    %meta{property: "og:type", content: "website"}
+    %meta{property: "og:site_name", content: "#{data.site.title}"}
+    %meta{property: "og:title", content: "#{current_page.data.title} &mdash; #{data.site.title}"}
+    %meta{property: "og:description", content: "#{(current_page.data.summary || data.site.summary)}"}
+    %meta{property: "og:locale", content: "en_US"}
+
+    = stylesheet_link_tag "app"
+
+
+  %body{class: page_classes}
+    %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
+
+    = partial "partials/nav_main"
+
+    #content{role: "main", tabindex:-1}
+      = yield
+
+    %footer
+      = partial "partials/nav_footer"
+
+    -# Load jQuery from Google
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+
+    -# If Google fails to deliver jQuery, load our local copy
+    :javascript
+      window.jQuery || document.write('<script src="/js/js-footer/jquery.min.js"><\/script>')
+
+    -# Load all the other scripts
+    = javascript_include_tag "app"
+
+    -if content_for? :scripts
+      = yield_content :scripts

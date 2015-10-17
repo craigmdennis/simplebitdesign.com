@@ -1,0 +1,81 @@
+$media__title__color: $blue ;
+
+/*
+Media Object
+
+Markup:
+<div class="media {$modifiers}">
+  <h3 class="media__title">Media Title</h3>
+  <div class="media__image">
+    <a href="http://">
+      <img src="http://placehold.it/128" alt="Placeholder avatar">
+    </a>
+  </div>
+  <div class="media__body">
+    <p>Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
+
+*/
+
+.media {
+  display: block;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  overflow:hidden;
+  font-size: 0;
+  
+  &__figure {
+    display: inline-block;
+
+    &:first-child {
+      float: left;
+      margin-right: $baseline;
+    }
+    &:last-child {
+      float: right;
+      margin-left: $baseline;
+    }
+
+    &:first-child,
+    &:last-child {
+      @include mq( $tablet-desktop ) {
+        float: none;
+        margin-bottom: $baseline;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 6rem;
+
+    @include mq( $tablet ) {
+      max-width: 8rem;
+    }
+  }
+
+  &__body {
+    font-size: 1rem;
+    overflow: hidden;
+
+    > p {
+      margin-top: 0;
+    }
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include height( 18px );
+    color: $media__title__color;
+    font-weight: 700;
+    margin-bottom: $baseline-half;
+
+    @include mq( $tablet ) {
+      @include height( 24px );
+    }
+  }
+}

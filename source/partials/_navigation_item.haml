@@ -1,0 +1,4 @@
+%li.navigation__item
+  - safeTitle = nav.title.downcase.parameterize
+  - url = nav.url ? nav.url : "/?section=" + nav.title.downcase.parameterize
+  = link_to nav.title, url, class: "navigation__text", data: { "accordion-target" => "#accordion-#{safeTitle}-content", "scroll-target" => safeTitle}
