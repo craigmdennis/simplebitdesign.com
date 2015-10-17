@@ -1,0 +1,25 @@
+%p If you like what you've seen then please get in touch to find out how we can work together
+
+= link_to "Get in touch", "#", class: "button button--primary"
+
+%nav
+  %ul{itemprop: "address", itemscope: true, itemtype: "http://schema.org/Organization"}
+    %li
+      = ui_svg "icon-envelope", 16
+      = link_to "info@simplebitdesign.com", "#", itemprop: "email"
+    %li
+      = ui_svg "icon-twitter", 16
+      = link_to "@simplebitdesign", "http://twitter.com/simplbitdesign"
+    %li{ itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
+      = ui_svg "icon-pin", 16
+      %strong{itemprop: "name"} Simple Bit Design
+      %div{itemprop: "streetAddress"}
+        %div Office 1
+        %div The Business Terrace
+        %div Maidstone House
+        %div King Street
+        %div Maidstone
+        %div Kent
+      %span{itemprop:"postalCode"} ME20 7QD
+
+We use cookies. We assume you're ok with that.

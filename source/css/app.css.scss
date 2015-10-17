@@ -11,14 +11,13 @@
 
 @import 'mixins/mq';
 
-@import 'helpers';
-@import 'animations';
+@import 'helpers/vishid';
+@import 'helpers/animations';
 
 @import 'base/reset';
 @import 'base/root';
 @import 'base/focus';
 
-@import 'type/fonts';
 @import 'type/type';
 @import 'type/copy';
 

@@ -1,17 +1,9 @@
-.icon {
+[class*="icon"],
+[class^="icon"] {
   display: inline-block;
-  background-color: inherit;
-  border: 0;
   font-style: normal;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon--32 {
-  width: 32px;
-  height: 32px;
+  fill: currentColor;
+  vertical-align: -0.125em;
 }
 
 .icon--after {

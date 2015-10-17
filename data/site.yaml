@@ -1,74 +1,35 @@
-title: "Dell"
-summary: "This is the site description"
+name: "Simple Bit Design"
+title: "UI &amp; UX Design Agency"
 
 # Breakpoints should match the CSS
 # Used for responsive images
 breakpoints: 
-  mobile: "(max-width: 49.9375em)" # 799px
-  tablet: "(min-width: 50em)" # 800px
+  mobile: "(max-width: 47.9375em)" # 799px
+  tablet: "(min-width: 48em)" # 800px
   desktop: "(min-width: 62em)" # 992px
   hd: "(min-width: 75em)" # 1200px
 
 # Navigation and associated homepage sections
 nav:
   - 
-    title: Future Ready Economies
-    subtitle: It's time to catch up with the future.
-    heroImage:
-      url: 
-        desktop: backgrounds/homepage-futureready.jpg
-      alt: An image
-    category: overview
+    title: What we do
+    url: "#what-we-do"
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
 
   -   
-    title: Technology Infrastructure
-    subtitle: How to be ready for now and tomorrow.
-    heroImage: 
-      url: 
-        desktop: backgrounds/homepage-technology.jpg
-      alt: An image
-    category: technology
+    title: Projects
+    url: "#projects"
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
 
-  - 
-    title: Commerce
-    subtitle: It's time to catch up with the future.
-    heroImage: 
-      url: 
-        desktop: backgrounds/homepage-commerce.jpg
-      alt: An image
-    category: commerce
-
-  - 
-    title: Human Capital
-    subtitle: It's time to catch up with the future.
-    heroImage: 
-      url: 
-        desktop: backgrounds/homepage-humancapital.jpg
-      alt: An image
-    category: capital
-
-  - title: Start The Conversation
-
-# Footer content
-footer:
-  nav:
-    -
-      title: "&copy; Dell 2016"
-      url: "http://www.dell.com/learn/us/en/uscorp1/site-terms-of-use-copyright"
-    -
-      title: Privacy
-      url: "http://www.dell.com/learn/us/en/uscorp1/policies-privacy"
-    -
-      title: "Ads &amp; Emails"
-      url: "http://www.dell.com/learn/us/en/uscorp1/policies-ads-and-emails"
-    -
-      title: "Legal &amp; Regulatory"
-      url: "http://www.dell.com/learn/us/en/uscorp1/terms"
-    -
-      title: "Corporate Social Responsibility"
-      url: http://www.dell.com/learn/us/en/uscorp1/cr
-    -
-      title: "Contact"
-      url: "http://www.dell.com/support/contents/us/en/19/category/Contact-Information?c=us&l=en"
-
-  text: Vestibulum id ligula porta felis euismod semper consectetur adipisicing elit. Architecto voluptatem officiis nihil totam nesciunt accusamus laborum deserunt. Laboriosam ut consequatur voluptates atque deserunt cupiditate illo obcaecati magni vel enim a?
+  -
+    title: Blog
+    url: "#blog"
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
+  -
+    title: Contact
+    url: "#"
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
+  -
+    title: Join the team
+    url: "#"
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."

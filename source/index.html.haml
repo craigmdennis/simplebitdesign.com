@@ -1,3 +1,82 @@
----
-title: We design and build beautiful interfaces
----
+-# Can probably split this up into partials
+%section#what-we-do
+  %h1 What We Do
+  %h2 We design for people.
+
+  %p Accessibility and usability are considered at every stage.
+
+  %h3 UI design
+
+  %p
+    Big or small, in your pocket or on your wall; we have the experience and skill to make the most of the display.
+    %b If it has a screen, we can design for it. 
+
+  %h3 Information design
+
+  -# = ui_svg "icon-clock", 16, class: "icon--before"
+
+  %p Do you have lots of data that you're struggling to make sense? We find effective ways to communicate your data in  meaningful ways.
+
+  %h3 Front End Development
+
+  %p
+    We think about the code from that start. Often prototyping and testing interactions with users. Code
+    %b is optimised for performance across multiple devices.
+
+= link_to "Get in touch", "#", class: "button button--primary"
+
+
+%section#projects
+  %h1 Projects
+
+  %h2 Recurrency
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eum blanditiis sapiente odio excepturi, hic quam, vero non similique expedita rerum quo perspiciatis dolor a doloremque cupiditate, sed libero et.
+  %figure
+    = image_tag "http://placehold.it/300", srcset: "http://placehold.it/600 2x", alt: "Recurrency screenshot"
+  = link_to "Find out more", "#", class: "button button--secondary"
+
+  %h2 MegaMac
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eum blanditiis sapiente odio excepturi, hic quam, vero non similique expedita rerum quo perspiciatis dolor a doloremque cupiditate, sed libero et.
+  %figure
+    = image_tag "http://placehold.it/300", srcset: "http://placehold.it/600 2x", alt: "MegaMac screenshot"
+  = link_to "Find out more", "#", class: "button button--secondary"
+
+  %h2 Rail Modeller
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eum blanditiis sapiente odio excepturi, hic quam, vero non similique expedita rerum quo perspiciatis dolor a doloremque cupiditate, sed libero et.
+  %figure
+    = image_tag "http://placehold.it/300", srcset: "http://placehold.it/600 2x", alt: "Rail Modeller screenshot"
+  = link_to "Find out more", "#", class: "button button--secondary"
+
+
+%section#blog
+  %h1 From the blog
+
+  %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+    %h2{itemprop: "headline"}
+      = link_to "Add hover styles only to non-touch devices", "#"
+    -# %p{itemprop: "description"}
+    %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+    = ui_svg "icon-eye", 16
+    %abbr{:title => "2 Minute Read"} 2 Min
+    %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+
+  %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+    %h2{itemprop: "headline"}
+      = link_to "Add hover styles only to non-touch devices", "#"
+    -# %p{itemprop: "description"}
+    %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+    = ui_svg "icon-eye", 16
+    %abbr{:title => "2 Minute Read"} 2 Min
+    %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+
+  %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+    %h2{itemprop: "headline"}
+      = link_to "Add hover styles only to non-touch devices", "#"
+    -# %p{itemprop: "description"}
+    %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+    = ui_svg "icon-eye", 16
+    %abbr{:title => "2 Minute Read"} 2 Min
+    %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+
+
+  = link_to "More from the blog", "#", class: "button button--secondary"

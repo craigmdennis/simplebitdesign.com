@@ -1,13 +1,12 @@
-- unless data.site.try(:heroImage).nil?
-  - content_for :meta do
-    - if current_page.data.heroImage.url.mobile != nil
-      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.mobile)}
-    - elsif current_page.data.heroImage.url.tablet != nil
-      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.tablet)}/
-    - elsif current_page.data.heroImage.url.desktop != nil
-      %meta{property: "og:image", content: image_path(current_page.data.heroImage.url.desktop)}/
-
-
 = wrap_layout :layout do
-  %article
-    = yield
+  %article{:itemscope => "", :itemtype => "http://schema.org/BlogPosting"}
+    %header
+      %img{:alt => "Arabic mathematical manuscript", :itemprop => "image", :src => "http://golden-age.com/images/arabic-manuscript.jpg"}/
+
+      %h1{:itemprop => "name"}
+        %a{:href => "http://goldenage.com/maths.html", :itemprop => "url"} Mathematics in The Muslim Golden Age
+      %p
+        %span{:itemprop => "author"} Dudley Storey
+        %time{:datetime => "2012-11-28", :itemprop => "datePublished"} 28 November 2012
+    %div{:itemprop => "articleBody"}
+      = yield

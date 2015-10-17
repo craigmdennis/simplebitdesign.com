@@ -4,52 +4,56 @@
   %head
     %meta{charset: "utf-8"}
 
-    -if content_for? :meta
-      = yield_content :meta
-
+    -# Picture element HTML5 shiv
     :javascript
-      // Picture element HTML5 shiv
       document.createElement( "picture" );
 
     = javascript_include_tag "picturefill.min.js"
-    = partial 'partials/modernizr'
+    = partial 'partials/script_modernizr'
+    = partial 'partials/script_typekit'
 
-    %title= "#{current_page.data.title} &mdash; #{data.site.title}"
-    %meta{name: "description", content: (current_page.data.summary || data.site.summary)}
+    - if exists? current_page.data.title
+      %title= current_page.data.title + " &mdash; " + data.site.name
+    - else
+      %title= data.site.name + " &mdash; " + data.site.title
+
+    - if exists? current_page.data.description
+      %meta{name: "description", content: current_page.data.description}
 
     %meta{"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %meta{name: "HandheldFriendly", content: "true"}
 
-    %meta{property: "og:type", content: "website"}
-    %meta{property: "og:site_name", content: "#{data.site.title}"}
-    %meta{property: "og:title", content: "#{current_page.data.title} &mdash; #{data.site.title}"}
-    %meta{property: "og:description", content: "#{(current_page.data.summary || data.site.summary)}"}
-    %meta{property: "og:locale", content: "en_US"}
+    -if content_for? :head
+      = yield_content :head
 
     = stylesheet_link_tag "app"
-
 
   %body{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
-    = partial "partials/nav_main"
+    %nav
+      = partial 'partials/logo'
+      = partial "partials/navigation", locals: { data: data.site.nav }
 
     #content{role: "main", tabindex:-1}
       = yield
 
-    %footer
-      = partial "partials/nav_footer"
+    = partial 'partials/footer'
 
     -# Load jQuery from Google
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
 
     -# If Google fails to deliver jQuery, load our local copy
     :javascript
-      window.jQuery || document.write('<script src="/js/js-footer/jquery.min.js"><\/script>')
+      window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')
 
     -# Load all the other scripts
     = javascript_include_tag "app"
+
+    -# Load SVG icon sprites
+    -# - if development?
+    = javascript_include_tag "https://fontastic.s3.amazonaws.com/EEco26jhFrTTtf67eq7Cgd/icons.js", async: true
 
     -if content_for? :scripts
       = yield_content :scripts

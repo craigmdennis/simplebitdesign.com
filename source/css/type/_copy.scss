@@ -54,14 +54,8 @@
     text-align: center;
 
     > p {
-      @include height( 24px );
       font-weight: 700;
-      // font-style: italic; // No italic font
       font-family: $global__heading;
-
-      @include mq( $tablet ) {
-        @include height( 40px );
-      }
     }
   }
 
