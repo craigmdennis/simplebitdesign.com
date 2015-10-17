@@ -1,19 +1,4 @@
 {
-<<<<<<< Updated upstream
-  "name": "simplebitdesig-com",
-  "description": "We make intuitive interfaces for complex app & services",
-  "version": "0.6.1",
-  "private": true,
-  "dependencies": {
-    "jquery": "1.11.0",
-    "breakpoint-sass": "~2.4.2",
-    "normalize-css": "~3.0.1",
-    "typeplate": "~1.1.3",
-    "jquery-validation": "~1",
-    "animate.css": "~3.1.1",
-    "animateCSS": "~1.1"
-  },
-=======
   "name": "Simple Bit Design",
   "version": "1.0.0",
   "authors": [
@@ -29,10 +14,9 @@
     "tests"
   ],
   "dependencies": {},
->>>>>>> Stashed changes
   "devDependencies": {
     "fastclick": "~1.0.6",
-    "sass-height": ">=2.0.2",
+    "sass-height": ">=2.0.3",
     "what-input": "~1.0.0",
     "flexiblegs-scss-plus": "~5.4.0",
     "picturefill": "~3.0.1",
