@@ -2,34 +2,13 @@
   .l-light
     .l-inside
       .l-constrained
-        %h1 From the blog
+        .m-collection
+          %h1.m-collection__title From the blog
 
-        %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-          %h2{itemprop: "headline"}
-            = link_to "Add hover styles only to non-touch devices", "#"
-          -# %p{itemprop: "description"}
-          %time{datetime: "", itemprop: "datePublished"} April 6, 2015
-          = ui_svg "eye", 16, class: "o-icon"
-          %abbr{:title => "2 Minute Read"} 2 Min
-          %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
-
-        %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-          %h2{itemprop: "headline"}
-            = link_to "Add hover styles only to non-touch devices", "#"
-          -# %p{itemprop: "description"}
-          %time{datetime: "", itemprop: "datePublished"} April 6, 2015
-          = ui_svg "eye", 16, class: "o-icon"
-          %abbr{:title => "2 Minute Read"} 2 Min
-          %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
-
-        %div{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-          %h2{itemprop: "headline"}
-            = link_to "Add hover styles only to non-touch devices", "#"
-          -# %p{itemprop: "description"}
-          %time{datetime: "", itemprop: "datePublished"} April 6, 2015
-          = ui_svg "eye", 16, class: "o-icon"
-          %abbr{:title => "2 Minute Read"} 2 Min
-          %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+          %ul.c-list.c-list--divided
+            = partial 'partials/sections/blog_summary'
+            = partial 'partials/sections/blog_summary'
+            = partial 'partials/sections/blog_summary'
 
 
-        = link_to "More from the blog", "#", class: "o-button o-button--secondary"
+          = link_to "More from the blog", "#", class: "o-button o-button--secondary"

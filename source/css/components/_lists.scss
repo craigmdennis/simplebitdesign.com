@@ -1,16 +1,18 @@
 .c-list {
+  margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-  margin-bottom: 0;
-  
+
   &--divided .c-list__item {
-    border-bottom: 1px solid rgba(0,0,0, 0.15);
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    padding-top: $baseline/2;
+    padding-bottom: $baseline/2;
   }
 
   &--inline .c-list__item {
     display: inline-block;
-    vertical-align: middle;
     margin-right: $baseline/2;
+    vertical-align: middle;
   }
 }
 

@@ -1,0 +1,13 @@
+%li.c-list__item{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+  .c-summary
+    %h2.c-summary__title{itemprop: "headline"}
+      = link_to "Add hover styles only to non-touch devices", "#"
+    .c-summary__body
+      %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+      .l-split
+        .c-summary__meta.c-summary__meta--accent
+          %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+
+        .c-summary__meta
+          = ui_svg "eye", 12, class: "o-icon o-icon--before"
+          %abbr{:title => "2 Minute Read"} 2 Min

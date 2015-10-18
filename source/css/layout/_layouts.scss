@@ -41,3 +41,9 @@ $subdued__bg: #F6F6F6;
     width: 100%;
   }
 }
+
+.l-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

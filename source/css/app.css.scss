@@ -16,19 +16,22 @@
 @import 'helpers/animations';
 @import 'helpers/align';
 
-@import 'layout/layouts';
-
 @import 'base/reset';
 @import 'base/root';
 @import 'base/focus';
 @import 'type/type';
 @import 'type/copy';
 
+@import 'layout/layouts';
+
+@import 'modules/collections';
+
 @import 'components/media';
 @import 'components/embed';
 @import 'components/lists';
 @import 'components/navigation';
 @import 'components/header';
+@import 'components/summary';
 
 @import 'objects/logo';
 @import 'objects/icons';
@@ -37,4 +40,3 @@
 @import 'objects/footnote';
 
 // INBOX - To Be Factored
-@import 'components/collections';
