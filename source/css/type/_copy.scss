@@ -41,15 +41,14 @@
   figcaption {
     @include height( 12px );
     display: block;
-    margin-top: $baseline-half;
-    color: $blue;
+    margin-top: $baseline/2;
     text-align: right;
     letter-spacing: 0.5pt;
   }
 
   blockquote {
-    padding-left: $baseline-double;
-    padding-right: $baseline-double;
+    padding-left: $baseline;
+    padding-right: $baseline;
     margin-left: 0;
     text-align: center;
 
@@ -66,7 +65,7 @@
 
   ul, ol {
     margin: 0 0 $baseline 0;
-    padding-left: $baseline-double.5;
+    padding-left: $baseline.5;
     list-style: none;
   }
 

@@ -1,14 +1,15 @@
 #skiplink {
-  @extend %vishid;
+  @extend .h-accessible;
 
   &:focus,
   &:active {
     position: static;
     height: auto;
     width: auto;
-    display: inline-block;
+    display: block;
     text-align: center;
     text-decoration: none;
     overflow: visible;
+    padding: $baseline;
   }
 }

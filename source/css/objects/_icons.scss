@@ -1,0 +1,20 @@
+$icon--primary__color: $global__accent;
+
+.o-icon {
+  display: inline-block;
+  font-style: normal;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+
+.o-icon--after {
+  margin-left: $baseline/4;
+}
+
+.o-icon--before {
+  margin-right: $baseline/4;
+}
+
+.o-icon--primary {
+  color: $icon--primary__color;
+}

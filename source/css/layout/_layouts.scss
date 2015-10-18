@@ -1,0 +1,43 @@
+$highlight__bg: $global__accent;
+$light__color: #4A4A4A;
+$subdued__bg: #F6F6F6;
+
+.l-constrained {
+  max-width: $global__maxwidth;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $baseline/2;
+  padding-right: $baseline/2;
+}
+
+.l-highlight {
+  background-color: $highlight__bg;
+  overflow: hidden;
+}
+
+.l-light {
+  background-color: white;
+  color: $light__color;
+}
+
+.l-subdued {
+  background-color: $subdued__bg;
+  color: $light__color;
+}
+
+.l-inside {
+  padding-top: $baseline/2;
+  overflow: hidden;
+}
+
+.l-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-fullwidth-mqmobile {
+  @include mq ( $mobile ) {
+    width: 100%;
+  }
+}

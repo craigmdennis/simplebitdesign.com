@@ -1,0 +1,51 @@
+// Only add hover styles to non-touch devices
+@mixin notouch( $hover: false ) {
+  .no-touch,
+  .no-touchevents & {
+
+    @if $hover == true {
+      &:hover,
+      &:focus {
+        @content;
+      }
+    }
+
+    @else {
+      @content;
+    }
+  }
+}
+
+/*
+
+USEAGE:
+.class {
+  background-color: blue;
+
+  @include notouch( true ) {
+    background-color: red;
+  }
+}
+
+.another {
+  @include notouch {
+    background-color: yellow;
+  }
+}
+
+RESULT:
+.class:hover {
+  background-color: blue;
+}
+
+.no-touch .class:hover,
+.no-touchevents .class:hover {
+  background-color: red;
+}
+
+.no-touch .another,
+.no-touchevents .another {
+  background-color: yellow;
+}
+
+*/

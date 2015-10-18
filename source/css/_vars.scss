@@ -1,15 +1,13 @@
 // Colors
-$blue:                    #0085c3;
+$global__accent:          #D24859;
 
 // Animations
-$global__fast:            200ms;
+$global__fast:            100ms;
 $global__slow:            500ms;
 $global__easing:          cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 // Spacing
-$baseline-half:           0.75rem;
-$baseline:                1.5rem;
-$baseline-double:         3rem;
+$baseline:                2rem;
 
 // Misc
 $global__radius:          3px;
@@ -17,12 +15,12 @@ $global__maxwidth:        74em;
 
 // Type
 $global__fontpath:        "/fonts";
-$global__heading:         "Museo Sans", sans-serif;
-$global__body:            "Museo Sans", sans-serif;
+$global__heading:         "Futura PT", sans-serif;
+$global__body:            "open Sans", sans-serif;
 
 // Breakpoints
-$mobile:                  "(max-width: 49.9375em)"; // 799px
-$tablet:                  "(min-width: 50em)"; // 800px
+$mobile:                  "(max-width: 47.9375em)"; // 799px
+$tablet:                  "(min-width: 48em)"; // 800px
 $tablet-desktop:          "(min-width: 48em) and (max-width: 62em)";
 $desktop:                 "(min-width: 62em)"; // 992px
 $hd:                      "(min-width: 75em)"; // 1200px

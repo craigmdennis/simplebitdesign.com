@@ -13,7 +13,9 @@ set :haml, { :format => :html5 }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 set :build_dir, "public"
-set :sass, precision: 7
+
+# Set SASS precision
+::Sass::Script::Number.precision = [7, ::Sass::Script::Number.precision].max
 
 activate :gist # Embed Gists
 activate :meta_tags # Easily add meta tags

@@ -1,7 +1,14 @@
+/* 
+
+ROOT
+Similar to reset but can include SASS $variables
+
+*/
+
 figure {
   margin: 0;
 }
 
 a {
-  transition: opacity $global__fast $global__easing;
+  transition: opacity $global__fast $global__easing, background-color $global__fast $global__easing;
 }

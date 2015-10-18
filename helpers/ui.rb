@@ -7,8 +7,8 @@ def ui_icon(icon_classes)
 end
 
 def ui_svg(icon_classes, size = false, options = {})
- 
-  defaults = {
+  
+  default_options = {
     class: icon_classes,
     "aria-hidden" => true,
     role: "presentation",
@@ -16,8 +16,7 @@ def ui_svg(icon_classes, size = false, options = {})
     height: (size ? size : nil)
   }
 
-  content_tag(:svg, defaults.merge( options ) ) do
-    content_tag(:use, nil, "xlink:href" => "#" + icon_classes)
-  end
-
+  content_tag(:svg, default_options.merge( options ) ) do
+    content_tag(:use, nil, "xlink:href" => "#icon-" + icon_classes)
+  end 
 end

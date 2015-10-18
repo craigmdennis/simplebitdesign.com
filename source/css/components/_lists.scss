@@ -1,14 +1,19 @@
-.list {
+.c-list {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 0;
   
-  &--divided > li {
+  &--divided .c-list__item {
     border-bottom: 1px solid rgba(0,0,0, 0.15);
   }
 
-  &--inline > li {
+  &--inline .c-list__item {
     display: inline-block;
     vertical-align: middle;
-    margin-right: $baseline-half;
+    margin-right: $baseline/2;
   }
+}
+
+.c-list--compact {
+  @include height( 14px, 32px );
 }

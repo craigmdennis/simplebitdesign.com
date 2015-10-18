@@ -1,14 +1,20 @@
 // Type
 $type__fontsize: 100%;
-$type__lineheight: strip-unit( $baseline ); // So everything relates
-$type__color: #4A4A4A;
+$type__lineheight: 1.5; // So everything relates
+$type__color: white;
+$type__bg: #4A4A4A;
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  margin-top: 0;
+}
+
 body {
+  background-color: $type__bg;
   font-family: $global__body;
   font-size: $type__fontsize;
   line-height: $type__lineheight;
@@ -19,5 +25,11 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $global__heading;
   font-weight: 700;
-  margin-bottom: $baseline;
+  margin-bottom: $baseline/2;
+}
+
+hr {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: $baseline/2;
+  margin-top: $baseline/2;
 }

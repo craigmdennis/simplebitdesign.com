@@ -32,9 +32,7 @@
   %body{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
-    %nav
-      = partial 'partials/logo'
-      = partial "partials/navigation", locals: { data: data.site.nav }
+    = partial 'partials/header'
 
     #content{role: "main", tabindex:-1}
       = yield

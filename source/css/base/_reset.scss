@@ -1,3 +1,12 @@
+/* 
+
+RESET
+Based on Normalize.
+No $variables are allowed.
+Only minor styles
+
+*/
+
 // It's safe to use box-sizing
 // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 *,
@@ -40,15 +49,14 @@ a[href^=tel]{
 }
 
 p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 img {
   vertical-align: middle; // Prevent extra space
   border: 0;
   max-width: 100%;
-  font-size: 0;
 }
 
 h1,h2,h3,h4,h5,h6,b,strong {

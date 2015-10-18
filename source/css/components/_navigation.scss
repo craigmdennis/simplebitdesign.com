@@ -1,43 +1,36 @@
-/*
-Navigation
-
-Markup:
-<ul class="navigation {$modifiers}">
-  <li class="navigation__item navigation__item--brand">
-    <a href="/"><img srcset="http://placehold.it/80 2x" src="http://placehold.it/40" alt="Dell Logo"></a></li>
-  <li class="navigation__item">
-    <a href="/tour.html" class="navigation__link navigation__link--text">Future Ready Workforce</a></li>
-  <li class="navigation__item">
-    <a href="/solutions.html" class="navigation__link navigation__link--text">Why Refresh</a></li>
-  <li class="navigation__item">
-    <a href="/company.html" class="navigation__link navigation__link--text">Devices Matter</a></li>
-  <li class="navigation__item">
-    <a href="/partners.html" class="navigation__link navigation__link--text">Must Haves</a></li>
-  <li class="navigation__item">
-    <a href="/resources.html" class="navigation__link navigation__link--text">Start The Conversation</a></li>
-</ul>
-
-*/
-
 .navigation {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: -$baseline/2;
+  margin-right: -$baseline/2;
+  margin-bottom: $baseline/2;
 
   &__item {
     margin: 0;
-    display: inline-block;
-    vertical-align: top;
+    border-bottom: 1px solid rgba(white, 0.15);
+
+    &:first-child {
+      border-top: 1px solid rgba(white, 0.15);
+    }
   }
 
   &__text {
     @include height( 18px, 48px );
-    background: none;
-    border: 0;
     font-weight: bold;
-    padding-left: $baseline-half;
-    padding-right: $baseline-half;
     display: block;
     color: inherit;
+    padding-left: $baseline/2;
+    padding-right: $baseline/2;
+  }
+}
+
+a.navigation__text {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  @include notouch( true ) {
+    background-color: rgba(black, 0.05);
   }
 }

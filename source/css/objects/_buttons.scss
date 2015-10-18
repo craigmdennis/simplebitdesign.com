@@ -1,0 +1,49 @@
+$button--primary__bg: $global__accent;
+$button--primary__color: white;
+$button--primary__border: $button--primary__bg;
+
+$button--secondary__bg: white;
+$button--secondary__color: $global__accent;
+$button--secondary__border: $global__accent;
+
+.o-button {
+  @include height( 18px, 48px );
+  display: block;
+  padding-right: $baseline;
+  padding-left: $baseline;
+  font-weight: bold;
+  text-align: center;
+  border-radius: $global__radius;
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
+  border: 1px solid transparent;
+  width: 100%;
+
+  @include mq ( $tablet ) {
+    width: initial;
+  }
+
+  &:hover,
+  &:focus  {
+    text-decoration: none;
+  }
+
+  &--primary {
+    color: $button--primary__color;
+    background-color: $button--primary__bg;
+
+    @include notouch( true ) {
+      background-color: darken($button--primary__bg, 5%);
+    }
+  }
+
+  &--secondary {
+    border-color: $button--secondary__border;
+    color: $button--secondary__color;
+    background-color: $button--secondary__bg;
+
+    @include notouch( true ) {
+      background-color: darken($button--secondary__bg, 5%);
+    }
+  }
+}
