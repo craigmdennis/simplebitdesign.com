@@ -37,7 +37,7 @@ Markup:
     overflow: hidden;
 
     :last-child {
-      @include mq ( $tablet ) {
+      @include media( $tablet ) {
         margin-bottom: 0;
       }
     }
@@ -52,13 +52,13 @@ Markup:
 }
 
 .c-media--stacked-mqmobile {
-  @include mq ( $mobile ) {
+  @include media( $mobile ) {
     display: block;
   }
 }
 
 .c-media--stacked-mqmobile > .c-media__figure {
-  @include mq ( $mobile ) {
+  @include media( $mobile ) {
     margin-right: 0;
   }
 }

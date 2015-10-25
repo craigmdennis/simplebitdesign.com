@@ -2,6 +2,11 @@
 title: We design and build beautiful interfaces.
 ---
 
+- content_for :header do
+  = partial 'partials/logo', locals: { logoclasses: "o-logo--large" }
+  %h1.o-title= current_page.data.title
+  = partial "partials/navigation", locals: { data: data.site.nav, collapsible: false }
+
 -# Can probably split this up into partials
 = partial 'partials/sections/what-we-do'
 = partial 'partials/sections/projects'

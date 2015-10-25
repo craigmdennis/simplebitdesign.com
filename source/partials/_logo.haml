@@ -1,4 +1,6 @@
--# Replace by inline SVG
+- logoclasses = logoclasses || ""
 
-= link_to "/", title: "Home" do
+= link_to "/", title: "Home", class: "o-logo #{logoclasses}" do
+  
+  -# Replace by inline SVG
   = image_tag "http://placehold.it/100", alt: data.site.title

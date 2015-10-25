@@ -1,16 +1,27 @@
 .navigation {
-  list-style: none;
-  padding: 0;
-  margin-left: -$baseline/2;
-  margin-right: -$baseline/2;
-  margin-bottom: $baseline/2;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-left: -$baseline/2;
+    margin-right: -$baseline/2;
+    padding-bottom: $baseline/2;
+    padding-top: $baseline/2;
+
+    @include media( $tablet ) {
+      display: flex;
+    }
+  }
 
   &__item {
     margin: 0;
-    border-bottom: 1px solid rgba(white, 0.15);
 
-    &:first-child {
-      border-top: 1px solid rgba(white, 0.15);
+    @include media( $mobile ) {
+      border-bottom: 1px solid rgba(white, 0.15);
+
+      &:first-child {
+        border-top: 1px solid rgba(white, 0.15);
+      }
     }
   }
 
@@ -32,5 +43,68 @@ a.navigation__text {
 
   @include notouch( true ) {
     background-color: rgba(black, 0.05);
+  }
+}
+
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+// .navigation--collapse ul {
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   display: block;
+//   list-style: none;
+// }
+
+// .navigation--collapse li {
+//   width: 100%;
+//   display: block;
+// }
+
+@include media( $mobile ) {
+  .navigation--collapse {
+    .js & {
+      clip: rect(0 0 0 0);
+      max-height: 0;
+      position: absolute;
+      display: block;
+      overflow: hidden;
+      zoom: 1;
+    }
+
+    &.opened {
+      max-height: 9999px;
+    }
+  }
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@include media( $tablet ) {
+  .navigation--collapse {
+
+    .js & {
+      position: relative;
+    }
+
+    .closed {
+      .js & {
+        max-height: none;
+      }
+    }
+  }
+
+  .nav-toggle {
+    .js & {
+      display: none;
+    }
   }
 }

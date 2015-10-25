@@ -1,7 +1,10 @@
-%ul.navigation
-  - data.each do |nav|
-    %li.navigation__item
-      - if nav.url
-        = link_to nav.title, nav.url, class: "navigation__text"
-      - else
-        .navigation__text= nav.title
+- collapsible = collapsible || false
+
+#nav.navigation{ class: (collapsible ? "is-collapsible" : nil) }
+  %ul.navigation__list
+    - data.each do |nav|
+      %li.navigation__item
+        - if nav.url
+          = link_to nav.title, nav.url, class: "navigation__text"
+        - else
+          .navigation__text= nav.title

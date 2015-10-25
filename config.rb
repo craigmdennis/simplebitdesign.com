@@ -1,6 +1,7 @@
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  set :bundle_file_css, "css/app.css"
 end
 
 # Directories
@@ -18,14 +19,12 @@ set :build_dir, "public"
 ::Sass::Script::Number.precision = [7, ::Sass::Script::Number.precision].max
 
 activate :gist # Embed Gists
-activate :meta_tags # Easily add meta tags
-activate :middleman_simple_thumbnailer # Resize images
 
 # Blogging
 activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.sources = "posts/{category}/{title}.html"
-  blog.permalink = "{category}/{title}"
+  blog.prefix = ""
+  blog.sources = "posts/{year}/{month}/{title}.html"
+  blog.permalink = "{title}"
   blog.layout = "post"
   blog.paginate = true
   blog.per_page = 10
@@ -50,4 +49,10 @@ end
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = "staging"
+  deploy.strategy = :force_push
 end

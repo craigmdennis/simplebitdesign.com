@@ -19,7 +19,7 @@ $button--secondary__border: $global__accent;
   border: 1px solid transparent;
   width: 100%;
 
-  @include mq ( $tablet ) {
+  @include media( $tablet ) {
     width: initial;
   }
 

@@ -1,8 +1,5 @@
 .l-highlight
   .l-inside
-    .l-constrained
-      = partial 'partials/logo'
-
-      %h1.o-title= current_page.data.title
-
-      = partial "partials/navigation", locals: { data: data.site.nav }
+    .l-constrained      
+      - if content_for? :header
+        = yield_content :header

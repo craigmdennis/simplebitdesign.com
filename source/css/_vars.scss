@@ -19,11 +19,12 @@ $global__heading:         "Futura PT", sans-serif;
 $global__body:            "open Sans", sans-serif;
 
 // Breakpoints
-$mobile:                  "(max-width: 47.9375em)"; // 799px
-$tablet:                  "(min-width: 48em)"; // 800px
-$tablet-desktop:          "(min-width: 48em) and (max-width: 62em)";
-$desktop:                 "(min-width: 62em)"; // 992px
-$hd:                      "(min-width: 75em)"; // 1200px
+// Can't be "quoted" as it breaks NEAT
+$mobile:                  max-width 47.9375em; // 799px
+$tablet:                  48em;
+$tablet-desktop:          min-width 48em max-width 62em;
+$desktop:                 62em; // 992px
+$hd:                      75em; // 1200px
 
 // z-index
 $z: (

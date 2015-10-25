@@ -1,0 +1,28 @@
+- content_for :header do
+  = partial 'partials/logo'
+  = partial "partials/navigation", locals: { data: data.site.nav, collapsible: true }
+
+= wrap_layout :layout do
+  .l-light
+    .l-inside
+      %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
+        %header
+          .l-constrained
+            .m-post
+              .c-summary
+                .c-summary__body
+                  - if exists? current_page.data.date
+                    %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
+                    .l-split
+                      .c-summary__meta.c-summary__meta--accent
+                        %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+
+                      .c-summary__meta
+                        = ui_svg "eye", 12, class: "o-icon o-icon--before"
+                        %abbr{:title => "2 Minute Read"} 2 Min
+
+                - if exists? current_page.data.date
+                  %h1.m-post__title{itemprop: "name"}= current_page.data.title
+
+      .l-constrained{:itemprop => "articleBody"}
+        = yield

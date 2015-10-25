@@ -1,0 +1,10 @@
+.o-logo {
+  width: 32px;
+  display: inline-block;
+}
+
+.o-logo {
+  &--large {
+    width: 100px;
+  }
+}

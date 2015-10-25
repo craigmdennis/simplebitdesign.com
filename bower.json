@@ -20,6 +20,7 @@
     "what-input": "~1.0.0",
     "flexiblegs-scss-plus": "~5.4.0",
     "picturefill": "~3.0.1",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "responsive-nav": "~1.0.39"
   }
 }

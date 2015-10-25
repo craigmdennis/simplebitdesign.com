@@ -3,9 +3,7 @@ $light__color: #4A4A4A;
 $subdued__bg: #F6F6F6;
 
 .l-constrained {
-  max-width: $global__maxwidth;
-  margin-left: auto;
-  margin-right: auto;
+  @include outer-container;
   padding-left: $baseline/2;
   padding-right: $baseline/2;
 }
@@ -37,7 +35,7 @@ $subdued__bg: #F6F6F6;
 }
 
 .l-fullwidth-mqmobile {
-  @include mq ( $mobile ) {
+  @include media( $mobile ) {
     width: 100%;
   }
 }
