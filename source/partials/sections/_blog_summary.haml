@@ -1,13 +1,17 @@
-%li.c-list__item{itemid: "/blog/add-hover-styles-only-non-touch-devices", itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-  .c-summary
-    %h2.c-summary__title{itemprop: "headline"}
-      = link_to "Add hover styles only to non-touch devices", "#"
-    .c-summary__body
-      %meta{itemprop: "datePublished", content: "2015-02-05T08:00:00+08:00"}
-      .l-split
-        .c-summary__meta.c-summary__meta--accent
-          %time{datetime: "", itemprop: "datePublished"} April 6, 2015
+-# Get the raw reading data [h, mm, ss]
+- raw_reading_time = data.body.reading_time(:format => :raw)
+-# Get the minutes only and no less than 1
+- reading_mins = [raw_reading_time[1], 1].max
 
-        .c-summary__meta
-          = ui_svg "eye", 12, class: "o-icon o-icon--before"
-          %abbr{:title => "2 Minute Read"} 2 Min
+.c-summary
+  %h2.c-summary__title{itemprop: "headline"}
+    = link_to data.title, data.url
+  .c-summary__body
+    %meta{itemprop: "datePublished", content: data.date}
+    .l-split
+      .c-summary__meta.c-summary__meta--accent
+        %time{datetime: data.date.to_time.iso8601, itemprop: "datePublished", data: { toggle: "timeago" }}= data.date.strftime '%B %-d, %Y'
+
+      .c-summary__meta{"aria-label" => "About a #{reading_mins} minute read"}
+        = ui_svg "eye", 12, class: "o-icon o-icon--before"
+        %abbr{:title => "#{reading_mins} minute read"} #{reading_mins} min

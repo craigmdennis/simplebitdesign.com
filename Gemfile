@@ -12,9 +12,10 @@ gem "therubyracer" # faster JS compiles
 gem "oj" # faster JS compiles
 gem "middleman-simple-thumbnailer"
 gem "middleman-blog" # Blogging
-gem 'middleman-deploy', '~> 1.0'
 gem 'bourbon'
 gem 'neat'
+gem 'readingtime'
 
+gem 'middleman-deploy', '~> 1.0'
 gem "capistrano"
 gem "capistrano-gridserver"

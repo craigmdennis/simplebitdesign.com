@@ -3,10 +3,14 @@
   &__list {
     list-style: none;
     padding: 0;
-    margin-left: -$baseline/2;
-    margin-right: -$baseline/2;
     padding-bottom: $baseline/2;
     padding-top: $baseline/2;
+
+
+    @include media( $mobile ) {
+      margin-left: -$baseline/2;
+      margin-right: -$baseline/2;
+    }
 
     @include media( $tablet ) {
       display: flex;

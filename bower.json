@@ -21,6 +21,7 @@
     "flexiblegs-scss-plus": "~5.4.0",
     "picturefill": "~3.0.1",
     "jquery": "~2.1.4",
-    "responsive-nav": "~1.0.39"
+    "responsive-nav": "~1.0.39",
+    "jquery-timeago": "~1.4.3"
   }
 }

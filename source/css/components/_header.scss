@@ -3,7 +3,7 @@
   margin-bottom: $baseline/2;
   margin-top: $baseline/2;
 
-  @include media( $tablet ) {
+  @include media( 35em ) {
     @include height( 56px, 64px );
     max-width: 36rem;
   }
