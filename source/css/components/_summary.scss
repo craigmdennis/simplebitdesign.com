@@ -1,4 +1,6 @@
 .c-summary {
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
 
   &--divided {
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -35,5 +37,9 @@
     &--accent {
       color: $summary__title__color;
     }
+  }
+
+  &__teaser > :last-child {
+    margin-bottom: 0;
   }
 }

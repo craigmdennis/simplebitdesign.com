@@ -7,8 +7,8 @@
 
           %ul.c-list.c-list--divided
             - blog.articles[0...3].each do |article|
-              %li.c-list__item{itemid: article.url, itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-                = partial 'partials/sections/blog_summary', locals: {data: article}
+              %li.c-list__item{id: "post_#{article.title.downcase.parameterize}", itemid: article.url, itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+                = partial 'partials/sections/blog_summary', locals: {data: article, teaser: true}
 
 
           = link_to "More from the blog", "#", class: "o-button o-button--secondary"

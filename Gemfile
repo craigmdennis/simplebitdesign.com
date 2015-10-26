@@ -15,6 +15,7 @@ gem "middleman-blog" # Blogging
 gem 'bourbon'
 gem 'neat'
 gem 'readingtime'
+gem 'nokogiri'
 
 gem 'middleman-deploy', '~> 1.0'
 gem "capistrano"

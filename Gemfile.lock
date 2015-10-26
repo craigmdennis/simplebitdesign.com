@@ -217,6 +217,7 @@ DEPENDENCIES
   middleman-simple-thumbnailer
   middleman-sprockets
   neat
+  nokogiri
   oj
   readingtime
   redcarpet
