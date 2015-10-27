@@ -4,14 +4,6 @@
   %head
     %meta{charset: "utf-8"}
 
-    -# Picture element HTML5 shiv
-    :javascript
-      document.createElement( "picture" );
-
-    = javascript_include_tag "picturefill.min.js"
-    = partial 'partials/script_modernizr'
-    = partial 'partials/script_typekit'
-
     - if exists? current_page.data.title
       %title= current_page.data.title + " &mdash; " + data.site.name
     - else
@@ -24,10 +16,20 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %meta{name: "HandheldFriendly", content: "true"}
 
+    -# Stylesheet must come before inline javascript
+    = stylesheet_link_tag "app"
+
+    = javascript_include_tag "picturefill.min.js", async: true, defer: true
+
     -if content_for? :head
       = yield_content :head
 
-    = stylesheet_link_tag "app"
+    -# Picture element HTML5 shiv
+    :javascript
+      document.createElement( 'picture' );
+
+    = partial 'partials/script_modernizr'
+    = partial 'partials/script_typekit'
 
   %body{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content

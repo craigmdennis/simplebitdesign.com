@@ -1,5 +1,4 @@
 .l-highlight
-  .l-inside
-    .l-constrained      
-      - if content_for? :header
-        = yield_content :header
+  .l-constrained
+    - if content_for? :header
+      = yield_content :header

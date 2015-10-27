@@ -1,10 +1,9 @@
-.navigation {
+.m-navigation {
 
   &__list {
     list-style: none;
-    padding: 0;
-    padding-bottom: $baseline/2;
-    padding-top: $baseline/2;
+    padding: 0 0 $baseline/2 0;
+    margin: 0;
 
 
     @include media( $mobile ) {
@@ -39,7 +38,7 @@
   }
 }
 
-a.navigation__text {
+a.m-navigation__text {
   &:hover,
   &:focus {
     text-decoration: none;
@@ -50,29 +49,13 @@ a.navigation__text {
   }
 }
 
-/*! responsive-nav.js 1.0.39 by @viljamis */
-
-// .navigation--collapse ul {
-//   margin: 0;
-//   padding: 0;
-//   width: 100%;
-//   display: block;
-//   list-style: none;
-// }
-
-// .navigation--collapse li {
-//   width: 100%;
-//   display: block;
-// }
-
 @include media( $mobile ) {
-  .navigation--collapse {
+  .m-navigation--collapse {
     .js & {
       clip: rect(0 0 0 0);
       max-height: 0;
       position: absolute;
       display: block;
-      overflow: hidden;
       zoom: 1;
     }
 
@@ -82,18 +65,8 @@ a.navigation__text {
   }
 }
 
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
 @include media( $tablet ) {
-  .navigation--collapse {
+  .m-navigation--collapse {
 
     .js & {
       position: relative;
@@ -103,12 +76,6 @@ a.navigation__text {
       .js & {
         max-height: none;
       }
-    }
-  }
-
-  .nav-toggle {
-    .js & {
-      display: none;
     }
   }
 }

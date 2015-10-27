@@ -5,39 +5,39 @@
     = link_to "Get in touch", "#", class: "o-button o-button--primary"
 
     %nav
-      %ul.navigation{itemprop: "address", itemscope: true, itemtype: "http://schema.org/Organization"}
-        %li.navigation__item
-          = link_to "#", class: "navigation__text" do
-            .c-media
-              .c-media__figure
-                = ui_svg "envelope", 20, class: "o-icon o-icon--primary"
-              .c-media__body{itemprop: "email"} info@simplebitdesign.com
+      .m-navigation
+        %ul.m-navigation__list{itemprop: "address", itemscope: true, itemtype: "http://schema.org/Organization"}
+          %li.m-navigation__item
+            = link_to "#", class: "m-navigation__text" do
+              .c-media
+                .c-media__figure
+                  = ui_svg "envelope", 20, class: "o-icon o-icon--primary"
+                .c-media__body{itemprop: "email"} info@simplebitdesign.com
 
-        %li.navigation__item
-          = link_to "http://twitter.com/simplbitdesign", class: "navigation__text" do
-            .c-media
-              .c-media__figure
-                = ui_svg "twitter", 20, class: "o-icon o-icon--primary"
-              .c-media__body @simplebitdesign
+          %li.m-navigation__item
+            = link_to "http://twitter.com/simplbitdesign", class: "m-navigation__text" do
+              .c-media
+                .c-media__figure
+                  = ui_svg "twitter", 20, class: "o-icon o-icon--primary"
+                .c-media__body @simplebitdesign
 
-        %li.navigation__item{ itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
-          .navigation__text
-            .c-media
-              .c-media__figure
-                = ui_svg "pin", 20, class: "o-icon o-icon--primary"
-              .c-media__body
-                %strong{itemprop: "name"} Simple Bit Design
-                .c-list.c-list--compact
-                  %div{itemprop: "streetAddress"}
-                    .c-list__item Office 1
-                    .c-list__item The Business Terrace
-                    .c-list__item Maidstone House
-                    .c-list__item King Street
-                    .c-list__item Maidstone
-                    .c-list__item Kent
-                  .c-list__item{itemprop:"postalCode"} ME20 7QD
+          %li.m-navigation__item{ itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
+            .m-navigation__text
+              .c-media
+                .c-media__figure
+                  = ui_svg "pin", 20, class: "o-icon o-icon--primary"
+                .c-media__body
+                  %strong{itemprop: "name"} Simple Bit Design
+                  .c-list.c-list--compact
+                    %div{itemprop: "streetAddress"}
+                      .c-list__item Office 1
+                      .c-list__item The Business Terrace
+                      .c-list__item Maidstone House
+                      .c-list__item King Street
+                      .c-list__item Maidstone
+                      .c-list__item Kent
+                    .c-list__item{itemprop:"postalCode"} ME20 7QD
 
     .h-align-center
       .o-footnote We use cookies. We assume you're ok with that.
-      .o-footnote &copy; #{data.site.name} #{Time.now.year}
     = image_tag "cookie.svg", id: "cookie", alt: "A delicious cookie", class: "l-center"

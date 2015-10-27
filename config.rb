@@ -33,6 +33,8 @@ activate :blog do |blog|
   blog.default_extension = ".md"
 end
 
+page "/projects/*", :layout => "project"
+
 # Build-specific configuration
 configure :build do
 

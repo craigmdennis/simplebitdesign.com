@@ -43,7 +43,8 @@ $button--secondary__border: $global__accent;
     background-color: $button--secondary__bg;
 
     @include notouch( true ) {
-      background-color: darken($button--secondary__bg, 5%);
+      color: $button--primary__color;
+      background-color: darken($button--primary__bg, 5%);
     }
   }
 }

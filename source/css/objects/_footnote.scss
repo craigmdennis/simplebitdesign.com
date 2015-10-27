@@ -1,3 +1,5 @@
 .o-footnote {
   @include height( 12px );
+  font-weight: normal;
+  margin-bottom: $baseline;
 }

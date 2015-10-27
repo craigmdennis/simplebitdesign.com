@@ -4,6 +4,7 @@
 
 @import 'flexiblegs-scss-plus/flexiblegs-plus.scss';
 @import 'sass-height/sass-height.scss';
+@import 'sass-height/sass-height.scss';
 @import 'bourbon';
 @import 'neat';
 
@@ -27,13 +28,14 @@
 
 @import 'modules/collections';
 @import 'modules/posts';
+@import 'modules/navigation';
 
 @import 'components/media';
 @import 'components/embed';
 @import 'components/lists';
-@import 'components/navigation';
 @import 'components/header';
 @import 'components/summary';
+@import 'components/hamburger';
 
 @import 'objects/logo';
 @import 'objects/icons';

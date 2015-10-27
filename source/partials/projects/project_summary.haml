@@ -1,0 +1,14 @@
+- thumb = project.data.thumb || false
+
+.c-summary
+  .c-media.c-media--stacked-mqmobile
+    .c-media__body
+      %h2.c-summary__title.c-summary__title--accent
+        = link_to project.data.title, project.url
+      %p.c-summary__copy= project.data.summary
+    - if thumb
+      .c-media__figure
+        %figure
+          = image_tag thumb.url, srcset: (thumb.srcset.length ? thumb.srcset : nil), alt: thumb.alt, class: "l-fullwidth-mqmobile"
+
+  = link_to "Find out more", project.url, class: "o-button o-button--secondary"
