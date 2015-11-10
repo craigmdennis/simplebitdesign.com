@@ -1,7 +1,7 @@
 {
   "name": "simplebitdesign-com",
   "description": "We make intuitive interfaces for complex app & services",
-  "version": "0.7.0",
+  "version": "0.6.2",
   "bugs": {
     "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com/issues",
     "email": "support@simplebitdesign.com"
@@ -40,8 +40,7 @@
     "grunt-conventional-changelog": "~1.1.0",
     "grunt-bump": "0.0.14",
     "grunt-html-validation": "~0.1.17",
-    "grunt-uncss": "~0.3.3",
-    "grunt-shell": "~0.7.0"
+    "grunt-uncss": "~0.3.3"
   },
   "engines": {
     "node": ">=0.8.0"

@@ -1,11 +1,5 @@
-<a name="0.7.0"></a>
-## 0.7.0 (2014-06-19)
-
-
-#### Features
-
-* add capistrano ([eb72bb71](https://craigmdennis@bitbucket.org/simplebitdesign/simplebitdesign.com/commit/eb72bb71a37add92c84ee90cfef86f2742e697ac))
-
+<a name="0.6.2"></a>
+## 0.6.2 (2015-11-10)
 
 <a name="0.6.0"></a>
 ## 0.6.0 (2014-06-17)
