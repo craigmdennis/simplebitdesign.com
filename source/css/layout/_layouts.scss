@@ -6,12 +6,14 @@ $subdued__bg: #F6F6F6;
   @include outer-container;
   padding-left: $baseline/2;
   padding-right: $baseline/2;
+  overflow: hidden;
 }
 
 .l-highlight {
   background-color: $highlight__bg;
   overflow: hidden;
   position: relative;
+  color: white;
 }
 
 .l-light {

@@ -1,0 +1,13 @@
+---
+title: We are User Interface design specialists
+tag: User Interface Design
+---
+
+- content_for :header do
+  = partial 'partials/logo'
+  = partial "partials/navigation", locals: { data: data.site.nav, collapsible: true }
+
+.l-light
+  .l-constrained
+    %h1.o-title= current_page.data.title
+    %p This is the landing page for SEO and possibly PPC. It should have an introduction about #{current_page.data.tag} and list all projects / blog posts that are related; this can probably be handled with tags.

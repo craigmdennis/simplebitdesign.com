@@ -37,7 +37,6 @@ page "/projects/*", :layout => "project"
 
 # Build-specific configuration
 configure :build do
-
   activate :minify_css
   activate :minify_javascript
   activate :imageoptim
@@ -46,7 +45,6 @@ configure :build do
   activate :gzip
   activate :minify_html, remove_intertag_spaces: true
   activate :autoprefixer, browsers: ["last 2 versions", "Explorer >= 9"]
-
 end
 
 # Add bower components after asset hashing

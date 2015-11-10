@@ -18,3 +18,10 @@ $icon--primary__color: $global__accent;
 .o-icon--primary {
   color: $icon--primary__color;
 }
+
+// Custom sizing
+#icon_devices {
+  margin-bottom: -$baseline*1.5;
+  margin-top: -$baseline*1.5;
+  width: $baseline*6;
+}

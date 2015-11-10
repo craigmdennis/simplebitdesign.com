@@ -10,7 +10,7 @@
   &__title {
     @include height( 24px );
     font-weight: 700;
-    margin-bottom: $baseline/2;
+    margin-bottom: $baseline/4;
     
     &--accent {
       color: $summary__title__color;
@@ -20,6 +20,10 @@
   &__figure {
     margin-top: $baseline;
     margin-bottom: $baseline;
+
+    &__image {
+      width: $baseline*4;
+    }
   }
 
   &__copy {

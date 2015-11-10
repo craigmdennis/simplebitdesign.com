@@ -1,11 +1,9 @@
 .o-logo {
   width: 32px;
-  display: inline-block;
+  display: block;
   margin-bottom: $baseline/2;
   margin-top: $baseline/2;
-}
 
-.o-logo {
   &--large {
     width: 100px;
   }

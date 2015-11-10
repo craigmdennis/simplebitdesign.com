@@ -1,7 +1,7 @@
 .o-title {
   @include height( 36px, 40px );
-  margin-bottom: $baseline/2;
-  margin-top: $baseline/2;
+  margin-bottom: $baseline/4;
+  margin-top: $baseline/4;
 
   @include media( 35em ) {
     @include height( 56px, 64px );

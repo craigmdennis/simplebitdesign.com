@@ -3,8 +3,11 @@
     .l-inside
       .l-constrained
         .m-collection
-          %h1.m-collection__title Projects
+          %h1.m-collection__title
+            =link_to 'Projects', '/projects.html'
 
-          - sitemap.resources.each do |project|
-            - if project.url =~ /^(\/projects\/)/
-              = partial 'partials/projects/project_summary', locals: { project: project }
+          .c-list.c-list--divided
+            - sitemap.resources.each_with_index do |project, index|
+              - if project.url =~ /^(\/projects\/)/
+                .c-list__item
+                  = partial 'partials/projects/project_summary', locals: { project: project }

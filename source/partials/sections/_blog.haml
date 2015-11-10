@@ -3,7 +3,8 @@
     .l-inside
       .l-constrained
         .m-collection
-          %h1.m-collection__title From the blog
+          %h1.m-collection__title
+            =link_to 'From the blog', '/blog.html'
 
           %ul.c-list.c-list--divided
             - blog.articles[0...3].each do |article|
@@ -11,4 +12,4 @@
                 = partial 'partials/sections/blog_summary', locals: {data: article, teaser: true}
 
 
-          = link_to "More from the blog", "#", class: "o-button o-button--secondary"
+          = link_to "More from the blog", "blog.html", class: "o-button o-button--secondary"
