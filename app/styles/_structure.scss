@@ -112,6 +112,10 @@
 
 }
 
+.clients {
+  margin-bottom: baseline(4);
+}
+
 // Contact form positioning
 .form--contact {
   @extend %center;
