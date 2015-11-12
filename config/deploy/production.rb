@@ -1,6 +1,6 @@
 set :application, 'simplebitdesign.com'
 set :deploy_to, '/home/152547/users/.home/domains/simplebitdesign.com/'
-set :branch, 'production'
+set :branch, 'master'
 
 # Simple Role Syntax
 # ==================
