@@ -6,14 +6,22 @@ $subdued__bg: #F6F6F6;
   @include outer-container;
   padding-left: $baseline/2;
   padding-right: $baseline/2;
-  overflow: hidden;
+}
+
+.l-ontop {
+  position: relative;
+  z-index: 2;
+}
+
+.l-centered {
+  text-align: center;
 }
 
 .l-highlight {
   background-color: $highlight__bg;
-  overflow: hidden;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
 .l-light {
@@ -28,7 +36,17 @@ $subdued__bg: #F6F6F6;
 
 .l-inside {
   padding-top: $baseline/2;
-  overflow: hidden;
+
+  @include media( $tablet ) {
+    padding-top: $baseline;
+  }
+}
+
+.l-spacious {
+  @include media( $tablet ) {
+    padding-bottom: $baseline*4;
+    padding-top: $baseline*4;
+  }
 }
 
 .l-center {

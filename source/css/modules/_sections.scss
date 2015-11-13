@@ -1,0 +1,45 @@
+$summary__title__color: $global__accent;
+$section__callout__color: #4A4A4A;
+
+.m-section {
+  padding-top: $baseline;
+  
+  @include media( $tablet ) {
+    padding-bottom: $baseline*2;
+    padding-top: $baseline*2;
+  }
+
+  &__title {
+    @include height( 56px );
+    font-family: $global__heading;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    @include media( $tablet ) {
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      margin: 0 auto $baseline/2;
+      padding-bottom: $baseline/4;
+      max-width: 50%;
+    }
+  }
+
+  &__callout {
+    @include height( 36px );
+    color: $section__callout__color;
+    margin-bottom: $baseline/4;
+  }
+
+  &__copy {
+    @include height( 18px );
+  }
+
+  &__footer {
+    text-align: center;
+    margin-top: -$baseline/2;
+
+    @include media( $tablet ) {
+      margin-top: $baseline;
+    }
+  }
+}

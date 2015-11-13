@@ -2,8 +2,9 @@
 
   &__list {
     list-style: none;
-    padding: 0 0 $baseline/2 0;
     margin: 0;
+    padding-left: 0;
+    padding-bottom: $baseline/2; // Margin causes a jump in navigation collapse animation
 
 
     @include media( $mobile ) {
@@ -13,6 +14,19 @@
 
     @include media( $tablet ) {
       display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--inline {
+    @include media( $tablet ) {
+      display: block;
+      float: left;
+      margin: $baseline/4 $baseline/2;
+
+      .m-navigation__list {
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -30,11 +44,14 @@
 
   &__text {
     @include height( 18px, 48px );
-    font-weight: bold;
     display: block;
     color: inherit;
     padding-left: $baseline/2;
     padding-right: $baseline/2;
+
+    &--strong {
+      font-weight: bold;
+    }
   }
 }
 

@@ -1,0 +1,19 @@
+.l-grid {
+  @include outer-container;
+  clear: both;
+  
+  @include media( $tablet ) {
+    display: flex;
+  }
+
+  &--3-cols {
+    @include rwd( 'tablet', $tablet ) {
+      > .l-grid__span {
+        @include span-columns(4);
+        @include omega(3n);
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
+}

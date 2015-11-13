@@ -12,6 +12,7 @@
 @import 'utils/util_unicode';
 
 @import 'mixins/notouch';
+@import 'mixins/rwd';
 
 @import 'helpers/accessible';
 @import 'helpers/animations';
@@ -24,22 +25,44 @@
 @import 'type/copy';
 
 @import 'layout/layouts';
+@import 'layout/grid';
 
-@import 'modules/collections';
+@import 'modules/sections';
 @import 'modules/posts';
 @import 'modules/navigation';
+@import 'modules/panels';
 
 @import 'components/media';
 @import 'components/embed';
 @import 'components/lists';
-@import 'components/header';
 @import 'components/summary';
 @import 'components/hamburger';
+@import 'components/projects';
 
 @import 'objects/logo';
 @import 'objects/icons';
 @import 'objects/skiplink';
 @import 'objects/buttons';
 @import 'objects/footnote';
+@import 'objects/title';
 
 // INBOX - To Be Factored
+#headerlogo {
+  display: none;
+
+  @include media( $tablet ) {
+    transform: rotate(35deg);
+    position: absolute;
+    bottom: -20%;
+    right: -20%;
+    opacity: 0.1;
+    z-index: 1;
+    width: 100%;
+    max-width: 75em;
+    display: block;
+  }
+
+  @include media( $desktop ) {
+    width: 75%;
+  }
+}

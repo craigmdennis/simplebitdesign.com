@@ -1,11 +1,14 @@
 ---
-title: Recurrency
-summary: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
+title: Upgrade your Mac
+summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sapiente ipsam necessitatibus quibusdam dicta, et nulla eum. Iste assumenda minima quae maxime, non distinctio dignissimos hic culpa, eligendi facilis aliquam!
 
 thumb:
-  url: http://placehold.it/300
-  srcset: "http://placehold.it/600 2x" 
-  alt: Screenshot of Recurrency
+  url: http://placehold.it/1044x272
+  srcset: "http://placehold.it/2088x344 2x" 
+  alt: Screenshot of MegaMac work
+
+background: "#404040"
+color: "#FFFFFF"
 
 ---
 

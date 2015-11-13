@@ -1,0 +1,9 @@
+---
+title: Client Work
+---
+
+- content_for :header do
+  = partial 'partials/logo'
+  = partial 'partials/navigation', locals: {data: data.site.nav, collapsible: true, extraclasses: 'm-navigation--inline' }
+
+= partial 'partials/sections/projects'

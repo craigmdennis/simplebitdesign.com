@@ -51,15 +51,13 @@ Markup:
   }
 }
 
-.c-media--stacked-mqmobile {
-  @include media( $mobile ) {
+.c-media--stacked {
+  @include rwd( 'mobile', $mobile ) {
     display: block;
-  }
-}
 
-.c-media--stacked-mqmobile > .c-media__figure {
-  @include media( $mobile ) {
-    margin-right: 0;
+    .c-media__figure {
+      margin-right: 0;
+    }
   }
 }
 

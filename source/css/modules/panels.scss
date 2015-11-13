@@ -1,0 +1,31 @@
+$panel-border: 1px solid #EEE;
+
+.m-panel {
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
+  border: $panel-border;
+  padding-left: $baseline/2;
+  padding-right: $baseline/2;
+  display: block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  @include media( $desktop ) {
+    padding: $baseline/2 $baseline;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &--interactive {
+    transition: box-shadow $global__fast $global__easing;
+    &:hover,
+    &:focus {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+  }
+}

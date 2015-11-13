@@ -20,6 +20,8 @@ $button--secondary__border: $global__accent;
   width: 100%;
 
   @include media( $tablet ) {
+    @include height( 21px, 56px );
+    display: inline-block;
     width: initial;
   }
 

@@ -8,14 +8,14 @@
       .m-navigation
         %ul.m-navigation__list{itemprop: "address", itemscope: true, itemtype: "http://schema.org/Organization"}
           %li.m-navigation__item
-            = link_to "#", class: "m-navigation__text" do
+            = link_to "#", class: "m-navigation__text m-navigation__text--strong" do
               .c-media
                 .c-media__figure
                   = ui_svg "envelope", 20, class: "o-icon o-icon--primary"
                 .c-media__body{itemprop: "email"} info@simplebitdesign.com
 
           %li.m-navigation__item
-            = link_to "http://twitter.com/simplbitdesign", class: "m-navigation__text" do
+            = link_to "http://twitter.com/simplbitdesign", class: "m-navigation__text m-navigation__text--strong" do
               .c-media
                 .c-media__figure
                   = ui_svg "twitter", 20, class: "o-icon o-icon--primary"

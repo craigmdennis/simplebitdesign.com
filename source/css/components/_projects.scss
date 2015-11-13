@@ -1,0 +1,41 @@
+.c-project {
+  display: block;
+  overflow: hidden;
+  padding-left: $baseline*2;
+  padding-right: $baseline*2;
+  text-align: center;
+  margin-bottom: $baseline;
+
+  &:hover {
+    text-decoration: none;
+
+    .c-project__image {
+      @include media( $tablet ) {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  &__title {
+    @include height( 48px );
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/4;
+  }
+
+  &__intro {
+    @include height( 21px, 28px );
+    margin-bottom: $baseline;
+    opacity: 0.75;
+  }
+
+  &__body {}
+  
+  &__image {
+    display: block;
+    
+    @include media( $tablet ) {
+      transform: translateY($baseline);
+      transition: transform $global__slow $global__easing;
+    }
+  }
+}

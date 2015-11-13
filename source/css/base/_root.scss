@@ -12,3 +12,15 @@ figure {
 a {
   transition: color $global__fast $global__easing, background-color $global__fast $global__easing;
 }
+
+html {
+  @include media( $hd ) {
+    font-size: 112.5%;
+  }
+  @include media( 100em ) {
+    font-size: 125%;
+  }
+  @include media( 120em ) {
+    font-size: 137.5%;
+  }
+}

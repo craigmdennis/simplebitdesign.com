@@ -2,15 +2,11 @@
   margin-top: $baseline/2;
   margin-bottom: $baseline/2;
 
-  &--divided {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: $baseline/2;
-  }
-
   &__title {
     @include height( 24px );
     font-weight: 700;
     margin-bottom: $baseline/4;
+    margin-top: $baseline/2;
     
     &--accent {
       color: $summary__title__color;
@@ -21,8 +17,24 @@
     margin-top: $baseline;
     margin-bottom: $baseline;
 
-    &__image {
-      width: $baseline*4;
+    &--circle {
+      display: block;
+      background-color: $global__accent;
+      border-radius: 50%;
+      width: 50%;
+      padding-bottom: 50%;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+
+      &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: white;
+      }
     }
   }
 

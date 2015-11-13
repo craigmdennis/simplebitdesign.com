@@ -1,5 +1,6 @@
 name: "Simple Bit Design"
 title: "UI and UX Design Agency"
+description: "We design and build beautiful interfaces"
 
 # Breakpoints should match the CSS
 # Used for responsive images
@@ -12,18 +13,18 @@ breakpoints:
 # Navigation and associated homepage sections
 nav:
   - 
-    title: What we do
-    url: "#what-we-do"
+    title: Services
+    url: "/#services"
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
 
   -   
-    title: Projects
-    url: "#projects"
+    title: Client Work
+    url: "/#client-work"
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
 
   -
     title: Blog
-    url: "#blog"
+    url: "/#blog"
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
   -
     title: Contact

@@ -1,13 +1,20 @@
-%section#projects
-  .l-subdued
-    .l-inside
-      .l-constrained
-        .m-collection
-          %h1.m-collection__title
-            =link_to 'Projects', '/projects.html'
+%section#client-work
+  .l-light
+    .l-constrained
+      .c-list
+        - project_count = 0
+        - sitemap.resources.each do |project|
 
-          .c-list.c-list--divided
-            - sitemap.resources.each_with_index do |project, index|
-              - if project.url =~ /^(\/projects\/)/
-                .c-list__item
-                  = partial 'partials/projects/project_summary', locals: { project: project }
+          - if (project.url =~ /^(\/client-work\/)/) && (project_count < 3)
+            - project_count +1
+            - thumb = project.data.thumb || false
+
+            .c-list__item
+              = link_to project.url, class: "c-project", style: "background-color: #{project.data.background}; color: #{project.data.color};" do
+                %h2.c-project__title= project.data.title
+                %p.c-project__intro= project.data.summary
+                
+                - if thumb
+                  %figure
+                    .c-project__image
+                      = image_tag thumb.url, srcset: (thumb.srcset.length ? thumb.srcset : nil), alt: thumb.alt

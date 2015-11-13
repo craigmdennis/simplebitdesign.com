@@ -1,0 +1,10 @@
+@mixin rwd( $classes: (), $breakpoints: () ) {
+  @content;
+  @for $i from 1 through length($classes) {
+    &---MQ#{nth($classes, $i)} {
+      @include media( nth($breakpoints, $i) ) {
+        @content;
+      }
+    } 
+  }
+}

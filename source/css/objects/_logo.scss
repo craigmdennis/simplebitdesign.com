@@ -1,10 +1,23 @@
 .o-logo {
-  width: 32px;
+  width: 2em;
   display: block;
   margin-bottom: $baseline/2;
   margin-top: $baseline/2;
+  position: relative;
+  top: -0.0625em;
+
+  @include media( $tablet ) {
+    float: left;
+  }
 
   &--large {
-    width: 100px;
+    width: 6em;
+
+    @include media( $tablet ) {
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

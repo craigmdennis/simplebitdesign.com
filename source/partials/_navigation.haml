@@ -1,10 +1,12 @@
 - collapsible = collapsible || false
-%nav
-  #nav.m-navigation{ class: (collapsible ? "is-collapsible" : nil) }
+- extraclasses = extraclasses || nil
+
+#nav.m-navigation{ class: "#{(collapsible ? 'is-collapsible' : nil)} #{extraclasses}" }
+  %nav
     %ul.m-navigation__list
       - data.each do |nav|
         %li.m-navigation__item
           - if nav.url
-            = link_to nav.title, nav.url, class: "m-navigation__text"
+            = link_to nav.title, nav.url, class: "m-navigation__text m-navigation__text--strong"
           - else
-            .m-navigation__text= nav.title
+            .m-navigation__text.m-navigation__text--strong= nav.title

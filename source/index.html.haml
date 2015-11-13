@@ -3,11 +3,16 @@ title: We design and build beautiful interfaces.
 ---
 
 - content_for :header do
-  = partial 'partials/logo', locals: { logoclasses: "o-logo--large" }
-  %h1.o-title= current_page.data.title
-  = partial "partials/navigation", locals: { data: data.site.nav, collapsible: false }
+  
+  .l-spacious
+    .l-ontop
+      = partial 'partials/logo', locals: { logoclasses: "o-logo--large" }
 
--# Can probably split this up into partials
-= partial 'partials/sections/what-we-do'
+      %h1.o-title= current_page.data.title
+      = partial "partials/navigation", locals: { data: data.site.nav, collapsible: false }
+
+  #headerlogo{"aria-hidden" => true, role: "presentation"}= partial 'partials/logo_svg'
+
+= partial 'partials/sections/services'
 = partial 'partials/sections/projects'
 = partial 'partials/sections/blog'
