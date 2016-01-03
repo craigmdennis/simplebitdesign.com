@@ -4,12 +4,14 @@
 
 = wrap_layout :layout do
   .l-light
-    .l-inside
-      %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
+    %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
+      .l-constrained
         %header
-          .l-constrained
-            .m-post
-              = partial 'partials/sections/blog_summary', locals: { data: current_page}
+          = partial 'partials/sections/blog_summary', locals: { data: current_page}
 
-      .l-constrained{:itemprop => "articleBody"}
-        = yield
+        .l-grid
+          .l-grid__span--9---MQtablet
+            .copy{:itemprop => "articleBody"}
+              = yield
+          .l-grid__span--3---MQtablet
+            %p Sidebar

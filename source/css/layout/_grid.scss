@@ -1,19 +1,68 @@
 .l-grid {
-  @include outer-container;
-  clear: both;
-  
-  @include media( $tablet ) {
-    display: flex;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
   }
 
-  &--3-cols {
+  &__span--9 {
     @include rwd( 'tablet', $tablet ) {
-      > .l-grid__span {
-        @include span-columns(4);
-        @include omega(3n);
-        display: flex;
-        flex: 1;
-      }
+      @include span-columns(9);
+      @include omega(9n);
+    }
+  }
+
+  &__span--8 {
+    @include rwd( 'tablet', $tablet ) {
+      @include span-columns(8);
+      @include omega(8n);
+    }
+  }
+  
+  &__span--6 {
+    @include rwd( 'tablet', $tablet ) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include rwd( 'mobile', $mobile ) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+  }
+
+  &__span--4 {
+    @include rwd( 'tablet', $tablet ) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  &__span--3 {
+    @include rwd( 'tablet', $tablet ) {
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+
+  &__push--2 {
+    @include rwd( 'tablet', $tablet ) {
+      @include shift(2);
+    }
+  }
+
+  &__push--3 {
+    @include rwd( 'tablet', $tablet ) {
+      @include shift(3);
+    }
+  }
+
+  &__push--4 {
+    @include rwd( 'tablet', $tablet ) {
+      @include shift(4);
     }
   }
 }
