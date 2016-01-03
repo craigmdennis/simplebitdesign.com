@@ -4,8 +4,8 @@ client: Bond International
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sapiente ipsam necessitatibus quibusdam dicta, et nulla eum. Iste assumenda minima quae maxime, non distinctio dignissimos hic culpa, eligendi facilis aliquam!
 
 thumb:
-  url: http://placehold.it/1044x272
-  srcset: "http://placehold.it/2088x344 2x" 
+  url: http://placehold.it/1044x372
+  srcset: "http://placehold.it/2088x744 2x" 
   alt: Screenshot of Bond International work
 
 background: "#4A90E2"
