@@ -6,23 +6,29 @@ $button--secondary__bg: white;
 $button--secondary__color: $global__accent;
 $button--secondary__border: $global__accent;
 
-.o-button {
-  @include height( 18px, 48px );
+.c-button {
+  @include height( 18px, 46px );
   display: block;
   padding-right: $baseline;
   padding-left: $baseline;
   font-weight: bold;
   text-align: center;
   border-radius: $global__radius;
-  margin-top: $baseline/2;
-  margin-bottom: $baseline/2;
   border: 1px solid transparent;
   width: 100%;
 
   @include media( $tablet ) {
-    @include height( 21px, 56px );
     display: inline-block;
     width: initial;
+  }
+
+  &--seamless {
+    border: 0;
+  }
+
+  &--standalone {
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/2;
   }
 
   &:hover,

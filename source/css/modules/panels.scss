@@ -1,24 +1,25 @@
 $panel-border: 1px solid #EEE;
 
 .m-panel {
-  margin-top: $baseline/2;
-  margin-bottom: $baseline/2;
-  border: $panel-border;
-  padding-left: $baseline/2;
-  padding-right: $baseline/2;
-  display: block;
+  display: flex;
+  
+  &--bordered {
+    border: 1px solid #EEE;
+  }
 
   &:hover,
   &:focus {
     text-decoration: none;
   }
 
-  @include media( $desktop ) {
-    padding: $baseline/2 $baseline;
-  }
+  &__body {
+    padding: $baseline/2;
+    display: block;
+    width: 100%;
 
-  &__title {
-    text-align: center;
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &--interactive {

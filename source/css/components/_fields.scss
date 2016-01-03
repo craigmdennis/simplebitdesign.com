@@ -1,0 +1,24 @@
+// Must match button sizes & banner title
+// TODO: Refactor variables to make sure they match
+.c-field {
+  width: 100%;
+
+  &__input {
+    @include height( 18px, 46px );
+    width: 100%;
+    border: 1px solid #EEE;
+    padding-left: $baseline/2;
+    padding-right: $baseline/2;
+    border: 1px solid rgba(0,0,0,0.08);
+    background-clip: padding-box;
+
+    @include media( $tablet ) {
+      @include height( 18px, 56px );
+    }
+
+    &--seamless {
+      @include height( 18px, 48px );
+      border: 0;
+    }
+  }
+}

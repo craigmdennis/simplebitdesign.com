@@ -1,16 +1,15 @@
 %aside
   .l-highlight
     .l-constrained
-      .m-banner
-        .l-grid
-          .l-grid__span--8---MQtablet
-            .h-align-left
-              %label.m-banner__title{:for => "mailinglistemail"} Get on the mailing list for the latest updates:
-          .l-grid__span--4---MQtablet
-            %form{:action => "", :method => "post", :target => "_blank"}
-              .c-addon
-                .c-field.c-addon__field
-                  %input#mailinglistemail.c-field__input.c-field__input--seamless{:name => "EMAIL", :placeholder => "Email Address", :required => "", :type => "email"}/
-                  %div{"aria-hidden" => "true", :style => "position: absolute; left: -5000px;"}
-                    %input{:name => "b_b4e57d2bcb55bd7916adb74fe_e4ac74b959", :tabindex => "-1", :type => "text", :value => ""}/
-                %input.c-button.c-button--secondary{:type => "submit", :value => "Go"}/
+      .m-panel
+        .m-panel__body
+          .l-grid
+            .l-grid__span--8---MQtablet
+              .h-align-left
+                %label.m-banner__title{:for => "mailinglistemail"} Get on the mailing list for the latest updates:
+            .l-grid__span--4---MQtablet
+              %form{:action => "", :method => "post", :target => "_blank"}
+                .c-addon
+                  .c-field
+                    %input#mailinglistemail.c-field__input.c-field__input--seamless{:name => "EMAIL", :placeholder => "Email Address", :required => "", :type => "email"}/
+                  %input.c-button.c-button--secondary.c-button--seamless{:type => "submit", :value => "Go"}/
