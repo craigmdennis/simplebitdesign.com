@@ -6,7 +6,7 @@
 
 .c-summary
   %h2.c-summary__title{itemprop: "headline"}
-    = link_to data.title, data.url
+    = link_or_span data.title, data.url
   .c-summary__body
     %meta{itemprop: "datePublished", content: data.date}
     .l-split
