@@ -22,10 +22,13 @@ $panel-border: 1px solid #EEE;
   }
 
   &--interactive {
-    transition: box-shadow $global__fast $global__easing;
+    transition: top $global__fast $global__easing;
+    top: 0;
+    position: relative;
+
     &:hover,
     &:focus {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      top: -$baseline/4;
     }
   }
 }
