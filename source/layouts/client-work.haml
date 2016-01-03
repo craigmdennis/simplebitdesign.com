@@ -8,6 +8,7 @@
   .l-light
     .l-inside
       .l-constrained
+        %h1.o-title= current_page.data.client
         .c-project{ style: "background-color: #{current_page.data.background}; color: #{current_page.data.color};"}
           %h2.c-project__title= current_page.data.title
           %p.c-project__intro= current_page.data.summary
@@ -16,6 +17,4 @@
             %figure
               = link_to "#", class: "c-project__image" do
                 = image_tag thumb.url, srcset: (thumb.srcset.length ? thumb.srcset : nil), alt: thumb.alt
-
-        %h1.o-title= current_page.data.client
         = yield

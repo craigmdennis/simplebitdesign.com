@@ -1,10 +1,20 @@
 .c-project {
   display: block;
   overflow: hidden;
-  padding-left: $baseline*2;
-  padding-right: $baseline*2;
+  padding-left: $baseline/2;
+  padding-right: $baseline/2;
   text-align: center;
   margin-bottom: $baseline;
+
+  @include media( $tablet ) {
+    padding-left: $baseline;
+    padding-right: $baseline;
+  }
+
+  @include media( $desktop ) {
+    padding-left: $baseline*2;
+    padding-right: $baseline*2;
+  }
 
   &:hover {
     text-decoration: none;
@@ -32,7 +42,7 @@
   
   &__image {
     display: block;
-    
+
     @include media( $tablet ) {
       transform: translateY($baseline);
       transition: transform $global__slow $global__easing;
