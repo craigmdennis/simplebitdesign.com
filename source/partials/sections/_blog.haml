@@ -1,14 +1,13 @@
 %section#blog
-  .l-light
-    .l-constrained
-      .m-section
-        %h1.m-section__title
-          = link_or_span 'From the blog', '/blog.html'
+  .l-constrained
+    .c-section
+      %h1.c-section__title
+        = link_or_span 'From the blog', '/blog.html'
 
-        %ul.c-list.c-list--divided
-          - blog.articles[0...3].each do |article|
-            %li.c-list__item{id: "post_#{article.title.downcase.parameterize}", itemid: article.url, itemscope: true, itemtype: "http://schema.org/BlogPosting"}
-              = partial 'partials/sections/blog_summary', locals: {data: article, teaser: true}
+      %ul.c-list.c-list--divided
+        - blog.articles[0...3].each do |article|
+          %li.c-list__item{id: "post_#{article.title.downcase.parameterize}", itemid: article.url, itemscope: true, itemtype: "http://schema.org/BlogPosting"}
+            = partial 'partials/sections/blog_summary', locals: {data: article, teaser: true}
 
 
-        = link_to "More from the blog", "blog.html", class: "c-button c-button--secondary"
+      = link_to "More from the blog", "blog.html", class: "c-button c-button--secondary"

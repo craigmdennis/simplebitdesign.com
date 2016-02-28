@@ -1,0 +1,23 @@
+{
+  "name": "simplebitdesign.com",
+  "version": "2.0.0-alpha1",
+  "description": "We design and build intuitive interfaces",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/simplebitdesign/simplebitdesign.com.git"
+  },
+  "author": "Craig Dennis <craig@simplebitdesign.com> (http://simplebitdesign.com)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/simplebitdesign/simplebitdesign.com#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "fastclick": "^1.0.6",
+    "jquery": "^2.2.1",
+    "picturefill": "^3.0.2",
+    "responsive-nav": "^1.0.39",
+    "rwdcss": "^1.1.0",
+    "sass-height": "^2.0.6",
+    "timeago": "^1.5.2",
+    "what-input": "^1.2.5"
+  }
+}

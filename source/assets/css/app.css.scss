@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
+@import 'bourbon';
+
 @import 'vars';
 
-@import 'sass-height/sass-height.scss';
-@import 'sass-height/sass-height.scss';
-@import 'bourbon';
+@import 'sass-height/sass-height';
+@import 'rwdcss/rwd';
 @import 'neat';
 
 @import 'utils/util_rem';
@@ -12,7 +13,6 @@
 @import 'utils/util_unicode';
 
 @import 'mixins/notouch';
-@import 'mixins/rwd';
 
 @import 'helpers/accessible';
 @import 'helpers/animations';
@@ -21,16 +21,17 @@
 @import 'base/reset';
 @import 'base/root';
 @import 'base/focus';
+
 @import 'type/type';
 @import 'type/copy';
 
 @import 'layout/layouts';
 @import 'layout/grid';
 
-@import 'modules/sections';
-@import 'modules/posts';
-@import 'modules/navigation';
-@import 'modules/panels';
+@import 'components/sections';
+@import 'components/posts';
+@import 'components/navigation';
+@import 'components/panels';
 
 @import 'components/media';
 @import 'components/embed';

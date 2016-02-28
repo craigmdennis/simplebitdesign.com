@@ -36,7 +36,7 @@ Markup:
     flex: 1;
     overflow: hidden;
 
-    :last-child {
+    &:last-child {
       @include media( $tablet ) {
         margin-bottom: 0;
       }
@@ -52,7 +52,7 @@ Markup:
 }
 
 .c-media--stacked {
-  @include rwd( 'mobile', $mobile ) {
+  @include rwd( mobile ) {
     display: block;
 
     .c-media__figure {

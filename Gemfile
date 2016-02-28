@@ -1,22 +1,21 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "middleman", "~> 3.4.0"
-gem "middleman-livereload"
-gem "middleman-autoprefixer"
-gem "middleman-sprockets" # Asset pipeline
-gem "middleman-minify-html" # Minify HTML
-gem "redcarpet" # Markdown
-gem "middleman-gist"
-gem "middleman-imageoptim"
-gem "therubyracer" # faster JS compiles
-gem "oj" # faster JS compiles
-gem "middleman-simple-thumbnailer"
-gem "middleman-blog" # Blogging
+# Middleman
+gem 'middleman', '~> 4.0'
+gem "middleman-sprockets", "~> 4.0.0.rc"
+gem 'middleman-livereload'
+gem 'middleman-autoprefixer'
+gem 'middleman-minify-html'
+gem 'middleman-simple-thumbnailer'
+gem 'middleman-blog'
+
+# Front End
 gem 'bourbon'
 gem 'neat'
+gem 'redcarpet'
 gem 'readingtime'
 gem 'nokogiri'
 
-gem 'middleman-deploy', '~> 1.0'
-gem "capistrano"
-gem "capistrano-gridserver"
+# Deploy
+gem 'capistrano'
+gem 'capistrano-gridserver'

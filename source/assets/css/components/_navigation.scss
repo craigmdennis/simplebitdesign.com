@@ -1,4 +1,4 @@
-.m-navigation {
+.c-navigation {
 
   &__list {
     list-style: none;
@@ -24,7 +24,7 @@
       float: left;
       margin: $baseline/4 $baseline/2;
 
-      .m-navigation__list {
+      .c-navigation__list {
         padding-bottom: 0;
       }
     }
@@ -55,7 +55,7 @@
   }
 }
 
-a.m-navigation__text {
+a.c-navigation__text {
   &:hover,
   &:focus {
     text-decoration: none;
@@ -67,7 +67,7 @@ a.m-navigation__text {
 }
 
 @include media( $mobile ) {
-  .m-navigation--collapse {
+  .c-navigation--collapse {
     .js & {
       clip: rect(0 0 0 0);
       max-height: 0;
@@ -83,7 +83,7 @@ a.m-navigation__text {
 }
 
 @include media( $tablet ) {
-  .m-navigation--collapse {
+  .c-navigation--collapse {
 
     .js & {
       position: relative;

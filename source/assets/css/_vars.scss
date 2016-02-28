@@ -1,0 +1,51 @@
+// Colors
+$color__pickledblue:      #34495E;
+$color__carminepink:      #E74C3C;
+$color__athensgray:       #ECEEF1;
+
+$global__accent:          $color__carminepink;
+
+// Animations
+$global__fast:            100ms;
+$global__slow:            300ms;
+$global__easing:          cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Spacing
+$baseline:                2em;
+
+// Misc
+$global__radius:          0;
+$global__maxwidth:        75em;
+
+// Type
+$global__fontpath:        "/fonts";
+$global__heading:         "Lato", sans-serif;
+$global__body:            "open-sans", "Open Sans", sans-serif;
+
+// Breakpoints
+$breakpoints: (
+  mobile: max-width 47.9375em,
+  tablet: 48em,
+  tablet-desktop: min-width 48em max-width 61.9375em,
+  desktop: 62em,
+  hd: 75em
+);
+
+$mobile:                  map-get( $breakpoints, mobile); // 767px
+$tablet:                  map-get( $breakpoints, tablet); // 768px
+$tablet-desktop:          map-get( $breakpoints, tablet-desktop); // 768px
+$desktop:                 map-get( $breakpoints, desktop); // 992px
+$hd:                      map-get( $breakpoints, hd); // 1200px
+
+// z-index
+$z: (
+  ground: -3000,
+  basement: -2000,
+  floor: -1000,
+  table: 0,
+  bottom_bun: 1000,
+  condiment: 2000,
+  cheese: 3000,
+  meat: 4000,
+  top_bun: 5000
+);

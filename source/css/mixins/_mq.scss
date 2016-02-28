@@ -1,5 +1,0 @@
-@mixin mq( $breakpoint ) {
-  @media #{$breakpoint} {
-    @content;
-  }
-}
