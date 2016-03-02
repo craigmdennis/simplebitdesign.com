@@ -45,13 +45,17 @@ $z: (
 $breakpoints: (
   mobile: max-width em(479px),
   phablet: em(480px),
+  upto-tablet: max-width em(787px),
   tablet: em(768px),
+  upto-desktop: max-width em(1023px),
   desktop: em(1024px),
   hd: em(1200px)
 );
 
 $mobile: map-get( $breakpoints, mobile);
 $phablet: map-get( $breakpoints, phablet);
+$upto-tablet: map-get( $breakpoints, upto-tablet);
 $tablet: map-get( $breakpoints, tablet);
+$upto-desktop: map-get( $breakpoints, upto-desktop);
 $desktop: map-get( $breakpoints, desktop);
 $hd: map-get( $breakpoints, hd);

@@ -32,7 +32,6 @@ body {
 }
 
 // Remove the grey background colour from active links in IE 10.
-// Links inherit their colour (added back in .copy)
 a {
   background: transparent;
   color: inherit;
@@ -50,8 +49,8 @@ a[href^=tel]{
 }
 
 p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 img {
@@ -62,7 +61,7 @@ img {
 
 h1,h2,h3,h4,h5,h6,b,strong {
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,7 +73,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
 }
 
 // Correct inability to style clickable `input` types in iOS.
@@ -180,7 +179,7 @@ label abbr {
 }
 
 figure {
-  margin: 0.75rem 0;
+  margin: 0 0 1rem 0;
 }
 
 picture {

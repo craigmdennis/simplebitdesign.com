@@ -1,0 +1,14 @@
+$text-primary: $base-accent;
+$text-dark: $color-pickledblue;
+
+.t-primary {
+  color: $text-primary;
+}
+
+.t-light {
+  color: white;
+}
+
+.t-dark {
+  color: $text-dark;
+}

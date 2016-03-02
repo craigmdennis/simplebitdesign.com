@@ -7,6 +7,7 @@
   @include row;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 
   > * {
     display: flex;
@@ -15,21 +16,30 @@
 }
 
 .l-grid__span--6 {
-  @include rwd( tablet ) {
+  @include rwd( desktop ) {
     @include span( 6 );
   }
 }
 
 .l-grid__span--4 {
-  @include rwd( tablet ) {
+  @include rwd( desktop ) {
     @include span( 4 );
   }
 }
 
+.l-grid__span--3 {
+  @include rwd( upto-desktop desktop ) {
+    @include span( 3 );
+  }
+}
+
 .l-grid--lines > * {
-  border-right: 1px solid #EEE;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid $color-athensgray;
   margin-bottom: -1px;
+
+  @include media( $desktop ) {
+    border-right: 1px solid $color-athensgray;
+  }
 
   [class*="l-grid__span--6"] {
     &:nth-child(2n) {

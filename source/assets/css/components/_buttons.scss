@@ -4,9 +4,9 @@ $button-primary-bg: $base-accent;
 $button-primary-color: white;
 $button-primary-border: $button-primary-bg;
 
-$button-secondary-bg: white;
-$button-secondary-color: $base-accent;
-$button-secondary-border: $base-accent;
+$button-secondary-bg: $color-athensgray;
+$button-secondary-color: $color-pickledblue;
+$button-secondary-border: $color-athensgray;
 
 .c-button {
   @include height( $button-type-size, $base-button-height );
@@ -19,6 +19,10 @@ $button-secondary-border: $base-accent;
   border: $base-button-border-width solid transparent;
   width: 100%;
 
+  &:not(:last-child) {
+    margin-right: $small-spacing;
+  }
+
   @include media( $tablet ) {
     display: inline-block;
     width: initial;
@@ -29,6 +33,7 @@ $button-secondary-border: $base-accent;
     text-decoration: none;
   }
 
+  // Colours
   &--primary {
     background-color: $button-primary-bg;
     color: $button-primary-color;
@@ -37,6 +42,7 @@ $button-secondary-border: $base-accent;
     &:hover,
     &:focus {
       background-color: darken($button-primary-bg, 5%);
+      border-color: darken($button-primary-bg, 5%);
     }
   }
 
@@ -48,6 +54,26 @@ $button-secondary-border: $base-accent;
     &:hover,
     &:focus {
       background-color: darken($button-secondary-bg, 5%);
+      border-color: darken($button-secondary-bg, 5%);
+    }
+  }
+
+  // Sizes
+  &--giant {
+    @include height( 24px, 72px );
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+    font-weight: 700;
+  }
+
+  &--block {
+    @include rwd( upto-tablet ) {
+      width: 100%;
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: $small-spacing;
+      }
     }
   }
 }

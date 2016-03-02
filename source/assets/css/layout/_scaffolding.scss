@@ -1,9 +1,7 @@
 body {
-  padding: $small-spacing/2;
-  // transition: padding $base-duration-slow $base-timing;
 
   @include media( $phablet ) {
-    padding: $small-spacing;
+    padding: $small-spacing/2;
   }
 
   @include media( $tablet ) {
@@ -23,14 +21,16 @@ body {
   }
 }
 
-.l-blackhole {
+.l-middle {
+  @include rwd( desktop, false ) {
+    @include position(absolute, 50% null null 50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.l-inner {
   padding: $base-spacing;
-
-  @include media( $tablet ) {
-    padding: $base-spacing*2;
-  }
-
-  @include media( $desktop ) {
-    padding: $base-spacing*4;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

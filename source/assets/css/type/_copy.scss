@@ -1,9 +1,16 @@
-.copy {
+.c-copy {
   font-family: $base-serif;
   font-weight: 400;
+  width: 100%;
 
   &--emphasised {
     font-style: italic;
+  }
+
+  &__leading {
+    max-width: em(640px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   table,
@@ -37,6 +44,10 @@
     &:focus {
       text-decoration: none;
     }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   figure {

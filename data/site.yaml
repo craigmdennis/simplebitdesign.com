@@ -1,36 +1,3 @@
 name: "Simple Bit Design"
-title: "UI and UX Design Agency"
-description: "We design and build beautiful interfaces"
-
-# Breakpoints should match the CSS
-# Used for responsive images
-breakpoints: 
-  mobile: "(max-width: 47.9375em)" # 799px
-  tablet: "(min-width: 48em)" # 800px
-  desktop: "(min-width: 62em)" # 992px
-  hd: "(min-width: 75em)" # 1200px
-
-# Navigation and associated homepage sections
-nav:
-  - 
-    title: Services
-    url: "/#services"
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
-
-  -   
-    title: Client Work
-    url: "/#client-work"
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
-
-  -
-    title: Blog
-    url: "/blog.html"
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
-  -
-    title: Contact
-    url: "/contact.html"
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
-  -
-    title: Join the team
-    url: "/jobs.html"
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem adipisci voluptates, rem corporis, blanditiis qui enim et hic assumenda consequuntur sapiente iste quidem omnis illo obcaecati sed molestias placeat."
+title: "UI and UX Design Kent"
+description: "We make beautiful interfaces"

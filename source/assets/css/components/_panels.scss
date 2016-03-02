@@ -1,19 +1,6 @@
 .c-panel {
   display: flex;
-
-  &--center {
-    justify-content: center;
-  }
-
-  &:first-child {
-    border-top-left-radius: $base-radius;
-    border-top-right-radius: $base-radius;
-  }
-
-  &:last-child {
-    border-bottom-left-radius: $base-radius;
-    border-bottom-right-radius: $base-radius;
-  }
+  flex-wrap: wrap;
 
   &__body {
     padding: $base-spacing;
@@ -21,8 +8,19 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @include media( $desktop ) {
+      padding: $base-spacing*2;
+    }
+
     > p:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    @include media( $upto-desktop ) {
+      padding: 0 $base-spacing $base-spacing;
     }
   }
 
@@ -30,16 +28,35 @@
     @include height( 32px );
     font-weight: 700;
     margin-bottom: $small-spacing;
+
+    &--giant {
+      @include media( $tablet ) {
+        @include height( 48px );
+      }
+    }
   }
 }
 
 .c-panel--has-buttons {
-  .c-panel__body {
-    position: relative;
+  position: relative;
+  @include media( $desktop ) {
     padding-bottom: rem($base-button-height) + $base-spacing;
   }
 
-  .c-panel__buttons {
-    // @include position(absolute, null 0 0 0);
+  > .c-panel__buttons {
+    @include media( $desktop ) {
+      @include position(absolute, null $base-spacing*2 $base-spacing*2 $base-spacing*2);
+    }
+  }
+}
+
+.c-panel--center {
+  justify-content: center;
+
+  > .c-panel__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 }

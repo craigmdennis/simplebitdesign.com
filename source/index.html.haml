@@ -1,54 +1,90 @@
----
-title: We make beautiful interfaces.
----
-
 -# - content_for :header do
 .l-constrained
   .c-section
-    .c-panel.c-panel--center.l-highlight
-      .l-blackhole
-        .h-align-center.l-center
-          %h3 Simple Bit Design
-          %h1 We make beautiful interfaces
+    %header#top
+      .c-panel.c-panel--center.l-highlight
+        .l-blackhole
+          .h-align-center.l-center
+            %h3= data.site.name
+            %h1= data.site.description
 
-    .l-light
+    %section#services
+      .l-light
+        .l-middle---MQdesktop
+          %header
+            %h1.o-hub-text Services
+        .l-grid.l-grid--lines
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--has-buttons
+              .c-panel__body
+                %h2.c-panel__title User Interface Design
+                .c-copy.c-copy--emphasised
+                  %p The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
+              .c-panel__buttons
+                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
+                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--has-buttons
+              .c-panel__body
+                %h2.c-panel__title Information Architecture
+                .c-copy.c-copy--emphasised
+                  %p IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
+              .c-panel__buttons
+                = link_to 'Find out more about IA', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
+                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--has-buttons
+              .c-panel__body
+                %h2.c-panel__title Front End Development
+                .c-copy.c-copy--emphasised
+                  %p Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across mutiple device sizes. Our modular approach to development allows the code to scale with your product.
+              .c-panel__buttons
+                = link_to 'Our code best-practices', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
+                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--has-buttons
+              .c-panel__body
+                %h2.c-panel__title User Experience Design
+                .c-copy.c-copy--emphasised
+                  %p User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
+              .c-panel__buttons
+                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
+                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+  
+  .c-section.l-dark
+    %aside#how-we-can-help
+      .c-panel.c-panel--center
+        .c-panel__body
+          %h3.c-panel__title Find out how can we help
+          .c-copy.c-copy--emphasised
+            .c-copy__leading
+              %p We have experience working with startups, agencies and large, multi-national companies; working well with in-house teams and independently.
+        .c-panel__buttons
+          = link_to 'Get in touch', '#', class: 'c-button c-button--giant c-button--primary'
+
+  .c-section.l-light
+    %section#clients
       .l-grid.l-grid--lines
-        .l-grid__span--6---MQtablet
-          .c-panel.c-panel--has-buttons
+        .l-grid__span--6---MQdesktop
+          .c-panel.c-panel--upsize
             .c-panel__body
-              .c-panel__title User Interface Design
-              .copy
-                %p The user interface is the window through which the world experiences your website, application, or system. Even the most sophisticated code and transcendent design fail if the site lacks usability. A powerful user interface bridges the distance between the human brain and the digital product.
-              .c-panel__buttons
-                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary'
-                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
-
-        .l-grid__span--6---MQtablet
-          .c-panel.c-panel--has-buttons
-            .c-panel__body
-              .c-panel__title Information Architecture
-              .copy
-                %p IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
-              .c-panel__buttons
-                = link_to 'Find out more about IA', '#', class: 'c-button c-button--primary'
-                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
-
-        .l-grid__span--6---MQtablet
-          .c-panel.c-panel--has-buttons
-            .c-panel__body
-              .c-panel__title Front End Development
-              .copy
-                %p Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across mutiple device sizes. Our modular approach to development allows the code to scale with your product.
-              .c-panel__buttons
-                = link_to 'Our code best-practices', '#', class: 'c-button c-button--primary'
-                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
-
-        .l-grid__span--6---MQtablet
-          .c-panel.c-panel--has-buttons
-            .c-panel__body
-              .c-panel__title User Experience Design
-              .copy
-                %p User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
-              .c-panel__buttons
-                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary'
-                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
+              %h1.c-panel__title.c-panel__title--giant.t-primary We work with  amazing brands
+              .c-copy.c-copy--emphasised
+                %p Our work is seen by millions of people. That’s a lot of pressure. Whether it’s a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; we prototype, test and iterate to validate our ideas, ensuring we’re on the right track.
+        .l-grid__span--6---MQdesktop
+          .l-grid.l-grid--lines
+            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+              .l-inner
+                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Bond International Software', class: 'l-center'
+            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+              .l-inner
+                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'MEGAMAC', class: 'l-center'
+            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+              .l-inner
+                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'BBC', class: 'l-center'
+            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+              .l-inner
+                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Smashing Magazine', class: 'l-center'

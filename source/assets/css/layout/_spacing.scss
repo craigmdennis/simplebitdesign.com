@@ -1,0 +1,11 @@
+.l-blackhole {
+  padding: $base-spacing;
+
+  @include media( $tablet ) {
+    padding: $base-spacing*2;
+  }
+
+  @include media( $desktop ) {
+    padding: $base-spacing*4;
+  }
+}
