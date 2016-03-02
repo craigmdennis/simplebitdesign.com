@@ -4,18 +4,11 @@
 
 @import 'vars';
 
+@import 'neat';
 @import 'sass-height/sass-height';
 @import 'rwdcss/rwd';
-@import 'neat';
-
-@import 'utils/util_rem';
-@import 'utils/util_stripunits';
-@import 'utils/util_unicode';
-
-@import 'mixins/notouch';
 
 @import 'helpers/accessible';
-@import 'helpers/animations';
 @import 'helpers/align';
 
 @import 'base/reset';
@@ -25,47 +18,22 @@
 @import 'type/type';
 @import 'type/copy';
 
-@import 'layout/layouts';
+@import 'layout/scaffolding';
 @import 'layout/grid';
+@import 'layout/colors';
 
-@import 'components/sections';
 @import 'components/posts';
 @import 'components/navigation';
 @import 'components/panels';
-
 @import 'components/media';
 @import 'components/embed';
 @import 'components/lists';
-@import 'components/summary';
 @import 'components/hamburger';
-@import 'components/projects';
 @import 'components/addons';
 @import 'components/buttons';
 @import 'components/fields';
+@import 'components/sections';
 
-@import 'objects/logo';
 @import 'objects/icons';
 @import 'objects/skiplink';
 @import 'objects/footnote';
-@import 'objects/title';
-
-// INBOX - To Be Factored
-#headerlogo {
-  display: none;
-
-  @include media( $tablet ) {
-    transform: rotate(35deg);
-    position: absolute;
-    bottom: -20%;
-    right: -20%;
-    opacity: 0.1;
-    z-index: 1;
-    width: 100%;
-    max-width: 75em;
-    display: block;
-  }
-
-  @include media( $desktop ) {
-    width: 75%;
-  }
-}

@@ -3,13 +3,13 @@
   padding-left: 0;
   list-style: none;
 
-  &--divided .c-list__item {
+  &--divided > .c-list__item {
     border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 
-  &--inline .c-list__item {
+  &--inline > .c-list__item {
     display: inline-block;
-    margin-right: $baseline/2;
+    margin-right: $small-spacing;
     vertical-align: middle;
   }
 }

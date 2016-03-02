@@ -1,20 +1,24 @@
-$panel-border: 1px solid #EEE;
-
 .c-panel {
   display: flex;
-  
-  &--bordered {
-    border: 1px solid #EEE;
+
+  &--center {
+    justify-content: center;
   }
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  &:first-child {
+    border-top-left-radius: $base-radius;
+    border-top-right-radius: $base-radius;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $base-radius;
+    border-bottom-right-radius: $base-radius;
   }
 
   &__body {
-    padding: $baseline/2;
-    display: block;
+    padding: $base-spacing;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 
     > p:last-child {
@@ -22,14 +26,20 @@ $panel-border: 1px solid #EEE;
     }
   }
 
-  &--interactive {
-    transition: top $global__fast $global__easing;
-    top: 0;
-    position: relative;
+  &__title {
+    @include height( 32px );
+    font-weight: 700;
+    margin-bottom: $small-spacing;
+  }
+}
 
-    &:hover,
-    &:focus {
-      top: -$baseline/4;
-    }
+.c-panel--has-buttons {
+  .c-panel__body {
+    position: relative;
+    padding-bottom: rem($base-button-height) + $base-spacing;
+  }
+
+  .c-panel__buttons {
+    // @include position(absolute, null 0 0 0);
   }
 }

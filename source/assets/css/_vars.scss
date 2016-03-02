@@ -1,43 +1,34 @@
 // Colors
-$color__pickledblue:      #34495E;
-$color__carminepink:      #E74C3C;
-$color__athensgray:       #ECEEF1;
+$color-pickledblue: #34495E;
+$color-carminepink: #E74C3C;
+$color-athensgray: #ECEEF1;
 
-$global__accent:          $color__carminepink;
+$base-accent: $color-carminepink;
+$base-background-color: $color-athensgray;
 
 // Animations
-$global__fast:            100ms;
-$global__slow:            300ms;
-$global__easing:          cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$base-duration-fast: 100ms;
+$base-duration-slow: 300ms;
+$base-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
-// Spacing
-$baseline:                2em;
+// Layout
+$container: em(1152px);
+$grid-columns: 12;
+$gutter: 4rem;
 
-// Misc
-$global__radius:          0;
-$global__maxwidth:        75em;
+$base-radius: 3px;
+$base-spacing: $gutter/2;
+$small-spacing: $base-spacing/2;
 
-// Type
-$global__fontpath:        "/fonts";
-$global__heading:         "Lato", sans-serif;
-$global__body:            "open-sans", "Open Sans", sans-serif;
+$base-button-height: 40px;
+$base-button-border-width: 1px;
 
-// Breakpoints
-$breakpoints: (
-  mobile: max-width 47.9375em,
-  tablet: 48em,
-  tablet-desktop: min-width 48em max-width 61.9375em,
-  desktop: 62em,
-  hd: 75em
-);
+// Typography
+$base-serif: "Lora", "Georgia", serif;
+$base-sans: "Avenir Next", "Lato", sans-serif;
+$base-font-size: 1em;
 
-$mobile:                  map-get( $breakpoints, mobile); // 767px
-$tablet:                  map-get( $breakpoints, tablet); // 768px
-$tablet-desktop:          map-get( $breakpoints, tablet-desktop); // 768px
-$desktop:                 map-get( $breakpoints, desktop); // 992px
-$hd:                      map-get( $breakpoints, hd); // 1200px
-
-// z-index
+// Layering
 $z: (
   ground: -3000,
   basement: -2000,
@@ -49,3 +40,18 @@ $z: (
   meat: 4000,
   top_bun: 5000
 );
+
+// Breakpoints
+$breakpoints: (
+  mobile: max-width em(479px),
+  phablet: em(480px),
+  tablet: em(768px),
+  desktop: em(1024px),
+  hd: em(1200px)
+);
+
+$mobile: map-get( $breakpoints, mobile);
+$phablet: map-get( $breakpoints, phablet);
+$tablet: map-get( $breakpoints, tablet);
+$desktop: map-get( $breakpoints, desktop);
+$hd: map-get( $breakpoints, hd);

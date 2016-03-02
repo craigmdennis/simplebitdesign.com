@@ -1,8 +1,8 @@
 // Type
-$type__fontsize:   100%;
-$type__lineheight: 1.5; // So everything relates
-$type__color:      $color__pickledblue;
-$type__bg:         $color__athensgray;
+$type-fontsize: 100%;
+$type-lineheight: 1.5;
+$type-color: $color-pickledblue;
+$type-bg: $color-athensgray;
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -10,22 +10,22 @@ html {
 }
 
 body {
-  background-color: $type__bg;
-  font-family: $global__body;
-  font-size: $type__fontsize;
-  line-height: $type__lineheight;
-  font-weight: 300;
-  color: $type__color;
+  background-color: $type-bg;
+  font-family: $base-sans;
+  font-size: $type-fontsize;
+  line-height: $type-lineheight;
+  font-weight: 500;
+  color: $type-color;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: $global__heading;
+  font-family: $base-sans;
   font-weight: 700;
-  margin-bottom: $baseline/2;
+  margin-bottom: $small-spacing;
 }
 
 hr {
   border-bottom: 1px solid rgba(0,0,0,0.15);
-  margin-bottom: $baseline/2;
-  margin-top: $baseline/2;
+  margin-bottom: $small-spacing;
+  margin-top: $small-spacing;
 }

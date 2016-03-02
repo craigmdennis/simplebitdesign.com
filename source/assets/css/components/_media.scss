@@ -1,4 +1,4 @@
-$media__title__color: $global__accent ;
+$media-title-color: $base-accent;
 
 /*
 Media Object
@@ -28,7 +28,7 @@ Markup:
   }
   
   &__figure {
-    margin-right: $baseline/2;
+    margin-right: $small-spacing;
   }
 
   &__body {
@@ -45,9 +45,9 @@ Markup:
 
   &__title {
     @include height( 18px );
-    color: $media__title__color;
+    color: $media-title-color;
     font-weight: 700;
-    margin-bottom: $baseline/2;
+    margin-bottom: $small-spacing;
   }
 }
 
@@ -63,5 +63,5 @@ Markup:
 
 .c-media--reverse > .c-media__figure {
   order: 1;
-  margin: 0 0 0 $baseline/2;
+  margin: 0 0 0 $small-spacing;
 }

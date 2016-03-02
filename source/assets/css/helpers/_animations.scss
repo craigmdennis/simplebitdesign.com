@@ -1,9 +1,0 @@
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-[data-toggle] {
-  opacity: 0;
-  animation: fadein $global__fast 300ms $global__easing forwards;
-}

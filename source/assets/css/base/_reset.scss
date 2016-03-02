@@ -12,7 +12,7 @@ Only minor styles
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 // Prevent iOS resizing text on orientation change
@@ -20,7 +20,8 @@ Only minor styles
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+                box-sizing: border-box;
 }
 
 // Remove body padding

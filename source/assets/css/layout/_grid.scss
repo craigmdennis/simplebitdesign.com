@@ -1,56 +1,39 @@
+@mixin span($columns) {
+  width: (100% / $grid-columns) * $columns;
+  width: calc( (100% / #{$grid-columns}) * #{$columns} );
+}
+
 .l-grid {
   @include row;
+  display: flex;
+  flex-wrap: wrap;
 
-  &__span--9 {
-    @include rwd( tablet ) {
-      @include span-columns(9);
-      @include omega(9n);
-    }
+  > * {
+    display: flex;
+    flex-wrap: wrap;
   }
+}
 
-  &__span--8 {
-    @include rwd( tablet ) {
-      @include span-columns(8);
-      @include omega(8n);
-    }
+.l-grid__span--6 {
+  @include rwd( tablet ) {
+    @include span( 6 );
   }
-  
-  &__span--6 {
-    @include rwd( mobile tablet ) {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-  }
+}
 
-  &__span--4 {
-    @include rwd( tablet ) {
-      @include span-columns(4);
-      @include omega(3n);
-    }
+.l-grid__span--4 {
+  @include rwd( tablet ) {
+    @include span( 4 );
   }
+}
 
-  &__span--3 {
-    @include rwd( tablet ) {
-      @include span-columns(3);
-      @include omega(4n);
-    }
-  }
+.l-grid--lines > * {
+  border-right: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  margin-bottom: -1px;
 
-  &__push--2 {
-    @include rwd( tablet ) {
-      @include shift(2);
-    }
-  }
-
-  &__push--3 {
-    @include rwd( tablet ) {
-      @include shift(3);
-    }
-  }
-
-  &__push--4 {
-    @include rwd( tablet ) {
-      @include shift(4);
+  [class*="l-grid__span--6"] {
+    &:nth-child(2n) {
+      border-right: 0;
     }
   }
 }

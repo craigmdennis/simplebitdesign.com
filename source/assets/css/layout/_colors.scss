@@ -1,0 +1,16 @@
+$highlight-bg: $base-accent;
+$dark-bg: $color-pickledblue;
+
+.l-highlight {
+  background-color: $highlight-bg;
+  color: white;
+}
+
+.l-light {
+  background-color: white;
+}
+
+.l-dark {
+  background-color: $dark-bg;
+  color: white;
+}

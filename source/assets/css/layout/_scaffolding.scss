@@ -1,0 +1,36 @@
+body {
+  padding: $small-spacing/2;
+  // transition: padding $base-duration-slow $base-timing;
+
+  @include media( $phablet ) {
+    padding: $small-spacing;
+  }
+
+  @include media( $tablet ) {
+    padding: $base-spacing;
+  }
+}
+
+.l-constrained {
+  @include outer-container( $container );
+}
+
+.l-split {
+  @include rwd( tablet ) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.l-blackhole {
+  padding: $base-spacing;
+
+  @include media( $tablet ) {
+    padding: $base-spacing*2;
+  }
+
+  @include media( $desktop ) {
+    padding: $base-spacing*4;
+  }
+}

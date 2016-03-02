@@ -2,11 +2,13 @@ require 'readingtime'
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
-end
+  set :sass_source_maps, true
 
-# Templates
-page "/client-work/*", :layout => "client-work"
+  activate :livereload do |live|
+    live.livereload_css_target = "assets/css/app.css"
+    live.livereload_css_pattern = "\.css"
+  end
+end
 
 # Directories
 set :css_dir, "assets/css"

@@ -1,34 +1,27 @@
-$button--primary__bg: $global__accent;
-$button--primary__color: white;
-$button--primary__border: $button--primary__bg;
+$button-type-size: 18px;
 
-$button--secondary__bg: white;
-$button--secondary__color: $global__accent;
-$button--secondary__border: $global__accent;
+$button-primary-bg: $base-accent;
+$button-primary-color: white;
+$button-primary-border: $button-primary-bg;
+
+$button-secondary-bg: white;
+$button-secondary-color: $base-accent;
+$button-secondary-border: $base-accent;
 
 .c-button {
-  @include height( 18px, 46px );
+  @include height( $button-type-size, $base-button-height );
+  background-color: transparent;
   display: block;
-  padding-right: $baseline;
-  padding-left: $baseline;
-  font-weight: bold;
+  padding-right: $small-spacing;
+  padding-left: $small-spacing;
   text-align: center;
-  border-radius: $global__radius;
-  border: 1px solid transparent;
+  border-radius: $base-radius;
+  border: $base-button-border-width solid transparent;
   width: 100%;
 
   @include media( $tablet ) {
     display: inline-block;
     width: initial;
-  }
-
-  &--seamless {
-    border: 0;
-  }
-
-  &--standalone {
-    margin-top: $baseline/2;
-    margin-bottom: $baseline/2;
   }
 
   &:hover,
@@ -37,22 +30,24 @@ $button--secondary__border: $global__accent;
   }
 
   &--primary {
-    color: $button--primary__color;
-    background-color: $button--primary__bg;
+    background-color: $button-primary-bg;
+    color: $button-primary-color;
+    border-color: $button-primary-border;
 
-    @include notouch( true ) {
-      background-color: darken($button--primary__bg, 5%);
+    &:hover,
+    &:focus {
+      background-color: darken($button-primary-bg, 5%);
     }
   }
 
   &--secondary {
-    border-color: $button--secondary__border;
-    color: $button--secondary__color;
-    background-color: $button--secondary__bg;
+    background-color: $button-secondary-bg;
+    color: $button-secondary-color;
+    border-color: $button-secondary-border;
 
-    @include notouch( true ) {
-      color: $button--primary__color;
-      background-color: darken($button--primary__bg, 5%);
+    &:hover,
+    &:focus {
+      background-color: darken($button-secondary-bg, 5%);
     }
   }
 }

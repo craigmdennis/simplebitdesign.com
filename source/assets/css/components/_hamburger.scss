@@ -1,4 +1,4 @@
-$hamburger-size: $baseline;
+$hamburger-size: $base-spacing;
 $hamburger-color: white;
 
 @mixin line {
@@ -7,7 +7,7 @@ $hamburger-color: white;
   height: $hamburger-size/7;
   background: $hamburger-color;
   border-radius: $hamburger-size/14;
-  transition: all $global__slow $global__easing;
+  transition: all $base-duration-fast $base-timing;
 }
 
 .c-hamburger {
@@ -18,13 +18,8 @@ $hamburger-color: white;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
   cursor: pointer;
-  height: $baseline;
-  width: $baseline;
-
-  // Should be abstracted
-  position: absolute;
-  top: $baseline/2;
-  right: $baseline/2;
+  height: $base-spacing;
+  width: $base-spacing;
 
   @include media( $tablet ) {
     display: none;

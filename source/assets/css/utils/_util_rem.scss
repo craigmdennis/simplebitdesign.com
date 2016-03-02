@@ -1,3 +1,0 @@
-@function rem( $value, $font-base: 16px ) {
-  @return parseInt($value) / parseInt($font-base) + rem;
-}

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Middleman
-gem 'middleman', '~> 4.0'
-gem "middleman-sprockets", "~> 4.0.0.rc"
+gem 'middleman', '~> 4.1'
+gem 'middleman-sprockets', '~> 4.0.0.rc'
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
 gem 'middleman-minify-html'

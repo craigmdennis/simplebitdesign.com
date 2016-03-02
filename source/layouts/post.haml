@@ -1,14 +1,14 @@
 - content_for :header do
-  = partial 'partials/logo'
-  = partial 'partials/navigation', locals: {data: data.site.nav, collapsible: true, extraclasses: 'm-navigation--inline' }
+  -# = partial 'partials/logo'
+  -# = partial 'partials/navigation', locals: {data: data.site.nav, collapsible: true, extraclasses: 'm-navigation--inline' }
 
 = wrap_layout :layout do
   .l-light
     %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
       .l-constrained
         %header
-          = partial 'partials/sections/blog_summary', locals: { data: current_page}
 
+        
         .l-grid
           .l-grid__span--9---MQtablet
             .copy{:itemprop => "articleBody"}

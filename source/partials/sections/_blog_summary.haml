@@ -4,19 +4,19 @@
 - reading_mins = [raw_reading_time[1], 1].max
 - teaser = teaser || false
 
-.c-summary
-  %h2.c-summary__title{itemprop: "headline"}
-    = link_or_span data.title, data.url
-  .c-summary__body
-    %meta{itemprop: "datePublished", content: data.date}
-    .l-split
-      .c-summary__meta.c-summary__meta--accent
-        %time{datetime: data.date.to_time.iso8601, itemprop: "datePublished", data: { toggle: "timeago" }}= data.date.strftime '%B %-d, %Y'
+-# .c-summary
+-#   %h2.c-summary__title{itemprop: "headline"}
+-#     = link_or_span data.title, data.url
+-#   .c-summary__body
+-#     %meta{itemprop: "datePublished", content: data.date}
+-#     .l-split
+-#       .c-summary__meta.c-summary__meta--accent
+-#         %time{datetime: data.date.to_time.iso8601, itemprop: "datePublished", data: { toggle: "timeago" }}= data.date.strftime '%B %-d, %Y'
 
-      .c-summary__meta{"aria-label" => "About a #{reading_mins} minute read"}
-        = ui_svg "eye", 12, class: "o-icon o-icon--before"
-        %abbr{:title => "#{reading_mins} minute read"} #{reading_mins} min
+-#       .c-summary__meta{"aria-label" => "About a #{reading_mins} minute read"}
+-#         = ui_svg "eye", 12, class: "o-icon o-icon--before"
+-#         %abbr{:title => "#{reading_mins} minute read"} #{reading_mins} min
 
-    - if teaser
-      .c-summary__teaser
-        = data.summary(100)
+-#     - if teaser
+-#       .c-summary__teaser
+-#         = data.summary(100)

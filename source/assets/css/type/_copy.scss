@@ -1,19 +1,23 @@
 .copy {
-  font-size: 112.5%;
+  font-family: $base-serif;
+  font-weight: 400;
+
+  &--emphasised {
+    font-style: italic;
+  }
 
   table,
   dl {
-    margin-bottom: $baseline;
+    margin-bottom: $base-spacing;
   }
 
   dt {
-    font-family: $global__heading;
     font-weight: bold;
   }
 
   dd {
-    padding-left: $baseline;
-    margin-bottom: $baseline;
+    padding-left: $base-spacing;
+    margin-bottom: $base-spacing;
   }
 
   td {
@@ -37,26 +41,25 @@
 
   figure {
     display: block;
-    margin-bottom: $baseline;
+    margin-bottom: $base-spacing;
   }
 
   figcaption {
     @include height( 12px );
     display: block;
-    margin-top: $baseline/2;
+    margin-top: $small-spacing;
     text-align: right;
     letter-spacing: 0.5pt;
   }
 
   blockquote {
-    padding-left: $baseline;
-    padding-right: $baseline;
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
     margin-left: 0;
     text-align: center;
 
     > p {
       font-weight: 700;
-      font-family: $global__heading;
     }
   }
 
@@ -66,8 +69,8 @@
   }
 
   ul, ol {
-    margin: 0 0 $baseline 0;
-    padding-left: $baseline.5;
+    margin: 0 0 $base-spacing 0;
+    padding-left: $base-spacing;
     list-style: none;
   }
 

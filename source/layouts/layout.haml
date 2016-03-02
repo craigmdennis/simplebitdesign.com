@@ -34,12 +34,12 @@
   %body{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
-    = partial 'partials/header'
+    -# = partial 'partials/header'
 
     #content{role: "main", tabindex:-1}
       = yield
 
-    = partial 'partials/footer'
+    -# = partial 'partials/footer'
 
     -# Load jQuery from Google
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
@@ -55,5 +55,5 @@
     -# - if development?
     = javascript_include_tag "https://fontastic.s3.amazonaws.com/EEco26jhFrTTtf67eq7Cgd/icons.js", async: true
 
-    -if content_for? :scripts
+    - if content_for? :scripts
       = yield_content :scripts

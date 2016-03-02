@@ -1,19 +1,54 @@
 ---
-title: We design and build beautiful interfaces.
+title: We make beautiful interfaces.
 ---
 
-- content_for :header do
-  
-  .l-spacious
-    .l-ontop
-      = partial 'partials/logo', locals: { logoclasses: "o-logo--large" }
+-# - content_for :header do
+.l-constrained
+  .c-section
+    .c-panel.c-panel--center.l-highlight
+      .l-blackhole
+        .h-align-center.l-center
+          %h3 Simple Bit Design
+          %h1 We make beautiful interfaces
 
-      %h1.o-title= current_page.data.title
-      = partial "partials/navigation", locals: { data: data.site.nav, collapsible: false }
+    .l-light
+      .l-grid.l-grid--lines
+        .l-grid__span--6---MQtablet
+          .c-panel.c-panel--has-buttons
+            .c-panel__body
+              .c-panel__title User Interface Design
+              .copy
+                %p The user interface is the window through which the world experiences your website, application, or system. Even the most sophisticated code and transcendent design fail if the site lacks usability. A powerful user interface bridges the distance between the human brain and the digital product.
+              .c-panel__buttons
+                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary'
+                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
 
-  #headerlogo{"aria-hidden" => true, role: "presentation"}= partial 'partials/logo_svg'
+        .l-grid__span--6---MQtablet
+          .c-panel.c-panel--has-buttons
+            .c-panel__body
+              .c-panel__title Information Architecture
+              .copy
+                %p IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
+              .c-panel__buttons
+                = link_to 'Find out more about IA', '#', class: 'c-button c-button--primary'
+                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
 
-= partial 'partials/sections/welcome'
-= partial 'partials/sections/services'
-= partial 'partials/sections/client-work'
-= partial 'partials/sections/blog'
+        .l-grid__span--6---MQtablet
+          .c-panel.c-panel--has-buttons
+            .c-panel__body
+              .c-panel__title Front End Development
+              .copy
+                %p Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across mutiple device sizes. Our modular approach to development allows the code to scale with your product.
+              .c-panel__buttons
+                = link_to 'Our code best-practices', '#', class: 'c-button c-button--primary'
+                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'
+
+        .l-grid__span--6---MQtablet
+          .c-panel.c-panel--has-buttons
+            .c-panel__body
+              .c-panel__title User Experience Design
+              .copy
+                %p User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
+              .c-panel__buttons
+                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary'
+                = link_to 'Related articles', '#', class: 'c-button c-button--secondary'

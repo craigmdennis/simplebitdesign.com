@@ -1,46 +1,6 @@
-= partial 'partials/mailinglist'
-
 %footer
   .l-dark
     .l-constrained
-      %p If you like what you've seen then please get in touch to find out how we can work together
-
-      = link_to "Get in touch", "contact.html", class: "c-button c-button--primary"
-
-      %nav
-        .c-navigation
-          %ul.c-navigation__list{itemprop: "address", itemscope: true, itemtype: "http://schema.org/Organization"}
-            %li.c-navigation__item
-              = link_to "#", class: "c-navigation__text c-navigation__text--strong" do
-                .c-media
-                  .c-media__figure
-                    = ui_svg "envelope", 20, class: "o-icon o-icon--primary"
-                  .c-media__body{itemprop: "email"} info@simplebitdesign.com
-
-            %li.c-navigation__item
-              = link_to "http://twitter.com/simplbitdesign", class: "c-navigation__text c-navigation__text--strong" do
-                .c-media
-                  .c-media__figure
-                    = ui_svg "twitter", 20, class: "o-icon o-icon--primary"
-                  .c-media__body @simplebitdesign
-
-            %li.c-navigation__item{ itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
-              .c-navigation__text
-                .c-media
-                  .c-media__figure
-                    = ui_svg "pin", 20, class: "o-icon o-icon--primary"
-                  .c-media__body
-                    %strong{itemprop: "name"} Simple Bit Design
-                    .c-list.c-list--compact
-                      %div{itemprop: "streetAddress"}
-                        .c-list__item Office 1
-                        .c-list__item The Business Terrace
-                        .c-list__item Maidstone House
-                        .c-list__item King Street
-                        .c-list__item Maidstone
-                        .c-list__item Kent
-                      .c-list__item{itemprop:"postalCode"} ME20 7QD
-
       .h-align-center
         .o-footnote We use cookies. We assume you're ok with that.
       = image_tag "cookie.svg", id: "cookie", alt: "A delicious cookie", class: "l-center"

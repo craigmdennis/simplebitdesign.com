@@ -164,7 +164,7 @@ DEPENDENCIES
   bourbon
   capistrano
   capistrano-gridserver
-  middleman (~> 4.0)
+  middleman (~> 4.1)
   middleman-autoprefixer
   middleman-blog
   middleman-livereload
