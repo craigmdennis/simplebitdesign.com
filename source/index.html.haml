@@ -4,10 +4,10 @@
     %header#top
       .c-panel.c-panel--center.l-highlight
         .l-blackhole
-          .h-align-center.l-center
-            %h3= data.site.name
-            %h1= data.site.description
+          .h-align-center
             = ui_svg 'simple-bit-logo', 72, class: 'o-icon o-logo'
+            %h2.o-title= data.site.name
+            %h1.o-subtitle= data.site.description
 
     %section#services
       .l-light

@@ -1,0 +1,10 @@
+.o-title {
+  @include height( 42px );
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.o-subtitle {
+  @include height( 24px );
+  font-weight: 400;
+}
