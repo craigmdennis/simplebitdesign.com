@@ -1,14 +1,3 @@
-require 'readingtime'
-
-# Development-specific configuration
-configure :development do
-  set :sass_source_maps, true
-
-  activate :livereload do |live|
-    live.livereload_css_target = "assets/css/app.css"
-  end
-end
-
 # Directories
 set :css_dir, "assets/css"
 set :js_dir, "assets/js"
@@ -34,6 +23,20 @@ activate :blog do |blog|
   blog.default_extension = ".md"
 end
 
+# Add node modules after asset hashing
+after_configuration do
+  sprockets.append_path File.join "#{root}", "node_modules"
+end
+
+# Development-specific configuration
+configure :development do
+  set :sass_source_maps, true
+
+  activate :livereload do |live|
+    live.livereload_css_target = "assets/css/app.css"
+  end
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
@@ -44,9 +47,4 @@ configure :build do
   activate :minify_html, remove_intertag_spaces: true
   activate :autoprefixer, browsers: ["last 2 versions"]
   activate :directory_indexes
-end
-
-# Add node modules after asset hashing
-after_configuration do
-  sprockets.append_path File.join "#{root}", "node_modules"
 end
