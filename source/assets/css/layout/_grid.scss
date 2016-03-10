@@ -5,13 +5,31 @@
 
 .l-grid {
   @include row;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 
-  > * {
+  @include rwd( upto-desktop desktop, false ) {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
+    > * {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+[class*="l-grid__span"] {
+  width: 100%;
+}
+
+.l-grid--baseline > * {
+  align-items: flex-end;
+}
+
+
+.l-grid__span--8 {
+  @include rwd( desktop ) {
+    @include span( 8 );
   }
 }
 

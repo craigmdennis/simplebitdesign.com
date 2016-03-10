@@ -1,5 +1,6 @@
 $highlight-bg: $base-accent;
 $dark-bg: $color-pickledblue;
+$subtle-bg: #F5F7FA;
 
 .l-highlight {
   background-color: $highlight-bg;
@@ -13,4 +14,8 @@ $dark-bg: $color-pickledblue;
 .l-dark {
   background-color: $dark-bg;
   color: white;
+}
+
+.l-subtle {
+  background-color: $subtle-bg;
 }

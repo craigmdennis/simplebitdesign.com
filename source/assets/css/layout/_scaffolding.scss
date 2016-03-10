@@ -28,6 +28,24 @@ body {
   }
 }
 
+.l-vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.l-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-right {
+  float: right;
+}
+
+.l-left {
+  float: left;
+}
+
 .l-inner {
   padding: $base-spacing;
   display: block;

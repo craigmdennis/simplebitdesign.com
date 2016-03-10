@@ -14,7 +14,7 @@
         .l-middle---MQdesktop
           %header
             %h1.o-hub-text Services
-        .l-grid.l-grid--lines
+        .l-grid.l-grid--lines.l-grid---MQdesktop
           .l-grid__span--6---MQdesktop
             .c-panel.c-panel--has-buttons
               .c-panel__body
@@ -63,29 +63,41 @@
           .c-copy.c-copy--emphasised
             .c-copy__leading
               %p We have experience working with startups, agencies and large, multi-national companies; working well with in-house teams and independently.
-        .c-panel__buttons
-          = link_to 'Get in touch', '#', class: 'c-button c-button--giant c-button--primary'
+          .c-panel__buttons
+            = link_to 'Get in touch', '#', class: 'c-button c-button--giant c-button--primary'
 
-  .c-section.l-light
-    %section#clients
-      .l-grid.l-grid--lines
-        .l-grid__span--6---MQdesktop
-          .c-panel.c-panel--upsize
+  .c-section
+    .l-light
+      %section#clients
+        .l-grid.l-grid--lines.l-grid---MQdesktop
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--upsize
+              .c-panel__body
+                %h1.c-panel__title.c-panel__title--giant.t-primary We work with  amazing brands
+                .c-copy.c-copy--emphasised
+                  %p Our work is seen by millions of people. That’s a lot of pressure. Whether it’s a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; we prototype, test and iterate to validate our ideas, ensuring we’re on the right track.
+          .l-grid__span--6---MQdesktop
+            .l-grid.l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines
+              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+                .l-inner.l-vcenter
+                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Bond International Software', class: 'l-center'
+              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+                .l-inner.l-vcenter
+                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'MEGAMAC', class: 'l-center'
+              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+                .l-inner.l-vcenter
+                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'BBC', class: 'l-center'
+              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+                .l-inner.l-vcenter
+                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Smashing Magazine', class: 'l-center'
+    .l-subtle
+      .l-grid.l-grid--baseline.l-grid---MQdesktop
+        .l-grid__span--8---MQdesktop
+          .c-panel
             .c-panel__body
-              %h1.c-panel__title.c-panel__title--giant.t-primary We work with  amazing brands
+              %h3.c-panel__title If it has a screen, we can design for it
               .c-copy.c-copy--emphasised
-                %p Our work is seen by millions of people. That’s a lot of pressure. Whether it’s a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; we prototype, test and iterate to validate our ideas, ensuring we’re on the right track.
-        .l-grid__span--6---MQdesktop
-          .l-grid.l-grid--lines
-            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-              .l-inner
-                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Bond International Software', class: 'l-center'
-            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-              .l-inner
-                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'MEGAMAC', class: 'l-center'
-            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-              .l-inner
-                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'BBC', class: 'l-center'
-            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-              .l-inner
-                = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Smashing Magazine', class: 'l-center'
+                %p The principles of design are fundamental, tools and technology are the things that change. Whether you have a SaaS application, website, or app &mdash; we can use our expertise to help achieve your goals.
+              = link_to 'Get in touch', '#contact', class: 'c-button c-button--primary'
+        .l-grid__span--4---MQdesktop
+          = image_tag 'devices', srcset: "devices@2x.png 2x", class: 'l-right'

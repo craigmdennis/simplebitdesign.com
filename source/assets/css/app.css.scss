@@ -15,7 +15,7 @@
 @import 'base/root';
 @import 'base/focus';
 
-@import 'type/type';
+@import 'type/root';
 @import 'type/copy';
 @import 'type/colors';
 
@@ -37,6 +37,8 @@
 @import 'components/sections';
 
 @import 'objects/icons';
+@import 'objects/logo';
 @import 'objects/skiplink';
 @import 'objects/footnote';
 @import 'objects/hub-text';
+@import 'objects/titles';
