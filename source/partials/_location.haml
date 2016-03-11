@@ -1,0 +1,36 @@
+%section#location
+  .l-light
+    .l-grid.l-grid---MQdesktop
+      .l-grid__span--4---MQdesktop
+        .c-panel
+          .c-panel__body
+            %div{itemscope: true, itemtype: "http://schema.org/LocalBusiness"}
+              %h1.h-color-primary
+                %span{itemprop: "name"} Simple Bit Design
+              -# %span{itemprop: "description"} A superb collection of fine gifts and clothing
+              %ul.c-list{itemprop: "address", itemscope: true, itemtype:"http://schema.org/PostalAddress"}
+                %li{itemprop: "streetAddress"}
+                  %div The Business Terrace
+                  %div Maidstone House
+                  %div King Street
+                %li{itemprop: "addressLocality"} Maidstone
+                %li{itemprop: "addressRegion"} Kent
+                %li{itemprop: "postalCode"} ME15 6AW
+              
+              %ul.c-list
+                %li
+                  = link_to "02081 333 777", "tel:02081333777"
+                %li
+                  = link_to "info@simplebitdesign.com", "mailto:info@simplebitdesign.com"
+
+            -# .c-media
+            -#   .c-media__figure
+            -#     = ui_svg "coffee", 40
+            -#   .c-media__body
+            -#     %span Feel free to pop in for a coffee
+
+
+      .l-grid__span--8---MQdesktop
+        .l-fill
+          .o-embed.o-embed--fill.o-embed--gmap
+            %iframe{ src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyC7xcLSiqIVviluqZQ_hv6NJrSP2Y4qGt4&q=Simple+Bit+Design,The+Business+Terrace,Maidstone+House,King+Street,Maidstone,Kent,ME156AW", width: "100%", height: "100%", frameborder: "0", style: "border:0;", allowfullscreen: true}

@@ -1,12 +1,18 @@
-.o-background-rotate {
+.o-background-twitter {
   @include position(absolute, $small-spacing $small-spacing null null);
   transform: scaleX(-1) rotate(-25deg);
   opacity: 0.125;
+}
+
+.o-background-logo {
+  @include position(absolute, -10rem -8rem null null);
+  transform: rotate(25deg);
+  opacity: 0.05;
 }
 
 .o-background-video {
   @include position(absolute, 0 null null 0);
   width: 100%;
   opacity: 0.1;
-  overflow: hidden;
+  overflow: hidden
 }

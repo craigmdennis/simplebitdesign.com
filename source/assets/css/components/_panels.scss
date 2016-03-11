@@ -2,9 +2,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 
   &__body {
     padding: $base-spacing;
+    width: 100%;
 
     @include media( $desktop ) {
       padding: $base-spacing*2;
@@ -46,6 +48,7 @@
   }
 
   > .c-panel__buttons {
+    margin-top: -$base-spacing;
     @include media( $desktop ) {
       @include position(absolute, null $base-spacing*2 $base-spacing*2 $base-spacing*2);
     }

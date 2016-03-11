@@ -6,7 +6,7 @@
 .l-grid {
   @include row;
 
-  @include rwd( upto-desktop desktop, false ) {
+  @include rwd( tablet upto-desktop desktop, false ) {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -20,6 +20,7 @@
 
 [class*="l-grid__span"] {
   width: 100%;
+  position: relative;
 }
 
 .l-grid--baseline > * {
@@ -34,7 +35,7 @@
 }
 
 .l-grid__span--6 {
-  @include rwd( desktop ) {
+  @include rwd( tablet desktop ) {
     @include span( 6 );
   }
 }

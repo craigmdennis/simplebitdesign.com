@@ -10,6 +10,8 @@
 
 @import 'helpers/accessible';
 @import 'helpers/align';
+@import 'helpers/links';
+@import 'helpers/colors';
 
 @import 'base/reset';
 @import 'base/root';
@@ -17,7 +19,6 @@
 
 @import 'type/root';
 @import 'type/copy';
-@import 'type/colors';
 
 @import 'layout/scaffolding';
 @import 'layout/grid';

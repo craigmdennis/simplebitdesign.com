@@ -1,6 +1,7 @@
 .o-embed {
   position: relative;
   height: 0;
+  min-width: 100%;
 
   object,
   embed,
@@ -20,4 +21,34 @@
 
 .o-embed--4x3 {
   padding-bottom: 75%;
+}
+
+.o-embed--fill {
+  position: absolute;
+  height: 100%;
+}
+
+.o-embed--gmap {
+  &:before,
+  &:after {
+    @include position(absolute, null 0 null null);
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-image: url('/assets/images/corner.svg');
+    background-size: 12px;
+    background-repeat: no-repeat; 
+    z-index: map-get($z, top_bun);
+  }
+
+  &:before {
+    top: 0;
+    background-position: top right;
+  }
+
+  &:after {
+    bottom: 0;
+    background-position: bottom right;
+  }
 }

@@ -10,6 +10,7 @@ figure {
 }
 
 a {
+  color: $base-accent;
   transition: color $base-duration-fast $base-timing, background-color $base-duration-fast $base-timing;
 }
 

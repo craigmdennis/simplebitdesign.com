@@ -4,18 +4,30 @@
   
   @include media( $phablet ) {
     border-radius: $base-radius;
-    margin-bottom: $small-spacing/2;
+
+    &:not(:last-child) {
+      margin-bottom: $small-spacing/2;
+    }
   }
 
   @include media( $tablet ) {
-    margin-bottom: $base-spacing;
+    &:not(:last-child) {
+      margin-bottom: $base-spacing;
+    }
   }
 
   &__overlay {
-    @include position(absolute, 0 0 0 0);
+    @include position(absolute, 50% 0 0 0);
     border-top-left-radius: $base-radius;
     border-top-right-radius: $base-radius;
     mix-blend-mode: multiply;
     opacity: 0.25;
+    height: 100%;
+    transform: translateY(-50%);
+
+    @include media( $upto-tablet ) {
+      width: 130%;
+      transform: translate(-15%, -50%);
+    }
   }
 }
