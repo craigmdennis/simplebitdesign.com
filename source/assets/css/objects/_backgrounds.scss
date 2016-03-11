@@ -1,0 +1,12 @@
+.o-background-rotate {
+  @include position(absolute, $small-spacing $small-spacing null null);
+  transform: scaleX(-1) rotate(-25deg);
+  opacity: 0.125;
+}
+
+.o-background-video {
+  @include position(absolute, 0 null null 0);
+  width: 100%;
+  opacity: 0.1;
+  overflow: hidden;
+}

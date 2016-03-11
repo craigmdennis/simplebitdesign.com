@@ -2,12 +2,18 @@
 .l-constrained
   .c-section
     %header#top
-      .c-panel.c-panel--center.l-highlight
-        .l-blackhole
-          .h-align-center
-            = ui_svg 'simple-bit-logo', 72, class: 'o-icon o-logo'
-            %h2.o-title= data.site.name
-            %h1.o-subtitle= data.site.description
+      .l-highlight
+        .c-section__overlay
+          .o-embed.o-embed--16x9
+            %video{autoplay: true, loop: true, poster: "assets/images/049955897-web-designer-working-website-l.jpg"}
+              %source{src: "assets/video/049955897-web-designer-working-website-l.mp4", type: "video/mp4"}
+
+        .c-panel.c-panel--center
+          .l-blackhole
+            .h-align-center
+              = ui_svg "simple-bit-logo", 72, class: "o-icon o-logo"
+              %h2.o-title= data.site.name
+              %h1.o-subtitle= data.site.description
 
     %section#services
       .l-light
@@ -22,8 +28,8 @@
                 .c-copy.c-copy--emphasised
                   %p The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
               .c-panel__buttons
-                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
-                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+                = link_to "How we approach UI design", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
+                = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
 
           .l-grid__span--6---MQdesktop
             .c-panel.c-panel--has-buttons
@@ -32,8 +38,8 @@
                 .c-copy.c-copy--emphasised
                   %p IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
               .c-panel__buttons
-                = link_to 'Find out more about IA', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
-                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+                = link_to "Find out more about IA", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
+                = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
 
           .l-grid__span--6---MQdesktop
             .c-panel.c-panel--has-buttons
@@ -42,8 +48,8 @@
                 .c-copy.c-copy--emphasised
                   %p Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across mutiple device sizes. Our modular approach to development allows the code to scale with your product.
               .c-panel__buttons
-                = link_to 'Our code best-practices', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
-                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+                = link_to "Our code best-practices", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
+                = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
 
           .l-grid__span--6---MQdesktop
             .c-panel.c-panel--has-buttons
@@ -52,8 +58,8 @@
                 .c-copy.c-copy--emphasised
                   %p User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
               .c-panel__buttons
-                = link_to 'How we approach UI design', '#', class: 'c-button c-button--primary c-button--block---MQupto-tablet'
-                = link_to 'Articles', '#', class: 'c-button c-button--secondary c-button--block---MQupto-tablet'
+                = link_to "How we approach UI design", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
+                = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
   
   .c-section.l-dark
     %aside#how-we-can-help
@@ -64,7 +70,7 @@
             .c-copy__leading
               %p We have experience working with startups, agencies and large, multi-national companies; working well with in-house teams and independently.
           .c-panel__buttons
-            = link_to 'Get in touch', '#', class: 'c-button c-button--giant c-button--primary'
+            = link_to "Get in touch", "#", class: "c-button c-button--giant---MQtablet c-button--primary"
 
   .c-section
     .l-light
