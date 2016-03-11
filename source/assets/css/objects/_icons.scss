@@ -18,3 +18,9 @@ $icon-primary-color: $base-accent;
 .o-icon--primary {
   color: $icon-primary-color;
 }
+
+.o-icon--right {
+  float: right;
+  margin-bottom: em(-1px);
+  margin-right: em(-4px);
+}

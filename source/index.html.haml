@@ -86,16 +86,16 @@
             .l-grid.l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines
               .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
                 .l-inner.l-vcenter
-                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Bond International Software', class: 'l-center'
+                  = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "Bond International Software", class: "l-center"
               .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
                 .l-inner.l-vcenter
-                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'MEGAMAC', class: 'l-center'
+                  = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "MEGAMAC", class: "l-center"
               .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
                 .l-inner.l-vcenter
-                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'BBC', class: 'l-center'
+                  = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "BBC", class: "l-center"
               .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
                 .l-inner.l-vcenter
-                  = image_tag 'http://placehold.it/150', srcset: 'http://placehold.it/300 2x', alt: 'Smashing Magazine', class: 'l-center'
+                  = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "Smashing Magazine", class: "l-center"
     .l-subtle
       .l-grid.l-grid--baseline.l-grid---MQdesktop
         .l-grid__span--8---MQdesktop
@@ -104,6 +104,30 @@
               %h3.c-panel__title If it has a screen, we can design for it
               .c-copy.c-copy--emphasised
                 %p The principles of design are fundamental, tools and technology are the things that change. Whether you have a SaaS application, website, or app &mdash; we can use our expertise to help achieve your goals.
-              = link_to 'Get in touch', '#contact', class: 'c-button c-button--primary'
+              = link_to "Get in touch", "#contact", class: "c-button c-button--primary"
         .l-grid__span--4---MQdesktop
-          = image_tag 'devices', srcset: "devices@2x.png 2x", class: 'l-right'
+          = image_tag "devices", srcset: "devices@2x.png 2x", class: "l-right"
+
+  .c-section
+    .l-light
+      %section#articles
+        .l-grid.l-grid--lines.l-grid---MQdesktop
+
+          .l-grid__span--6---MQdesktop
+            .c-panel
+              .c-panel__body
+                %h3.c-panel__title.c-panel__title--small Web design isn"t dead
+                .c-copy.c-copy--emphasised
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni velit beatae consequatur natus accusantium libero porro!
+                = link_to "Continue reading", "#", class: "c-button c-button--primary"
+
+          .l-grid__span--6---MQdesktop
+            .c-panel.c-panel--upsize
+              .c-panel__body
+                %h3.c-panel__title.c-panel__title--small Web design isn"t dead
+                .c-copy.c-copy--emphasised
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni velit beatae consequatur natus accusantium libero porro!
+                = link_to "Continue reading", "#", class: "c-button c-button--primary"
+
+  .c-section
+    = partial 'partials/twitter'

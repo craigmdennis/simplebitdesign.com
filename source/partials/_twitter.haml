@@ -1,0 +1,19 @@
+.l-twitter
+  = ui_svg "twitter", 400, class: "o-background-rotate"
+  .l-grid.l-grid---MQdesktop
+    .l-grid__span--8---MQdesktop
+      %aside#activity
+        .c-panel.c-panel--upsize
+          .c-panel__body
+            %p
+              Working on some dashboard
+              = link_to "#ui", "http://twitter.com/hashtag/ui", target: "_blank"
+              = link_to "https://t.co/KE72ReCgV6", "https://t.co/KE72ReCgV6", target: "_blank"
+            
+            = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "twitter-follow-button", data: { "show-count" => false, size: "large"}
+            
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            -# = link_to "#", class: "c-button c-button--secondary" do
+            -#   Follow @simplebitdesign
+            -#   = ui_svg "twitter", 24, class: "o-icon o-icon--after o-icon--right"

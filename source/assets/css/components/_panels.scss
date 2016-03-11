@@ -1,12 +1,10 @@
 .c-panel {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 
   &__body {
     padding: $base-spacing;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
 
     @include media( $desktop ) {
       padding: $base-spacing*2;
@@ -30,9 +28,13 @@
     margin-bottom: $small-spacing;
 
     &--giant {
-      @include media( $tablet ) {
+      @include rwd( tablet ) {
         @include height( 48px );
       }
+    }
+
+    &--small {
+      @include height( 21px );
     }
   }
 }
@@ -40,7 +42,7 @@
 .c-panel--has-buttons {
   position: relative;
   @include media( $desktop ) {
-    padding-bottom: rem($base-button-height) + $base-spacing;
+    padding-bottom: 3.25rem;
   }
 
   > .c-panel__buttons {
