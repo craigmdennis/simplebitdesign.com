@@ -1,9 +1,12 @@
 .c-copy {
+  @include wf("lora", n4);
   font-family: $base-serif;
   font-weight: 400;
   width: 100%;
 
-  &--emphasised {
+  &--emphasised,
+  em,
+  i {
     font-style: italic;
   }
 
@@ -13,13 +16,22 @@
     margin-right: auto;
   }
 
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
   table,
   dl {
     margin-bottom: $base-spacing;
   }
 
   dt {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   dd {

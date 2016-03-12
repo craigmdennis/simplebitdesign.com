@@ -43,12 +43,18 @@
 
 .c-panel--has-buttons {
   position: relative;
+
   @include media( $desktop ) {
-    padding-bottom: 3.25rem;
+    padding-bottom: 28rem;
+    height: 0;
+  }
+
+  @include media( $hd ) {
+    padding-bottom: 25rem;
   }
 
   > .c-panel__buttons {
-    margin-top: -$base-spacing;
+
     @include media( $desktop ) {
       @include position(absolute, null $base-spacing*2 $base-spacing*2 $base-spacing*2);
     }

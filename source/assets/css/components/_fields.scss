@@ -9,7 +9,6 @@ $form-matched-height: $base-button-height + $base-button-border-width;
 $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 
 %consistentFormElements {
-  @include height( $form-control-type-size, $form-control-height );
   padding-left: $small-spacing;
   padding-right: $small-spacing;
 }
@@ -21,15 +20,18 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 }
 
 .c-form__label {
-  @extend %consistentFormElements;
-  font-weight: 500;
+  @include height( $form-control-type-size, $form-matched-height );
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
 }
 
 .c-form__control {
-  @extend %consistentFormElements;
+  @include height( $form-control-type-size, $form-control-height );
   color: $form-color;
   border: $form-control-border;
   border-radius: $form-control-radius;
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
   width: 100%;
 }
 

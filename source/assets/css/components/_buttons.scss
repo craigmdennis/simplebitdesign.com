@@ -18,6 +18,9 @@ $button-secondary-border: $color-athensgray;
   border-radius: $base-radius;
   border: $base-button-border-width solid transparent;
   width: 100%;
+  font-weight: 500;
+
+  @include wf("avenirnextw00", n5);
 
   &:not(:last-child) {
     margin-right: $small-spacing;

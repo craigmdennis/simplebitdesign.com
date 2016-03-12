@@ -19,10 +19,25 @@
 
     = partial "partials/favicon"
 
-    -# Stylesheet must come before inline javascript
+    -# Application Stylesheet
     = stylesheet_link_tag "app"
+    = stylesheet_link_tag "//fast.fonts.net/cssapi/09fd0c05-177d-4a2b-9fcd-f4ec85499026.css"
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic"
+    
 
-    = javascript_include_tag "picturefill.min.js", async: true, defer: true
+    -# Render blocking but prevents FOUC
+    -# = javascript_include_tag "//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"
+  
+    -# -# Load Fonts from Fonts.com and Google
+    -# :javascript
+    -#   WebFont.load({
+    -#     monotype: {
+    -#       projectId: '09fd0c05-177d-4a2b-9fcd-f4ec85499026'
+    -#     },
+    -#     google: { families: [
+    -#       'Lora:400,400italic,700,700italic:latin']
+    -#     }
+    -#   });
 
     -if content_for? :head
       = yield_content :head
@@ -32,7 +47,6 @@
       document.createElement( 'picture' );
 
     = partial 'partials/script_modernizr'
-    = partial 'partials/script_typekit'
 
   %body{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
@@ -42,7 +56,7 @@
     #content{role: "main", tabindex:-1}
       = yield
 
-    -# = partial 'partials/footer'
+    = partial 'partials/footer'
 
     -# Load jQuery from Google
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
@@ -56,6 +70,8 @@
 
     -# Load SVG icon sprites
     = javascript_include_tag "https://file.myfontastic.com/EEco26jhFrTTtf67eq7Cgd/icons.js", async: true
+
+    = javascript_include_tag "picturefill.min.js", async: true
 
     - if content_for? :scripts
       = yield_content :scripts
