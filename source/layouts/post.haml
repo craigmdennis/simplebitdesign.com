@@ -1,17 +1,18 @@
-- content_for :header do
-  -# = partial 'partials/logo'
-  -# = partial 'partials/navigation', locals: {data: data.site.nav, collapsible: true, extraclasses: 'm-navigation--inline' }
-
 = wrap_layout :layout do
-  .l-light
-    %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
-      .l-constrained
-        %header
+  .c-section
+    .l-light
+      = partial "partials/navigation-post"
 
-        
-        .l-grid
-          .l-grid__span--9---MQtablet
+      %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
+        .l-constrained
+          .l-leading
+            %header
+              %h1.o-title= current_page.title
             .c-copy{:itemprop => "articleBody"}
               = yield
-          .l-grid__span--3---MQtablet
-            %p Sidebar
+
+  .c-section
+    = partial "partials/related-articles"
+
+  .c-section
+    = partial "partials/contact"

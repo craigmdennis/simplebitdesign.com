@@ -9,13 +9,5 @@
       %aside#activity
         .c-panel.c-panel--upsize
           .c-panel__body
-            %p.h-inherit-links
-              Working on some dashboard
-              = link_to "#ui", "http://twitter.com/hashtag/ui", target: "_blank"
-              = link_to "https://t.co/KE72ReCgV6", "https://t.co/KE72ReCgV6", target: "_blank"
-            
+            #tweet.h-inherit-links.h-reset
             = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
-
-            -# = link_to "#", class: "c-button c-button--secondary" do
-            -#   Follow @simplebitdesign
-            -#   = ui_svg "twitter", 24, class: "o-icon o-icon--after o-icon--right"

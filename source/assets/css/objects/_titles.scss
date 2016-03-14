@@ -1,7 +1,7 @@
 .o-title {
   @include height( 42px );
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: $small-spacing/4;
 }
 
 .o-subtitle {

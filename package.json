@@ -18,6 +18,7 @@
     "rwdcss": "^1.1.0",
     "sass-height": "^2.0.6",
     "timeago": "^1.5.2",
+    "twitter-fetcher": "^15.0.2",
     "what-input": "^1.2.5"
   }
 }

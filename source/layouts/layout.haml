@@ -23,21 +23,6 @@
     = stylesheet_link_tag "app"
     = stylesheet_link_tag "//fast.fonts.net/cssapi/09fd0c05-177d-4a2b-9fcd-f4ec85499026.css"
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic"
-    
-
-    -# Render blocking but prevents FOUC
-    -# = javascript_include_tag "//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"
-  
-    -# -# Load Fonts from Fonts.com and Google
-    -# :javascript
-    -#   WebFont.load({
-    -#     monotype: {
-    -#       projectId: '09fd0c05-177d-4a2b-9fcd-f4ec85499026'
-    -#     },
-    -#     google: { families: [
-    -#       'Lora:400,400italic,700,700italic:latin']
-    -#     }
-    -#   });
 
     -if content_for? :head
       = yield_content :head

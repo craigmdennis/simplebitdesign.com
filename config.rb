@@ -9,18 +9,23 @@ set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 set :build_dir, "public"
 
+# Pretty URLs
+activate :directory_indexes
+
 # Set SASS precision
 ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
 
 # Blogging
 activate :blog do |blog|
-  blog.prefix = ""
-  blog.sources = "posts/{year}/{month}/{title}.html"
-  blog.permalink = "blog/{year}/{month}/{title}.html"
+  blog.prefix = "posts"
+  blog.sources = "{year}/{month}/{title}.html"
+  blog.permalink = "{year}/{month}/{title}.html"
   blog.layout = "post"
   blog.paginate = true
   blog.per_page = 10
   blog.default_extension = ".md"
+  blog.calendar_template = "calendar.html"
+  blog.generate_day_pages = false
 end
 
 # Add node modules after asset hashing
@@ -46,5 +51,4 @@ configure :build do
   activate :gzip
   activate :minify_html, remove_intertag_spaces: true
   activate :autoprefixer, browsers: ["last 2 versions"]
-  activate :directory_indexes
 end

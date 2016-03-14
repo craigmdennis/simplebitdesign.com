@@ -20,8 +20,6 @@ $button-secondary-border: $color-athensgray;
   width: 100%;
   font-weight: 500;
 
-  @include wf("avenirnextw00", n5);
-
   &:not(:last-child) {
     margin-right: $small-spacing;
   }
@@ -78,5 +76,9 @@ $button-secondary-border: $color-athensgray;
         margin-bottom: $small-spacing;
       }
     }
+  }
+
+  &--next {
+    float: right;
   }
 }

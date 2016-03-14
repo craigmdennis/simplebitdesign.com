@@ -2,18 +2,13 @@
   .l-light
     .l-grid.l-grid--lines.l-grid---MQdesktop
 
-      .l-grid__span--6---MQdesktop
-        .c-panel
-          .c-panel__body
-            %h3.c-panel__title.c-panel__title--small Web design isn't dead
-            .c-copy.c-copy--emphasised
-              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni velit beatae consequatur natus accusantium libero porro!
-            = link_to "Continue reading", "#", class: "c-button c-button--primary"
+      - blog.articles[0...2].each do |article|
+        .l-grid__span--6---MQdesktop
+          .c-panel
+            .c-panel__body
+              %h3.c-panel__title.c-panel__title--small= article.title
 
-      .l-grid__span--6---MQdesktop
-        .c-panel.c-panel--upsize
-          .c-panel__body
-            %h3.c-panel__title.c-panel__title--small Web design isn't dead
-            .c-copy.c-copy--emphasised
-              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni velit beatae consequatur natus accusantium libero porro!
-            = link_to "Continue reading", "#", class: "c-button c-button--primary"
+              - if defined?(article.summary)
+                .c-copy.c-copy--emphasised
+                  %p= article.summary
+              = link_to "Continue reading", article.url, class: "c-button c-button--primary"

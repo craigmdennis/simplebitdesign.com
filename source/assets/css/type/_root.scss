@@ -19,7 +19,6 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  @include wf("avenirnextw00", 7);
   font-family: $base-sans;
   font-weight: 700;
   margin-bottom: $small-spacing;
@@ -33,8 +32,4 @@ hr {
 
 p {
   font-size: 112.5%; // 16px becomes 18px
-}
-
-p,li,a {
-  @include wf("avenirnextw00", 4);
 }

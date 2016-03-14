@@ -6,18 +6,23 @@
           .c-panel__body
             %h1.c-panel__title.c-panel__title--giant.h-color-primary We work with  amazing brands
             .c-copy.c-copy--emphasised
-              %p Our work is seen by millions of people. That’s a lot of pressure. Whether it’s a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; we prototype, test and iterate to validate our ideas, ensuring we’re on the right track.
+              %p
+                %strong Our work is seen by millions of people.
+                That’s a lot of pressure. Whether it's a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; we
+                %strong prototype, test and iterate
+                to validate our ideas, delivering a product that empowers people.
+                
       .l-grid__span--6---MQdesktop
         .l-grid.l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines
           .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
             .l-inner.l-vcenter
-              = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "Bond International Software", class: "l-center"
+              = image_tag "#{image_path('clients/bond.png')}", srcset: "#{image_path('clients/bond@2x.png')} 2x", alt: "Bond International Software", class: "l-center"
           .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
             .l-inner.l-vcenter
-              = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "MEGAMAC", class: "l-center"
+              = image_tag "#{image_path('clients/megamac.png')}", srcset: "#{image_path('clients/megamac@2x.png')} 2x", alt: "MEGAMAC", class: "l-center"
           .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
             .l-inner.l-vcenter
-              = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "BBC", class: "l-center"
+              = image_tag "#{image_path('clients/bbc.png')}", srcset: "#{image_path('clients/bbc@2x.png')} 2x", alt: "BBC", class: "l-center"
           .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
             .l-inner.l-vcenter
-              = image_tag "http://placehold.it/150", srcset: "http://placehold.it/300 2x", alt: "Smashing Magazine", class: "l-center"
+              = image_tag "#{image_path('clients/smashing-mag.png')}", srcset: "#{image_path('clients/smashing-mag@2x.png')} 2x", alt: "Smashing Magazine", class: "l-center"

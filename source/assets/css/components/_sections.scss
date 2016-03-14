@@ -4,30 +4,35 @@
   
   @include media( $phablet ) {
     border-radius: $base-radius;
-
-    &:not(:last-child) {
-      margin-bottom: $small-spacing/2;
-    }
+    margin-bottom: $small-spacing/2;
+    margin-top: $small-spacing/2;
   }
 
   @include media( $tablet ) {
-    &:not(:last-child) {
-      margin-bottom: $base-spacing;
-    }
+    margin-bottom: $base-spacing;
+    margin-top: $base-spacing;
   }
 
   &__overlay {
     @include position(absolute, 50% 0 0 0);
     border-top-left-radius: $base-radius;
     border-top-right-radius: $base-radius;
-    mix-blend-mode: multiply;
-    opacity: 0.25;
+    opacity: 0.075;
     height: 100%;
     transform: translateY(-50%);
+
+    .mixblendmode & {
+      mix-blend-mode: multiply;
+      opacity: 0.15;
+    }
 
     @include media( $upto-tablet ) {
       width: 130%;
       transform: translate(-15%, -50%);
     }
   }
+}
+
+.c-section__header {
+  padding: $base-spacing;
 }

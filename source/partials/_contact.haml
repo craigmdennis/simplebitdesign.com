@@ -1,28 +1,29 @@
-.l-dark
-  .l-grid.l-grid---MQtablet
-    .l-grid__span--6---MQtablet
-      .c-panel
-        .c-panel__body
-          %h3.c-panel__title Get in touch
-          .c-copy.c-copy--emphasised
-            %p We are available for hire to design and develop with passionate product teams.
-          = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary c-button--small twitter-follow-button", data: { "show-count" => false, size: "large"}
+%section#contact
+  .l-dark
+    .l-grid.l-grid---MQtablet
+      .l-grid__span--6---MQtablet
+        .c-panel
+          .c-panel__body
+            %h3.c-panel__title Get in touch
+            .c-copy.c-copy--emphasised
+              %p We are available for hire to design and develop with passionate product teams.
+            -# = link_to "Tweet to @simplebitdesign", "https://twitter.com/intent/tweet?screen_name=simplebitdesign", class: "c-button c-button--secondary c-button--small twitter-mention-button", data: { "show-count" => false, size: "large"}
 
-    .l-grid__span--6---MQtablet
-      .c-panel
-        .c-panel__body
-          %form.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
-            .c-form__row
-              %label.h-accessible{for: "name"} Name
-              %input#name.c-form__control{type: "text", name: "name", placeholder: "Name", required: true}
-            .c-form__row
-              %label.h-accessible{for: "email"} Email
-              %input#email.c-form__control{type: "email", name: "_replyto", placeholder: "Email", required: true}
-            .c-form__row
-              %label.h-accessible{for: "message"} Your message
-              %textarea#message.c-form__control{name: "message", rows: 4, required: true, placeholder: "Tell us a little about your project"}
-            .c-form__row.c-form__row--inline
-              %label.c-form__label{for: "budget"} Budget:
-              %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0}
+      .l-grid__span--6---MQtablet
+        .c-panel
+          .c-panel__body
+            %form.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
+              .c-form__row
+                %label.h-accessible{for: "message"} Your message
+                %textarea#message.c-form__control{name: "message", rows: 5, required: true, placeholder: "Tell us a little about your project"}
+              .c-form__row.c-form__row--inline
+                %label.c-form__label{for: "name"} Name:
+                %input#name.c-form__control{type: "text", name: "name", placeholder: "John Smith", required: true}
+              .c-form__row.c-form__row--inline
+                %label.c-form__label{for: "email"} Email:
+                %input#email.c-form__control{type: "email", name: "_replyto", placeholder: "j.smith@gmail.com", required: true}
+              .c-form__row.c-form__row--inline
+                %label.c-form__label{for: "budget"} Budget:
+                %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0}
 
-              %input.c-button.c-button--primary.c-button--next{type: "submit", value: "Send"}
+                %input.c-button.c-button--primary.c-button--next{type: "submit", value: "Send"}

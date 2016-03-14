@@ -1,11 +1,3 @@
-- content_for :scripts do
-  :javascript
-    if('CSS' in window && 'supports' in window.CSS) {
-      var support = window.CSS.supports('mix-blend-mode','multiply');
-          support = support?'mix-blend-mode':'no-mix-blend-mode';
-          $('html').addClass(support);
-    }
-
 -# - content_for :header do
 .l-constrained
   .c-section
@@ -13,8 +5,25 @@
       .l-highlight
         .c-section__overlay
           .o-embed.o-embed--16x9
-            %video{autoplay: true, loop: true, poster: "assets/images/049955897-web-designer-working-website-l.jpg"}
-              %source{src: "assets/video/049955897-web-designer-working-website-l.mp4", type: "video/mp4"}
+            %video{autoplay: true, loop: true, poster: "assets/images/bg.png"}
+              %source{src: "#{asset_url('assets/video/bg.mp4')}", type: "video/mp4"}
+
+        .l-navigation
+          %nav
+            %button#navigationbutton.o-navigation.o-navigation--light.c-button.c-button--seamless.c-button--next{type: "button", data: {toggle: "navigation"}}
+              .h-accessible Menu
+              = ui_svg 'menu', 28
+            %ul#navigation.c-navigation.c-navigation--light
+              %li
+                = link_to "Home", "#", class: "c-navigation__text"
+              %li
+                = link_to "About", "#", class: "c-navigation__text"
+              %li
+                = link_to "Articles", "#", class: "c-navigation__text"
+              %li
+                = link_to "Services", "#", class: "c-navigation__text"
+              %li
+                = link_to "Contact", "#contact", class: "c-navigation__text"
 
         .c-panel.c-panel--center
           .l-blackhole
@@ -32,8 +41,9 @@
     = partial "partials/clients"
     = partial "partials/screen-design"
 
-  .c-section
-    = partial "partials/related-articles"
+  - if blog.articles
+    .c-section
+      = partial "partials/related-articles"
 
   .c-section
     = partial "partials/twitter"
@@ -43,3 +53,13 @@
 
   .c-section
     = partial "partials/contact"
+
+
+- content_for :scripts do  
+  -# Test for mix-blend-mode
+  :javascript
+    if('CSS' in window && 'supports' in window.CSS) {
+      var support = window.CSS.supports('mix-blend-mode','multiply');
+          support = support?'mixblendmode':'no-mixblendmode';
+          $('html').addClass(support);
+    }
