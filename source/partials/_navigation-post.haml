@@ -1,19 +1,25 @@
 %nav#top
-  %button#navigationbutton.o-navigation.c-button.c-button--seamless.c-button--next{type: "button", data: {toggle: "navigation"}}
-    .h-accessible Menu
-    = ui_svg "menu", 28
+  -# %button#navigationbutton.o-navigation.c-button.c-button--seamless.c-button--next{type: "button", data: {toggle: "navigation"}}
+    -# .h-accessible Menu
+    -# = ui_svg "menu", 28
 
-  = link_to "/" do
-    = ui_svg "simple-bit-logo", 48
+  .c-section__header
+    .l-split
+      = link_to "/", class: "c-media" do
+        .c-media__figure
+          = ui_svg "simple-bit-logo", 36
+        .c-media__body
+          %h2.o-logo-title Simple Bit Design
+          %h4.o-logo-subtitle We make beautiful interfaces
 
-  %ul#navigation.c-navigation
-    %li
-      = link_to "Home", "#", class: "c-navigation__text"
-    %li
-      = link_to "About", "#", class: "c-navigation__text"
-    %li
-      = link_to "Articles", "#", class: "c-navigation__text"
-    %li
-      = link_to "Services", "#", class: "c-navigation__text"
-    %li
-      = link_to "Contact", "#contact", class: "c-navigation__text"
+      %ul.c-navigation
+        %li
+          = link_to "Home", "#", class: "c-navigation__text"
+        %li
+          = link_to "About", "#", class: "c-navigation__text"
+        %li
+          = link_to "Articles", "#", class: "c-navigation__text"
+        %li
+          = link_to "Services", "#", class: "c-navigation__text"
+        %li
+          = link_to "Contact", "#contact", class: "c-navigation__text"

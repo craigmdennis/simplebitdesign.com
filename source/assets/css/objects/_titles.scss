@@ -8,3 +8,14 @@
   @include height( 24px );
   font-weight: 400;
 }
+
+.o-logo-title {
+  @include height( 16px );
+  margin-bottom: 0;
+}
+
+.o-logo-subtitle {
+  @include height( 10.25px );
+  margin-bottom: 0;
+  font-weight: 300;
+}
