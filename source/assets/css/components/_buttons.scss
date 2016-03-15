@@ -17,12 +17,11 @@ $button-secondary-border: $color-athensgray;
   text-align: center;
   border-radius: $base-radius;
   border: $base-button-border-width solid transparent;
-  width: 100%;
   font-weight: 500;
 
-  &:not(:last-child) {
-    margin-right: $small-spacing;
-  }
+  // &:not(:last-child){
+  //   margin-right: $small-spacing;
+  // }
 
   @include media( $tablet ) {
     display: inline-block;

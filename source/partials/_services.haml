@@ -3,43 +3,16 @@
     .l-middle---MQdesktop
       %header
         %h1.o-hub-text Services
+
     .l-grid.l-grid--lines.l-grid---MQdesktop
-      .l-grid__span--6---MQdesktop
-        .c-panel.c-panel--has-buttons
-          .c-panel__body
-            %h2.c-panel__title User Interface Design
-            .c-copy.c-copy--emphasised
-              %p The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
-          .c-panel__buttons
-            = link_to "How we approach UI design", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
-            = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
+      - data.site.services.each_with_index do |service, index|
 
-      .l-grid__span--6---MQdesktop
-        .c-panel.c-panel--has-buttons
-          .c-panel__body
-            %h2.c-panel__title Information Architecture
-            .c-copy.c-copy--emphasised
-              %p IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
-          .c-panel__buttons
-            = link_to "Find out more about IA", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
-            = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
-
-      .l-grid__span--6---MQdesktop
-        .c-panel.c-panel--has-buttons
-          .c-panel__body
-            %h2.c-panel__title Front End Development
-            .c-copy.c-copy--emphasised
-              %p Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across multiple device sizes. Our modular approach to development allows the code to scale with your product.
-          .c-panel__buttons
-            = link_to "See our coding standards", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
-            = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
-
-      .l-grid__span--6---MQdesktop
-        .c-panel.c-panel--has-buttons
-          .c-panel__body
-            %h2.c-panel__title User Experience Design
-            .c-copy.c-copy--emphasised
-              %p User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
-          .c-panel__buttons
-            = link_to "How we approach UI design", "#", class: "c-button c-button--primary c-button--block---MQupto-tablet"
-            = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
+        .l-grid__span--6---MQdesktop
+          .c-panel.c-panel--has-buttons
+            .c-panel__body
+              %h2.c-panel__title= service.title
+              .c-copy.c-copy--emphasised
+                %p= service.summary
+            .c-panel__buttons
+              = link_to service.anchor, service.slug, class: "c-button c-button--primary c-button--block---MQupto-tablet"
+              -# = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"

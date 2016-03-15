@@ -1,1 +1,15 @@
-.c-post {}
+.c-post {
+  @include media( $desktop ) {
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing*2;
+  }
+}
+
+.c-post__meta {
+  margin-bottom: $small-spacing;
+  margin-top: $small-spacing;
+}
+
+.c-post__header {
+  margin-bottom: $base-spacing;
+}

@@ -38,6 +38,16 @@
     &--small {
       @include height( 21px );
     }
+
+    > a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $base-accent;
+        text-decoration: none;
+      }
+    }
   }
 }
 

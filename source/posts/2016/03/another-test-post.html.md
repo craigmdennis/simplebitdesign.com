@@ -1,7 +1,7 @@
 ---
-title: This is a test post
-category: User Experience (UX)
-date: 25/10/2015 22:57
+title: Another Test Post
+category: Front End Development
+date: 14/03/2016 22:29
 ---
 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 

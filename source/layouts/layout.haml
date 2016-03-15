@@ -4,12 +4,12 @@
   %head
     %meta{charset: "utf-8"}
 
-    - if exists? current_page.data.title
+    - if defined? current_page.data.title
       %title= current_page.data.title + " &mdash; " + data.site.name
     - else
       %title= data.site.name + " &mdash; " + data.site.title
 
-    - if exists? current_page.data.description
+    - if defined? current_page.data.description
       %meta{name: "description", content: current_page.data.description}
 
     %meta{"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
@@ -33,10 +33,8 @@
 
     = partial 'partials/script_modernizr'
 
-  %body{class: page_classes}
+  %body#top
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
-
-    -# = partial 'partials/header'
 
     #content{role: "main", tabindex:-1}
       = yield

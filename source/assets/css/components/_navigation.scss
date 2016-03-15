@@ -12,8 +12,10 @@ $nav-color-light: white;
 }
 
 .c-navigation.is-closed {
-  transform: translateX(125%);
-  opacity: 0;
+  .js & {
+    transform: translateX(125%);
+    opacity: 0;
+  }
 }
 
 .c-navigation__item {
@@ -27,13 +29,24 @@ $nav-color-light: white;
   display: block;
   padding-left: $small-spacing;
   padding-right: $small-spacing;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $base-accent;
+  }
 }
 
 .c-navigation.c-navigation--light {
   border-bottom: 0;
 
   .c-navigation__text {
-    color: $nav-color-light;
+    color: rgba($nav-color-light, 0.5);
+    
+    &:hover,
+    &:focus {
+      color: $nav-color-light;
+    }
   }
 }
 
@@ -47,5 +60,7 @@ $nav-color-light: white;
 }
 
 .o-navigation.is-closed {
-  transform: rotate(0deg);
+  .js & {
+    transform: rotate(0deg);
+  }
 }

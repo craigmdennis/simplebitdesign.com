@@ -1,3 +1,59 @@
-name: "Simple Bit Design"
-title: "UI and UX Design Kent"
-description: "We make beautiful interfaces"
+name: Simple Bit Design
+title: UI and UX Design Kent
+description: We make beautiful interfaces
+
+navigation:
+  - anchor: Home
+    href: /home/
+  - anchor: Work
+    href: /work/
+  - anchor: Services
+    href: /services/
+  - anchor: Posts
+    href: /posts/
+  - anchor: Contact
+    href: /#contact
+
+hero:
+  video: assets/video/bg.mp4
+  poster: assets/images/bg.png
+
+services: 
+  - title: User Interface Design
+    summary: The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
+    slug: /interface-design/
+    anchor: How we approach UI design
+
+  - title: Information Architecture
+    summary: IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
+    slug: /information-architecture/
+    anchor: More about IA
+
+  - title: Front End Development
+    summary: Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across multiple device sizes. Our modular approach to development allows the code to scale with your product.
+    slug: /front-end-development/
+    anchor: See our coding standards
+
+  - title: User Experience Design
+    summary: User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
+    slug: /ux-design/
+    anchor: More about UX design
+
+clients: 
+  title: We work with passionate brands
+  copy: "<strong>Our work is seen by millions of people.</strong> That’s a lot of pressure. Whether it's a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; <strong>we prototype, test and iterate</strong> to validate our ideas, delivering a product that empowers people."
+  logos:
+    - src: "clients/megamac"
+      alt: "Megamac"
+    - src: "clients/smashing-mag"
+      alt: "Smashing Magazine"
+    - src: "clients/bond"
+      alt: "Bond International Software"
+    - src: "clients/bbc"
+      alt: "BBC"
+
+posts:
+  intro: "Sometimes we have a flash of inspiration, overcome an obstacle or explore new ideas; before we forget, we write some of them down."
+
+footer:
+  cookie: We use delicious cookies to improve your experience

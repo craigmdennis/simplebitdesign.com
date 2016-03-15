@@ -84,8 +84,4 @@
 
 
   $.isScrolled = false;
-  $(window).bind(scrollStart+' '+scrollEnd, function (evt/**Event*/){
-    $.isScrolled = (evt.type == scrollStart);
-    $('body')[$.isScrolled ? 'addClass' : 'removeClass']('is-scrolled');
-  });
 })(jQuery);

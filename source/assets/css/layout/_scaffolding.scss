@@ -16,7 +16,7 @@ body {
 }
 
 .l-split {
-  @include rwd( tablet ) {
+  @include rwd( tablet desktop ) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,6 +40,7 @@ body {
 .l-center {
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 
 .l-right {
@@ -63,7 +64,8 @@ body {
 
 .l-navigation {
   @include media( $tablet ) {
-    @include position(absolute, $small-spacing 0 null null);
+    @include position(absolute, 0 0 null null);
+    padding: $base-spacing;
   }
 
   z-index: map-get($z, top_bun);

@@ -7,9 +7,6 @@ open = false
 
 # $('<button id="hamburger" class="c-hamburger" role="button" type="button"><span class="c-hamburger__lines"><span class="h-accessible">Menu</span></span></button>').insertBefore( triggerClass )
 
-$nav.addClass('is-closed')
-$button.addClass('is-closed')
-
 $toggle.click ->
   $nav.toggleClass('is-closed')
   $button.toggleClass('is-closed')

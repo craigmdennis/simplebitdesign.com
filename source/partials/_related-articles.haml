@@ -3,12 +3,6 @@
     .l-grid.l-grid--lines.l-grid---MQdesktop
 
       - blog.articles[0...2].each do |article|
-        .l-grid__span--6---MQdesktop
-          .c-panel
-            .c-panel__body
-              %h3.c-panel__title.c-panel__title--small= article.title
-
-              - if defined?(article.summary)
-                .c-copy.c-copy--emphasised
-                  %p= article.summary
-              = link_to "Continue reading", article.url, class: "c-button c-button--primary"
+        - if current_page != article
+          .l-grid__span--6---MQdesktop
+            = partial "partials/post-summary", locals: {article: article}

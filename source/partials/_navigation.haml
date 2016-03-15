@@ -1,0 +1,4 @@
+%ul#navigation.c-navigation.is-closed
+  - data.site.navigation.each_with_index do |nav, index|
+    %li
+      = link_to nav.anchor, nav.href, class: "c-navigation__text"

@@ -1,0 +1,21 @@
+.c-logo {
+  color: $color-pickledblue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-carminepink;
+    text-decoration: none;
+  }
+}
+
+.c-logo__title {
+  @include height( 16px );
+  margin-bottom: 0;
+}
+
+.c-logo__subtitle {
+  @include height( 10.25px );
+  margin-bottom: 0;
+  font-weight: 300;
+}

@@ -2,65 +2,40 @@
 pageable: true
 ---
 
-.c-section
-  %section
+.l-constrained
+  .c-section
     .l-light
-      = partial "partials/navigation-post"
-      .l-constrained
-        %header
-          .c-panel
-            .c-panel__body
-              %h1.o-title
-                Archive for
-                - case page_type
-                  - when 'day'
-                    = Date.new(year, month, day).strftime('%b %e %Y')
-                  - when 'month'
-                    = Date.new(year, month, 1).strftime('%b %Y')
-                  - when 'year'
-                    = year
+      %header
+        .c-section__header
+          = partial "partials/post-nav"
 
-              %ul.c-list
-                - page_articles.each_with_index do |article, i|
-                  %li
-                    = link_to article.title, article
-                    %span= article.date.strftime('%B %e')
+      %section
+        .c-section__header
+          %h1.o-title
+            Posts from
+            - case page_type
+              - when 'day'
+                = Date.new(year, month, day).strftime('%b %e %Y')
+              - when 'month'
+                = Date.new(year, month, 1).strftime('%B %Y')
+              - when 'year'
+                = year
 
-        -# .c-copy
-          -# = yield
+          .l-grid---MQdesktop
+            .l-grid__span--8---MQdesktop
+              .c-copy
+                %p= data.site.posts.intro
 
-.c-section
-  = partial "partials/screen-design"
-.c-section
-  = partial "partials/contact"
--# <!-- <h1>Archive for
--#   <% case page_type
--#      when 'day' %>
--#     <%= Date.new(year, month, day).strftime('%b %e %Y') %>
--#   <% when 'month' %>
--#     <%= Date.new(year, month, 1).strftime('%b %Y') %>
--#   <% when 'year' %>
--#     <%= year %>
--#   <% end %>
--# </h1>
+        .c-panel
+          .c-panel__body
+            %ul.c-list
+              - page_articles.each_with_index do |article, i|
+                %li
+                  = partial "partials/time", locals: { data: article }
+                  %h3.o-subtitle= link_to article.title, article
 
--# <% if paginate && num_pages > 1 %>
--#   <p>Page <%= page_number %> of <%= num_pages %></p>
+  .c-section
+    = partial "partials/screen-design"
 
--#   <% if prev_page %>
--#     <p><%= link_to 'Previous page', prev_page %></p>
--#   <% end %>
--# <% end %>
-
--# <ul>
--#   <% page_articles.each_with_index do |article, i| %>
--#     <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
--#   <% end %>
--# </ul>
-
--# <% if paginate %>
--#   <% if next_page %>
--#     <p><%= link_to 'Next page', next_page %></p>
--#   <% end %>
--# <% end %>
--#  -->
+  .c-section
+    = partial "partials/contact"

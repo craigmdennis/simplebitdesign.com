@@ -34,6 +34,10 @@
 }
 
 .c-section__header {
-  padding: $base-spacing;
+  padding: $base-spacing $base-spacing*2;
   border-bottom: 1px solid $color-athensgray;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

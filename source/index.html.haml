@@ -5,25 +5,16 @@
       .l-highlight
         .c-section__overlay
           .o-embed.o-embed--16x9
-            %video{autoplay: true, loop: true, poster: "assets/images/bg.png"}
-              %source{src: "#{asset_url('assets/video/bg.mp4')}", type: "video/mp4"}
+            %video{role: "presentation", autoplay: true, loop: true, poster: "#{asset_url(data.site.hero.poster)}"}
+              %source{src: "#{asset_url(data.site.hero.video)}", type: "video/mp4"}
 
         .l-navigation
           %nav
-            %button#navigationbutton.o-navigation.o-navigation--light.c-button.c-button--seamless.c-button--next{type: "button", data: {toggle: "navigation"}}
+            %button#navigationbutton.o-navigation.o-navigation--light.is-closed.c-button.c-button--seamless.c-button--next{type: "button", data: {toggle: "navigation"}}
               .h-accessible Menu
               = ui_svg 'menu', 28
-            %ul#navigation.c-navigation.c-navigation--light
-              %li
-                = link_to "Home", "#", class: "c-navigation__text"
-              %li
-                = link_to "About", "#", class: "c-navigation__text"
-              %li
-                = link_to "Articles", "#", class: "c-navigation__text"
-              %li
-                = link_to "Services", "#", class: "c-navigation__text"
-              %li
-                = link_to "Contact", "#contact", class: "c-navigation__text"
+            
+            = partial "partials/navigation"
 
         .c-panel.c-panel--center
           .l-blackhole

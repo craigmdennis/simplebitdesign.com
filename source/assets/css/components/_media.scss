@@ -19,7 +19,7 @@ Markup:
 */
 
 .c-media {
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
   font-weight: inherit;
 
@@ -28,7 +28,7 @@ Markup:
   }
   
   &__figure {
-    margin-right: $small-spacing;
+    margin-right: $small-spacing/2;
   }
 
   &__body {
@@ -48,16 +48,6 @@ Markup:
     color: $media-title-color;
     font-weight: 700;
     margin-bottom: $small-spacing;
-  }
-}
-
-.c-media--stacked {
-  @include rwd( mobile ) {
-    display: block;
-
-    .c-media__figure {
-      margin-right: 0;
-    }
   }
 }
 

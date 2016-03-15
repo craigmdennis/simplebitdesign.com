@@ -1,7 +1,7 @@
 .o-title {
   @include height( 42px );
   font-weight: 700;
-  margin-bottom: $small-spacing/4;
+  margin-bottom: $small-spacing;
 }
 
 .o-subtitle {
@@ -9,13 +9,6 @@
   font-weight: 400;
 }
 
-.o-logo-title {
-  @include height( 16px );
-  margin-bottom: 0;
-}
-
-.o-logo-subtitle {
-  @include height( 10.25px );
-  margin-bottom: 0;
-  font-weight: 300;
+.o-title + .o-subtitle {
+  margin-top: -$small-spacing/2;
 }
