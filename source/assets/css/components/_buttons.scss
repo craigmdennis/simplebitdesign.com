@@ -8,6 +8,10 @@ $button-secondary-bg: $color-athensgray;
 $button-secondary-color: $color-pickledblue;
 $button-secondary-border: $color-athensgray;
 
+$button-tertiary-bg: $color-pickledblue;
+$button-tertiary-color: white;
+$button-tertiary-border: $color-pickledblue;
+
 .c-button {
   @include height( $button-type-size, $base-button-height );
   background-color: transparent;
@@ -19,9 +23,9 @@ $button-secondary-border: $color-athensgray;
   border: $base-button-border-width solid transparent;
   font-weight: 500;
 
-  // &:not(:last-child){
-  //   margin-right: $small-spacing;
-  // }
+  &:not(:last-child):not(.c-button--seamless) {
+    margin-right: $small-spacing;
+  }
 
   @include media( $tablet ) {
     display: inline-block;
@@ -55,6 +59,18 @@ $button-secondary-border: $color-athensgray;
     &:focus {
       background-color: darken($button-secondary-bg, 5%);
       border-color: darken($button-secondary-bg, 5%);
+    }
+  }
+
+  &--tertiary {
+    background-color: $button-tertiary-bg;
+    color: $button-tertiary-color;
+    border-color: $button-tertiary-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-tertiary-bg, 5%);
+      border-color: darken($button-tertiary-bg, 5%);
     }
   }
 

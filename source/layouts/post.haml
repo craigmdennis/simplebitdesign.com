@@ -4,7 +4,7 @@
       .l-light
         %header
           .c-section__header
-            %nav#top
+            %nav
               %button#navigationbutton.o-navigation.c-button.c-button--seamless.c-button--next.is-closed{type: "button", data: {toggle: "navigation"}}
                 .h-accessible Menu
                 = ui_svg "menu", 28
@@ -31,4 +31,4 @@
       = partial "partials/related-articles"
 
     .c-section
-      = partial "partials/contact"
+      = partial "partials/contact", locals: { twitter: true, title: "Enjoy this? Hire us!" }

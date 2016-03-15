@@ -1,12 +1,21 @@
+- title = "Get in touch" unless title
+
 %section#contact
   .l-dark
     .l-grid.l-grid---MQtablet
       .l-grid__span--6---MQtablet
         .c-panel
           .c-panel__body
-            %h3.c-panel__title Get in touch
+            %h3.c-panel__title= title
             .c-copy.c-copy--emphasised
               %p We are available for hire to design and develop with passionate people.
+
+            - if defined?(twitter)
+              - content_for :scripts do
+                :javascript
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+              = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
       .l-grid__span--6---MQtablet
         .c-panel
