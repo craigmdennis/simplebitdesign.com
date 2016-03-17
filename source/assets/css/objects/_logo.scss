@@ -1,5 +1,14 @@
 .o-logo {
   display: block;
-  margin: 0 auto $small-spacing;
+  margin: 0;
   position: relative;
+  color: $color-pickledblue;
+  text-decoration: none;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    color: $color-carminepink;
+    text-decoration: none;
+  }
 }

@@ -28,7 +28,7 @@ Markup:
   }
   
   &__figure {
-    margin-right: $small-spacing/2;
+    margin-right: $base-spacing;
   }
 
   &__body {
@@ -53,5 +53,5 @@ Markup:
 
 .c-media--reverse > .c-media__figure {
   order: 1;
-  margin: 0 0 0 $small-spacing;
+  margin: 0 0 0 $base-spacing;
 }

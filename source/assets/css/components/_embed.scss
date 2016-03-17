@@ -29,9 +29,6 @@
 }
 
 .o-embed--gmap {
-  .js & {
-    pointer-events: none;
-  }
 
   &:before,
   &:after {

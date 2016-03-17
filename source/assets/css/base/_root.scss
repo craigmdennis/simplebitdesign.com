@@ -19,15 +19,21 @@ html {
     font-size: 112.5%;
   }
   @include media( em(1600px) ) {
-    font-size: 125%;
+    font-size: 112.5%;
   }
   @include media( em(1920px) ) {
     font-size: 137.5%;
   }
 }
 
-header,
-section,
-footer {
-  position: relative;
+body {
+  @include media( $phablet ) {
+    padding-left: $small-spacing/2;
+    padding-right: $small-spacing/2;
+  }
+
+  @include media( $tablet ) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+  }
 }

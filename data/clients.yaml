@@ -1,0 +1,12 @@
+title: We work with passionate brands
+copy: "<strong>Our work is seen by millions of people.</strong> That’s a lot of pressure. Whether it's a checkout flow for an e-commerce site or the most efficient way to process recruitment candidates; <strong>we prototype, test and iterate</strong> to validate our ideas, delivering a product that empowers people."
+logos:
+  - src: "clients/megamac"
+    alt: "Megamac"
+    href: "/work/megamac/"
+  - src: "clients/smashing-mag"
+    alt: "Smashing Magazine"
+  - src: "clients/bond"
+    alt: "Bond International Software"
+  - src: "clients/bbc"
+    alt: "BBC"

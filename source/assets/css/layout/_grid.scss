@@ -1,15 +1,16 @@
+$grid-line-width: 1px;
+$grid-line: $grid-line-width solid $color-athensgray;
+
 @mixin span($columns) {
   width: (100% / $grid-columns) * $columns;
   width: calc( (100% / #{$grid-columns}) * #{$columns} );
 }
 
 .l-grid {
-  @include row;
-
   @include rwd( tablet upto-desktop desktop, false ) {
+    @include row;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 
     > * {
       display: flex;
@@ -52,17 +53,40 @@
   }
 }
 
-.l-grid--lines > * {
-  border-bottom: 1px solid $color-athensgray;
-  margin-bottom: -1px;
+.l-grid--lines {
 
-  @include media( $desktop ) {
-    border-right: 1px solid $color-athensgray;
+  > * {
+    border-bottom: $grid-line;
+    margin-bottom: -$grid-line-width;
   }
 
-  [class*="l-grid__span--6"] {
-    &:nth-child(2n) {
-      border-right: 0;
+  > .l-grid__span--6 {
+    @include rwd( desktop, false ) {
+      &:not(:nth-child(2n)) {
+        border-right: $grid-line;
+      }
+    }
+  }
+
+  > .l-grid__span--3 {
+    @include rwd( upto-desktop, false ) {
+      &:not(:nth-child(4n)) {
+        border-right: $grid-line;
+      }
+    }
+  }
+}
+
+.l-grid--gutter {
+  @include rwd( desktop ) {
+    flex-wrap: nowrap;
+    width: auto;
+    margin-left: -$gutter/4;
+    margin-right: -$gutter/4;
+
+    > * {
+      margin-left: $gutter/4;
+      margin-right: $gutter/4;
     }
   }
 }

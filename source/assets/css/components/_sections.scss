@@ -4,22 +4,34 @@
   
   @include media( $phablet ) {
     border-radius: $base-radius;
-    margin-bottom: $small-spacing/2;
-    margin-top: $small-spacing/2;
+    
+    &:not(.c-section--adjacent) {
+      margin-top: $small-spacing/2;
+    }
+
+    &--first {
+      border-radius: $base-radius $base-radius 0 0;
+    }
+
+    &--last {
+      border-radius: 0 0 $base-radius $base-radius;
+    }
   }
 
   @include media( $tablet ) {
-    margin-bottom: $base-spacing;
-    margin-top: $base-spacing;
+    &:not(.c-section--adjacent) {
+      margin-top: $base-spacing;
+    }
   }
 
   &__overlay {
     @include position(absolute, 50% 0 0 0);
-    border-top-left-radius: $base-radius;
-    border-top-right-radius: $base-radius;
+    border-bottom-left-radius: $base-radius;
+    border-bottom-right-radius: $base-radius;
     opacity: 0.075;
     height: 100%;
     transform: translateY(-50%);
+    overflow: hidden;
 
     .mixblendmode & {
       mix-blend-mode: multiply;
@@ -34,10 +46,5 @@
 }
 
 .c-section__header {
-  padding: $base-spacing $base-spacing*2;
-  border-bottom: 1px solid $color-athensgray;
-
-  p:last-child {
-    margin-bottom: 0;
-  }
+  padding: $base-spacing $large-spacing;
 }

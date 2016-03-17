@@ -15,6 +15,9 @@ activate :directory_indexes
 # Set SASS precision
 ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
 
+# Custom Templates
+page "/projects/*", :layout => "project"
+
 # Blogging
 activate :blog do |blog|
   blog.prefix = "posts"
@@ -26,6 +29,7 @@ activate :blog do |blog|
   blog.default_extension = ".md"
   blog.calendar_template = "calendar.html"
   blog.generate_day_pages = false
+  blog.summary_length = 100
 end
 
 # Add node modules after asset hashing

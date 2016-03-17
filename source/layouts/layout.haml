@@ -36,8 +36,25 @@
   %body#top
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
+    %header
+      .l-constrained
+        - if content_for? :header
+          .c-section
+            .l-light
+              .c-section__header
+                = partial "partials/navigation"
+              = yield_content :header
+
+        - else
+          .c-section.c-section--first
+            .l-light
+              .c-section__header
+                = partial "partials/navigation"
+
+
     #content{role: "main", tabindex:-1}
-      = yield
+      .l-constrained
+        = yield
 
     = partial 'partials/footer'
 
@@ -47,6 +64,15 @@
     -# If Google fails to deliver jQuery, load our local copy
     :javascript
       window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')
+
+    -# Test for mix-blend-mode
+    :javascript
+      if('CSS' in window && 'supports' in window.CSS) {
+        var support = window.CSS.supports('mix-blend-mode','multiply');
+            support = support?'mixblendmode':'no-mixblendmode';
+            $('html').addClass(support);
+      }
+
 
     -# Load all the other scripts
     = javascript_include_tag "app"

@@ -1,7 +1,10 @@
 .c-post {
   @include media( $desktop ) {
     padding-top: $base-spacing;
-    padding-bottom: $base-spacing*2;
+
+    &:not(.c-post--adjacent) {
+      padding-bottom: $large-spacing;
+    }
   }
 }
 
@@ -12,4 +15,25 @@
 
 .c-post__header {
   margin-bottom: $base-spacing;
+}
+
+.c-post__title {
+  @include height( 32px );
+  font-weight: normal;
+  text-align: center;
+
+  &--extra {
+    padding-bottom: $base-spacing;
+    padding-top: $base-spacing;
+  }
+}
+
+.c-post__mainimage {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-top-right-radius: $base-radius*1.5;
+  border-top-left-radius: $base-radius*1.5;
+  border: 1px solid $color-athensgray;
+  border-width: 1px 1px 0 1px;
 }

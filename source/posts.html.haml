@@ -2,20 +2,17 @@
 pageable: true
 ---
 
+- content_for :header do
+  .c-section__header.l-bordered
+    %h1.o-title Posts
+    .l-grid---MQdesktop
+      .l-grid__span--8---MQdesktop
+        .c-copy
+          %p= data.site.posts.intro
+
 .l-constrained
   .c-section
     .l-light
-      %header
-        .c-section__header
-          = partial "partials/post-nav"
-
-        .c-section__header
-          %h1.o-title Posts
-          .l-grid---MQdesktop
-            .l-grid__span--8---MQdesktop
-              .c-copy
-                %p= data.site.posts.intro
-
       %section#articles
         .l-grid.l-grid--lines.l-grid---MQdesktop
           - blog.articles[0...10].each do |article|

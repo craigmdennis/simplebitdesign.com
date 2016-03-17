@@ -2,10 +2,10 @@
   padding: $base-spacing;
 
   @include media( $tablet ) {
-    padding: $base-spacing*2;
+    padding: $base-spacing*4 $large-spacing;
   }
 
   @include media( $desktop ) {
-    padding: $base-spacing*4;
+    padding: $base-spacing*8 $large-spacing;
   }
 }

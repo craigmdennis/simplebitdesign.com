@@ -1,34 +1,22 @@
 = wrap_layout :layout do
-  .l-constrained
-    .c-section
-      .l-light
-        %header
-          .c-section__header
-            %nav
-              %button#navigationbutton.o-navigation.c-button.c-button--seamless.c-button--next.is-closed{type: "button", data: {toggle: "navigation"}}
-                .h-accessible Menu
-                = ui_svg "menu", 28
+  .c-section.c-section--last.c-section--adjacent
+    .l-light.l-bordered
+      %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
+        .l-leading
+          .c-post
+            %header
+              .c-post__header
+                %h1.o-title= current_page.title
+                .c-post__meta
+                  .o-tag= current_page.data.category
+                .c-post__meta
+                  = partial "partials/time", locals: { data: current_page }
+            .c-post__body{:itemprop => "articleBody"}
+              .c-copy
+                = yield
 
-              .l-split---MQtablet
-                = partial "partials/logo-inline"
-                = partial "partials/navigation"
+  .c-section
+    = partial "partials/related-articles"
 
-        %article{itemscope: true, :itemtype => "http://schema.org/BlogPosting"}
-          .l-leading
-            .c-post
-              %header
-                .c-post__header
-                  %h1.o-title= current_page.title
-                  .c-post__meta
-                    .o-tag= current_page.data.category
-                  .c-post__meta
-                    = partial "partials/time", locals: { data: current_page }
-              .c-post__body{:itemprop => "articleBody"}
-                .c-copy
-                  = yield
-
-    .c-section
-      = partial "partials/related-articles"
-
-    .c-section
-      = partial "partials/contact", locals: { twitter: true, title: "Enjoy this? Hire us!" }
+  .c-section
+    = partial "partials/contact", locals: { twitter: true, title: "Enjoy this? Hire us!" }

@@ -44,7 +44,6 @@ a {
 
 p {
   margin-top: 0;
-  margin-bottom: 2rem;
 }
 
 img {
@@ -55,7 +54,6 @@ img {
 
 h1,h2,h3,h4,h5,h6,b,strong {
   margin-top: 0;
-  margin-bottom: 2rem;
    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -67,7 +65,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
 
 // Correct inability to style clickable `input` types in iOS.
@@ -173,7 +171,7 @@ label abbr {
 }
 
 figure {
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 
 picture {
@@ -188,4 +186,19 @@ dd {
 svg {
   fill: currentColor;
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+p,
+ul,
+ol,
+figure {
+  margin-bottom: 1.5rem;
 }

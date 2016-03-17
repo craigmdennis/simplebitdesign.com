@@ -1,0 +1,18 @@
+- imageAlt = "Screenshot of " + project.client
+- imagePath = path.gsub '.html', '/main'
+
+
+.l-subtle.l-bordered
+  .c-post.c-post--adjacent
+    %article
+      %header
+        .l-leading
+          %h1.c-post__title.c-post__title--extra= project.title
+
+          - if current_page.path != path
+            - imagePath = path.gsub '.html', '/home'
+            
+            .h-align-center
+              = link_to "View project", path, class: "c-button c-button--tertiary"
+
+      = image_tag "#{image_path(imagePath + '.png')}", srcset: "#{image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "c-post__mainimage"

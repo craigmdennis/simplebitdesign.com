@@ -1,16 +1,23 @@
 %section#clients
   .l-light
-    .l-grid.l-grid--lines.l-grid---MQdesktop
+    .l-grid---MQdesktop.l-grid--lines
       .l-grid__span--6---MQdesktop
         .c-panel.c-panel--upsize
           .c-panel__body
-            %h1.c-panel__title.c-panel__title--giant.h-color-primary= data.site.clients.title
+            %h1.c-panel__title.c-panel__title--giant.h-color-primary= data.clients.title
             .c-copy.c-copy--emphasised
-              = data.site.clients.copy
+              = data.clients.copy
                 
       .l-grid__span--6---MQdesktop
-        .l-grid.l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines.l-grid--equal
-          - data.site.clients.logos.each_with_index do |logo, index|
-            .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-              .l-fill.l-vcenter.l-center
-                = image_tag "#{image_path(logo.src + '.png')}", srcset: "#{image_path(logo.src + '@2x.png')} 2x", alt: logo.alt
+        .l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines.l-grid--equal
+          - data.clients.logos.each_with_index do |logo, index|
+            - image = image_tag "#{image_path(logo.src + '.png')}", srcset: "#{image_path(logo.src + '@2x.png')} 2x", alt: logo.alt
+
+            - if logo.href
+              = link_to logo.href, class: "l-grid__span--3---MQupto-desktop l-grid__span--6---MQdesktop" do
+                .l-vcenter.l-center
+                  = image
+            - else
+              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
+                .l-vcenter.l-center
+                  = image

@@ -2,14 +2,15 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  flex: 1;
 
   &__body {
     padding: $base-spacing;
     width: 100%;
 
     @include media( $desktop ) {
-      padding: $base-spacing*2;
+      padding: $large-spacing;
     }
 
     > p:last-child {
@@ -27,7 +28,7 @@
   &__title {
     @include height( 32px );
     font-weight: 700;
-    margin-bottom: $small-spacing;
+    margin-bottom: $base-spacing;
 
     &--giant {
       @include rwd( tablet ) {
@@ -66,7 +67,7 @@
   > .c-panel__buttons {
 
     @include media( $desktop ) {
-      @include position(absolute, null $base-spacing*2 $base-spacing*2 $base-spacing*2);
+      @include position(absolute, null $large-spacing $large-spacing $large-spacing);
     }
   }
 }

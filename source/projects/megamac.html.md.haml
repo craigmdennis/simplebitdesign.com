@@ -1,0 +1,62 @@
+---
+client: Megamac
+title: We worked with MEGAMAC to <strong>improve the UX</strong> across their shop and account area.
+category: UI / UX Design
+---
+
+.l-grid---MQdesktop.l-grid--gutter---MQdesktop
+  .l-grid__span--6---MQdesktop
+    .c-section
+      .l-light
+        .c-panel
+          .c-panel__body
+            %h3.c-panel__title Test &amp; Iterate
+            .c-copy.c-copy--emphasised.c-copy--adjacent
+              %p Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at.
+          .l-subtle
+            .c-section__header
+              .c-media
+                .c-media__figure
+                  = ui_svg "coffee", 56
+                .c-media__body
+                  .c-copy.c-copy--emphasised.c-copy--adjacent
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat mollitia.
+
+  .l-grid__span--6---MQdesktop
+    .c-section
+      .l-light
+        .c-panel
+          .c-panel__body
+            %h3.c-panel__title Development to Production
+            .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
+              %p Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at.
+          .l-subtle
+            .c-section__header
+              .c-media
+                .c-media__figure
+                  = ui_svg "coffee", 56
+                .c-media__body
+                  .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque.
+
+.l-grid---MQdesktop.l-grid--gutter---MQdesktop
+
+  .l-grid__span--4---MQdesktop
+    .c-section
+      .l-light
+        = image_tag "http://placehold.it/400"
+
+  .l-grid__span--4---MQdesktop
+    .c-section
+      .l-subtle
+        .l-inner
+          = image_tag "#{image_path('projects/megamac/mobile.png')}", srcset: "#{image_path('projects/megamac/mobile@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-center"
+
+  .l-grid__span--4---MQdesktop
+    .c-section
+      .l-light
+        .c-panel
+          .c-panel__body
+            %h2.c-panel__title Great UX on any device
+            .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
+              %p We created a great user experience across devices of any size. Images play a key role but can impact performce if not handled correctly; we use reponsive images to only load the image size we need.

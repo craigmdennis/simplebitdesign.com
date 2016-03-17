@@ -14,11 +14,12 @@ $base-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 // Layout
 $container: em(1152px);
 $grid-columns: 12;
-$gutter: 4rem;
+$gutter: 3rem;
 
 $base-radius: 3px;
 $base-spacing: $gutter/2;
 $small-spacing: $base-spacing/2;
+$large-spacing: $base-spacing*2;
 
 $base-button-height: 40px;
 $base-button-border-width: 1px;

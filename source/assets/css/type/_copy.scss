@@ -15,6 +15,12 @@
     margin-right: auto;
   }
 
+  &--adjacent {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   strong,
   b {
     font-weight: 700;
@@ -56,10 +62,6 @@
       text-decoration: none;
     }
   }
-
-  // p:last-child {
-  //   margin-bottom: 0;
-  // }
 
   figure {
     display: block;
