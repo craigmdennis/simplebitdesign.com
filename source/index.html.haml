@@ -17,7 +17,7 @@
     = partial "partials/screen-design"
 
   .c-section
-    - sub_pages('projects').first(1).each do |project|
+    - sub_pages("projects").first(1).each do |project|
       = partial "partials/project-summary", locals: { project: project.data, path: project.path }
 
   .c-section

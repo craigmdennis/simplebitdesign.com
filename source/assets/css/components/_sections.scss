@@ -20,6 +20,12 @@
 
   @include media( $tablet ) {
     &:not(.c-section--adjacent) {
+      margin-top: $small-spacing;
+    }
+  }
+
+  @include media( $desktop ) {
+    &:not(.c-section--adjacent) {
       margin-top: $base-spacing;
     }
   }
@@ -47,4 +53,5 @@
 
 .c-section__header {
   padding: $base-spacing $large-spacing;
+  align-self: flex-end;
 }

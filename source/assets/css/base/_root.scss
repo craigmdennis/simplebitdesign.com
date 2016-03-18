@@ -16,7 +16,7 @@ a {
 
 html {
   @include media( $hd ) {
-    font-size: 112.5%;
+    // font-size: 112.5%;
   }
   @include media( em(1600px) ) {
     font-size: 112.5%;
@@ -33,6 +33,11 @@ body {
   }
 
   @include media( $tablet ) {
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+  }
+
+  @include media( $desktop ) {
     padding-left: $base-spacing;
     padding-right: $base-spacing;
   }

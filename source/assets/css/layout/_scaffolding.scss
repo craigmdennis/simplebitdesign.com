@@ -52,6 +52,10 @@
   }
 }
 
+.l-max {
+  width: 100%;
+}
+
 .l-navigation {
   @include media( $tablet ) {
     @include position(absolute, 0 0 null null);

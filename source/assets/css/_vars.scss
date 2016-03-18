@@ -2,6 +2,7 @@
 $color-pickledblue: #34495E;
 $color-carminepink: #E74C3C;
 $color-athensgray: #ECEEF1;
+$color-whisper: #F5F7FA;
 
 $base-accent: $color-carminepink;
 $base-background-color: $color-athensgray;
@@ -12,7 +13,7 @@ $base-duration-slow: 300ms;
 $base-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 // Layout
-$container: em(1152px);
+$container: em(1279px);
 $grid-columns: 12;
 $gutter: 3rem;
 

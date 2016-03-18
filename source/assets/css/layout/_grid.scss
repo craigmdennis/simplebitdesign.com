@@ -11,11 +11,6 @@ $grid-line: $grid-line-width solid $color-athensgray;
     @include row;
     display: flex;
     flex-wrap: wrap;
-
-    > * {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 }
 

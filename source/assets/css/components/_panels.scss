@@ -1,9 +1,5 @@
 .c-panel {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  flex: 1;
 
   &__body {
     padding: $base-spacing;

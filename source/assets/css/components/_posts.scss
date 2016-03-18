@@ -30,10 +30,19 @@
 
 .c-post__mainimage {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  border-top-right-radius: $base-radius*1.5;
-  border-top-left-radius: $base-radius*1.5;
-  border: 1px solid $color-athensgray;
-  border-width: 1px 1px 0 1px;
+  margin: $base-spacing auto 0;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+
+  @include media( $desktop ) {
+    padding-left: $large-spacing;
+    padding-right: $large-spacing;
+  }
+
+  > img {
+    border: 1px solid $color-athensgray;
+    border-width: 1px 1px 0 1px;
+    border-top-right-radius: $base-radius*1.5;
+    border-top-left-radius: $base-radius*1.5;
+  }
 }
