@@ -16,10 +16,11 @@ activate :directory_indexes
 ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
 
 # Custom Templates
-page "/projects/*", :layout => "project"
+# page "/projects/*", :layout => "project"
 
 # Blogging
 activate :blog do |blog|
+  blog.name = 'posts'
   blog.prefix = "posts"
   blog.sources = "{year}/{month}/{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
@@ -28,6 +29,21 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.default_extension = ".md"
   blog.calendar_template = "calendar.html"
+  blog.generate_day_pages = false
+  blog.summary_length = 100
+end
+
+# Blogging
+activate :blog do |blog|
+  blog.name = 'projects'
+  blog.prefix = "projects"
+  blog.sources = "{title}.html"
+  blog.permalink = "{title}.html"
+  blog.layout = "project"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.default_extension = ".md"
+  blog.calendar_template = false
   blog.generate_day_pages = false
   blog.summary_length = 100
 end

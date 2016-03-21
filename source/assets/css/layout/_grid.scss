@@ -19,8 +19,12 @@ $grid-line: $grid-line-width solid $color-athensgray;
   position: relative;
 }
 
-.l-grid--baseline > * {
-  align-items: flex-end;
+.l-grid--baseline {
+  > * {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 

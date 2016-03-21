@@ -1,0 +1,45 @@
+---
+pageable: true
+---
+
+- content_for :header do
+  .c-section__header.l-bordered
+    %h1.o-title Posts
+    .l-grid---MQdesktop
+      .l-grid__span--8---MQdesktop
+        .c-copy
+          %p= data.site.posts.intro
+
+.l-constrained
+  - blog("projects").articles[0...10].each do |project|
+    .c-section.l-light
+      = partial "partials/project-summary", locals: { project: project.data, path: project.path }
+
+  .c-section
+    = partial "partials/twitter"
+
+  .c-section
+    = partial "partials/contact"
+
+  -# <% if paginate %>
+  -#   <% if next_page %>
+  -#     <p><%= link_to 'Next page', next_page %></p>
+  -#   <% end %>
+  -# <% end %>
+  -#  -->
+
+
+.l-constrained
+
+  .c-section
+    = partial "partials/twitter"
+
+  .c-section
+    = partial "partials/contact"
+
+  -# <% if paginate %>
+  -#   <% if next_page %>
+  -#     <p><%= link_to 'Next page', next_page %></p>
+  -#   <% end %>
+  -# <% end %>
+  -#  -->

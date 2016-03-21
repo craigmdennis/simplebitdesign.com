@@ -11,13 +11,14 @@
       .l-grid__span--6---MQdesktop
         .l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines.l-grid--equal
           - data.clients.logos.each_with_index do |logo, index|
-            - image = image_tag "#{image_path(logo.src + '.png')}", srcset: "#{image_path(logo.src + '@2x.png')} 2x", alt: logo.alt
+            - image = image_tag "#{image_path(logo.src + '.png')}", srcset: "#{image_path(logo.src + '@2x.png')} 2x", alt: logo.alt, class: "l-center"
 
             - if logo.href
               = link_to logo.href, class: "l-grid__span--3---MQupto-desktop l-grid__span--6---MQdesktop" do
-                .l-vcenter.l-center
+                .l-vcenter
                   = image
+
             - else
               .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-                .l-vcenter.l-center
+                .l-vcenter
                   = image
