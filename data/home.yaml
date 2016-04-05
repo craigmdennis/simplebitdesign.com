@@ -1,5 +1,5 @@
-video: assets/video/bg.mp4
-poster: assets/images/bg.png
+video: /video/bg.mp4
+poster: images/bg.png
 
 phrases: 
   - Simplicity is the ultimate sophistication

@@ -20,7 +20,7 @@
       .l-grid__span--6---MQtablet
         .c-panel
           .c-panel__body
-            %form.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
+            %form#formspree.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
               .c-form__row
                 %label.h-accessible{for: "message"} Your message
                 %textarea#message.c-form__control{name: "message", rows: 5, required: true, placeholder: "Tell us a little about your project"}
@@ -34,4 +34,4 @@
                 %label.c-form__label{for: "budget"} Budget:
                 %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0}
 
-                %input.c-button.c-button--primary.c-button--next{type: "submit", value: "Send"}
+                %button.c-button.c-button--primary.c-button--next{type: "submit"} Send

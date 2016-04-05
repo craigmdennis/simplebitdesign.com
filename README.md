@@ -1,18 +1,12 @@
-# Simple Bit
-## We design and build beautiful interfaces
+# Middleman + Gulp Starter
+A demo showing how to use Middleman v4 with Gulp Starter
 
-### Layouts
-- A road is a layout
-`.l-*`
+<a href="https://youtu.be/-io8EeB3GHI" target="_blank"><img src="http://d.pr/i/13Fxy+" width="600"/></a>
 
-### Module
-- A car is a module
-`.m-*`
+Watch the screencast: https://youtu.be/-io8EeB3GHI
 
-### Components
-- An engine or a door is a component
-`.c-*`
+1. `bundle install`
+2. `npm install`
+3. `middleman serve`
 
-### Object
-- A key is an object
-`.o-*`
+You should probably use the latest code from Middleman and Gulp Starter rather than rely on this repo being updated.

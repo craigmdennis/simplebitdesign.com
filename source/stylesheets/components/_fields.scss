@@ -1,0 +1,115 @@
+$form-control-border-width: 1px;
+$form-control-border: $form-control-border-width solid #EEE;
+$form-control-radius: $base-radius;
+$form-control-type-size: 18px;
+$form-color: $color-pickledblue;
+
+// Match the total height of default buttons
+$form-matched-height: $base-button-height + $base-button-border-width;
+$form-control-height: $form-matched-height - ( $form-control-border-width*2 );
+
+%consistentFormElements {
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+}
+
+.c-form {}
+
+.c-form__row {
+  margin-bottom: $small-spacing;
+}
+
+.c-form__label {
+  @include height( $form-control-type-size, $form-matched-height );
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+}
+
+.c-form__control {
+  @include height( $form-control-type-size, $form-control-height );
+  color: $form-color;
+  border: $form-control-border;
+  border-radius: $form-control-radius;
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+  width: 100%;
+}
+
+.c-form__item {
+  padding-top: $small-spacing;
+  padding-bottom: $small-spacing;
+}
+
+.c-form__row--inline {
+  display: flex;
+
+  > .c-form__control {
+    flex: 1;
+    width: 50%;
+
+    &:first-of-type {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-of-type {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// Modifiers
+.c-form--edge {
+  .c-form__row {
+    margin-top: -$small-spacing;
+  }
+
+  .c-form__label {
+    @include height( 15px );
+    padding-top: $small-spacing;
+
+    @include media( $mobile ) {
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+
+  .c-form__control {
+    @include height( 17px, $base-button-height );
+    border-width: 0 0 1px 0;
+    margin-top: -$small-spacing;
+
+    @include media( $tablet ) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.c-form--inset {
+  border-radius: $base-radius;
+  overflow: hidden;
+
+  .c-form__row {
+    margin-bottom: 0;
+    background-color: white;
+    padding: $small-spacing/2;
+
+    .c-form__control,
+    .c-form__label {
+      color: $form-color;
+      border-color: white;
+      padding-left: $small-spacing/2;
+      padding-right: $small-spacing/2;
+    }
+
+    &:not(:last-child) {
+      border-bottom: $form-control-border;
+    }
+  }
+
+  input[type="submit"]:not(:first-child) {
+    margin-left: $small-spacing/2;
+  }
+}

@@ -1,0 +1,14 @@
+.o-hub-text {
+  @include height( 24px );
+  padding: $base-spacing;
+  color: $base-accent;
+  margin-bottom: 0;
+  border-bottom: 1px solid $color-athensgray;
+
+  @include media( $desktop ) {
+    @include height( 48px );
+    border: 0;
+    background-color: white;
+    padding: $small-spacing/2;
+  }
+}

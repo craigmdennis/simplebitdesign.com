@@ -1,0 +1,84 @@
+.c-panel {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  justify-content: space-between;
+
+  &__body {
+    padding: $base-spacing;
+    width: 100%;
+
+    @include media( $desktop ) {
+      padding: $large-spacing;
+    }
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    @include media( $upto-desktop ) {
+      padding: 0 $base-spacing $base-spacing;
+    }
+  }
+
+  &__title {
+    @include height( 32px );
+    font-weight: 700;
+    margin-bottom: $base-spacing;
+
+    &--giant {
+      @include rwd( tablet ) {
+        @include height( 48px );
+      }
+    }
+
+    &--small {
+      @include height( 21px );
+    }
+
+    > a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $base-accent;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.c-panel--has-buttons {
+  position: relative;
+
+  @include media( $desktop ) {
+    padding-bottom: 28rem;
+    height: 0;
+  }
+
+  @include media( $hd ) {
+    padding-bottom: 25rem;
+  }
+
+  > .c-panel__buttons {
+
+    @include media( $desktop ) {
+      @include position(absolute, null $large-spacing $large-spacing $large-spacing);
+    }
+  }
+}
+
+.c-panel--center {
+  justify-content: center;
+
+  > .c-panel__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
