@@ -11,6 +11,9 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Pretty URLs
+activate :directory_indexes
+
 # Language Support
 set :haml, { :format => :html5 }
 set :markdown_engine, :redcarpet
@@ -21,7 +24,7 @@ set :build_dir, "public"
 activate :blog do |blog|
   blog.name = 'posts'
   blog.prefix = "posts"
-  blog.sources = "{year}/{month}/{title}.html"
+  blog.sources = "{year}/{month}-{day}-{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
   blog.layout = "post"
   blog.paginate = true

@@ -15,7 +15,7 @@ pageable: true
     .l-light
       %section#articles
         .l-grid.l-grid--lines.l-grid---MQdesktop
-          - blog.articles[0...10].each do |article|
+          - posts[0...10].each do |article|
             .l-grid__span--6---MQdesktop
               = partial "partials/post-summary", locals: {article: article}
 
