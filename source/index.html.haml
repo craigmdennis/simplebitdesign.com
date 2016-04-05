@@ -16,8 +16,8 @@
     = partial "partials/clients"
     = partial "partials/screen-design"
 
-  - if blog('projects').articles
-    - blog('projects').articles[0...2].each do |project|
+  - if projects
+    - projects[0...2].each do |project|
       .c-section
         = partial "partials/project-summary", locals: { project: project.data, path: project.path }
 
@@ -30,7 +30,7 @@
   .c-section
     = partial "partials/twitter"
 
-  - if blog('posts').articles
+  - if posts
     .c-section
       = partial "partials/related-articles"
 
