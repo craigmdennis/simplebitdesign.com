@@ -16,8 +16,8 @@
     "gulp": "gulp",
     "development": "gulp",
     "production": "gulp production",
-    "deploy": "gulp deploy",
-    "demo": "gulp production && gulp server",
+    "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --delete",
+    "deploy": "cd public && aws s3 sync . s3://simplebitdesign.com --delete",
     "test": "gulp production && karma start --single-run",
     "test:watch": "karma start",
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
@@ -76,6 +76,7 @@
     "morgan": "1.7.0",
     "object-assign": "4.0.1",
     "open": "0.0.5",
+    "picturefill": "^3.0.2",
     "pretty-hrtime": "1.0.2",
     "require-dir": "0.3.0",
     "rwdcss": "^2.0.1",

@@ -1,10 +1,4 @@
-# Add Custom helpers
-require 'lib/blog_helper'
-require 'lib/embed_helper'
-require 'lib/images_helper'
-require 'lib/menu_helper'
-require 'lib/sitemap_helper'
-require 'lib/ui_helper'
+require 'lib/gulp'
 
 # Per-page layout changes with no layout
 page '/*.xml', layout: false
@@ -15,7 +9,7 @@ page '/*.txt', layout: false
 activate :directory_indexes
 
 # Language Support
-set :haml, { :format => :html5 }
+set :haml, { :attr_wrapper => '"', :format => :html5 }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 set :build_dir, "public"
@@ -56,9 +50,30 @@ configure :build do
   activate :minify_html do |html|
     html.remove_quotes = false
     html.remove_intertag_spaces = true
-  end 
+  end
 
+  # Ignore the CSS file Middleman normally generates
+  # Middleman expects `site.css.scss` → `site.css`
+  # We strip the `.css` to prevent Gulp generating `site.css.css`
+  # Add your site's main `.scss` filename (without the extension)
+  # To understand more, comment this out and run `middleman build`
   ignore 'stylesheets/app'
+  ignore 'javascripts/app'
+
+  # Check to see if Gulp file revving is enabled
+  rev_manifest = REV_MANIFEST if defined?(REV_MANIFEST)
+
+  # If file revving is enabled we need to ignore the original files
+  # as they will still get copied by Middleman
+  if rev_manifest
+    rev_manifest.each do |key, value|
+      ignore key
+    end
+
+    # Ignore the actual manifest file itself
+    ignore 'rev-manifest.json'
+    ignore 'static/*'
+  end
 end
 
 activate :external_pipeline,

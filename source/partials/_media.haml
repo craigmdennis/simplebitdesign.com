@@ -1,7 +1,7 @@
 .c-media
   - if data.thumb != nil
     = link_to path, class: "c-media__figure" do
-      = image_tag data.thumb.url, alt: (data.thumb.alt ? data.thumb.alt : "Thumbnail"), class: "c-media__image"
+      = image_tag gulp_image_path(data.thumb.url), alt: (data.thumb.alt ? data.thumb.alt : "Thumbnail"), class: "c-media__image"
   .c-media__body
     - if data.title
       %h4.media__title

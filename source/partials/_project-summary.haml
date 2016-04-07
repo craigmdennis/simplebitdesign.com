@@ -8,11 +8,14 @@
       %h1.c-post__title.c-post__title--extra= project.title
 
       - if current_page.path != path
-        - imagePath = path.gsub '.html', '/home'
+        - homeImagePath = path.gsub '.html', '/home'
+        
+        - if sitemap.find_resource_by_path("images/#{gulp_image_path(homeImagePath)}.png")
+          - imagePath = homeImagePath
         
         .h-align-center
           = link_to "View project", path, class: "c-button c-button--tertiary"
 
 
     .c-post__mainimage
-      = image_tag "#{image_path(imagePath + '.png')}", srcset: "#{image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"
+      = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"
