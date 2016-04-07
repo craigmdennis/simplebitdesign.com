@@ -26,6 +26,7 @@ module.exports = function(env) {
     },
     context: jsSrc,
     plugins: [
+      // Make $ reference jQuery
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",

@@ -11,10 +11,10 @@ module GulpAssetHelper
     end
 
     root = GULP_CONFIG['root']['dest'].gsub(/(.*).tmp/, '/')
-    asset_path = type ? File.join(GULP_CONFIG['tasks'][type.to_s]['dest'].to_s, path.to_s) : path.to_s
+    asset_path = type ? File.join(GULP_CONFIG['tasks'][type]['dest'], path) : path
     asset_path = rev_manifest[asset_path].to_s if rev_manifest
-    asset_path = File.join(root.to_s, asset_path).to_s
-    File.absolute_path(asset_path, '/').to_s
+    asset_path = File.join(root, asset_path)
+    File.absolute_path(asset_path, '/')
   end
 
   def gulp_js_path(path)
