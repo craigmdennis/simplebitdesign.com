@@ -13,18 +13,12 @@ intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae praesenti
 
 .l-constrained
 
-  -# - if posts
-  -#   .c-section
-  -#     = partial "partials/related-articles", locals: { category: "ux"}
-
   .c-section
     = partial "partials/services"
 
-  .c-section
-    = partial "partials/help"
-
-  .c-section
-    = partial "partials/twitter"
+  - if posts
+    .c-section
+      = partial "partials/related-articles"
 
   .c-section
     = partial "partials/contact"
