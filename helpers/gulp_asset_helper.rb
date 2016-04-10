@@ -2,6 +2,8 @@ module GulpAssetHelper
   def gulp_asset_path(path, type = nil)
     rev_manifest = nil
 
+    config[:environment]
+
     # In development, check for the manifest every time
     if config[:environment] != 'production'
       rev_manifest = JSON.parse(File.read(REV_MANIFEST_PATH)) if File.exist?(REV_MANIFEST_PATH)
@@ -12,8 +14,8 @@ module GulpAssetHelper
 
     root = GULP_CONFIG['root']['dest'].gsub(/(.*).tmp/, '/')
     asset_path = type ? File.join(GULP_CONFIG['tasks'][type]['dest'], path) : path
-    asset_path = rev_manifest[asset_path].to_s if rev_manifest
-    asset_path = File.join(root, asset_path)
+    asset_path = rev_manifest[asset_path] if rev_manifest
+    asset_path = File.join(root, asset_path.to_s)
     File.absolute_path(asset_path, '/')
   end
 
@@ -30,6 +32,6 @@ module GulpAssetHelper
   end
 
   def sprite(id, classes = "", viewBox = "0 0 24 24")
-    "<svg class='sprite -#{id} #{classes}' aria-hidden='true' preserveAspectRatio viewBox='#{viewBox}'><use xlink:href='#{gulp_image_path('sprites.svg')}##{id}' /></use></svg>".html_safe
+    "<svg class='sprite sprite--#{id} #{classes}' aria-hidden='true' preserveAspectRatio viewBox='#{viewBox}'><use xlink:href='#{gulp_image_path('icons.svg')}##{id}' /></use></svg>".html_safe
   end
 end

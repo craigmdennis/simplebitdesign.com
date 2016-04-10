@@ -1,8 +1,5 @@
 - imageAlt = "Screenshot of #{project.client}"
 - imagePath = path.to_s.gsub '.html', '/main'
--# - imagePath = "projects/bond/main"
--# - imagePath = path.gsub 'bond', 'megamac'
-
 
 .l-subtle
   .c-post.c-post--adjacent
@@ -10,14 +7,13 @@
       %h1.c-post__title.c-post__title--extra= project.title
 
       - if current_page.path != path
-        -# - homeImagePath = path.gsub '.html', '/home'
+        - homeImagePath = path.to_s.gsub '.html', '/home'
         
-        -# - if sitemap.find_resource_by_path("images/#{gulp_image_path(homeImagePath)}.png")
-        -#   - imagePath = homeImagePath
+        - if sitemap.find_resource_by_path("images/#{gulp_image_path(homeImagePath)}.png")
+          - imagePath = homeImagePath
         
         .h-align-center
           = link_to "View project", path, class: "c-button c-button--tertiary"
-
 
     .c-post__mainimage
       = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"

@@ -1,6 +1,7 @@
 name: Simple Bit Design
 title: UI and UX Design Kent
 description: We make beautiful interfaces
+url: "http://simplebitdesign.com"
 
 navigation:
   - anchor: Home
@@ -11,8 +12,8 @@ navigation:
     href: "/services/"
   - anchor: Posts
     href: "/posts/"
-  - anchor: Jobs
-    href: "/jobs/"
+  # - anchor: Jobs
+  #   href: "/jobs/"
   - anchor: Contact
     href: "#contact"
 

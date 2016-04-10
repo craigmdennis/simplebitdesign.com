@@ -12,6 +12,11 @@
                 .c-post__meta
                   = partial "partials/time", locals: { data: current_page }
             .c-post__body{:itemprop => "articleBody"}
+              - if defined? current_page.data.tldr
+                .c-notice
+                  %h5.c-notice__title In Brief
+                  %p= current_page.data.tldr
+
               .c-copy
                 = yield
 

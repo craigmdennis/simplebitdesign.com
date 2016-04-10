@@ -2,6 +2,38 @@
   font-family: $base-serif;
   font-weight: 400;
   width: 100%;
+  font-size: 112.5%;
+
+  h1,h2,h3,h4,h5,h6 {
+    padding-top: $base-spacing;
+    margin-top: 0;
+  }
+
+  h1,
+  h2 { @include height( 40px ); }
+  h3 { @include height( 32px ); }
+  h4 { @include height( 24px ); }
+  h5 { @include height( 21px ); }
+  h6 { @include height( 18px ); }
+
+  .c-copy__left {
+
+  }
+
+  .c-copy__right {  
+    @include media( $tablet ) {
+      float: right;
+      margin-left: $base-spacing;
+    }
+  }
+
+  .c-copy__left {  
+    @include media( $tablet ) {
+      float: left;
+      margin-right: $base-spacing;
+    }
+  }
+
 
   &--emphasised,
   em,
@@ -31,7 +63,9 @@
   }
 
   table,
-  dl {
+  dl,
+  iframe,
+  p {
     margin-bottom: $base-spacing;
   }
 
@@ -77,23 +111,33 @@
   }
 
   blockquote {
-    padding-left: $base-spacing;
-    padding-right: $base-spacing;
-    margin-left: 0;
-    text-align: center;
+    padding: $base-spacing;
+    margin: 0 0 $base-spacing*2 0;
+    background-color: #f8f8f8;
+    border-left: 8px solid #eeeeee;
 
     > p {
-      font-weight: 700;
+      font-weight: 100;
+      font-style: italic;
     }
   }
 
   cite {
     display: block;
     font-style: normal;
+    font-family: $base-sans;
+    font-weight: bold;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+
+    // &::before {
+    //   content: "—";
+    // }
   }
 
   ul, ol {
-    margin: 0 0 $base-spacing 0;
+    margin: $base-spacing 0;
     padding-left: $base-spacing;
     list-style: none;
   }

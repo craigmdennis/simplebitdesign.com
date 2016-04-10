@@ -7,7 +7,7 @@
   "tasks": {
     "browserSync": {
       "proxy": "http://localhost:4567",
-      "reloadDelay" : 1000
+      "reloadDelay" : 2000
     },
 
     "static": {

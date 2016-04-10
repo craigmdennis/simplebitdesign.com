@@ -4,7 +4,8 @@
   -#   = ui_svg "menu", 28
 
   .l-split---MQtablet
-    = partial "partials/logo-inline"
+    = link_to "/", class: "o-logo" do
+      = sprite "simplebitdesign"
 
     %ul#navigation.c-navigation
       - data.site.navigation.each_with_index do |nav, index|

@@ -19,7 +19,9 @@ var paths = {
 var cssTask = function () {
   return gulp.src(paths.src)
     .pipe(gulpif(!global.production, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass({
+      precision: 8
+    }))
     .on('error', handleErrors)
     .pipe(autoprefixer(config.tasks.css.autoprefixer))
     .pipe(gulpif(global.production, cssnano({autoprefixer: false})))

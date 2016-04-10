@@ -1,0 +1,27 @@
+---
+title: UX Design
+intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae praesentium veniam nobis libero sint maxime expedita mollitia dolorum id soluta. Necessitatibus atque veniam illum eos tenetur fugit a maiores iste!
+---
+
+- content_for :header do
+  .c-section__header.l-bordered
+    %h1.o-title= current_page.data.title
+    .l-grid---MQdesktop
+      .l-grid__span--8---MQdesktop
+        .c-copy
+          %p= current_page.data.intro
+
+.l-constrained
+
+  - if posts
+    .c-section
+      = partial "partials/related-articles", locals: { category: "ux"}
+
+  .c-section
+    = partial "partials/help"
+
+  .c-section
+    = partial "partials/twitter"
+
+  .c-section
+    = partial "partials/contact"

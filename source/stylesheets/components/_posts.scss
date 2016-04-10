@@ -8,13 +8,17 @@
   }
 }
 
+.c-post--adjacent {
+  margin-top: auto;
+}
+
 .c-post__meta {
   margin-bottom: $small-spacing;
   margin-top: $small-spacing;
 }
 
 .c-post__header {
-  margin-bottom: $base-spacing;
+  margin-bottom: $large-spacing;
 }
 
 .c-post__title {

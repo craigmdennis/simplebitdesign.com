@@ -7,4 +7,11 @@ module MenuHelper
       return link_to menu_text, page_url, :title => (title_attr || menu_text)
     end
   end
+
+  def table_of_contents(resource)
+    content = File.read(resource.source_file)
+    toc_renderer = Redcarpet::Render::HTML_TOC.new
+    markdown = Redcarpet::Markdown.new(toc_renderer)
+    markdown.render(content)
+  end
 end

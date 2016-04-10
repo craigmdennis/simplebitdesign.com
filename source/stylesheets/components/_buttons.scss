@@ -12,8 +12,13 @@ $button-tertiary-bg: $color-pickledblue;
 $button-tertiary-color: white;
 $button-tertiary-border: $color-pickledblue;
 
+$button-twitter-bg: $color-twitter;
+$button-twitter-color: white;
+$button-twitter-border: $color-twitter;
+
 .c-button {
   @include height( $button-type-size, $base-button-height );
+  font-family: $base-sans;
   background-color: transparent;
   display: block;
   padding-right: $small-spacing;
@@ -21,7 +26,7 @@ $button-tertiary-border: $color-pickledblue;
   text-align: center;
   border-radius: $base-radius;
   border: $base-button-border-width solid transparent;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 
   &:not(:last-child):not(.c-button--seamless) {
@@ -72,6 +77,18 @@ $button-tertiary-border: $color-pickledblue;
     &:focus {
       background-color: darken($button-tertiary-bg, 5%);
       border-color: darken($button-tertiary-bg, 5%);
+    }
+  }
+
+  &--twitter {
+    background-color: $button-twitter-bg;
+    color: $button-twitter-color;
+    border-color: $button-twitter-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-twitter-bg, 5%);
+      border-color: darken($button-twitter-bg, 5%);
     }
   }
 

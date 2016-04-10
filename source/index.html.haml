@@ -2,8 +2,8 @@
   .l-highlight
     .c-section__overlay
       .o-embed.o-embed--16x9
-        %video{role: "presentation", autoplay: true, loop: true, poster: "#{asset_url(data.home.poster)}"}
-          %source{src: "#{asset_url(data.home.video)}", type: "video/mp4"}
+        %video{role: "presentation", autoplay: true, loop: true, poster: "images/bg.png"}
+          %source{src: "video/bg.mp4", type: "video/mp4"}
 
     .c-panel.c-panel--center
       .l-blackhole
@@ -13,8 +13,8 @@
 
 .l-constrained
   .c-section
-    = partial "partials/clients"
     = partial "partials/screen-design"
+    = partial "partials/clients"
 
   - if projects
     - projects[0...2].each do |project|

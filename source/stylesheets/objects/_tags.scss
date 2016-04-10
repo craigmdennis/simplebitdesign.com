@@ -1,12 +1,13 @@
 .o-tag {
   @include height(16px, 32px);
-  padding-left: $small-spacing/2;
-  padding-right: $small-spacing/2;
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
   background-color: $base-accent;
   color: white;
   text-transform: uppercase;
   letter-spacing: 2pt;
   display: inline-block;
+  border-radius: $base-radius;
 }
 
 .o-time {

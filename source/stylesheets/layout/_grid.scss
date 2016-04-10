@@ -17,6 +17,9 @@ $grid-line: $grid-line-width solid $color-athensgray;
 [class*="l-grid__span"] {
   width: 100%;
   position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-flow: column;
 }
 
 .l-grid--baseline {

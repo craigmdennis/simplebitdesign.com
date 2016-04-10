@@ -1,0 +1,22 @@
+.c-notice {
+  display: block;
+  background: #f5f5f5;
+  border: 1px solid #e2e2e2;
+  padding: $base-spacing;
+  border-radius: 3px;
+  margin-bottom: $base-spacing;
+  color: #333333;
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-notice__title {
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  padding-bottom: $small-spacing;
+  margin-top: 0;
+  border-bottom: 1px solid #e2e2e2;
+  color: #b6b6b6;
+}
