@@ -1,24 +1,15 @@
 ---
 title: Services
-intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae praesentium veniam nobis libero sint maxime expedita mollitia dolorum id soluta. Necessitatibus atque veniam illum eos tenetur fugit a maiores iste!
+intro: We offer a range of services that we can tailor to meet your needs. Whether you're a startup with big aspirations or a well-established company in need of a design refresh; we can help. Below are our key areas of focus.
 ---
 
 - content_for :header do
-  .c-section__header.l-bordered
-    %h1.o-title= current_page.data.title
-    .l-grid---MQdesktop
-      .l-grid__span--8---MQdesktop
-        .c-copy
-          %p= current_page.data.intro
+  = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
 
 .l-constrained
 
   .c-section
     = partial "partials/services"
-
-  - if posts
-    .c-section
-      = partial "partials/related-articles"
 
   .c-section
     = partial "partials/contact"

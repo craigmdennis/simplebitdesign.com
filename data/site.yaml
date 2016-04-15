@@ -1,6 +1,6 @@
 name: Simple Bit Design
 title: UI and UX Design Kent
-description: We make beautiful interfaces
+description: We help brands make beautiful products
 url: "http://simplebitdesign.com"
 
 navigation:
@@ -17,7 +17,7 @@ navigation:
   - anchor: Contact
     href: "#contact"
 
-services: 
+services:
   - title: User Interface Design
     summary: The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
     slug: /interface-design/
@@ -45,4 +45,4 @@ projects:
   intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sint enim. Quibusdam recusandae neque quo eum, maiores necessitatibus quae est eligendi harum error fugiat, odio et placeat in voluptas aspernatur."
 
 footer:
-  cookie: We use delicious cookies to improve your experience
+  cookie: We use delicious cookies to improve your experience. By using this site we assume you're ok with that.

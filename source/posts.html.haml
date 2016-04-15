@@ -3,12 +3,7 @@ pageable: true
 ---
 
 - content_for :header do
-  .c-section__header.l-bordered
-    %h1.o-title Posts
-    .l-grid---MQdesktop
-      .l-grid__span--8---MQdesktop
-        .c-copy
-          %p= data.site.posts.intro
+  = partial "partials/page-header", locals: { title: "Posts", intro: data.site.posts.intro}
 
 .l-constrained
   .c-section

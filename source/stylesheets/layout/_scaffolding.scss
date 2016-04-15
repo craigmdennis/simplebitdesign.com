@@ -77,3 +77,8 @@
 .l-bordered {
   border-top: 1px solid $color-athensgray;
 }
+
+.l-top {
+  @include position(absolute, 0 0 null 0);
+  z-index: map-get($z, bottom_bun);
+}

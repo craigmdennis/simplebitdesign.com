@@ -1,54 +1,5 @@
 %section#location
   .l-light
-    .l-grid.l-grid---MQdesktop
-      .l-grid__span--4---MQdesktop
-        .c-panel
-          .c-panel__body
-            %div{itemscope: true, itemtype: "http://schema.org/LocalBusiness"}
-              %h1.c-panel__title.c-panel__title--small
-                %span{itemprop: "name"} Simple Bit Design
-              -# %span{itemprop: "description"} A superb collection of fine gifts and clothing
-              %ul.c-list{itemprop: "address", itemscope: true, itemtype:"http://schema.org/PostalAddress"}
-                %li{itemprop: "streetAddress"}
-                  %div The Business Terrace
-                  %div Maidstone House
-                  %div King Street
-                %li{itemprop: "addressLocality"} Maidstone
-                %li{itemprop: "addressRegion"} Kent
-                %li{itemprop: "postalCode"} ME15 6AW
-              
-              %ul.c-list
-                %li
-                  = link_to "02081 333 777", "tel:02081333777"
-                %li
-                  = link_to "info@simplebitdesign.com", "mailto:info@simplebitdesign.com"
-
-
-      .l-grid__span--8---MQdesktop
-        .l-fill
-          #map.o-embed.o-embed--fill.o-embed--gmap
-            -# %iframe{ src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyC7xcLSiqIVviluqZQ_hv6NJrSP2Y4qGt4&q=Simple+Bit+Design,The+Business+Terrace,Maidstone+House,King+Street,Maidstone,Kent,ME156AW", width: "100%", height: "100%", frameborder: "0", style: "border:0;", allowfullscreen: true}
-
-            - content_for :scripts do
-              = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyC7xcLSiqIVviluqZQ_hv6NJrSP2Y4qGt4&callback=initMap", async: true,  defer: true
-
-              :javascript
-                function initMap() {
-                  $.getJSON()
-                  
-                  var myLatLng = {lat: 51.273568, lng: 0.526574};
-
-                  var map = new google.maps.Map(document.getElementById('map'), {
-                    scrollwheel: false,
-                    zoom: 17,
-                    backgroundColor: '#ffffff',
-                    center: myLatLng,
-                    data: "!4m6!1m3!3m2!1s0x47df323aa161941f:0x9102acfb5c0c86ef!2sSimple+Bit+Design!3m1!1s0x47df323aa161941f:0x9102acfb5c0c86ef"
-                  });
-
-                  var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    title: 'Hello World!'
-                  });
-                }
+    #mapoverlay.o-embed.o-embed--fill.o-embed--overlay{"aria-hidden" => true}
+    #map.o-embed.o-embed--map
+      %iframe{ src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyC7xcLSiqIVviluqZQ_hv6NJrSP2Y4qGt4&q=Simple+Bit+Design,The+Business+Terrace,Maidstone+House,King+Street,Maidstone,Kent,ME156AW", width: "100%", height: "100%", frameborder: "0", style: "border:0;", allowfullscreen: true}

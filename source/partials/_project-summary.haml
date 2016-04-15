@@ -8,10 +8,10 @@
 
       - if current_page.path != path
         - homeImagePath = path.to_s.gsub '.html', '/home'
-        
-        - if sitemap.find_resource_by_path("images/#{gulp_image_path(homeImagePath)}.png")
-          - imagePath = homeImagePath
-        
+
+        -# - if sitemap.find_resource_by_path("#{gulp_image_path(homeImagePath)}.png")
+        -#   - imagePath = homeImagePath
+
         .h-align-center
           = link_to "View project", path, class: "c-button c-button--tertiary"
 

@@ -3,12 +3,7 @@ pageable: true
 ---
 
 - content_for :header do
-  .c-section__header.l-bordered
-    %h1.o-title Projects
-    .l-grid---MQdesktop
-      .l-grid__span--8---MQdesktop
-        .c-copy
-          %p= data.site.projects.intro
+  = partial "partials/page-header", locals: { title: "Projects", intro: data.site.projects.intro}
 
 .l-constrained
   - blog("projects").articles[0...10].each do |project|

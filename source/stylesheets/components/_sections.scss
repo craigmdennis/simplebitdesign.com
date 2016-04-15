@@ -3,10 +3,10 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  
+
   @include media( $phablet ) {
     border-radius: $base-radius;
-    
+
     &:not(.c-section--adjacent) {
       margin-top: $small-spacing/2;
     }
@@ -54,6 +54,10 @@
 }
 
 .c-section__header {
-  padding: $base-spacing $large-spacing;
-  align-self: flex-end;
+  padding: $base-spacing;
+  //align-self: flex-end;
+}
+
+.c-section__header--large {
+  padding: $large-spacing;
 }

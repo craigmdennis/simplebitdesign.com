@@ -2,14 +2,23 @@
   display: block;
   margin: 0;
   position: relative;
-  color: $color-pickledblue;
+  color: inherit;
   text-decoration: none;
   user-select: none;
   font-size: rem(40px);
+  opacity: 0.9;
+  transition: opacity $base-duration-fast $base-timing, color $base-duration-fast $base-timing;
 
   &:hover,
   &:focus {
-    color: $color-carminepink;
     text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.o-logo--light {
+  &:hover,
+  &:focus {
+    color: $base-accent;
   }
 }

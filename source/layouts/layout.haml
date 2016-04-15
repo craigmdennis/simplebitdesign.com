@@ -33,18 +33,17 @@
 
     = partial 'partials/script_modernizr'
 
-  %body#top
+  %body#top{class: page_classes}
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
     %header
       .l-constrained
         - if content_for? :header
           .c-section
-            .l-light
-              .c-section__header
-                = partial "partials/navigation"
-              = yield_content :header
-
+            %div{class: (current_page.url == "/" ? "l-highlight" : "l-light")}
+              .c-section__header{class: (current_page.url == "/" ? "l-top" : "")}
+                = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : "") }
+            = yield_content :header
         - else
           .c-section.c-section--first
             .l-light

@@ -16,18 +16,22 @@
   h5 { @include height( 21px ); }
   h6 { @include height( 18px ); }
 
-  .c-copy__left {
+  .c-copy__intro {
+    font-size: 125%;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  .c-copy__right {  
+  .c-copy__right {
     @include media( $tablet ) {
       float: right;
       margin-left: $base-spacing;
     }
   }
 
-  .c-copy__left {  
+  .c-copy__left {
     @include media( $tablet ) {
       float: left;
       margin-right: $base-spacing;

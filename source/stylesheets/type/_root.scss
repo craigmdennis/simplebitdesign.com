@@ -29,3 +29,10 @@ hr {
   margin-bottom: $small-spacing;
   margin-top: $small-spacing;
 }
+
+object,
+embed,
+iframe,
+video {
+  display: block;
+}

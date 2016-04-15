@@ -1,6 +1,7 @@
 $nav-color: $color-pickledblue;
 $nav-border: 1px solid $nav-color;
 $nav-color-light: white;
+$nav-underline-height: 0.2em;
 
 .c-navigation {
   display: flex;
@@ -9,13 +10,6 @@ $nav-color-light: white;
   list-style-type: none;
   padding: 0;
   transition: transform $base-duration-slow $base-timing, opacity $base-duration-slow $base-timing;
-}
-
-.c-navigation.is-closed {
-  .js & {
-    transform: translateX(125%);
-    opacity: 0;
-  }
 }
 
 .c-navigation__item {
@@ -29,6 +23,7 @@ $nav-color-light: white;
   display: block;
   padding-left: $small-spacing;
   padding-right: $small-spacing;
+  font-weight: 500;
 
   &:hover,
   &:focus {
@@ -41,11 +36,27 @@ $nav-color-light: white;
   border-bottom: 0;
 
   .c-navigation__text {
-    color: rgba($nav-color-light, 0.5);
-    
+    color: rgba($nav-color-light, 0.9);
+    position: relative;
+
+    &:after {
+      @include position(absolute, null $small-spacing (-$nav-underline-height) $small-spacing);
+      content: '';
+      display: block;
+      background-color: white;
+      height: 0;
+      opacity: 0.9;
+      transition: height $base-duration-fast $base-timing, opacity $base-duration-fast $base-timing;
+    }
+
     &:hover,
     &:focus {
       color: $nav-color-light;
+
+      &:after {
+        opacity: 1;
+        height: $nav-underline-height;
+      }
     }
   }
 }
@@ -64,3 +75,13 @@ $nav-color-light: white;
     transform: rotate(0deg);
   }
 }
+
+@mixin generate-active-classes( $name ) {
+  @each $n in $name {
+    .#{$n} .c-navigation__#{$n} {
+      color: $base-accent;
+    }
+  }
+}
+
+@include generate-active-classes( projects services posts );
