@@ -1,5 +1,9 @@
 .o-footnote {
   @include height( 12px );
   font-weight: normal;
-  margin-bottom: $base-spacing;
+  padding: $base-spacing;
+
+  @include media($tablet) {
+    padding-top: 0;
+  }
 }

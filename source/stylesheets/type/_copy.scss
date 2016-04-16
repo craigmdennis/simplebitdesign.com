@@ -16,8 +16,18 @@
   h5 { @include height( 21px ); }
   h6 { @include height( 18px ); }
 
+  &.c-copy--adjacent {
+    @include rwd( mobile ) {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .c-copy__intro {
-    font-size: 125%;
+    @include media( $tablet ) {
+      font-size: 125%;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -49,12 +59,6 @@
     max-width: em(640px);
     margin-left: auto;
     margin-right: auto;
-  }
-
-  &--adjacent {
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 
   strong,

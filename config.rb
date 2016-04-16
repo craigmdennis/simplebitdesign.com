@@ -1,4 +1,5 @@
 require 'lib/gulp'
+require 'lib/package'
 
 # Per-page layout changes with no layout
 page '/*.xml', layout: false
@@ -7,6 +8,7 @@ page '/*.txt', layout: false
 
 # Pretty URLs
 activate :directory_indexes
+# activate :automatic_image_sizes
 
 # Language Support
 set :haml, { :attr_wrapper => '"', :format => :html5 }

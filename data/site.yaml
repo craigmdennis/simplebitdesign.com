@@ -38,11 +38,5 @@ services:
     slug: /ux-design/
     anchor: More about UX design
 
-posts:
-  intro: "Sometimes we have a flash of inspiration, overcome an obstacle or explore new ideas; before we forget, we write some of them down."
-
-projects:
-  intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sint enim. Quibusdam recusandae neque quo eum, maiores necessitatibus quae est eligendi harum error fugiat, odio et placeat in voluptas aspernatur."
-
 footer:
   cookie: We use delicious cookies to improve your experience. By using this site we assume you're ok with that.
