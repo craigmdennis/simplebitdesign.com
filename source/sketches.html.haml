@@ -1,0 +1,15 @@
+---
+title: Sketches
+intro: Pen and paper are the most flexible way to <b>rapidly iterate</b> on new ideas. They don't have to be pretty and they <em>don't</em> have to be perfect; it's about getting the ideas out of your head.
+---
+
+- imagePath = nil
+
+- content_for :header do
+  = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
+
+.l-masonry
+  - sitemap.resources.select{ |r| r.path.start_with?("images/sketches") }.each_with_index do |image, index|
+
+    = link_to image.path do
+      = image_tag image.path, alt: "Sketch #{index}"

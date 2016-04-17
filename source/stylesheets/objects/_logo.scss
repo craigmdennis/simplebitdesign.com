@@ -1,4 +1,5 @@
 .o-logo {
+  padding: $base-spacing $base-spacing $small-spacing;
   display: block;
   margin: 0;
   position: relative;
@@ -9,16 +10,23 @@
   opacity: 0.9;
   transition: opacity $base-duration-fast $base-timing, color $base-duration-fast $base-timing;
 
+  @include media( $tablet ) {
+    padding: 0;
+  }
+
   &:hover,
-  &:focus {
+  &:focus,
+  &.is-hovered {
     text-decoration: none;
     opacity: 1;
   }
 }
 
 .o-logo--light {
+  opacity: 1;
   &:hover,
-  &:focus {
+  &:focus,
+  &.is-hovered {
     color: $base-accent;
   }
 }

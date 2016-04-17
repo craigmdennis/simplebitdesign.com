@@ -17,34 +17,59 @@ var opts = {
   zIndex: 2e9, // The z-index (defaults to 2000000000)
   className: 'spinner', // The CSS class to assign to the spinner
   top: '50%', // Top position relative to parent
-  left: '50%', // Left position relative to parent
+  left: false, // Left position relative to parent
   shadow: false, // Whether to render a shadow
   hwaccel: true, // Whether to use hardware acceleration
   position: 'absolute' // Element positioning
 }
 var spinner = new Spinner(opts).spin()
 var $contactForm = $('#formspree');
+var $fields = $contactForm.find('input','textarea')
+
+var disableForm = function() {
+  $fields.attr('readonly', true);
+  $contactForm.find('button[type="submit"]')
+    .addClass('has-icon')
+    .attr('disabled', true)
+    .text("Sending...")
+    .append(spinner.el)
+}
+
+var enableForm = function() {
+  $fields.removeAttr('readonly');
+  $contactForm.find('button[type="submit"]')
+    .removeClass('has-icon')
+    .attr('disabled', false)
+    .text("Send");
+}
 
 $contactForm.submit(function(e) {
   e.preventDefault();
 
+  console.log( $(this).attr('action') );
+
   $.ajax({
-    // url: '//formspree.io/info@simplebitdesign.com',
+    url: $(this).attr('action'),
     method: 'POST',
     data: $(this).serialize(),
     dataType: 'json',
-    beforeSend: function() {
-      $contactForm.find('button[type="submit"]').addClass('has-icon').append(spinner.el)
 
-      $contactForm.find('input','textarea').attr('readonly', true)
+    beforeSend: function() {
+      disableForm();
     },
+
     success: function(data) {
-      // $contactForm.find('.alert--loading').hide();
-      // $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+      enableForm();
+
+      $contactForm.prepend('<div class="c-notice c-notice--success">Message sent! We\'ll be in touch soon.</div>');
+
+      $contactForm[0].reset();
     },
+
     error: function(err) {
-      // $contactForm.find('.alert--loading').hide();
-      // $contactForm.append('<div class="alert alert--error">Oops, there was an error.</div>');
+      enableForm();
+
+      $contactForm.prepend('<div class="c-notice c-notice--danger">Oops, there was an error. Please try again.</div>');
     }
   });
 });

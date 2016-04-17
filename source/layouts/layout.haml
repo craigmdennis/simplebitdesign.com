@@ -21,19 +21,14 @@
 
     -# Application Stylesheet
     = stylesheet_link_tag gulp_css_path("app.css")
-    = stylesheet_link_tag "//fast.fonts.net/cssapi/09fd0c05-177d-4a2b-9fcd-f4ec85499026.css"
-    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic"
 
     -if content_for? :head
       = yield_content :head
 
-    -# Picture element HTML5 shiv
-    :javascript
-      document.createElement( 'picture' );
-
     = partial 'partials/script_modernizr'
 
   %body#top{class: page_classes}
+    -# .animsition
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
     %header
@@ -41,13 +36,13 @@
         - if content_for? :header
           .c-section
             %div{class: (current_page.url == "/" ? "l-highlight" : "l-light")}
-              .c-section__header{class: (current_page.url == "/" ? "l-top" : "")}
+              .c-section__header---MQtablet{class: (current_page.url == "/" ? "c-section__header--bordered---MQtablet l-top---MQtablet" : "")}
                 = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : "") }
             = yield_content :header
         - else
           .c-section.c-section--first
             .l-light
-              .c-section__header
+              .c-section__header---MQtablet
                 = partial "partials/navigation"
 
 
@@ -76,13 +71,8 @@
     -# Load all the other scripts
     = javascript_include_tag gulp_js_path("app.js")
 
-    -# Load SVG icon sprites
-    -# = javascript_include_tag "https://file.myfontastic.com/EEco26jhFrTTtf67eq7Cgd/icons.js", async: true
-
     -# Google Tag Manager
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T3C5WS"height="0" width="0"style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T3C5WS');</script>
-
-    = javascript_include_tag gulp_js_path("picturefill.js"), async: true
 
     - if content_for? :scripts
       = yield_content :scripts

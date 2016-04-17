@@ -1,9 +1,11 @@
 ---
+title: Posts
+intro: Sometimes we have a flash of inspiration, overcome an obstacle or explore new ideas; before we forget, we write some of them down.
 pageable: true
 ---
 
 - content_for :header do
-  = partial "partials/page-header", locals: { title: "Posts", intro: data.site.posts.intro}
+  = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
 
 .l-constrained
   .c-section

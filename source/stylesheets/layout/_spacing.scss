@@ -1,5 +1,5 @@
 .l-blackhole {
-  padding: $base-spacing;
+  padding: $large-spacing;
 
   @include media( $tablet ) {
     padding: $base-spacing*4 $large-spacing;

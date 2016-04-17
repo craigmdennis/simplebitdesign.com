@@ -7,7 +7,7 @@ $color-whisper: #F5F7FA;
 // Social
 $color-twitter: #55acee;
 
-$base-accent: #D04A5A;
+$base-accent: #d04a5a;
 $base-background-color: $color-athensgray;
 
 // Animations
@@ -65,3 +65,6 @@ $tablet: map-get( $breakpoints, tablet);
 $upto-desktop: map-get( $breakpoints, upto-desktop);
 $desktop: map-get( $breakpoints, desktop);
 $hd: map-get( $breakpoints, hd);
+
+// Paths
+$base-font-path: "../"

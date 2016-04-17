@@ -1,9 +1,10 @@
 ---
-pageable: true
+title: Projects
+intro: Our projects vary widly and some we're not even aloud to talk about. We're proud of all of our work but here are a few that we're aloud to talk about.
 ---
 
 - content_for :header do
-  = partial "partials/page-header", locals: { title: "Projects", intro: data.site.projects.intro}
+  = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
 
 .l-constrained
   - blog("projects").articles[0...10].each do |project|

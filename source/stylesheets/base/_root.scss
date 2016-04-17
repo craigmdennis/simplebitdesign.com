@@ -1,4 +1,4 @@
-/* 
+/*
 
 ROOT
 Similar to reset but can include SASS $variables
@@ -15,9 +15,6 @@ a {
 }
 
 html {
-  @include media( $hd ) {
-    // font-size: 112.5%;
-  }
   @include media( em(1600px) ) {
     font-size: 112.5%;
   }

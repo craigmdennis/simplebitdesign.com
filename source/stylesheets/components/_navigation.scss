@@ -4,12 +4,16 @@ $nav-color-light: white;
 $nav-underline-height: 0.2em;
 
 .c-navigation {
-  display: flex;
-  align-self: flex-end;
-  margin: 0;
+  margin: 0 0 $small-spacing 0;
   list-style-type: none;
   padding: 0;
   transition: transform $base-duration-slow $base-timing, opacity $base-duration-slow $base-timing;
+
+  @include media( $tablet ) {
+    display: flex;
+    align-self: flex-end;
+    margin: 0;
+  }
 }
 
 .c-navigation__item {
@@ -20,15 +24,41 @@ $nav-underline-height: 0.2em;
 .c-navigation__text {
   @include height(20px, 40px);
   color: inherit;
+  position: relative;
   display: block;
-  padding-left: $small-spacing;
-  padding-right: $small-spacing;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
   font-weight: 500;
 
+  @include media($tablet) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+  }
+
+  &:after {
+    @include media( $tablet ) {
+      @include position(absolute, null $small-spacing (-$base-spacing) $small-spacing);
+      background-color: $base-accent;
+      content: '';
+      display: block;
+      height: 0;
+      opacity: 0;
+      transition: height $base-duration-fast $base-timing, opacity $base-duration-fast $base-timing;
+    }
+  }
+
   &:hover,
-  &:focus {
+  &:focus,
+  &.is-hovered {
     text-decoration: none;
     color: $base-accent;
+
+    &:after {
+      @include media( $tablet ) {
+        height: $nav-underline-height;
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -36,27 +66,18 @@ $nav-underline-height: 0.2em;
   border-bottom: 0;
 
   .c-navigation__text {
-    color: rgba($nav-color-light, 0.9);
-    position: relative;
+    color: $nav-color-light;
+    opacity: 0.9;
+    transition: opacity $base-duration-fast $base-timing;
 
     &:after {
-      @include position(absolute, null $small-spacing (-$nav-underline-height) $small-spacing);
-      content: '';
-      display: block;
       background-color: white;
-      height: 0;
-      opacity: 0.9;
-      transition: height $base-duration-fast $base-timing, opacity $base-duration-fast $base-timing;
     }
 
     &:hover,
-    &:focus {
-      color: $nav-color-light;
-
-      &:after {
-        opacity: 1;
-        height: $nav-underline-height;
-      }
+    &:focus,
+    &.is-hovered {
+      opacity: 1;
     }
   }
 }

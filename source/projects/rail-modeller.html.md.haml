@@ -6,37 +6,42 @@ date: 18/03/2016 22:57
 ---
 
 .l-grid---MQdesktop.l-grid--gutter---MQdesktop
-  .l-grid__span--6---MQdesktop.l-light.c-section
-    .c-panel
-      .c-panel__body
-        %h3.c-panel__title Complex Interactions
-        .c-copy.c-copy--emphasised.c-copy--adjacent
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio esse similique aperiam, aspernatur facere, obcaecati laborum ex voluptatem voluptatum recusandae voluptates consectetur officiis. Animi excepturi ut ad nobis dicta, accusamus!
-    
-      
-  .l-grid__span--6---MQdesktop.l-light.c-section
-    .c-panel
-      .c-panel__body
-        %h3.c-panel__title Affordances
-        .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas accusamus praesentium nesciunt omnis illo mollitia expedita, minima, suscipit non est, velit blanditiis tenetur facere harum consequatur officia reprehenderit voluptates dolore!
+  .l-grid__span--6---MQdesktop
+    .l-light.c-section.l-bordered---MQmobile
+      .c-panel
+        .c-panel__body
+          %h3.c-panel__title Complex Interactions
+          .c-copy.c-copy--adjacent
+            %p Rail Modeller is a an OSX application and as such doens't have a linear flow. We worked to simplify the interactions required to produce complex interaction such as selecting a library and picking a track piece, setting a gradient and splitting the canvas into a more orthographic view to give context.
 
 
-.l-grid---MQdesktop.l-grid--gutter---MQdesktop
-  .l-grid__span--4---MQdesktop.l-light.c-section
-    = image_tag "#{gulp_image_path('projects/rail-modeller/1.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/1@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-max"
+  .l-grid__span--6---MQdesktop
+    .l-light.c-section.l-bordered---MQmobile
+      .c-panel
+        .c-panel__body
+          %h3.c-panel__title Affordances
+          .c-copy.c-copy--adjacent.copy--downsize
+            %p We introcuced a more consistent menu system which iconography that more clearly indicated the action which it represents. We used graphics programs as the basis as the tasks are fairly similar. We mitigated any ambiguity by showing toolstips as help.
 
-  .l-grid__span--4---MQdesktop.l-subtle.c-section
-    = image_tag "#{gulp_image_path('projects/rail-modeller/2.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/2@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-center l-max"
+
+.l-grid---MQtablet.l-grid--gutter---MQtablet.l-grid---MQdesktop.l-grid--gutter---MQdesktop
+  .l-grid__span--6---MQtablet.l-grid__span--4---MQdesktop
+    .l-light.c-section.l-bordered---MQmobile
+      = image_tag "#{gulp_image_path('projects/rail-modeller/1.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/1@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-max"
+
+  .l-grid__span--6---MQtablet.l-grid__span--4---MQdesktop
+    .l-subtle.c-section.l-bordered---MQmobile
+      = image_tag "#{gulp_image_path('projects/rail-modeller/2.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/2@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-center l-max"
 
   -# .l-grid__span--4---MQdesktop.l-subtle.c-section
   -#   = image_tag "#{gulp_image_path('projects/rail-modeller/3.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/3@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-center l-max"
 
-  .l-grid__span--4---MQdesktop.l-light.c-section
-    .c-panel__body
-      %h2.c-panel__title Terminology
-      .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam rerum expedita ad hic error commodi molestias nulla nemo doloribus id blanditiis consequuntur at natus, iste impedit laudantium, laborum saepe nesciunt!
+  .l-grid__span--4---MQdesktop
+    .l-light.c-section.l-bordered---MQmobile
+      .c-panel__body
+        %h2.c-panel__title Terminology
+        .c-copy.c-copy--adjacent.copy--downsize
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam rerum expedita ad hic error commodi molestias nulla nemo doloribus id blanditiis consequuntur at natus, iste impedit laudantium, laborum saepe nesciunt!
 
 -# .l-grid---MQdesktop.l-grid--gutter---MQdesktop
 
@@ -52,14 +57,16 @@ date: 18/03/2016 22:57
 
 .l-subtle.c-section
   .l-grid---MQdesktop
-    .l-grid__span--4---MQdesktop.c-panel
-      .c-panel__body
-        %h2.c-panel__title Modules
-        .c-copy.c-copy--emphasised
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quibusdam, voluptate! Enim quibusdam nostrum dolores, voluptate, ipsa quae.
-          %p Facilis hic aut, officiis, quos ut, tempore aliquam enim voluptates suscipit in repudiandae. Minus, repellendus eaque magni.
-        = link_to "Download on the App Store", "#", class: "c-button c-button--tertiary"
+    .l-grid__span--4---MQdesktop.l-bordered---MQmobile
+      .c-panel
+        .c-panel__body
+          %h2.c-panel__title Modules
+          .c-copy
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quibusdam, voluptate! Enim quibusdam nostrum dolores, voluptate, ipsa quae.
+            %p Facilis hic aut, officiis, quos ut, tempore aliquam enim voluptates suscipit in repudiandae. Minus, repellendus eaque magni.
+          = link_to "Download on the App Store", "#", class: "c-button c-button--tertiary"
     .l-grid__span--8---MQdesktop
       .c-post.c-post--adjacent
         .c-post__mainimage
-          = image_tag "#{gulp_image_path('projects/rail-modeller/highlight.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/highlight@2x.png')} 2x", alt: "Screenshot of MEGAMAC"
+          = link_to "#{gulp_image_path('projects/rail-modeller/highlight@2x.png')}", target: "_blank" do
+            = image_tag "#{gulp_image_path('projects/rail-modeller/highlight.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/highlight@2x.png')} 2x", alt: "Screenshot of MEGAMAC"

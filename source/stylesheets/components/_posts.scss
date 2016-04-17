@@ -22,11 +22,23 @@
 }
 
 .c-post__title {
-  @include height( 32px );
+  @include height( 24px );
+  margin-bottom: $small-spacing;
+
+  @include media( $tablet ) {
+    @include height( 32px );
+  }
+
   font-weight: normal;
   text-align: center;
+}
 
-  &--extra {
+.c-post__button {
+  margin-top: $large-spacing;
+}
+
+.c-post__title--extra {
+  @include rwd( $tablet ) {
     padding-bottom: $base-spacing;
     padding-top: $base-spacing;
   }
@@ -34,16 +46,20 @@
 
 .c-post__mainimage {
   display: block;
-  margin: $base-spacing auto 0;
-  padding-left: $base-spacing;
-  padding-right: $base-spacing;
+  //margin: 0 auto;
+  margin-left: $base-spacing;
+  margin-right: $base-spacing;
 
-  @include media( $desktop ) {
-    padding-left: $large-spacing;
-    padding-right: $large-spacing;
+  @include media( $tablet ) {
+    margin-top: $base-spacing;
   }
 
-  > img {
+  @include media( $desktop ) {
+    //padding-left: $large-spacing;
+    //padding-right: $large-spacing;
+  }
+
+  img {
     border: 1px solid rgba(0,0,0,0.1);
     border-width: 1px 1px 0 1px;
     border-top-right-radius: $base-radius*1.5;

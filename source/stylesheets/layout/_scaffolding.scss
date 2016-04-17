@@ -75,10 +75,38 @@
 }
 
 .l-bordered {
-  border-top: 1px solid $color-athensgray;
+  @include rwd( mobile ) {
+    border-top: 1px solid $color-athensgray;
+  }
 }
 
 .l-top {
-  @include position(absolute, 0 0 null 0);
-  z-index: map-get($z, bottom_bun);
+  @include rwd( tablet ) {
+    @include position(absolute, 0 0 null 0);
+    z-index: map-get($z, bottom_bun);
+  }
+}
+
+.l-masonry {
+  margin-top: $small-spacing;
+  columns: 2;
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+  column-gap: $small-spacing;
+
+  @include media($tablet) {
+    columns: 3;
+    padding: 0;
+  }
+
+  @include media($tablet) {
+    columns: 4;
+  }
+
+  > * {
+    display: block;
+    margin-bottom: $small-spacing;
+    border-radius: $base-radius;
+    overflow: hidden;
+  }
 }

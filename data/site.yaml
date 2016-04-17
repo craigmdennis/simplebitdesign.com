@@ -12,10 +12,10 @@ navigation:
     href: "/services/"
   - anchor: Posts
     href: "/posts/"
-  # - anchor: Jobs
-  #   href: "/jobs/"
+  - anchor: Sketches
+    href: "/sketches/"
   - anchor: Contact
-    href: "#contact"
+    href: "//dev.simplebitdesign.com/#contact"
 
 services:
   - title: User Interface Design

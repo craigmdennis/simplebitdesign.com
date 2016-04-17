@@ -1,4 +1,4 @@
-/* 
+/*
 
 FOCUS
 Generic focus state
@@ -32,7 +32,8 @@ a {
 // Focus states when using a mouse
 [data-whatinput="mouse"],
 [data-whatinput="touch"] {
-  :focus {
+  :focus,
+  .is-focussed {
     outline: 0;
   }
 }

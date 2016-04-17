@@ -1,13 +1,8 @@
 $grid-line-width: 1px;
 $grid-line: $grid-line-width solid $color-athensgray;
 
-@mixin span($columns) {
-  width: (100% / $grid-columns) * $columns;
-  width: calc( (100% / #{$grid-columns}) * #{$columns} );
-}
-
 .l-grid {
-  @include rwd( tablet upto-desktop desktop, false ) {
+  @include rwd( tablet desktop, false ) {
     @include row;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +12,7 @@ $grid-line: $grid-line-width solid $color-athensgray;
 [class*="l-grid__span"] {
   width: 100%;
   position: relative;
-  flex-shrink: 0;
+  flex-shrink: 1;
   display: flex;
   flex-flow: column;
 }
@@ -33,25 +28,25 @@ $grid-line: $grid-line-width solid $color-athensgray;
 
 .l-grid__span--8 {
   @include rwd( desktop ) {
-    @include span( 8 );
+    width: 66.66666666%;
   }
 }
 
 .l-grid__span--6 {
   @include rwd( tablet desktop ) {
-    @include span( 6 );
+    width: 50%;
   }
 }
 
 .l-grid__span--4 {
-  @include rwd( desktop ) {
-    @include span( 4 );
+  @include rwd( tablet desktop ) {
+    width: 33.33333333%;
   }
 }
 
 .l-grid__span--3 {
   @include rwd( upto-desktop desktop ) {
-    @include span( 3 );
+    width: 25%;
   }
 }
 
@@ -79,16 +74,22 @@ $grid-line: $grid-line-width solid $color-athensgray;
   }
 }
 
-.l-grid--gutter {
-  @include rwd( desktop ) {
-    flex-wrap: nowrap;
-    width: auto;
-    margin-left: -$gutter/4;
-    margin-right: -$gutter/4;
+.l-grid--gutter---MQtablet {
+  margin-left: -$gutter/8;
+  margin-right: -$gutter/8;
 
-    > * {
-      margin-left: $gutter/4;
-      margin-right: $gutter/4;
-    }
+  > * {
+    padding-left: $gutter/8;
+    padding-right: $gutter/8;
+  }
+}
+
+.l-grid--gutter---MQdesktop {
+  margin-left: -$gutter/4;
+  margin-right: -$gutter/4;
+
+  > * {
+    padding-left: $gutter/4;
+    padding-right: $gutter/4;
   }
 }

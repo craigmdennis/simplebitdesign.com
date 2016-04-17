@@ -28,6 +28,7 @@ $button-twitter-border: $color-twitter;
   border: $base-button-border-width solid transparent;
   font-weight: 600;
   position: relative;
+  width: 100%;
 
   &:not(:last-child):not(.c-button--seamless) {
     margin-right: $small-spacing;
@@ -118,4 +119,13 @@ $button-twitter-border: $color-twitter;
 
 .c-button.has-icon {
   padding-right: $base-spacing*2;
+
+  > .spinner {
+    right: $base-spacing;
+  }
+}
+
+.c-button[disabled] {
+  background-color: #ccc;
+  border-color: #ccc;
 }

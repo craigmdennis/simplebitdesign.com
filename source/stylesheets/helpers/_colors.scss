@@ -12,3 +12,13 @@ $text-dark: $color-pickledblue;
 .h-color-dark {
   color: $text-dark;
 }
+
+.h-inherit {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

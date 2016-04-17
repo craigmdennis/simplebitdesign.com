@@ -2,6 +2,7 @@
   overflow: hidden;
   position: relative;
   display: flex;
+  flex: 1 0 auto;
   flex-flow: column;
 
   @include media( $phablet ) {
@@ -54,10 +55,20 @@
 }
 
 .c-section__header {
-  padding: $base-spacing;
+  @include rwd( tablet ) {
+    padding: $base-spacing;
+  }
   //align-self: flex-end;
 }
 
 .c-section__header--large {
-  padding: $large-spacing;
+  @include media( $tablet ) {
+    padding: $large-spacing;
+  }
+}
+
+.c-section__header--bordered {
+  @include rwd( tablet, false ) {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
 }

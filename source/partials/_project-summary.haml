@@ -4,7 +4,11 @@
 .l-subtle
   .c-post.c-post--adjacent
     .l-leading
-      %h1.c-post__title.c-post__title--extra= project.title
+      %h1.c-post__title.c-post__title--extra---MQtablet
+        - if current_page.path != path
+          = link_to project.title, path, class: "h-inherit"
+        - else
+          = project.title
 
       - if current_page.path != path
         - homeImagePath = path.to_s.gsub '.html', '/home'
@@ -13,7 +17,13 @@
         -#   - imagePath = homeImagePath
 
         .h-align-center
-          = link_to "View project", path, class: "c-button c-button--tertiary"
+          .c-post__button
+            = link_to "View project", path, class: "c-button c-button--tertiary"
 
-    .c-post__mainimage
-      = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"
+    .h-align-center
+      - if current_page.path != path
+        = link_to path, class: "c-post__mainimage" do
+          = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"
+      - else
+        .c-post__mainimage
+          = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center"

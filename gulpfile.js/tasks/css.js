@@ -10,6 +10,7 @@ var handleErrors = require('../lib/handleErrors')
 var autoprefixer = require('gulp-autoprefixer')
 var path         = require('path')
 var cssnano      = require('gulp-cssnano')
+var cssimport    = require("gulp-cssimport")
 
 var paths = {
   src: path.join(config.root.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
@@ -23,6 +24,7 @@ var cssTask = function () {
       precision: 8
     }))
     .on('error', handleErrors)
+    .pipe(cssimport())
     .pipe(autoprefixer(config.tasks.css.autoprefixer))
     .pipe(gulpif(global.production, cssnano({autoprefixer: false})))
     .pipe(gulpif(!global.production, sourcemaps.write()))

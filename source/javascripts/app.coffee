@@ -1,12 +1,11 @@
 require 'what-input'
+require 'picturefill'
 require '_fastclick'
 require '_navigation'
 require '_twitter'
 require '_formspree'
-
-$('#mapoverlay').click (e) ->
-  e.stopPropagation()
-  $(this).addClass('map-is-interactive')
-
-$(document).on 'click scrollstart', ->
-  $('#mapoverlay').removeClass('map-is-interactive')
+# require '_lazyload'
+require '_map'
+require '_consolidate'
+require '_focusparent'
+# require '_transition'

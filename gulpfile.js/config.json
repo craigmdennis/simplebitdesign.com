@@ -19,8 +19,7 @@
       "src": "javascripts",
       "dest": "javascripts",
       "entries": {
-        "app": ["./app.coffee"],
-        "picturefill": ["picturefill/dist/picturefill"]
+        "app": ["./app.coffee"]
       },
       "extensions": ["js", "coffee", "json"],
       "babel": {

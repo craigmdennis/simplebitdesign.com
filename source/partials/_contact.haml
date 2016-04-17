@@ -7,7 +7,7 @@
         .c-panel
           .c-panel__body
             %h3.c-panel__title= title
-            .c-copy.c-copy--emphasised
+            .c-copy.c-copy--emphasised{class: ( defined?(twitter) ? nil : "c-copy--adjacent" )}
               %p We love working with with <b>passionate teams</b> to build amazing products. Get in touch with a little information about what you're working on and we'll get back to you as soon as we can.
 
             - if defined?(twitter)
@@ -19,19 +19,21 @@
 
       .l-grid__span--6---MQtablet
         .c-panel
-          .c-panel__body
+          .c-panel__body---MQtablet
             %form#formspree.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
-              .c-form__row
+              %input{type: "text", name:"_gotcha", style:  "display:none"}
+              .c-form__row.c-form__row--first
                 %label.h-accessible{for: "message"} Your message
-                %textarea#message.c-form__control{name: "message", rows: 5, required: true, placeholder: "Tell us a little about your project"}
+                %textarea#message.c-form__control{name: "message", rows: 5, required: true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
               .c-form__row.c-form__row--inline
                 %label.c-form__label{for: "name"} Name:
-                %input#name.c-form__control{type: "text", name: "name", placeholder: "John Smith", required: true}
+                %input#name.c-form__control{type: "text", name: "name", placeholder: "John Smith", required: true, data: { focus: ".c-form__row" }}
               .c-form__row.c-form__row--inline
                 %label.c-form__label{for: "email"} Email:
-                %input#email.c-form__control{type: "email", name: "_replyto", placeholder: "j.smith@gmail.com", required: true}
-              .c-form__row.c-form__row--inline
+                %input#email.c-form__control{type: "email", name: "email", placeholder: "j.smith@gmail.com", required: true, data: { focus: ".c-form__row" }}
+              .c-form__row.c-form__row--inline.c-form__row--last
                 %label.c-form__label{for: "budget"} Budget:
-                %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0}
+                %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0, data: { focus: ".c-form__row" }}
 
-                %button.c-button.c-button--primary.c-button--next{type: "submit"} Send
+              .c-form__submit.l-light
+                %button.c-button.c-button--primary{type: "submit"} Send

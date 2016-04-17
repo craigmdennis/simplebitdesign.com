@@ -17,12 +17,29 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 
 .c-form__row {
   margin-bottom: $small-spacing;
+  position: relative;
+}
+
+.c-form__row.is-focussed {
+  @include focus;
+  outline-offset: -1px;
+  z-index: map-get( $z, cheese );
+
+  [data-whatinput="mouse"] &,
+  [data-whatinput="touch"] & {
+    outline: none;
+  }
+
+  > .c-form__control {
+    outline: none;
+  }
 }
 
 .c-form__label {
   @include height( $form-control-type-size, $form-matched-height );
   padding-left: $small-spacing;
   padding-right: $small-spacing;
+  min-width: 5rem;
 }
 
 .c-form__control {
@@ -59,6 +76,16 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
   }
 }
 
+.c-form__row--first {
+  border-top-left-radius: $base-radius;
+  border-top-right-radius: $base-radius;
+}
+
+.c-form__row--last {
+  border-bottom-left-radius: $base-radius;
+  border-bottom-right-radius: $base-radius;
+}
+
 // Modifiers
 .c-form--edge {
   .c-form__row {
@@ -88,8 +115,9 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 }
 
 .c-form--inset {
-  border-radius: $base-radius;
-  overflow: hidden;
+  @include media( $tablet ) {
+    border-radius: $form-control-radius;
+  }
 
   .c-form__row {
     margin-bottom: 0;
@@ -111,5 +139,18 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 
   input[type="submit"]:not(:first-child) {
     margin-left: $small-spacing/2;
+  }
+}
+
+.c-form__submit {
+  position: relative;
+  padding: $small-spacing;
+  z-index: map-get( $z, cheese );
+
+  @include media( $tablet ) {
+    padding: 0;
+    margin-top: -$large-spacing;
+    margin-right: $small-spacing/2;
+    float: right;
   }
 }

@@ -4,6 +4,7 @@
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 @import '../../node_modules/sass-height/sass-height';
 @import '../../node_modules/rwdcss/rwd';
+@import '../../node_modules/animsition/dist/css/animsition.css';
 
 @import 'vars';
 
@@ -18,11 +19,13 @@
 
 @import 'type/root';
 @import 'type/copy';
+@import 'type/fonts';
 
 @import 'layout/scaffolding';
 @import 'layout/grid';
 @import 'layout/colors';
 @import 'layout/spacing';
+@import 'layout/lazyload';
 
 @import 'components/posts';
 @import 'components/navigation';

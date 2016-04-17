@@ -2,8 +2,6 @@ module GulpAssetHelper
   def gulp_asset_path(path, type = nil)
     rev_manifest = nil
 
-    config[:environment]
-
     # In development, check for the manifest every time
     if config[:environment] != 'production'
       rev_manifest = JSON.parse(File.read(REV_MANIFEST_PATH)) if File.exist?(REV_MANIFEST_PATH)
@@ -12,7 +10,7 @@ module GulpAssetHelper
       rev_manifest = REV_MANIFEST if defined?(REV_MANIFEST)
     end
 
-    root = GULP_CONFIG['root']['dest'].gsub(/(.*).tmp/, '/')
+    root = GULP_CONFIG['root']['dest'].sub(/(.*).tmp/, '/')
     asset_path = type ? File.join(GULP_CONFIG['tasks'][type]['dest'], path) : path
     asset_path = rev_manifest[asset_path] if rev_manifest
     asset_path = File.join(root, asset_path.to_s)
