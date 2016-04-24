@@ -92,6 +92,7 @@
     "svg4everybody": "^2.0.3",
     "timeago": "^1.5.2",
     "twitter-fetcher": "^15.0.2",
+    "typed.js": "^1.1.1",
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.5.1",
     "webpack-hot-middleware": "2.10.0",

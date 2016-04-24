@@ -67,10 +67,10 @@
 }
 
 .l-leading {
-  padding: $base-spacing;
+  //padding: $base-spacing;
 
   @include media( $tablet ) {
-    padding: $base-spacing 20%;
+    max-width: em(768px);
   }
 }
 
@@ -104,9 +104,21 @@
   }
 
   > * {
-    display: block;
+    display: inline-block;
     margin-bottom: $small-spacing;
     border-radius: $base-radius;
     overflow: hidden;
+  }
+}
+
+.l-blackhole {
+  padding: $large-spacing*2 $large-spacing;
+
+  @include media( $tablet ) {
+    padding: $base-spacing*4 $large-spacing;
+  }
+
+  @include media( $desktop ) {
+    padding: $base-spacing*6 $large-spacing;
   }
 }

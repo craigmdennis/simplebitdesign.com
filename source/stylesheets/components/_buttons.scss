@@ -12,9 +12,9 @@ $button-tertiary-bg: $color-pickledblue;
 $button-tertiary-color: white;
 $button-tertiary-border: $color-pickledblue;
 
-$button-twitter-bg: $color-twitter;
+$button-twitter-bg: #1b95e0;
 $button-twitter-color: white;
-$button-twitter-border: $color-twitter;
+$button-twitter-border: #1b95e0;
 
 .c-button {
   @include height( $button-type-size, $base-button-height );

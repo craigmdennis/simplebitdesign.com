@@ -4,15 +4,33 @@ $nav-color-light: white;
 $nav-underline-height: 0.2em;
 
 .c-navigation {
-  margin: 0 0 $small-spacing 0;
+  margin: 0;
   list-style-type: none;
-  padding: 0;
+  padding: $small-spacing 0;
   transition: transform $base-duration-slow $base-timing, opacity $base-duration-slow $base-timing;
+
+  @include media( max-width #{$tablet} ) {
+    @include position( fixed, $base-spacing*3.5 0 0 0 );
+    border-top: 1px solid rgba(0,0,0,0.15);
+    z-index: map-get($z, top_bun);
+    background-color: $base-accent;
+    display: none;
+  }
+
+  @include media( $phablet ) {
+    top: 5.75rem;
+    left: $small-spacing/2;
+    right: $small-spacing/2;
+  }
 
   @include media( $tablet ) {
     display: flex;
     align-self: flex-end;
-    margin: 0;
+    padding: 0;
+  }
+
+  > li {
+    height: calc(100%/6);
   }
 }
 
@@ -22,17 +40,29 @@ $nav-underline-height: 0.2em;
 }
 
 .c-navigation__text {
-  @include height(20px, 40px);
+  font-size: 7.5vh;
+  text-align: center;
   color: inherit;
   position: relative;
   display: block;
   padding-left: $base-spacing;
   padding-right: $base-spacing;
-  font-weight: 500;
+  font-weight: 700;
+
+  @include media( $mobile ) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   @include media($tablet) {
+    @include height(20px, 40px);
+    text-align: left;
     padding-left: $base-spacing;
     padding-right: $base-spacing;
+    font-weight: 500;
   }
 
   &:after {

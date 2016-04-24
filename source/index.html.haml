@@ -7,32 +7,39 @@
 
     .c-panel.c-panel--center
       .l-blackhole
-        .h-align-center
-          %h1.o-title.o-title--offset---MQtablet= data.site.description
-          %p.o-subtitle= data.home.phrases.sample
+        .l-leading.l-center
+          .h-align-center
+            %h1.o-title.o-title--offset---MQtablet
+              We help brands make
+              %span{data: { typed: data.home.phrases }} beautiful
+              products
+
+          -# %p.o-subtitle= data.home.phrases.sample
 
 .l-constrained
-  .c-section
-    = partial "partials/screen-design"
-    = partial "partials/clients"
+  %section
+    .c-section
+      = partial "partials/screen-design"
+      = partial "partials/clients"
 
   - if projects
-    - projects[0...2].each do |project|
-      .c-section
-        = partial "partials/project-summary", locals: { project: project.data, path: project.path }
+    %section#projects
+      - projects[0...2].each do |project|
+        .c-section
+          = partial "partials/project-summary", locals: { project: project.data, path: project.path }
 
   .c-section
     = partial "partials/help"
 
-  .c-section
+  #services.c-section
     = partial "partials/services"
 
   .c-section
     = partial "partials/twitter"
 
-  - if posts
-    .c-section
-      = partial "partials/related-articles"
+- if posts
+  .c-section
+    = partial "partials/related-articles"
 
   .c-section
     = partial "partials/location"

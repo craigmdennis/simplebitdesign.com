@@ -1,6 +1,6 @@
 ---
 title: Projects
-intro: Our projects vary widly and some we're not even aloud to talk about. We're proud of all of our work but here are a few that we're aloud to talk about.
+intro: Our projects vary by industry and scope. We're proud of all of our work but here are a few that we're aloud to talk about.
 ---
 
 - content_for :header do
@@ -8,7 +8,7 @@ intro: Our projects vary widly and some we're not even aloud to talk about. We'r
 
 .l-constrained
   - blog("projects").articles[0...10].each do |project|
-    .c-section.l-light
+    .c-section.l-light.l-bordered---MQmobile
       = partial "partials/project-summary", locals: { project: project.data, path: project.path }
 
   -# .c-section

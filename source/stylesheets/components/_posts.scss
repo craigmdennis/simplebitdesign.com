@@ -1,4 +1,6 @@
 .c-post {
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
   @include media( $desktop ) {
     padding-top: $base-spacing;
 
@@ -23,10 +25,13 @@
 
 .c-post__title {
   @include height( 24px );
-  margin-bottom: $small-spacing;
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
 
   @include media( $tablet ) {
     @include height( 32px );
+    margin-top: $large-spacing;
+    margin-bottom: $large-spacing;
   }
 
   font-weight: normal;
@@ -34,29 +39,19 @@
 }
 
 .c-post__button {
-  margin-top: $large-spacing;
-}
-
-.c-post__title--extra {
-  @include rwd( $tablet ) {
-    padding-bottom: $base-spacing;
-    padding-top: $base-spacing;
+  margin-bottom: $base-spacing;
+  //margin-top: $base-spacing;
+  @include media( $tablet ) {
+    margin-bottom: $large-spacing;
+    //margin-top: $large-spacing;
   }
 }
 
 .c-post__mainimage {
   display: block;
-  //margin: 0 auto;
-  margin-left: $base-spacing;
-  margin-right: $base-spacing;
 
   @include media( $tablet ) {
     margin-top: $base-spacing;
-  }
-
-  @include media( $desktop ) {
-    //padding-left: $large-spacing;
-    //padding-right: $large-spacing;
   }
 
   img {

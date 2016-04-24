@@ -77,13 +77,17 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
 }
 
 .c-form__row--first {
-  border-top-left-radius: $base-radius;
-  border-top-right-radius: $base-radius;
+  @include media( $tablet ) {
+    border-top-left-radius: $base-radius;
+    border-top-right-radius: $base-radius;
+  }
 }
 
 .c-form__row--last {
-  border-bottom-left-radius: $base-radius;
-  border-bottom-right-radius: $base-radius;
+  @include media( $tablet ) {
+    border-bottom-left-radius: $base-radius;
+    border-bottom-right-radius: $base-radius;
+  }
 }
 
 // Modifiers

@@ -9,32 +9,30 @@ navigation:
   - anchor: Projects
     href: "/projects/"
   - anchor: Services
-    href: "/services/"
+    href: "#services"
   - anchor: Posts
     href: "/posts/"
   - anchor: Sketches
     href: "/sketches/"
   - anchor: Contact
-    href: "//dev.simplebitdesign.com/#contact"
+    href: "#contact"
 
 services:
   - title: User Interface Design
-    summary: The user interface is the window through which the world experiences your website, application, or system. A powerful user interface bridges the distance between the human brain and the digital product.
-    slug: /interface-design/
+    summary: UI design is our main area of expertise. We pride ourselves on keeping stakeholders and **users involved throughout a project**, working **iteratively** to give multiple opportunities for feedback. Our skills with **SaaS and data driven applications** allows us to create **intuitive interfaces** that will meet your needs and **provide an effortless experience** for your users.
+
+    slug: /ui-design/
     anchor: How we approach UI design
 
-  - title: Information Architecture
-    summary: IA focuses on organising, structuring, and labeling content in a predictable way that your audience will understand; helping people find information and complete tasks as effectively as possible.
-    slug: /information-architecture/
-    anchor: More about IA
-
   - title: Front End Development
-    summary: Speed is a feature. But also, now, an expectation. Our code follows best-practice techniques for performance across multiple device sizes. Our modular approach to development allows the code to scale with your product.
+    summary: We produce **fluid design systems that fit any device** without constraining your content. Using **modular CSS** and living style guides means that **your product can scale** quickly with your brand. Keeping **accessibility at the forefront**, we’ll work with development teams to make sure your deliverables are multi-browser compatible, with **performance as a feature**, not just an afterthought.
+
     slug: /front-end-development/
     anchor: See our coding standards
 
   - title: User Experience Design
-    summary: User experience design (UXD, UED or XD) is the process of enhancing user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.
+    summary: The user experience of a website or application can be an enjoyable or a frustrating one. We’re here to **make it simple**. By **testing** our concepts throughout the design process, we ensure users are able to **find what they’re looking for quickly** and without hassle, creating a **great experience** for your audience.
+
     slug: /ux-design/
     anchor: More about UX design
 

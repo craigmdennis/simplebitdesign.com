@@ -12,11 +12,11 @@
       margin-top: $small-spacing/2;
     }
 
-    &--first {
+    &.c-section--first {
       border-radius: $base-radius $base-radius 0 0;
     }
 
-    &--last {
+    &.c-section--last {
       border-radius: 0 0 $base-radius $base-radius;
     }
   }
@@ -48,7 +48,7 @@
     }
 
     @include media( $upto-tablet ) {
-      width: 130%;
+      width: 150%;
       transform: translate(-15%, -50%);
     }
   }

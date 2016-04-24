@@ -1,15 +1,15 @@
 - modifier = modifier || nil
 
 %nav
-  -# %button#navigationbutton.o-navigation.c-button.c-button--seamless.c-button--next.is-closed{type: "button", data: {toggle: "navigation"}}
-  -#   .h-accessible Menu
-  -#   = ui_svg "menu", 28
-
   .l-split---MQtablet
-    = link_to "/", class: "o-logo #{(current_page.url == '/' ? nil : 'o-logo--light')}",  data: { consolidate: "home" } do
-      = sprite "simplebitdesign"
+    .l-split
+      = link_to "/", class: "o-logo #{(current_page.url == '/' ? nil : 'o-logo--light')}",  data: { consolidate: "home" } do
+        = sprite "simplebitdesign"
+
+      = partial "partials/menu-icon"
 
     %ul#navigation.c-navigation{class: modifier}
       - data.site.navigation.each_with_index do |nav, index|
         %li{class: "c-navigation__#{nav.anchor.downcase}" }
+
           = link_to nav.anchor, nav.href, class: "c-navigation__text", data: { consolidate: nav.anchor.downcase }

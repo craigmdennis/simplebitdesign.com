@@ -1,18 +1,13 @@
-%section#services
-  .l-light
-    .l-middle---MQdesktop
-      %header
-        %h1.o-hub-text Services
+- data.site.services.each_with_index do |service, index|
+  %div{class: (index.even? ? "l-light" : "l-subtle")}
+    %section.c-panel
+      .c-panel__body
+        .l-grid---MQdesktop
+          .l-grid__span--8---MQdesktop
+            %h1.c-panel__title.c-panel__title--giant= service.title
+            .c-copy.c-copy--emphasised.c-copy--large
+              :markdown
+                #{service.summary}
 
-    .l-grid.l-grid--lines.l-grid---MQdesktop
-      - data.site.services.each_with_index do |service, index|
-
-        .l-grid__span--6---MQdesktop
-          .c-panel.c-panel--has-buttons
-            .c-panel__body
-              %h2.c-panel__title= service.title
-              .c-copy.c-copy--emphasised
-                %p= service.summary
-            .c-panel__buttons
-              = link_to service.anchor, service.slug, class: "c-button c-button--primary c-button--block---MQupto-tablet"
-              -# = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"
+        -# = link_to service.anchor, service.slug, class: "c-button c-button--primary c-button--block---MQupto-tablet"
+        -# = link_to "Articles", "#", class: "c-button c-button--secondary c-button--block---MQupto-tablet"

@@ -36,6 +36,7 @@
       },
       "sass": {
         "indentedSyntax": false,
+        "precision": 8,
         "includePaths": []
       },
       "extensions": ["sass", "scss", "css"]
@@ -45,7 +46,7 @@
       "src": "./",
       "dest": "./",
       "htmlmin": {},
-      "extensions": ["html", "erb", "haml", "md", "yml"],
+      "extensions": ["html", "erb", "haml", "md", "yaml", "yml"],
       "excludeFolders": ["assets", "data"]
     },
 

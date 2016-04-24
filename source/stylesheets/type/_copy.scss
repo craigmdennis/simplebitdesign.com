@@ -4,6 +4,19 @@
   width: 100%;
   font-size: 112.5%;
 
+  &.c-copy--large,
+  .c-copy__intro {
+    @include media( $tablet ) {
+      font-size: 125%;
+    }
+  }
+
+  &.c-copy--emphasised,
+  em,
+  i {
+    font-style: italic;
+  }
+
   h1,h2,h3,h4,h5,h6 {
     padding-top: $base-spacing;
     margin-top: 0;
@@ -24,16 +37,6 @@
     }
   }
 
-  .c-copy__intro {
-    @include media( $tablet ) {
-      font-size: 125%;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   .c-copy__right {
     @include media( $tablet ) {
       float: right;
@@ -46,19 +49,6 @@
       float: left;
       margin-right: $base-spacing;
     }
-  }
-
-
-  &--emphasised,
-  em,
-  i {
-    font-style: italic;
-  }
-
-  &__leading {
-    max-width: em(640px);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   strong,
