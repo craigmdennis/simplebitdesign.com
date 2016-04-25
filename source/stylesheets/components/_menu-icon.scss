@@ -1,20 +1,21 @@
-$tcon-size: 2.5rem !default;
-$tcon-transition: $base-duration-slow !default;
-$tcon-jstransform: 'tcon-transform' !default;
+$tcon-size: 2rem;
+$tcon-transition: $base-duration-slow;
+$tcon-jstransform: 'tcon-transform';
 
-$tcon-menu-radius: ($tcon-size / 14) !default;
-$tcon-menu-color: white !default;
+$tcon-menu-radius: ($tcon-size / 14);
+$tcon-menu-color: white;
+$tcon-menu-color-light: $color-pickledblue;
 $tcon-menu-arrowleft-transformation: (
   transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 90deg)
-) !default;
+);
 $tcon-menu-arrow360left-transformation: (
   transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)
-) !default;
+);
 
 @include media( max-width #{$tablet} ) {
   .tcon {
-    @include height( 20px );
-    padding-right: $base-spacing;
+    @include height( 18px );
+    padding: 0 $base-spacing 0 0;
     appearance: none;
     border: none;
     cursor: pointer;
@@ -32,6 +33,10 @@ $tcon-menu-arrow360left-transformation: (
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
 
+    &.tcon--light {
+      color: $tcon-menu-color-light;
+    }
+
     > * {
       display: block;
     }
@@ -40,6 +45,7 @@ $tcon-menu-arrow360left-transformation: (
     &:focus {
       outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
     }
+
     &::-moz-focus-inner {
       border: 0;
     }
@@ -52,6 +58,10 @@ $tcon-menu-arrow360left-transformation: (
     border-radius: $tcon-menu-radius;
     transition: $tcon-transition;
     background: $tcon-menu-color;
+
+    .tcon--light & {
+      background-color: $tcon-menu-color-light;
+    }
   }
 
   .tcon-menu__lines {

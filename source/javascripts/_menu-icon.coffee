@@ -1,3 +1,3 @@
-transformicons = require 'vendor/transformicons'
+# transformicons = require 'vendor/transformicons'
 
-transformicons.add('.tcon')
+# transformicons.add('.tcon')

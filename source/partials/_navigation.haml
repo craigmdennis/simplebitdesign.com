@@ -1,15 +1,16 @@
 - modifier = modifier || nil
+- logo_mod = (current_page.url == '/' ? nil : 'o-logo--light')
 
 %nav
   .l-split---MQtablet
     .l-split
-      = link_to "/", class: "o-logo #{(current_page.url == '/' ? nil : 'o-logo--light')}",  data: { consolidate: "home" } do
+      = link_to "/", class: "o-logo #{logo_mod}",  data: { consolidate: "home" } do
         = sprite "simplebitdesign"
 
       = partial "partials/menu-icon"
 
     %ul#navigation.c-navigation{class: modifier}
       - data.site.navigation.each_with_index do |nav, index|
-        %li{class: "c-navigation__#{nav.anchor.downcase}" }
+        %li{class: "c-navigation__#{nav.anchor.downcase}", "data-toggle" => "navigation" }
 
           = link_to nav.anchor, nav.href, class: "c-navigation__text", data: { consolidate: nav.anchor.downcase }
