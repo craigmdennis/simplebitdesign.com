@@ -1,11 +1,11 @@
 - data.site.services.each_with_index do |service, index|
-  %div{class: (index.even? ? "l-light" : "l-subtle")}
+  .l-fullheight{class: (index.even? ? "l-light" : "l-subtle")}
     %section.c-panel
       .c-panel__body
         .l-grid---MQdesktop
           .l-grid__span--8---MQdesktop
-            %h1.c-panel__title.c-panel__title--giant= service.title
-            .c-copy.c-copy--emphasised.c-copy--large
+            %h1.c-panel__title.c-panel__title--giant.will-animate.fadeInUp= service.title
+            .c-copy.c-copy--emphasised.c-copy--large.will-animate.fadeInUp
               :markdown
                 #{service.summary}
 

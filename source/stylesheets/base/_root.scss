@@ -22,20 +22,3 @@ html {
     font-size: 137.5%;
   }
 }
-
-body {
-  @include media( $phablet ) {
-    padding-left: $small-spacing/2;
-    padding-right: $small-spacing/2;
-  }
-
-  @include media( $tablet ) {
-    padding-left: $small-spacing;
-    padding-right: $small-spacing;
-  }
-
-  @include media( $desktop ) {
-    padding-left: $base-spacing;
-    padding-right: $base-spacing;
-  }
-}

@@ -22,6 +22,7 @@
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
   },
   "devDependencies": {
+    "animate.css": "^3.5.1",
     "animsition": "^4.0.1",
     "babel-core": "6.7.2",
     "babel-loader": "6.2.4",
@@ -65,6 +66,7 @@
     "gulp-util": "3.0.7",
     "gulp-watch": "4.3.5",
     "imagesloaded": "^4.1.0",
+    "imports-loader": "^0.6.5",
     "jquery": "^2.2.2",
     "jquery-lazyload": "^1.9.7",
     "karma": "0.13.22",
@@ -96,7 +98,8 @@
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.5.1",
     "webpack-hot-middleware": "2.10.0",
-    "what-input": "^2.0.1"
+    "what-input": "^2.0.1",
+    "wow": "git://github.com/matthieua/WOW.git#amd"
   },
   "license": "MIT"
 }

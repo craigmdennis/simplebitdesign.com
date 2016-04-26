@@ -5,6 +5,7 @@
 @import '../../node_modules/sass-height/sass-height';
 @import '../../node_modules/rwdcss/rwd';
 @import '../../node_modules/animsition/dist/css/animsition.css';
+@import '../../node_modules/animate.css/animate.css';
 
 @import 'vars';
 
@@ -43,6 +44,7 @@
 @import 'components/callouts';
 @import 'components/menu-icon';
 @import 'components/tweet';
+@import 'components/animations';
 
 @import 'objects/icons';
 @import 'objects/logo';

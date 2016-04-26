@@ -45,6 +45,8 @@ $nav-underline-height: 0.2em;
   }
 
   @include media($tablet) {
+    @include height(20px, 40px);
+    font-weight: 500;
     padding-left: $base-spacing;
     padding-right: $base-spacing;
   }

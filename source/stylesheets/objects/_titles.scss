@@ -7,14 +7,18 @@
     @include height( 56px );
   }
 
+  @include media( $desktop ) {
+    @include height( 72px );
+  }
+
   transition: opacity $base-duration-fast $base-timing;
 }
 
-.o-title--offset {
-  @include rwd( tablet, false ) {
-    margin-top: $large-spacing + $small-spacing;
-  }
-}
+// .o-title--offset {
+//   @include rwd( tablet, false ) {
+//     margin-top: $large-spacing + $small-spacing;
+//   }
+// }
 
 .o-subtitle {
   @include height( 21px );

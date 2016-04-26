@@ -6,40 +6,41 @@
   flex-flow: column;
 
   @include media( $phablet ) {
-    border-radius: $base-radius;
+    // border-radius: $base-radius;
 
     &:not(.c-section--adjacent) {
-      margin-top: $small-spacing/2;
+      // margin-top: $small-spacing/2;
     }
 
     &.c-section--first {
-      border-radius: $base-radius $base-radius 0 0;
+      // border-radius: $base-radius $base-radius 0 0;
     }
 
     &.c-section--last {
-      border-radius: 0 0 $base-radius $base-radius;
+      // border-radius: 0 0 $base-radius $base-radius;
     }
   }
 
   @include media( $tablet ) {
     &:not(.c-section--adjacent) {
-      margin-top: $small-spacing;
+      // margin-top: $small-spacing;
     }
   }
 
   @include media( $desktop ) {
     &:not(.c-section--adjacent) {
-      margin-top: $base-spacing;
+      // margin-top: $base-spacing;
     }
   }
 
   &__overlay {
-    @include position(absolute, 50% 0 0 0);
+    @include position(absolute, 0 0 null 0);
     border-bottom-left-radius: $base-radius;
     border-bottom-right-radius: $base-radius;
     opacity: 0.075;
+    width: 100%;
     height: 100%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     overflow: hidden;
 
     .mixblendmode & {
@@ -47,9 +48,13 @@
       opacity: 0.15;
     }
 
+    + div {
+      position: relative;
+    }
+
     @include media( $upto-tablet ) {
-      width: 175%;
-      transform: translate(-37.5%, -50%);
+      // width: 175%;
+      // transform: translate(-37.5%, -50%);
     }
   }
 }

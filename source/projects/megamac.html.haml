@@ -5,41 +5,41 @@ category: UI / UX Design
 date: 18/03/2016 22:57
 ---
 
-.l-grid---MQdesktop.l-grid--gutter---MQdesktop
+.l-grid---MQdesktop.l-grid--lines.l-module
   .l-grid__span--6---MQdesktop
-    .l-light.c-section.l-bordered---MQmobile
+    .l-light.c-section.l-bordered
       .c-panel
         .c-panel__body
           %h3.c-panel__title Test &amp; Iterate
           .c-copy.c-copy--adjacent
             %p Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae.
-        .c-section__header.l-subtle
-          .c-media
-            .c-media__figure
-              = ui_svg "coffee", 56
-            .c-media__body
-              .c-copy.c-copy--emphasised.c-copy--adjacent
-                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat mollitia.
+        -# .c-section__header.l-subtle
+        -#   .c-media
+        -#     .c-media__figure
+        -#       = ui_svg "coffee", 56
+        -#     .c-media__body
+        -#       .c-copy.c-copy--emphasised.c-copy--adjacent
+        -#         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat mollitia.
 
 
 
   .l-grid__span--6---MQdesktop
-    .l-light.c-section.l-bordered---MQmobile
+    .l-light.c-section.l-bordered
       .c-panel
         .c-panel__body
           %h3.c-panel__title Development to Production
           .c-copy.c-copy--adjacent.copy--downsize
             %p Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at.
-        .c-section__header.l-subtle
-          .c-media
-            .c-media__figure
-              = ui_svg "coffee", 56
-            .c-media__body
-              .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
-                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque.
+        -# .c-section__header.l-subtle
+        -#   .c-media
+        -#     .c-media__figure
+        -#       = ui_svg "coffee", 56
+        -#     .c-media__body
+        -#       .c-copy.c-copy--emphasised.c-copy--adjacent.copy--downsize
+        -#         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque.
 
 
-.l-grid---MQdesktop.l-grid--gutter---MQdesktop
+.l-grid---MQdesktop.l-grid--gutter---MQdesktop.l-module
   .l-grid__span--4---MQdesktop
     .l-light.c-section.l-bordered---MQmobile
       = image_tag "#{gulp_image_path('projects/megamac/1.png')}", srcset: "#{gulp_image_path('projects/megamac/1@2x.png')} 2x", alt: "Mobile view of Megamac site", class: "l-max"

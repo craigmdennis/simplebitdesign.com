@@ -1,13 +1,13 @@
 %section#clients
-  .l-light
-    .l-grid---MQdesktop.l-grid--lines
+  .l-light.l-fullheight
+    .l-grid---MQdesktop.l-grid--lines.l-grid--equal
       .l-grid__span--6---MQdesktop
         .c-panel.c-panel--upsize
           .c-panel__body
             %h1.c-panel__title.c-panel__title--giant.h-color-primary= data.clients.title
             .c-copy.c-copy--emphasised
               = data.clients.copy
-                
+
       .l-grid__span--6---MQdesktop
         .l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines.l-grid--equal
           - data.clients.logos.each_with_index do |logo, index|

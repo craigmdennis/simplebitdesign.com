@@ -11,6 +11,13 @@
     }
   }
 
+  &.c-copy--large,
+  .c-copy__intro {
+    @include media( $desktop ) {
+      font-size: 150%;
+    }
+  }
+
   &.c-copy--emphasised,
   em,
   i {

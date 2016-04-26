@@ -17,6 +17,10 @@ $grid-line: $grid-line-width solid $color-athensgray;
   flex-flow: column;
 }
 
+.l-grid--equal {
+  flex: 1;
+}
+
 .l-grid--baseline {
   > * {
     display: flex;
@@ -75,8 +79,8 @@ $grid-line: $grid-line-width solid $color-athensgray;
 }
 
 .l-grid--gutter---MQtablet {
-  margin-left: -$gutter/8;
-  margin-right: -$gutter/8;
+  margin-left: $gutter/8;
+  margin-right: $gutter/8;
 
   > * {
     padding-left: $gutter/8;
@@ -85,8 +89,8 @@ $grid-line: $grid-line-width solid $color-athensgray;
 }
 
 .l-grid--gutter---MQdesktop {
-  margin-left: -$gutter/4;
-  margin-right: -$gutter/4;
+  margin-left: $gutter/4;
+  margin-right: $gutter/4;
 
   > * {
     padding-left: $gutter/4;

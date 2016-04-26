@@ -1,20 +1,18 @@
 - content_for :header do
   .l-highlight
     .c-section__overlay
-      .o-embed.o-embed--16x9
-        %video{role: "presentation", autoplay: true, loop: true, poster: gulp_image_path("bg.jpg")}
+      .o-embed.o-embed--fill
+        %video#bgvideo{role: "presentation", autoplay: false, loop: true, poster: gulp_image_path("bg.jpg")}
           %source{src: "video/bg.mp4", type: "video/mp4"}
 
-    .c-panel.c-panel--center
-      .l-blackhole
-        .l-leading.l-center
-          .h-align-center
-            %h1.o-title.o-title--offset---MQtablet
-              We help brands make
-              %span{data: { typed: data.home.phrases }} beautiful
-              products
+    .l-fullheight---MQtablet.l-vcenter
+      .l-leading.l-center.h-align-center
+        %h1#tagline.o-title.o-title--offset---MQtablet.will-animate.fadeInUp
+          We help brands make
+          %span{data: { typed: data.home.phrases }} beautiful
+          products
 
-          -# %p.o-subtitle= data.home.phrases.sample
+        -# %p.o-subtitle= data.home.phrases.sample
 
 .l-constrained
   %section
