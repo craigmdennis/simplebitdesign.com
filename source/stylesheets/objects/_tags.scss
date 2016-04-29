@@ -8,6 +8,10 @@
   letter-spacing: 2pt;
   display: inline-block;
   border-radius: $base-radius;
+
+  &:not(:last-child) {
+    margin-right: $small-spacing;
+  }
 }
 
 .o-time {

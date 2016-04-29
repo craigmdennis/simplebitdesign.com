@@ -7,6 +7,7 @@ config =
   "domId": domId
   "maxTweets": 1
   "enableLinks": true
+  "showImages": false
   "showPermalinks": false
   "showUser": false
   "showTime": false

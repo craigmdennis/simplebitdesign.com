@@ -1,39 +1,36 @@
 - title = "We are accepting new projects for Q3 2016" unless title
 
 %section#contact
-  .l-dark.l-module
-    .l-grid.l-grid---MQtablet
-      .l-grid__span--6---MQtablet
-        .c-panel
-          .c-panel__body
-            %h3.c-panel__title= title
-            .c-copy.c-copy--emphasised{class: ( defined?(twitter) ? nil : "c-copy--adjacent" )}
-              %p We love working with with <b>passionate teams</b> to build amazing products. Get in touch with a little information about what you're working on and we'll get back to you as soon as we can.
+  .l-grid.l-grid---MQtablet.l-module
+    .l-grid__span--6---MQtablet.l-dark
+      .c-panel
+        .c-panel__body
+          %h3.c-panel__title= title
+          .c-copy.c-copy--emphasised{class: ( defined?(twitter) ? nil : "c-copy--adjacent" )}
+            %p We love working with with <b>passionate teams</b> to build amazing products. Get in touch with a little information about what you're working on and we'll get back to you as soon as we can.
 
-            - if defined?(twitter)
-              - content_for :scripts do
-                :javascript
-                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          - if defined?(twitter)
+            - content_for :scripts do
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-              = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
+            = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
-      .l-grid__span--6---MQtablet
-        .c-panel
-          .c-panel__body---MQtablet
-            %form#formspree.c-form.c-form--inset{action: "//formspree.io/info@simplebitdesign.com", method: "POST"}
-              %input{type: "text", name:"_gotcha", style:  "display:none"}
-              .c-form__row.c-form__row--first
-                %label.h-accessible{for: "message"} Your message
-                %textarea#message.c-form__control{name: "message", rows: 5, required: true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
-              .c-form__row.c-form__row--inline
-                %label.c-form__label{for: "name"} Name:
-                %input#name.c-form__control{type: "text", name: "name", placeholder: "John Smith", required: true, data: { focus: ".c-form__row" }}
-              .c-form__row.c-form__row--inline
-                %label.c-form__label{for: "email"} Email:
-                %input#email.c-form__control{type: "email", name: "email", placeholder: "j.smith@gmail.com", required: true, data: { focus: ".c-form__row" }}
-              .c-form__row.c-form__row--inline.c-form__row--last
-                %label.c-form__label{for: "budget"} Budget:
-                %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0, data: { focus: ".c-form__row" }}
+    .l-grid__span--6---MQtablet.l-light.l-bordered
+      %form#formspree.c-form.c-form--inset{action: "https://formsubmit.io/send/3ca79782-22bb-4e80-8ae9-6db755459d5b", method: "POST"}
+        %input{type: "text", name:"_gotcha", style:  "display:none"}
+        .c-form__row.c-form__row--fill
+          %label.h-accessible{for: "message"} Your message
+          %textarea#message.c-form__control{name: "message", rows: 8, required: true, "aria-required" => true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
+        .c-form__row.c-form__row--inline
+          %label.c-form__label{for: "name"} Name:
+          %input#name.c-form__control{type: "text", name: "name", placeholder: "John Smith", required: true,  "aria-required" => true, data: { focus: ".c-form__row" }}
+        .c-form__row.c-form__row--inline
+          %label.c-form__label{for: "email"} Email:
+          %input#email.c-form__control{type: "email", name: "email", placeholder: "j.smith@gmail.com", required: true,  "aria-required" => true, data: { focus: ".c-form__row" }}
+        .c-form__row.c-form__row--inline
+          %label.c-form__label{for: "budget"} Budget:
+          %input#budget.c-form__control{type: "number", name: "budget", placeholder: "Optional", min: 0, step: 1000, data: { focus: ".c-form__row" }}
 
-              .c-form__submit.l-light
-                %button.c-button.c-button--primary{type: "submit"} Send
+        .c-form__submit
+          %button.c-button.c-button--primary{type: "submit"} Send

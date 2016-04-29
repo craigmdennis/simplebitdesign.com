@@ -6,5 +6,8 @@
     -#   %p= partial "partials/time", locals: { data: article }
     - if defined?(article.summary)
       .c-copy.c-copy--emphasised
-        %p= article.summary
+        - if article.data.summary
+          %p= article.summary
+        - else
+          %p= article.data.tldr
     = link_to "Continue reading", article.url, class: "c-button c-button--primary"

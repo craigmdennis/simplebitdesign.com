@@ -4,5 +4,3 @@ animations = new WOW
   boxClass: 'will-animate'
 
 animations.init()
-
-module.exports = animations

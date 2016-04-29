@@ -1,24 +1,24 @@
 %section#clients
-  .l-light.l-fullheight
+  .l-light
     .l-grid---MQdesktop.l-grid--lines.l-grid--equal
       .l-grid__span--6---MQdesktop
         .c-panel.c-panel--upsize
           .c-panel__body
             %h1.c-panel__title.c-panel__title--giant.h-color-primary= data.clients.title
-            .c-copy.c-copy--emphasised
+            .c-copy.c-copy--emphasised.c-copy--adjacent
               = data.clients.copy
 
       .l-grid__span--6---MQdesktop
-        .l-grid---MQupto-desktop.l-grid---MQdesktop.l-grid--lines.l-grid--equal
+        .l-grid.l-grid--lines.l-grid--equal
           - data.clients.logos.each_with_index do |logo, index|
             - image = image_tag "#{gulp_image_path(logo.src + '.png')}", srcset: "#{gulp_image_path(logo.src + '@2x.png')} 2x", alt: logo.alt, class: "l-center"
 
             - if logo.href
-              = link_to logo.href, class: "l-grid__span--3---MQupto-desktop l-grid__span--6---MQdesktop" do
-                .l-vcenter
+              = link_to logo.href, class: "l-grid__span--6" do
+                .l-vcenter.will-animate.fadeIn{"data-wow-offset" => 200}
                   = image
 
             - else
-              .l-grid__span--3---MQupto-desktop.l-grid__span--6---MQdesktop
-                .l-vcenter
+              .l-grid__span--6
+                .l-vcenter.will-animate.fadeIn{"data-wow-offset" => 200}
                   = image

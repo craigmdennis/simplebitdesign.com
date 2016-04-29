@@ -1,5 +1,5 @@
 $nav-color: $color-pickledblue;
-$nav-border: 1px solid $nav-color;
+$nav-border: $color-athensgray;
 $nav-color-light: white;
 $nav-underline-height: 0.2em;
 
@@ -10,6 +10,7 @@ $nav-underline-height: 0.2em;
 
   @include media( max-width #{$tablet} ) {
     display: none;
+    margin-bottom: 0;
 
     &.is-open {
       display: block;
@@ -26,7 +27,7 @@ $nav-underline-height: 0.2em;
 
 .c-navigation__text {
   @include media( max-width #{$tablet} ) {
-    border-top: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid $nav-border;
   }
   font-size: 5vh;
   text-align: center;
@@ -56,10 +57,10 @@ $nav-underline-height: 0.2em;
       @include position(absolute, null $small-spacing (-$base-spacing) $small-spacing);
       background-color: $base-accent;
       content: '';
+      height: $nav-underline-height;
       display: block;
-      height: 0;
-      opacity: 0;
-      transition: height $base-duration-slow $base-timing, opacity $base-duration-slow $base-timing;
+      transform: translateY(100%);
+      transition: transform $base-duration-fast $base-timing;
     }
   }
 
@@ -71,8 +72,7 @@ $nav-underline-height: 0.2em;
 
     &:after {
       @include media( $tablet ) {
-        height: $nav-underline-height;
-        opacity: 1;
+        transform: translateY(0%);
       }
     }
   }

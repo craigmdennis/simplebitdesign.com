@@ -22,6 +22,15 @@
     -# Application Stylesheet
     = stylesheet_link_tag gulp_css_path("app.css")
 
+    -# Test for mix-blend-mode
+    -# This is in the head to prevent FOUC
+    :javascript
+      if('CSS' in window && 'supports' in window.CSS) {
+        var support = window.CSS.supports('mix-blend-mode','multiply');
+          support = support?'mixblendmode':'no-mixblendmode';
+          document.documentElement.className+=' '+support;
+      }
+
     -if content_for? :head
       = yield_content :head
 
@@ -32,18 +41,17 @@
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
     %header
-      .l-constrained
-        - if content_for? :header
-          .c-section
-            %div{class: (current_page.url == "/" ? "l-highlight" : "l-light")}
-              .c-section__header---MQtablet{class: (current_page.url == "/" ? "c-section__header--bordered---MQtablet l-top---MQtablet" : "")}
-                = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : "") }
-            = yield_content :header
-        - else
-          .c-section.c-section--first
-            .l-light
-              .c-section__header---MQtablet
-                = partial "partials/navigation"
+      - if content_for? :header
+        .c-section
+          %div{class: (current_page.url == "/" ? "l-top---MQupto-tablet" : "l-light")}
+            .c-section__header---MQtablet{class: (current_page.url == "/" ? "c-section__header--bordered---MQtablet l-top---MQtablet" : "")}
+              = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : "") }
+          = yield_content :header
+      - else
+        .c-section.c-section--first
+          .l-light
+            .c-section__header---MQtablet
+              = partial "partials/navigation"
 
 
     #content{role: "main", tabindex:-1}
@@ -58,14 +66,6 @@
     -# If Google fails to deliver jQuery, load our local copy
     :javascript
       window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')
-
-    -# Test for mix-blend-mode
-    :javascript
-      if('CSS' in window && 'supports' in window.CSS) {
-        var support = window.CSS.supports('mix-blend-mode','multiply');
-            support = support?'mixblendmode':'no-mixblendmode';
-            $('html').addClass(support);
-      }
 
 
     -# Load all the other scripts

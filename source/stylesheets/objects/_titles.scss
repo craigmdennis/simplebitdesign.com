@@ -8,21 +8,20 @@
   }
 
   @include media( $desktop ) {
-    @include height( 72px );
+    @include height( 64px );
+    margin-bottom: $base-spacing;
   }
-
-  transition: opacity $base-duration-fast $base-timing;
 }
 
-// .o-title--offset {
-//   @include rwd( tablet, false ) {
-//     margin-top: $large-spacing + $small-spacing;
-//   }
-// }
+.o-title--offset {
+  @include rwd( tablet, false ) {
+    margin-top: -$large-spacing - $base-spacing;
+  }
+}
 
 .o-subtitle {
   @include height( 21px );
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 0;
 
   @include media( $tablet ) {

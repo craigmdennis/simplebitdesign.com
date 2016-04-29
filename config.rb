@@ -31,7 +31,7 @@ activate :blog do |blog|
   blog.default_extension = ".md"
   blog.calendar_template = "calendar.html"
   blog.generate_day_pages = false
-  blog.summary_length = 100
+  blog.summary_length = 250
 end
 
 # Projects

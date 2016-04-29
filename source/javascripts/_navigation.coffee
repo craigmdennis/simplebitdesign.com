@@ -1,4 +1,4 @@
-transformicon = require 'vendor/transformicons'
+transformicon = require 'vendor/_transformicons'
 
 $toggle = $('[data-toggle="navigation"]')
 $nav = $('#navigation')

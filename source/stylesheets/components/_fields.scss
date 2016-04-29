@@ -13,11 +13,19 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
   padding-right: $small-spacing;
 }
 
-.c-form {}
+.c-form {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column;
+}
 
 .c-form__row {
   margin-bottom: $small-spacing;
   position: relative;
+}
+
+.c-form__row.c-form__row--fill {
+  flex: 1;
 }
 
 .c-form__row.is-focussed {
@@ -76,48 +84,7 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
   }
 }
 
-.c-form__row--first {
-  @include media( $tablet ) {
-    border-top-left-radius: $base-radius;
-    border-top-right-radius: $base-radius;
-  }
-}
-
-.c-form__row--last {
-  @include media( $tablet ) {
-    border-bottom-left-radius: $base-radius;
-    border-bottom-right-radius: $base-radius;
-  }
-}
-
 // Modifiers
-.c-form--edge {
-  .c-form__row {
-    margin-top: -$small-spacing;
-  }
-
-  .c-form__label {
-    @include height( 15px );
-    padding-top: $small-spacing;
-
-    @include media( $mobile ) {
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
-    }
-  }
-
-  .c-form__control {
-    @include height( 17px, $base-button-height );
-    border-width: 0 0 1px 0;
-    margin-top: -$small-spacing;
-
-    @include media( $tablet ) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-}
-
 .c-form--inset {
   @include media( $tablet ) {
     border-radius: $form-control-radius;
@@ -126,7 +93,7 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
   .c-form__row {
     margin-bottom: 0;
     background-color: white;
-    padding: $small-spacing/2;
+    padding: $small-spacing;
 
     .c-form__control,
     .c-form__label {
@@ -152,9 +119,7 @@ $form-control-height: $form-matched-height - ( $form-control-border-width*2 );
   z-index: map-get( $z, cheese );
 
   @include media( $tablet ) {
+    @include position(absolute, null $small-spacing $small-spacing null)
     padding: 0;
-    margin-top: -$large-spacing;
-    margin-right: $small-spacing/2;
-    float: right;
   }
 }

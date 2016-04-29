@@ -2,7 +2,9 @@
   .l-light
     .l-grid.l-grid--lines.l-grid---MQdesktop
 
-      - blog("posts").articles[0...2].each do |article|
-        - if current_page != article
+      - count = 0
+      - posts.each do |article|
+        - if current_page != article && count < 2
+          - count++
           .l-grid__span--6---MQdesktop
             = partial "partials/post-summary", locals: {article: article}

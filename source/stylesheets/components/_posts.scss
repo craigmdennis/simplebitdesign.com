@@ -1,6 +1,7 @@
 .c-post {
   padding-left: $base-spacing;
   padding-right: $base-spacing;
+
   @include media( $desktop ) {
     padding-top: $base-spacing;
 
@@ -20,7 +21,8 @@
 }
 
 .c-post__header {
-  margin-bottom: $large-spacing;
+  margin-top: $large-spacing;
+  margin-bottom: $base-spacing;
 }
 
 .c-post__title {
@@ -49,15 +51,28 @@
 
 .c-post__mainimage {
   display: block;
-
-  @include media( $tablet ) {
-    margin-top: $base-spacing;
-  }
+  position: relative;
 
   img {
-    border: 1px solid rgba(0,0,0,0.1);
-    border-width: 1px 1px 0 1px;
-    border-top-right-radius: $base-radius*1.5;
-    border-top-left-radius: $base-radius*1.5;
+    transition: transform $base-duration-slow $base-timing;
+    transform: translateY(2%);
+
+    &:hover {
+      transform: translateY(0);
+    }
   }
+
+  img:nth-child(2) {
+    position: absolute;
+    top: 15%;
+    right: -5%;
+    width: 35%;
+  }
+}
+
+.o-highlight-image {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-width: 1px 1px 0 1px;
+  border-top-right-radius: $base-radius*1.5;
+  border-top-left-radius: $base-radius*1.5;
 }

@@ -4,9 +4,8 @@ $notice-success-bg: #2ecc71;
 .c-notice {
   @include height( 18px );
   display: block;
-  background: #ccc;
+  background-color: #f5f5f5;
   padding: $base-spacing;
-  border-radius: 3px;
   margin-bottom: $base-spacing;
   font-weight: 700;
 
@@ -23,4 +22,18 @@ $notice-success-bg: #2ecc71;
 .c-notice--success {
   background-color: $notice-success-bg;
   color: white;
+}
+
+.c-notice.c-notice--fill {
+  display: flex;
+  flex: 1 0 auto;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-notice.c-notice--large {
+  @include media( $tablet ) {
+    @include height( 24px );
+  }
 }

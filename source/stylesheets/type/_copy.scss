@@ -4,17 +4,24 @@
   width: 100%;
   font-size: 112.5%;
 
-  &.c-copy--large,
-  .c-copy__intro {
-    @include media( $tablet ) {
-      font-size: 125%;
-    }
+  @include media( $tablet ) {
+    font-size: 125%;
   }
 
   &.c-copy--large,
   .c-copy__intro {
     @include media( $desktop ) {
       font-size: 150%;
+      margin-bottom: $base-spacing;
+    }
+  }
+
+  .o-embed {
+    margin-bottom: $base-spacing;
+
+    @include media( $tablet ) {
+      margin-top: $large-spacing;
+      margin-bottom: $large-spacing;
     }
   }
 
@@ -27,6 +34,7 @@
   h1,h2,h3,h4,h5,h6 {
     padding-top: $base-spacing;
     margin-top: 0;
+    clear: both;
   }
 
   h1,

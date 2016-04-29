@@ -29,6 +29,7 @@ $button-twitter-border: #1b95e0;
   font-weight: 600;
   position: relative;
   width: 100%;
+  min-width: 7.5rem;
 
   &:not(:last-child):not(.c-button--seamless) {
     margin-right: $small-spacing;
@@ -95,25 +96,33 @@ $button-twitter-border: #1b95e0;
 
   // Sizes
   &--giant {
-    @include height( 24px, 72px );
-    padding-left: $base-spacing;
-    padding-right: $base-spacing;
-    font-weight: 700;
+    @include rwd( tablet ) {
+      @include height( 24px, 60px );
+      padding-left: $base-spacing;
+      padding-right: $base-spacing;
+      font-weight: 700;
+    }
   }
 
   &--block {
-    @include rwd( upto-tablet ) {
-      width: 100%;
-      display: block;
+    width: 100%;
+    display: block;
 
-      &:not(:last-child) {
-        margin-bottom: $small-spacing;
-      }
+    &:not(:last-child) {
+      margin-bottom: $small-spacing;
     }
   }
 
   &--next {
     float: right;
+  }
+}
+
+.c-button + .c-button {
+  margin-top: $base-spacing;
+
+  @include media( $tablet ) {
+    margin-top: 0;
   }
 }
 

@@ -24,7 +24,7 @@
       "extensions": ["js", "coffee", "json"],
       "babel": {
         "presets": ["es2015", "stage-1"],
-        "plugins": []
+        "plugins": ["transform-runtime"]
       },
       "extractSharedJs": false
     },
@@ -47,7 +47,7 @@
       "dest": "./",
       "htmlmin": {},
       "extensions": ["html", "erb", "haml", "md", "yaml", "yml"],
-      "excludeFolders": ["assets", "data"]
+      "excludeFolders": ["assets"]
     },
 
     "images": {

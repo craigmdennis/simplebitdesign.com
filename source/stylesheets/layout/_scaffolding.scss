@@ -41,10 +41,9 @@
 }
 
 .l-inner {
-  padding: $base-spacing;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .l-fill {
@@ -68,8 +67,6 @@
 }
 
 .l-leading {
-  //padding: $base-spacing;
-
   @include media( $tablet ) {
     max-width: em(768px);
   }
@@ -77,14 +74,18 @@
 
 .l-bordered {
   @include rwd( mobile ) {
-    border-top: 1px solid $color-athensgray;
+    border-top: 1px solid rgba(0,0,0,0.075);
+
+    &.l-light {
+      border-top: 1px solid $color-athensgray;
+    }
   }
 }
 
 .l-top {
-  @include rwd( tablet ) {
-    @include position(absolute, 0 0 null 0);
-    z-index: map-get($z, bottom_bun);
+  @include rwd( upto-tablet tablet, false ) {
+    @include position( absolute, 0 0 null 0);
+    z-index: map-get($z, top_bun);
   }
 }
 
@@ -97,7 +98,6 @@
 
   @include media($tablet) {
     columns: 3;
-    padding: 0;
   }
 
   @include media($tablet) {
@@ -118,8 +118,19 @@
     position: relative;
     display: flex;
   }
+
+  // TODO:
+  // Only if height is less than 800px
+  // Account for large screen
 }
 
 .l-module {
   margin-bottom: $base-spacing;
+}
+
+.c-copy--columns {
+  @include media( $tablet ) {
+    columns: 2;
+    column-gap: $small-spacing;
+  }
 }

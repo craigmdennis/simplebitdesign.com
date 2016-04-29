@@ -2,7 +2,7 @@ $grid-line-width: 1px;
 $grid-line: $grid-line-width solid $color-athensgray;
 
 .l-grid {
-  @include rwd( tablet desktop, false ) {
+  @include rwd( tablet desktop hd ) {
     @include row;
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +15,7 @@ $grid-line: $grid-line-width solid $color-athensgray;
   flex-shrink: 1;
   display: flex;
   flex-flow: column;
+  align-items: flex-start;
 }
 
 .l-grid--equal {
@@ -24,7 +25,7 @@ $grid-line: $grid-line-width solid $color-athensgray;
 .l-grid--baseline {
   > * {
     display: flex;
-    align-items: flex-end;
+    align-items: space-between;
     justify-content: flex-end;
   }
 }
@@ -37,13 +38,13 @@ $grid-line: $grid-line-width solid $color-athensgray;
 }
 
 .l-grid__span--6 {
-  @include rwd( tablet desktop ) {
+  @include rwd( tablet desktop hd ) {
     width: 50%;
   }
 }
 
 .l-grid__span--4 {
-  @include rwd( tablet desktop ) {
+  @include rwd( tablet desktop hd ) {
     width: 33.33333333%;
   }
 }
@@ -62,7 +63,7 @@ $grid-line: $grid-line-width solid $color-athensgray;
   }
 
   > .l-grid__span--6 {
-    @include rwd( desktop, false ) {
+    @include rwd( desktop hd ) {
       &:not(:nth-child(2n)) {
         border-right: $grid-line;
       }
@@ -70,7 +71,7 @@ $grid-line: $grid-line-width solid $color-athensgray;
   }
 
   > .l-grid__span--3 {
-    @include rwd( upto-desktop, false ) {
+    @include rwd( upto-desktop ) {
       &:not(:nth-child(4n)) {
         border-right: $grid-line;
       }
@@ -78,22 +79,23 @@ $grid-line: $grid-line-width solid $color-athensgray;
   }
 }
 
-.l-grid--gutter---MQtablet {
-  margin-left: $gutter/8;
-  margin-right: $gutter/8;
 
-  > * {
-    padding-left: $gutter/8;
-    padding-right: $gutter/8;
-  }
-}
-
-.l-grid--gutter---MQdesktop {
-  margin-left: $gutter/4;
-  margin-right: $gutter/4;
+.l-grid--gutter {
+  margin-left: -$gutter/4;
+  margin-right: -$gutter/4;
 
   > * {
     padding-left: $gutter/4;
     padding-right: $gutter/4;
+  }
+}
+
+.l-grid--gutter2x {
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+
+  > * {
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
   }
 }

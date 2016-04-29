@@ -1,3 +1,6 @@
 .tweet {
   @include height(24px, auto, 12);
+  @include media( $tablet ) {
+    @include height(40px, auto, 12);
+  }
 }

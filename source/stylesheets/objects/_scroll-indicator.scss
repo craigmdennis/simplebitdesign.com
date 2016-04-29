@@ -1,0 +1,19 @@
+.o-scroll-indicator {
+  font-size: 3rem;
+}
+
+.o-scroll-indicator--bottom {
+  @include position(absolute, null null $large-spacing 50%);
+  transform: translateX(-50%);
+  transition: opacity $base-duration-slow $base-timing;
+}
+
+[data-whatinput="mouse"] {
+  .o-scroll-indicator--bottom {
+    opacity: 0;
+  }
+
+  header:hover .o-scroll-indicator--bottom {
+    opacity: 1;
+  }
+}

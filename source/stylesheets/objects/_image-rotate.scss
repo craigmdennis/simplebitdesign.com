@@ -1,0 +1,21 @@
+.o-image-rotate {
+  display: block;
+
+  @include media( $tablet ) {
+    width: 40%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  > img {
+    transform: rotate(15deg);
+    width: auto;
+    max-width: none;
+    margin-left: 25%;
+    margin-top: 0%;
+    height: 135%;
+  }
+}

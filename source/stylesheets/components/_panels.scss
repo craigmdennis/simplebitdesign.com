@@ -19,14 +19,17 @@
   margin-bottom: $small-spacing;
 
   @include media( $tablet ) {
-    @include height( 32px );
+    @include height( 40px );
     margin-bottom: $base-spacing;
   }
 
 
   &.c-panel__title--giant {
-    @include rwd( tablet ) {
-      @include height( 48px );
+    @include height( 32px );
+    margin-bottom: $base-spacing;
+
+    @include media( $tablet ) {
+      @include height( 56px );
     }
   }
 
@@ -72,12 +75,16 @@
 }
 
 .c-panel--center {
-  justify-content: center;
-
   > .c-panel__body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     text-align: center;
   }
+}
+
+.c-panel--adjacent {
+  // @include rwd( mobile ) {
+  .c-panel__body {
+    padding-bottom: 0;
+  }
+  // }
 }

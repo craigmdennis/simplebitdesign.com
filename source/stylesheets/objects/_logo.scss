@@ -20,14 +20,16 @@
   &.is-hovered {
     text-decoration: none;
     opacity: 1;
+    color: $base-accent;
   }
 }
 
 .o-logo--light {
-  opacity: 1;
+  color: white;
+
   &:hover,
   &:focus,
   &.is-hovered {
-    color: $base-accent;
+    color: white;
   }
 }

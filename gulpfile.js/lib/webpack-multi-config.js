@@ -45,9 +45,10 @@ module.exports = function(env) {
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          exclude: /node_modules/,
+          exclude: /(node_modules|bower_components)/,
           query: config.tasks.js.babel
         },
+        { test: /\.js$/, loader: "imports-loader" },
         { test: /\.coffee$/, loader: "coffee-loader" },
         { test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate" }
       ]
