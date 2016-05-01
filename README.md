@@ -1,2 +1,3 @@
-# Simple Bit
-## We make intuitive interfaces
+# Simple Bit Design
+
+`bin/setup`

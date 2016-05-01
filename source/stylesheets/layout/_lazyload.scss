@@ -1,0 +1,17 @@
+//.js [data-toggle="lazyload"] img {
+//  opacity: 0;
+//  transition: opacity $base-duration-slow $base-timing;
+//}
+//
+//.js [data-toggle="lazyload"] .is-loaded {
+//  opacity: 1;
+//}
+
+.js [data-toggle="lazyload"] {
+  opacity: 0;
+  transition: opacity $base-duration-slow $base-timing;
+}
+
+.js [data-toggle="lazyload"].is-loaded {
+  opacity: 1;
+}

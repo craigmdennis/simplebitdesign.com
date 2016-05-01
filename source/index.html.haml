@@ -1,0 +1,50 @@
+---
+title: We help brands make beautiful products
+subtitle: UI and UX Design Specialists
+---
+
+- content_for :header do
+  .l-highlight
+    .c-section__overlay
+      .o-embed.o-embed--fill
+        %video#bgvideo{role: "presentation", autoplay: true, loop: true, poster: gulp_image_path("bg.jpg")}
+          %source{src: "video/bg.mp4", type: "video/mp4"}
+
+    .l-fullheight.l-vcenter
+      .l-leading.l-center.h-align-center.l-inner
+        %h1#tagline.o-title.o-title--offset---MQtablet.will-animate.fadeIn= current_page.title
+        %h2.o-subtitle.will-animate.fadeIn{"data-wow-delay" => "1s"}= current_page.subtititle
+        -# %span#typed{data: { phrases: data.home.phrases }} beautiful
+        = link_to "#content", id: "scrollindicator", class: "o-scroll-indicator o-scroll-indicator--bottom h-inherit", "data-scrollto" => true do
+          .will-animate.fadeInDown{"data-wow-delay" => "3s", "data-wow-duration" => "2s"}
+            = sprite "arrow-down"
+
+%section
+  .c-section
+    = partial "partials/screen-design"
+    = partial "partials/clients"
+
+- if projects
+  %section#projects
+    - projects[0...1].each_with_index do |project, index|
+      .c-section
+        = partial "partials/project-summary", locals: { project: project.data, path: project.path }
+
+.c-section
+  = partial "partials/help"
+
+#services.c-section
+  = partial "partials/services"
+
+.c-section
+  = partial "partials/twitter"
+
+-# - if posts
+-#   .c-section
+-#     = partial "partials/related-articles"
+
+.c-section
+  = partial "partials/location"
+
+.c-section
+  = partial "partials/contact"

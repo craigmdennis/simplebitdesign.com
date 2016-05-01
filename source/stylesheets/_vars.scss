@@ -1,0 +1,70 @@
+// Colors
+$color-pickledblue: #34495E;
+$color-carminepink: #E74C3C;
+$color-athensgray: #ECEEF1;
+$color-whisper: #F5F7FA;
+
+// Social
+$color-twitter: #55acee;
+
+$base-accent: #d04a5a;
+$base-background-color: $color-athensgray;
+
+// Animations
+$base-duration-fast: 100ms;
+$base-duration-slow: 300ms;
+$base-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Layout
+$container: em(1279px);
+$grid-columns: 12;
+$gutter: 3rem;
+
+$base-radius: 3px;
+$base-spacing: $gutter/2;
+$small-spacing: $base-spacing/2;
+$large-spacing: $base-spacing*2;
+
+$base-button-height: 40px;
+$base-button-border-width: 1px;
+
+// Typography
+// http://www.fonts.com/web-fonts/projects
+$base-serif: "Lora", "Georgia", serif;
+$base-sans: "Avenir Next W00", "Lato", sans-serif;
+$base-font-size: 1em;
+
+// Layering
+$z: (
+  ground: -3000,
+  basement: -2000,
+  floor: -1000,
+  table: 0,
+  bottom_bun: 1000,
+  condiment: 2000,
+  cheese: 3000,
+  meat: 4000,
+  top_bun: 5000
+);
+
+// Breakpoints
+$breakpoints: (
+  mobile: max-width em(479px),
+  phablet: em(480px),
+  upto-tablet: max-width em(787px),
+  tablet: em(768px),
+  upto-desktop: max-width em(1023px),
+  desktop: em(1024px),
+  hd: em(1200px)
+);
+
+$mobile: map-get( $breakpoints, mobile);
+$phablet: map-get( $breakpoints, phablet);
+$upto-tablet: map-get( $breakpoints, upto-tablet);
+$tablet: map-get( $breakpoints, tablet);
+$upto-desktop: map-get( $breakpoints, upto-desktop);
+$desktop: map-get( $breakpoints, desktop);
+$hd: map-get( $breakpoints, hd);
+
+// Paths
+$base-font-path: "../"

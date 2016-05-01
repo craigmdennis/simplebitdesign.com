@@ -1,0 +1,31 @@
+- data.site.services.each_with_index do |service, index|
+
+  - thisID = service.title.downcase.gsub " ", "-"
+  - nextID = nil
+
+  - data.site.services.each_with_index do |service, newIndex|
+    - if index+1 == newIndex
+      - nextID = service.title.downcase.gsub " ", "-"
+
+  %div{class: (index.even? ? "l-light" : "l-subtle")}
+    %section.c-panel{id: thisID}
+      - if defined?(service.image)
+        %figure.o-image-rotate.will-animate.fadeInRight{"data-wow-offset" => 200, "data-wow-delay" => "0.5s"}
+          - image_path = service.image.gsub(".png", "@2x.png")
+          = image_tag gulp_image_path( service.image ), srcset: "#{gulp_image_path( image_path )} 2x"
+      .c-panel__body
+        .l-grid---MQdesktop
+          .l-grid__span--8---MQdesktop
+            %h1.c-panel__title.c-panel__title--giant.will-animate.fadeInUp= service.title
+            .c-copy.c-copy--emphasised.c-copy--large.c-copy--adjacent---MQmobile.will-animate.fadeInUp
+              :markdown
+                #{service.summary}
+
+            - if nextID
+              = link_to "##{nextID}", class: "o-scroll-indicator will-animate fadeInDown", "data-wow-delay" => "1s", "data-scrollto" => true do
+                = sprite "arrow-down"
+            - else
+              = link_to "Get in touch", "#contact", class: "c-button c-button--primary will-animate fadeInDown", "data-wow-delay" => "1s", "data-scrollto" => true
+
+            -# .c-panel_buttons.will-animate.fadeIn{"data-wow-delay" => "1s"}
+            -#   = link_to "Get in touch", "#contact", class: "c-button c-button--primary"

@@ -1,0 +1,18 @@
+video: /video/bg.mp4
+poster: images/bg.png
+
+# phrases:
+#   - A great product needs to be functional, usable and beautiful
+#   # - Simplicity is the ultimate sophistication
+#   # - Helvetica is not the answer to everything
+
+phrases:
+  - beautiful
+  - usable
+  - functional
+  - accessible
+  - simple
+  - amazing
+  - interesting
+  - fun
+  - leading

@@ -1,0 +1,23 @@
+.o-tag {
+  @include height(16px, 32px);
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+  background-color: $base-accent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  display: inline-block;
+  border-radius: $base-radius;
+
+  &:not(:last-child) {
+    margin-right: $small-spacing;
+  }
+}
+
+.o-time {
+  @include height(14px);
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}

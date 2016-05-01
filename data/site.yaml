@@ -1,0 +1,46 @@
+name: Simple Bit Design
+title: UI and UX Design Kent
+description: We help brands make beautiful products
+url:
+  development: "http://localhost:3000"
+  staging: "http://dev.simplebitdesign.com"
+  production: "http://simplebitdesign.com"
+
+cdn: d4lhp1muuvgao.cloudfront.net
+
+navigation:
+  - anchor: Home
+    href: /
+  - anchor: Projects
+    href: "/projects/"
+  - anchor: Services
+    href: "#services"
+  # - anchor: Posts
+  #   href: "/posts/"
+  # - anchor: Sketches
+  #   href: "/sketches/"
+  - anchor: Contact
+    href: "#contact"
+    in_page: true
+
+services:
+  - title: User Interface Design
+    summary: UI design is our main area of expertise. We pride ourselves on keeping stakeholders and **users involved throughout a project**, working **iteratively** to give multiple opportunities for feedback. Our skills with **SaaS and data driven applications** allows us to create **intuitive interfaces** that will meet your needs and **provide an effortless experience** for your users.
+    slug: /ui-design/
+    anchor: How we approach UI design
+    image: photoshop.png
+
+  - title: Front End Development
+    summary: We produce **fluid design systems that fit any device** without constraining your content. Using **modular CSS** and living style guides means that **your product can scale** quickly with your brand. Keeping **accessibility at the forefront**, we’ll work with development teams to make sure your deliverables are multi-browser compatible, with **performance as a feature**, not just an afterthought.
+    slug: /front-end-development/
+    anchor: See our coding standards
+    image: sublime.png
+
+  - title: User Experience Design
+    summary: The user experience of a website or application can be an enjoyable or a frustrating one. We’re here to **make it simple**. By **testing** our concepts throughout the design process, we ensure users are able to **find what they’re looking for quickly** and without hassle, creating a **great experience** for your audience.
+    slug: /ux-design/
+    anchor: More about UX design
+    image: sketchbook.png
+
+footer:
+  cookie: We use delicious cookies to improve your experience. By using this site we assume you're ok with that.

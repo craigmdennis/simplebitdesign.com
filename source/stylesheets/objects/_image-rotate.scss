@@ -1,0 +1,43 @@
+.o-image-rotate {
+  display: none;
+
+  @include media( $tablet ) {
+    display: block;
+    width: 40%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    > img {
+      transform: rotate(15deg);
+      width: auto;
+      max-width: none;
+      margin-left: 25%;
+      margin-top: -5%;
+      height: 140%;
+    }
+  }
+}
+
+.o-image-offset {
+  display: block;
+  height: 100%;
+
+  @include media( $tablet ) {
+    // width: 60%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    > img {
+      width: auto;
+      max-width: none;
+      margin-left: 25%;
+      margin-top: 5%;
+      height: 95%;
+    }
+  }
+}

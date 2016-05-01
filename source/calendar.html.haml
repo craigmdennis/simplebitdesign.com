@@ -1,0 +1,37 @@
+---
+intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+pageable: true
+---
+
+.l-constrained
+  .c-section
+    %section
+      .c-section__header
+        %h1.o-title
+          Posts from
+          - case page_type
+            - when 'day'
+              = Date.new(year, month, day).strftime('%b %e %Y')
+            - when 'month'
+              = Date.new(year, month, 1).strftime('%B %Y')
+            - when 'year'
+              = year
+
+        .l-grid---MQdesktop
+          .l-grid__span--8---MQdesktop
+            .c-copy
+              %p= current_page.data.intro
+
+      .c-panel
+        .c-panel__body
+          %ul.c-list
+            - page_articles.each_with_index do |article, i|
+              %li
+                = partial "partials/time", locals: { data: article }
+                %h3.o-subtitle= link_to article.title, article
+
+  .c-section
+    = partial "partials/screen-design"
+
+  .c-section
+    = partial "partials/contact"

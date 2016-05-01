@@ -1,0 +1,57 @@
+$media-title-color: $base-accent;
+
+/*
+Media Object
+
+Markup:
+<div class="c-media {$modifiers}">
+  <h3 class="c-media__title">Media Title</h3>
+  <div class="c-media__image">
+    <a href="http://">
+      <img src="http://placehold.it/128" alt="Placeholder avatar">
+    </a>
+  </div>
+  <div class="c-media__body">
+    <p>Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
+
+*/
+
+.c-media {
+  display: inline-flex;
+  align-items: flex-start;
+  font-weight: inherit;
+
+  &--center {
+    align-items: center;
+  }
+  
+  &__figure {
+    margin-right: $base-spacing;
+  }
+
+  &__body {
+    font-size: inherit;
+    flex: 1;
+    overflow: hidden;
+
+    &:last-child {
+      @include media( $tablet ) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include height( 18px );
+    color: $media-title-color;
+    font-weight: 700;
+    margin-bottom: $small-spacing;
+  }
+}
+
+.c-media--reverse > .c-media__figure {
+  order: 1;
+  margin: 0 0 0 $base-spacing;
+}

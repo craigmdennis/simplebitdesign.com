@@ -1,0 +1,165 @@
+.c-copy {
+  font-family: $base-serif;
+  font-weight: 400;
+  width: 100%;
+  font-size: 112.5%;
+
+  @include media( $tablet ) {
+    font-size: 125%;
+  }
+
+  &.c-copy--large,
+  .c-copy__intro {
+    @include media( $desktop ) {
+      font-size: 150%;
+      margin-bottom: $base-spacing;
+    }
+  }
+
+  .o-embed {
+    margin-bottom: $base-spacing;
+
+    @include media( $tablet ) {
+      margin-top: $large-spacing;
+      margin-bottom: $large-spacing;
+    }
+  }
+
+  &.c-copy--emphasised,
+  em,
+  i {
+    font-style: italic;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    padding-top: $base-spacing;
+    margin-top: 0;
+    clear: both;
+  }
+
+  h1,
+  h2 { @include height( 40px ); }
+  h3 { @include height( 32px ); }
+  h4 { @include height( 24px ); }
+  h5 { @include height( 21px ); }
+  h6 { @include height( 18px ); }
+
+  &.c-copy--adjacent {
+    @include rwd( mobile ) {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .c-copy__right {
+    @include media( $tablet ) {
+      float: right;
+      margin-left: $base-spacing;
+    }
+  }
+
+  .c-copy__left {
+    @include media( $tablet ) {
+      float: left;
+      margin-right: $base-spacing;
+    }
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  table,
+  dl,
+  iframe,
+  p {
+    margin-bottom: $base-spacing;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    padding-left: $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+
+  td {
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.15);
+  }
+
+  th {
+    border: 1px solid rgba(0,0,0,0.15);
+    background-color: #CCC;
+  }
+
+  p > a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    display: block;
+    margin-bottom: $base-spacing;
+  }
+
+  figcaption {
+    @include height( 12px );
+    display: block;
+    margin-top: $small-spacing;
+    text-align: right;
+    letter-spacing: 0.5pt;
+  }
+
+  blockquote {
+    padding: $base-spacing;
+    margin: 0 0 $base-spacing*2 0;
+    background-color: #f8f8f8;
+    border-left: 8px solid #eeeeee;
+
+    > p {
+      font-weight: 100;
+      font-style: italic;
+    }
+  }
+
+  cite {
+    display: block;
+    font-style: normal;
+    font-family: $base-sans;
+    font-weight: bold;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+
+    // &::before {
+    //   content: "—";
+    // }
+  }
+
+  ul, ol {
+    margin: $base-spacing 0;
+    padding-left: $base-spacing;
+    list-style: none;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+}

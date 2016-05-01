@@ -1,0 +1,140 @@
+$button-type-size: 18px;
+
+$button-primary-bg: $base-accent;
+$button-primary-color: white;
+$button-primary-border: $button-primary-bg;
+
+$button-secondary-bg: $color-athensgray;
+$button-secondary-color: $color-pickledblue;
+$button-secondary-border: $color-athensgray;
+
+$button-tertiary-bg: $color-pickledblue;
+$button-tertiary-color: white;
+$button-tertiary-border: $color-pickledblue;
+
+$button-twitter-bg: #1b95e0;
+$button-twitter-color: white;
+$button-twitter-border: #1b95e0;
+
+.c-button {
+  @include height( $button-type-size, $base-button-height );
+  font-family: $base-sans;
+  background-color: transparent;
+  display: block;
+  padding-right: $small-spacing;
+  padding-left: $small-spacing;
+  text-align: center;
+  border-radius: $base-radius;
+  border: $base-button-border-width solid transparent;
+  font-weight: 600;
+  position: relative;
+  width: 100%;
+  min-width: 7.5rem;
+
+  &:not(:last-child):not(.c-button--seamless) {
+    margin-right: $small-spacing;
+  }
+
+  @include media( $tablet ) {
+    display: inline-block;
+    width: initial;
+  }
+
+  &:hover,
+  &:focus  {
+    text-decoration: none;
+  }
+
+  // Colours
+  &--primary {
+    background-color: $button-primary-bg;
+    color: $button-primary-color;
+    border-color: $button-primary-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-primary-bg, 5%);
+      border-color: darken($button-primary-bg, 5%);
+    }
+  }
+
+  &--secondary {
+    background-color: $button-secondary-bg;
+    color: $button-secondary-color;
+    border-color: $button-secondary-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-secondary-bg, 5%);
+      border-color: darken($button-secondary-bg, 5%);
+    }
+  }
+
+  &--tertiary {
+    background-color: $button-tertiary-bg;
+    color: $button-tertiary-color;
+    border-color: $button-tertiary-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-tertiary-bg, 5%);
+      border-color: darken($button-tertiary-bg, 5%);
+    }
+  }
+
+  &--twitter {
+    background-color: $button-twitter-bg;
+    color: $button-twitter-color;
+    border-color: $button-twitter-border;
+
+    &:hover,
+    &:focus {
+      background-color: darken($button-twitter-bg, 5%);
+      border-color: darken($button-twitter-bg, 5%);
+    }
+  }
+
+  // Sizes
+  &--giant {
+    @include rwd( tablet ) {
+      @include height( 24px, 60px );
+      padding-left: $base-spacing;
+      padding-right: $base-spacing;
+      font-weight: 700;
+    }
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: $small-spacing;
+    }
+  }
+
+  &--next {
+    float: right;
+  }
+}
+
+.c-button + .c-button {
+  margin-top: $base-spacing;
+
+  @include media( $tablet ) {
+    margin-top: 0;
+  }
+}
+
+.c-button.has-icon {
+  padding-right: $base-spacing*2;
+
+  > .spinner {
+    right: $base-spacing;
+  }
+}
+
+.c-button[disabled] {
+  background-color: #ccc;
+  border-color: #ccc;
+}

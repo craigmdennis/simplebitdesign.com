@@ -1,0 +1,78 @@
+!!!
+%html.no-js{lang: "en"}
+
+  %head
+    %meta{charset: "utf-8"}
+
+    - if defined? current_page.data.title
+      %title= current_page.data.title + " &mdash; " + data.site.name
+    - else
+      %title= data.site.name + " &mdash; " + data.site.title
+
+    - if defined? current_page.data.description
+      %meta{name: "description", content: current_page.data.description}
+
+    %meta{"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %meta{name: "HandheldFriendly", content: "true"}
+    %meta{name: "format-detection", content: "telephone=no"}
+
+    = partial "partials/favicon"
+
+    -# Application Stylesheet
+    = stylesheet_link_tag gulp_css_path("app.css")
+
+    -# Test for mix-blend-mode
+    -# This is in the head to prevent FOUC
+    :javascript
+      if('CSS' in window && 'supports' in window.CSS) {
+        var support = window.CSS.supports('mix-blend-mode','multiply');
+          support = support?'mixblendmode':'no-mixblendmode';
+          document.documentElement.className+=' '+support;
+      }
+
+    -if content_for? :head
+      = yield_content :head
+
+    = partial 'partials/script_modernizr'
+
+  %body#top{class: page_classes}
+    -# .animsition
+    %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
+
+    %header
+      - if content_for? :header
+        .c-section
+          %div{class: (current_page.url == "/" ? "l-top---MQupto-tablet" : "l-light")}
+            .c-section__header---MQtablet{class: (current_page.url == "/" ? "c-section__header--bordered---MQtablet l-top---MQtablet" : "")}
+              = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : nil) }
+          = yield_content :header
+      - else
+        .c-section.c-section--first
+          .l-light
+            .c-section__header---MQtablet
+              = partial "partials/navigation"
+
+
+    #content{role: "main", tabindex:-1}
+      .l-constrained
+        = yield
+
+    = partial 'partials/footer'
+
+    -# Load jQuery from Google
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+
+    -# If Google fails to deliver jQuery, load our local copy
+    :javascript
+      window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')
+
+
+    -# Load all the other scripts
+    = javascript_include_tag gulp_js_path("app.js")
+
+    -# Google Tag Manager
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T3C5WS"height="0" width="0"style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T3C5WS');</script>
+
+    - if content_for? :scripts
+      = yield_content :scripts

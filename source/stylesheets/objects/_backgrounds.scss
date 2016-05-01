@@ -1,0 +1,20 @@
+.o-background-twitter {
+  @include position(absolute, null $small-spacing -0.5em null);
+  font-size: rem(400px);
+  transform: scaleX(-1) rotate(-25deg);
+  opacity: 0.125;
+}
+
+.o-background-logo {
+  @include position(absolute, -10rem -8rem null null);
+  font-size: rem(680px);
+  transform: rotate(25deg);
+  opacity: 0.05;
+}
+
+.o-background-video {
+  @include position(absolute, 0 null null 0);
+  width: 100%;
+  opacity: 0.1;
+  overflow: hidden
+}
