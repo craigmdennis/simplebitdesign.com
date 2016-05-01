@@ -3,8 +3,8 @@ title: Projects
 intro: Our projects vary by industry and scope. We're proud of all of our work but here are a few that we're aloud to talk about.
 ---
 
-- content_for :header do
-  = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
+-# - content_for :header do
+-#   = partial "partials/page-header", locals: { title: current_page.data.title, intro: current_page.data.intro}
 
 .l-constrained
   - blog("projects").articles[0...1].each do |project|

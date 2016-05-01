@@ -2,8 +2,4 @@
   @include height( 12px );
   font-weight: normal;
   padding: $base-spacing;
-
-  @include media($tablet) {
-    padding-top: 0;
-  }
 }

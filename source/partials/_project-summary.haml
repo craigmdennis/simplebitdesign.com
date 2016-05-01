@@ -19,9 +19,10 @@
         .c-post__button.h-align-center
           = link_to "Learn more about #{project.client}", path, class: "c-button c-button--tertiary"
 
-    - if current_page.path != path
-      = link_to path, class: "c-post__mainimage" do
-        = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center will-animate fadeInUp o-highlight-image", "data-wow-offset" => 200
-    - else
-      .c-post__mainimage
-        = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "l-center will-animate fadeInUp o-highlight-image", "data-wow-offset" => 200
+    .c-post__mainimage
+      - if current_page.path != path
+        = link_to path do
+          = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "will-animate fadeInUp o-highlight-image", "data-wow-offset" => 200
+      - else
+        .l-center
+          = image_tag "#{gulp_image_path(imagePath + '.png')}", srcset: "#{gulp_image_path(imagePath + '@2x.png')} 2x", alt: imageAlt, class: "will-animate fadeInUp o-highlight-image", "data-wow-offset" => 200

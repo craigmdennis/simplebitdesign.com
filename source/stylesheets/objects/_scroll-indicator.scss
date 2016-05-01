@@ -1,5 +1,10 @@
 .o-scroll-indicator {
-  font-size: 3rem;
+  display: none;
+
+  @include media( $tablet ) {
+    display: block;
+    font-size: 3rem;
+  }
 }
 
 .o-scroll-indicator--bottom {

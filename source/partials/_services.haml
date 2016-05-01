@@ -7,16 +7,17 @@
     - if index+1 == newIndex
       - nextID = service.title.downcase.gsub " ", "-"
 
-  .l-fullheight---MQtablet{class: (index.even? ? "l-light" : "l-subtle")}
+  %div{class: (index.even? ? "l-light" : "l-subtle")}
     %section.c-panel{id: thisID}
       - if defined?(service.image)
         %figure.o-image-rotate.will-animate.fadeInRight{"data-wow-offset" => 200, "data-wow-delay" => "0.5s"}
-          = image_tag gulp_image_path(service.image)
+          - image_path = service.image.gsub(".png", "@2x.png")
+          = image_tag gulp_image_path( service.image ), srcset: "#{gulp_image_path( image_path )} 2x"
       .c-panel__body
         .l-grid---MQdesktop
           .l-grid__span--8---MQdesktop
             %h1.c-panel__title.c-panel__title--giant.will-animate.fadeInUp= service.title
-            .c-copy.c-copy--emphasised.c-copy--large.will-animate.fadeInUp
+            .c-copy.c-copy--emphasised.c-copy--large.c-copy--adjacent---MQmobile.will-animate.fadeInUp
               :markdown
                 #{service.summary}
 

@@ -6,6 +6,17 @@
   flex-flow: column;
   width: 100%;
 
+  @include media( em(1280px) ) {
+    &.c-section--first {
+      border-top-right-radius: $base-radius;
+      border-top-left-radius: $base-radius;
+    }
+    &.c-section--last {
+      border-bottom-right-radius: $base-radius;
+      border-bottom-left-radius: $base-radius;
+    }
+  }
+
   &__overlay {
     @include position(absolute, 50% 0 0 0);
     border-bottom-left-radius: $base-radius;
@@ -30,6 +41,11 @@
   @include rwd( tablet ) {
     overflow: hidden;
     padding: $base-spacing;
+  }
+
+  @include media( max-width #{$tablet} ) {
+    position: relative;
+    z-index: map-get($z, top_bun);
   }
 }
 

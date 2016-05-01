@@ -1,5 +1,7 @@
 - modifier = modifier || nil
 - logo_mod = (current_page.url == "/" ? "o-logo--light" : nil)
+- env = (current_page.url == "/" ? "" : config[:environment])
+- root = data.site.url["#{env}"]
 
 %nav
   .l-constrained
@@ -14,4 +16,6 @@
         - data.site.navigation.each_with_index do |nav, index|
           %li{class: "c-navigation__#{nav.anchor.downcase}", "data-toggle" => "navigation" }
 
-            = link_to nav.anchor, nav.href, class: "c-navigation__text", data: { consolidate: nav.anchor.downcase }
+            - href = (nav.in_page ? nav.href : "#{root}#{nav.href}" )
+
+            = link_to nav.anchor, href, class: "c-navigation__text", data: { consolidate: nav.anchor.downcase }

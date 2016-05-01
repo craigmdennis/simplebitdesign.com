@@ -84,6 +84,11 @@ $grid-line: $grid-line-width solid $color-athensgray;
   margin-left: -$gutter/4;
   margin-right: -$gutter/4;
 
+  @include media( em(1280px) ) {
+    margin-left: -$gutter/2*1.5;
+    margin-right: -$gutter/2*1.5;
+  }
+
   > * {
     padding-left: $gutter/4;
     padding-right: $gutter/4;
@@ -93,6 +98,11 @@ $grid-line: $grid-line-width solid $color-athensgray;
 .l-grid--gutter2x {
   margin-left: -$gutter/2;
   margin-right: -$gutter/2;
+
+  @include media( em(1280px) ) {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
 
   > * {
     padding-left: $gutter/2;

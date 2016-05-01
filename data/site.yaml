@@ -1,7 +1,10 @@
 name: Simple Bit Design
 title: UI and UX Design Kent
 description: We help brands make beautiful products
-url: "http://simplebitdesign.com"
+url:
+  development: "http://localhost:3000"
+  staging: "http://dev.simplebitdesign.com"
+  production: "http://simplebitdesign.com"
 
 navigation:
   - anchor: Home
@@ -10,12 +13,13 @@ navigation:
     href: "/projects/"
   - anchor: Services
     href: "#services"
-  - anchor: Posts
-    href: "/posts/"
-  - anchor: Sketches
-    href: "/sketches/"
+  # - anchor: Posts
+  #   href: "/posts/"
+  # - anchor: Sketches
+  #   href: "/sketches/"
   - anchor: Contact
     href: "#contact"
+    in_page: true
 
 services:
   - title: User Interface Design

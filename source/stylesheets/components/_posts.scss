@@ -50,8 +50,8 @@
 }
 
 .c-post__mainimage {
-  display: block;
   position: relative;
+  text-align: center;
 
   img {
     transition: transform $base-duration-slow $base-timing;

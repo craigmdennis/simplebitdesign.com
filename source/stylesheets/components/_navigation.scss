@@ -13,22 +13,35 @@ $nav-underline-height: 0.2em;
     margin-bottom: 0;
 
     &.is-open {
-      display: block;
+      display: flex;
+      min-height: calc(100vh - 4.5rem);
+      flex-flow: column;
+      justify-content: space-between;
+      background-color: white;
     }
   }
-
 
   @include media( $tablet ) {
     display: flex;
     align-self: flex-end;
     margin: 0;
   }
+
+  > li {
+    @include media( max-width #{$tablet} ) {
+      border-top: 1px solid $nav-border;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
 }
 
 .c-navigation__text {
-  @include media( max-width #{$tablet} ) {
-    border-top: 1px solid $nav-border;
-  }
   font-size: 5vh;
   text-align: center;
   color: inherit;
@@ -37,12 +50,13 @@ $nav-underline-height: 0.2em;
   padding: $small-spacing;
   font-weight: 700;
 
-  @include media( $mobile ) {
-    width: 100%;
-    height: 100%;
+  @include media( max-width #{$tablet} ) {
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+    width: 100%;
   }
 
   @include media($tablet) {
@@ -85,6 +99,10 @@ $nav-underline-height: 0.2em;
     color: $nav-color-light;
     opacity: 0.9;
     transition: opacity $base-duration-fast $base-timing;
+
+    @include media( max-width #{$tablet} ) {
+      color: $base-accent;
+    }
 
     &:after {
       background-color: white;

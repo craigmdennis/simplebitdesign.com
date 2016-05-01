@@ -45,7 +45,7 @@
         .c-section
           %div{class: (current_page.url == "/" ? "l-top---MQupto-tablet" : "l-light")}
             .c-section__header---MQtablet{class: (current_page.url == "/" ? "c-section__header--bordered---MQtablet l-top---MQtablet" : "")}
-              = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : "") }
+              = partial "partials/navigation", locals: {modifier: (current_page.url == "/" ? "c-navigation--light" : nil) }
           = yield_content :header
       - else
         .c-section.c-section--first
