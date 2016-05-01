@@ -6,6 +6,8 @@ url:
   staging: "http://dev.simplebitdesign.com"
   production: "http://simplebitdesign.com"
 
+cdn: d4lhp1muuvgao.cloudfront.net
+
 navigation:
   - anchor: Home
     href: /

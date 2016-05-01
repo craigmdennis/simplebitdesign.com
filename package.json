@@ -1,15 +1,15 @@
 {
   "name": "middleman-gulp-starter",
-  "version": "1.1.0",
-  "description": "Middleman v4 + Gulp Starter",
+  "version": "2.0.0",
+  "description": "UI & UX Specialists",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
-  "homepage": "https://github.com/craigmdennis/middleman-gulp-starter",
+  "homepage": "http://simplebitdesign.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:craigmdennis/middleman-gulp-starter.git"
+    "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com"
   },
   "scripts": {
     "start": "gulp",
@@ -17,6 +17,7 @@
     "development": "gulp",
     "production": "gulp production",
     "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --delete --cache-control max-age=2592000",
+    "deploy": "cd public && aws s3 sync . s3://simplebitdesign.com",
     "test": "gulp production && karma start --single-run",
     "test:watch": "karma start",
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
@@ -27,10 +28,8 @@
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.4",
     "fastclick": "^1.0.6",
-    "fontfaceobserver": "^1.7.1",
     "imagesloaded": "^4.1.0",
     "jquery": "^2.2.2",
-    "jquery-lazyload": "^1.9.7",
     "jquery-scrollto": "^1.4.4",
     "picturefill": "^3.0.2",
     "rwdcss": "^3.0.0",
@@ -39,7 +38,6 @@
     "svg4everybody": "^2.0.3",
     "timeago": "^1.5.2",
     "twitter-fetcher": "^15.0.2",
-    "typed.js": "^1.1.1",
     "what-input": "^2.0.1",
     "wow": "git://github.com/matthieua/WOW.git#amd"
   },
