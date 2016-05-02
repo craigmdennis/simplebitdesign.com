@@ -17,7 +17,7 @@
     "development": "gulp",
     "production": "gulp production",
     "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --delete --cache-control max-age=2592000",
-    "deploy": "cd public && aws s3 sync . s3://simplebitdesign.com",
+    "deploy": "cd public && aws s3 sync . s3://simplebitdesign.com --delete",
     "test": "gulp production && karma start --single-run",
     "test:watch": "karma start",
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
