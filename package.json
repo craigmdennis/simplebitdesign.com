@@ -1,6 +1,6 @@
 {
   "name": "middleman-gulp-starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "UI & UX Specialists",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
