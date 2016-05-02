@@ -1,8 +1,3 @@
----
-title: We help brands make beautiful products
-subtitle: UI and UX Design Specialists
----
-
 - content_for :header do
   .l-highlight
     .c-section__overlay
@@ -12,8 +7,8 @@ subtitle: UI and UX Design Specialists
 
     .l-fullheight.l-vcenter
       .l-leading.l-center.h-align-center.l-inner
-        %h1#tagline.o-title.o-title--offset---MQtablet.will-animate.fadeIn= current_page.title
-        %h2.o-subtitle.will-animate.fadeIn{"data-wow-delay" => "1s"}= current_page.subtititle
+        %h1#tagline.o-title.o-title--offset---MQtablet.will-animate.fadeIn= data.site.description
+        %h2.o-subtitle.will-animate.fadeIn{"data-wow-delay" => "1s"}= data.site.title
         -# %span#typed{data: { phrases: data.home.phrases }} beautiful
         = link_to "#content", id: "scrollindicator", class: "o-scroll-indicator o-scroll-indicator--bottom h-inherit", "data-scrollto" => true do
           .will-animate.fadeInDown{"data-wow-delay" => "3s", "data-wow-duration" => "2s"}

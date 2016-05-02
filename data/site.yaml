@@ -1,6 +1,7 @@
 name: Simple Bit Design
-title: UI and UX Design Kent
+title: UI and UX Design Specialists
 description: We help brands make beautiful products
+image: d1sjwyeuctdrq0.cloudfront.net/_branding/facebook-og.jpg
 url:
   development: "http://localhost:3000"
   staging: "http://dev.simplebitdesign.com"

@@ -1,0 +1,13 @@
+- description = ( defined?(current_page.data.intro) ? current_page.data.intro : data.site.description)
+
+- image = ( defined?(current_page.data.image) ? current_page.data.image : data.site.image)
+
+- root = data.site.url["#{config[:environment]}"]
+
+%meta{:content => "#{root}#{current_page.url}", :property => "og:url"}
+%meta{:content => data.site.name, :property => "og:site_name"}
+%meta{:content => description, :property => "og:description"}
+%meta{:content => image, :property => "og:image"}
+
+- if defined? current_page.data.title
+  %meta{:content => current_page.data.title, :property => "og:title"}
