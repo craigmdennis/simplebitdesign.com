@@ -25,8 +25,9 @@ $grid-line: $grid-line-width solid $color-athensgray;
 .l-grid--baseline {
   > * {
     display: flex;
-    align-items: space-between;
+    flex-direction: column;
     justify-content: flex-end;
+    flex: 1;
   }
 }
 

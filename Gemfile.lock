@@ -119,7 +119,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (>= 4.0.0)
+  middleman (>= 4.1.0)
   middleman-blog (>= 4.0.0)
   middleman-minify-html
   redcarpet

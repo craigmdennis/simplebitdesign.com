@@ -7,7 +7,7 @@
     - if index+1 == newIndex
       - nextID = service.title.downcase.gsub " ", "-"
 
-  %div{class: (index.even? ? "l-light" : "l-subtle")}
+  .l-fullheight---MQtablet{class: (index.even? ? "l-light" : "l-subtle")}
     %section.c-panel{id: thisID}
       - if defined?(service.image)
         %figure.o-image-rotate.will-animate.fadeInRight{"data-wow-offset" => 200, "data-wow-delay" => "0.5s"}

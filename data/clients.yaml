@@ -3,7 +3,7 @@ copy: "<p><strong>Our work is seen by millions of people.</strong> We need to ma
 logos:
   - src: "clients/megamac"
     alt: "Megamac"
-    href: "/projects/megamac/"
+    # href: "/projects/megamac/"
   - src: "clients/smashing-mag"
     alt: "Smashing Magazine"
   - src: "clients/bond"

@@ -2,10 +2,24 @@
 %html.no-js{lang: "en"}
 
   %head
+    -# Test for mix-blend-mode
+    -# This is in the head to prevent FOUC
+    :javascript
+      if('CSS' in window && 'supports' in window.CSS) {
+        var support = window.CSS.supports('mix-blend-mode','multiply');
+          support = support?'mixblendmode':'no-mixblendmode';
+          document.documentElement.className+=' '+support;
+      }
+
+    -if content_for? :head
+      = yield_content :head
+
+    = partial 'partials/script_modernizr'
+
     %meta{charset: "utf-8"}
 
     - if defined? current_page.data.title
-      %title= current_page.data.title + " &mdash; " + data.site.name
+      %title= strip_tags(current_page.data.title) + " &mdash; " + data.site.name
     - else
       %title= data.site.name + " &mdash; " + data.site.title
 
@@ -23,20 +37,6 @@
 
     -# Application Stylesheet
     = stylesheet_link_tag gulp_css_path("app.css")
-
-    -# Test for mix-blend-mode
-    -# This is in the head to prevent FOUC
-    :javascript
-      if('CSS' in window && 'supports' in window.CSS) {
-        var support = window.CSS.supports('mix-blend-mode','multiply');
-          support = support?'mixblendmode':'no-mixblendmode';
-          document.documentElement.className+=' '+support;
-      }
-
-    -if content_for? :head
-      = yield_content :head
-
-    = partial 'partials/script_modernizr'
 
   %body#top{class: page_classes}
     -# .animsition

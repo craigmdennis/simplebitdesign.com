@@ -10,7 +10,8 @@
     top: 0;
     bottom: 0;
 
-    > img {
+    img {
+      display: block;
       transform: rotate(15deg);
       width: auto;
       max-width: none;
@@ -21,23 +22,24 @@
   }
 }
 
-.o-image-offset {
-  display: block;
-  height: 100%;
+// .o-image-offset {
+//   display: block;
+//   height: 100%;
 
-  @include media( $tablet ) {
-    // width: 60%;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+//   @include media( $tablet ) {
+//     // width: 60%;
+//     overflow: hidden;
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
 
-    > img {
-      width: auto;
-      max-width: none;
-      margin-left: 25%;
-      margin-top: 5%;
-      height: 95%;
-    }
-  }
-}
+//     img {
+//       display: block;
+//       width: auto;
+//       max-width: none;
+//       // margin-left: 25%;
+//       margin-top: 5%;
+//       height: 95%;
+//     }
+//   }
+// }

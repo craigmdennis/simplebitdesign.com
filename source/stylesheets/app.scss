@@ -4,12 +4,12 @@
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 @import '../../node_modules/sass-height/sass-height';
 @import '../../node_modules/rwdcss/rwdcss';
-// @import '../../node_modules/animsition/dist/css/animsition.css';
-@import '../../node_modules/animate.css/source/_base.css';
-@import '../../node_modules/animate.css/source/fading_entrances/fadeIn.css';
-@import '../../node_modules/animate.css/source/fading_entrances/fadeInDown.css';
-@import '../../node_modules/animate.css/source/fading_entrances/fadeInUp.css';
-@import '../../node_modules/animate.css/source/fading_entrances/fadeInRight.css';
+
+@import 'animate.css/source/_base.css';
+@import 'animate.css/source/fading_entrances/fadeIn.css';
+@import 'animate.css/source/fading_entrances/fadeInDown.css';
+@import 'animate.css/source/fading_entrances/fadeInUp.css';
+@import 'animate.css/source/fading_entrances/fadeInRight.css';
 
 @import 'vars';
 
