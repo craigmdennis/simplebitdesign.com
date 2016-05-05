@@ -1,7 +1,7 @@
 .o-image-rotate {
   display: none;
 
-  @include media( $tablet ) {
+  @include media( $desktop ) {
     display: block;
     width: 40%;
     overflow: hidden;

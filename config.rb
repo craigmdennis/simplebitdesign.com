@@ -1,13 +1,6 @@
 require 'lib/gulp'
 require 'lib/package'
-
-# Temporarily ignore files
-ignore "public/ux-design/*"
-ignore "public/ui-design/*"
-ignore "public/front-end-development/*"
-ignore "public/services/*"
-ignore "public/sketches/*"
-ignore "public/posts/*"
+# require 'lib/inliner'
 
 # Per-page layout changes with no layout
 page '/*.xml', layout: false
@@ -16,7 +9,6 @@ page '/*.txt', layout: false
 
 # Pretty URLs
 activate :directory_indexes
-# activate :automatic_image_sizes
 
 # Language Support
 set :haml, { :attr_wrapper => '"', :format => :html5 }

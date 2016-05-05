@@ -11,10 +11,10 @@
           document.documentElement.className+=' '+support;
       }
 
+    = partial 'partials/script_modernizr'
+
     -if content_for? :head
       = yield_content :head
-
-    = partial 'partials/script_modernizr'
 
     %meta{charset: "utf-8"}
 
@@ -35,7 +35,12 @@
     = partial "partials/meta_facebook"
     = partial "partials/meta_twitter"
 
-    -# Application Stylesheet
+    -# Inline Critical CSS
+    -# = stylesheet_inline_tag gulp_css_path("app.css")
+
+    -# Async the rest of the CSS
+    -# = stylesheet_link_tag gulp_css_path("app.css"), rel: "preload", as:"style", onload:"this.rel='stylesheet'"
+    -# %noscript
     = stylesheet_link_tag gulp_css_path("app.css")
 
   %body#top{class: page_classes}

@@ -53,12 +53,15 @@
   position: relative;
   text-align: center;
 
-  img {
-    transition: transform $base-duration-slow $base-timing;
-    transform: translateY(2%);
+  &:not(.c-post__mainimage--static) {
 
-    &:hover {
-      transform: translateY(0);
+    img {
+      transition: transform $base-duration-slow $base-timing;
+      transform: translateY(2%);
+
+      &:hover {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -73,6 +76,18 @@
 .o-highlight-image {
   border: 1px solid rgba(0,0,0,0.1);
   border-width: 1px 1px 0 1px;
+  background-clip: padding-box;
   border-top-right-radius: $base-radius*1.5;
   border-top-left-radius: $base-radius*1.5;
+}
+
+.o-highlight-image.o-highlight-image--full {
+  border-bottom-right-radius: $base-radius*1.5;
+  border-bottom-left-radius: $base-radius*1.5;
+  border-width: 1px;
+  overflow: hidden;
+}
+
+.o-raise-image {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }

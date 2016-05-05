@@ -54,7 +54,7 @@ $breakpoints: (
   tablet: em(768px),
   upto-desktop: max-width em(1023px),
   desktop: em(1024px),
-  hd: em(1200px)
+  hd: em(1280px)
 );
 
 $mobile: map-get( $breakpoints, mobile);

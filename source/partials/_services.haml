@@ -17,7 +17,7 @@
         .l-grid---MQdesktop
           .l-grid__span--8---MQdesktop
             %h1.c-panel__title.c-panel__title--giant.will-animate.fadeInUp= service.title
-            .c-copy.c-copy--emphasised.c-copy--large.c-copy--adjacent---MQmobile.will-animate.fadeInUp
+            .c-copy.c-copy--emphasised.c-copy--large.will-animate.fadeInUp{class: (index == data.site.services.size - 1 ? "c-copy--adjacent---MQmobile" : nil)}
               :markdown
                 #{service.summary}
 

@@ -22,13 +22,9 @@ $grid-line: $grid-line-width solid $color-athensgray;
   flex: 1;
 }
 
-.l-grid--baseline {
-  > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-  }
+.l-grid--baseline > [class*="l-grid__span"] {
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 
@@ -108,5 +104,10 @@ $grid-line: $grid-line-width solid $color-athensgray;
   > * {
     padding-left: $gutter/2;
     padding-right: $gutter/2;
+
+    @include media( em(1280px) ) {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
   }
 }

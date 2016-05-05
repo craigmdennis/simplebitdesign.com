@@ -10,7 +10,7 @@ date: 18/03/2016 22:57
     .l-leading.l-center
       %h1.c-post__title= current_page.title
 
-      .c-post__mainimage.will-animate.fadeIn
+      %figure.c-post__mainimage.will-animate.fadeIn
         = image_tag "#{gulp_image_path('projects/rail-modeller/main.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/main@2x.png')} 2x", alt: "Rail Modeller UI menu overview", class: "o-highlight-image"
 
         = image_tag "#{gulp_image_path('projects/rail-modeller/3.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/3@2x.png')} 2x", alt: "Exmaple of a Rail Modeller side panel UI", class: "o-highlight-image"
@@ -47,8 +47,8 @@ date: 18/03/2016 22:57
       .o-embed.o-embed--square
         .o-embed__content
           .l-subtle.c-section.c-section--inset.l-bordered---MQmobile
-            = link_to gulp_image_path('projects/rail-modeller/5@2x.png') do
-              = image_tag "#{gulp_image_path('projects/rail-modeller/5.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/5@2x.png')} 2x", alt: "Part of the Rail Modeller style-guide deliverable", class: "l-center l-max"
+            = link_to gulp_image_path('projects/rail-modeller/7@2x.png') do
+              = image_tag "#{gulp_image_path('projects/rail-modeller/7.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/7@2x.png')} 2x", alt: "Part of the Rail Modeller style-guide deliverable", class: "l-center l-max"
 
     .l-grid__span--4.l-module
       .o-embed.o-embed--square
@@ -58,13 +58,12 @@ date: 18/03/2016 22:57
               = image_tag "#{gulp_image_path('projects/rail-modeller/4.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/4@2x.png')} 2x", alt: "A laptop with a picture of the Rail Modeller app running", class: "l-center l-max"
 
 
-.l-inner.l-module
-  .c-section.c-section--first.c-section--last.l-bordered
-    .l-subtle.c-section.c-section--inset.l-bordered---MQmobile
-      = link_to gulp_image_path('projects/rail-modeller/6@2x.png') do
-        %picture
-          %source{media: "(max-width: 47.9375em)", srcset: "#{gulp_image_path('projects/rail-modeller/6-small.png')}"}
-          = image_tag "#{gulp_image_path('projects/rail-modeller/6.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/6@2x.png')} 2x", alt: "A complete view of the Rail Modeller interface", class: "l-center l-max"
+.l-module---MQhd
+  .c-section.c-section--first.c-section--last
+    = link_to gulp_image_path('projects/rail-modeller/6@2x.png') do
+      %picture
+        %source{media: "(max-width: 47.9375em)", srcset: "#{gulp_image_path('projects/rail-modeller/6-small.png')}"}
+        = image_tag "#{gulp_image_path('projects/rail-modeller/6.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/6@2x.png')} 2x", alt: "A complete view of the Rail Modeller interface", class: "l-center l-max"
 
 -# .l-subtle.c-section
 -#   .c-panel.c-panel--adjacent.l-bordered---MQmobile
@@ -96,17 +95,20 @@ date: 18/03/2016 22:57
 -#         %p One of the key areas that needed improvement was the invetory; the area where users can collate the pieces they have used while building.
 -#         %p We made it <b>simple and straight-forward</b> to toggle between specific information about the canvas as well as give users the ability to create a shopping list and export <b>using conventional OSX interface elements</b>; the goal being to make the application <b>more accessible to non-technical people</b>
 
-.c-section.c-section--first
+%section.c-section.c-section--first
   .l-bordered---MQmobile.l-subtle
-    %section.c-panel.c-panel--adjacent
+    .c-panel.c-panel--adjacent
       .c-panel__body
-        %h1.c-panel__title.will-animate.fadeInUp{"data-wow-offset" => 200} Reinventing the Inventory UI
-        .l-grid---MQdesktop.l-grid--gutter
-          .l-grid__span--6---MQdesktop
-            .c-copy.will-animate.fadeIn{"data-wow-offset" => 200}
-              %p One of the key areas that needed improvement was the inventory; the area where users can collate the pieces they have used while building.
-              %p We made it <b>simple and straight-forward</b> to toggle between specific information about the canvas as well as give users the ability to create a shopping list and export <b>using conventional OSX interface elements</b>; the goal being to make the application <b>more accessible to non-technical people</b>
-          .l-grid__span--6---MQdesktop.l-grid--baseline
-            .will-animate.fadeInUp
-              %figure{"data-wow-delay" => "0.5s"}
-                = image_tag "#{gulp_image_path('projects/rail-modeller/highlight.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/highlight@2x.png')} 2x", alt: "Screenshot of MEGAMAC", class: "o-highlight-image"
+        .l-leading.l-center.h-align-center
+          %h1.c-panel__title Reinventing the Inventory
+          .c-copy.c-copy--intro
+            %p One of the key areas that needed improvement was the inventory; the area where users can view the pieces they have used while building.
+        .c-post__mainimage.c-post__mainimage--static
+          %figure{"data-wow-delay" => "0.5s"}
+            = image_tag "#{gulp_image_path('projects/rail-modeller/highlight.png')}", srcset: "#{gulp_image_path('projects/rail-modeller/highlight@2x.png')} 2x", alt: "Screenshot of MEGAMAC", class: "o-highlight-image o-highlight-image--full o-raise-image"
+
+    .c-panel
+      .c-panel__body
+        .l-leading.l-center
+          .c-copy
+            %p We made it <b>simple and straight-forward</b> to toggle between specific information about the canvas as well as give users the ability to create a shopping list and export <b>using conventional OSX interface elements</b>. The goal was always to make the application <b>more accessible to non-technical people.</b>
