@@ -7,6 +7,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+ignore 'public/npm-debug.log'
+
 # Pretty URLs
 activate :directory_indexes
 
