@@ -4,10 +4,10 @@
 
 - root = data.site.url["#{config[:environment]}"]
 
-%meta{:content => "#{root}#{current_page.url}", :property => "og:url"}
-%meta{:content => data.site.name, :property => "og:site_name"}
-%meta{:content => description, :property => "og:description"}
-%meta{:content => image, :property => "og:image"}
+%meta{:property => "og:url", :content => "#{root}#{current_page.url}"}
+%meta{:property => "og:site_name", :content => data.site.name}
+%meta{:property => "og:description", :content => description}
+%meta{:property => "og:image", :content => image}
 
 - if defined? current_page.data.title
-  %meta{:content => current_page.data.title, :property => "og:title"}
+  %meta{:property => "og:title", :content => current_page.data.title}

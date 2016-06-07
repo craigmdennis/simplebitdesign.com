@@ -1,13 +1,11 @@
 name: Simple Bit Design
 title: UI and UX Design Specialists
 description: We help brands make beautiful products
-image: http://cdn.simplebitdesign.com/_branding/facebook-og.jpg
+image: cdn.simplebitdesign.com/_branding/facebook-og.jpg
 url:
   development: "http://localhost:3000"
   staging: "http://dev.simplebitdesign.com"
   production: "http://simplebitdesign.com"
-
-cdn: d4lhp1muuvgao.cloudfront.net
 
 navigation:
   - anchor: Home
