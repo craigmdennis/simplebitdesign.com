@@ -2,17 +2,6 @@
 %html.no-js{lang: "en"}
 
   %head
-    -# Test for mix-blend-mode
-    -# This is in the head to prevent FOUC
-    :javascript
-      if('CSS' in window && 'supports' in window.CSS) {
-        var support = window.CSS.supports('mix-blend-mode','multiply');
-          support = support?'mixblendmode':'no-mixblendmode';
-          document.documentElement.className+=' '+support;
-      }
-
-    = partial 'partials/script_modernizr'
-
     -if content_for? :head
       = yield_content :head
 
@@ -66,6 +55,17 @@
         = yield
 
     = partial 'partials/footer'
+
+    -# Test for mix-blend-mode
+    -# This is in the head to prevent FOUC
+    :javascript
+      if('CSS' in window && 'supports' in window.CSS) {
+        var support = window.CSS.supports('mix-blend-mode','multiply');
+          support = support?'mixblendmode':'no-mixblendmode';
+          document.documentElement.className+=' '+support;
+      }
+
+    = partial 'partials/script_modernizr'
 
     -# Load jQuery from Google
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"

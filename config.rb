@@ -1,6 +1,5 @@
-require 'lib/gulp'
 require 'lib/package'
-# require 'lib/inliner'
+require 'lib/gulp'
 
 # Per-page layout changes with no layout
 page '/*.xml', layout: false

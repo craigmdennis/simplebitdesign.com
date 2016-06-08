@@ -1,4 +1,6 @@
 {
+  "cdn": "",
+
   "root": {
     "src": "./source",
     "dest": "./.tmp"

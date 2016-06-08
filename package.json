@@ -1,6 +1,6 @@
 {
   "name": "middleman-gulp-starter",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "UI & UX Specialists",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
@@ -16,10 +16,11 @@
     "gulp": "gulp",
     "development": "gulp",
     "production": "gulp production",
-    "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --delete",
-    "deploy-except-html": "cd public && aws s3 sync . s3://simplebitdesign.com --exclude '*.html' --delete --cache-control max-age=315360000",
-    "deploy-html": "cd public && aws s3 sync . s3://simplebitdesign.com --exclude '*' --include '*.html' --cache-control 'no-cache,public,must-revalidate,proxy-revalidate,max-age=0'",
-    "deploy": "npm run deploy-except-html && npm run deploy-html",
+    "sync-production": "cd public && aws s3 sync . s3://simplebitdesign.com --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --cache-control 'max-age=315360000,public' --acl public-read --exact-timestamps --delete",
+    "sync-staging": "cd public && aws s3 sync . s3://dev.simplebitdesign.com--cache-control 'max-age=0,public' --acl public-read --exact-timestamps --delete",
+    "stage": "npm run sync-stage; npm run invalidate-cloudfront",
+    "deploy": "npm run sync-production; npm run invalidate-cloudfront",
+    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id E37QAYHX8MROSF --paths 'index.html'",
     "test": "gulp production && karma start --single-run",
     "test:watch": "karma start",
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
