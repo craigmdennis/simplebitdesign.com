@@ -1,7 +1,7 @@
 name: Simple Bit Design
 title: UI and UX Design Specialists
 description: We help brands make beautiful products
-image: facebook-og.jpg
+image: /facebook-og.jpg
 url:
   development: "http://localhost:3000"
   staging: "http://dev.simplebitdesign.com"
