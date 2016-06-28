@@ -7,25 +7,24 @@
     - if index+1 == newIndex
       - nextID = service.title.downcase.gsub " ", "-"
 
-  .l-fullheight---MQtablet{class: (index.even? ? "l-light" : "l-subtle")}
+  .l-fullheight---MQdesktop{class: (index.even? ? "l-light" : "l-subtle")}
     %section.c-panel{id: thisID}
       - if defined?(service.image)
-        %figure.o-image-rotate.will-animate.fadeInRight{"data-wow-offset" => 200, "data-wow-delay" => "0.5s"}
-          - image_path = service.image.gsub(".png", "@2x.png")
-          = image_tag gulp_image_path( service.image ), srcset: "#{gulp_image_path( image_path )} 2x"
+        - image_path = service.image.gsub(".png", "@2x.png")
+        = image_tag gulp_image_path( service.image ), srcset: "#{gulp_image_path( image_path )} 2x", class: "o-image-right"
       .c-panel__body
         .l-grid---MQdesktop
           .l-grid__span--8---MQdesktop
-            %h1.c-panel__title.c-panel__title--giant.will-animate.fadeInUp= service.title
-            .c-copy.c-copy--emphasised.c-copy--large.will-animate.fadeInUp{class: (index == data.site.services.size - 1 ? "c-copy--adjacent---MQmobile" : nil)}
+            %h1.c-panel__title.c-panel__title--giant= service.title
+            .c-copy.c-copy--emphasised.c-copy--large{class: (index == data.site.services.size - 1 ? "c-copy--adjacent---MQmobile" : nil)}
               :markdown
                 #{service.summary}
 
             - if nextID
-              = link_to "##{nextID}", class: "o-scroll-indicator will-animate fadeInDown", "data-wow-delay" => "1s", "data-scrollto" => true do
+              = link_to "##{nextID}", class: "o-scroll-indicator will-animate fadeInDown", "data-scrollto" => true do
                 = sprite "arrow-down"
             - else
-              = link_to "Get in touch", "#contact", class: "c-button c-button--primary will-animate fadeInDown", "data-wow-delay" => "1s", "data-scrollto" => true
+              = link_to "Get in touch", "#contact", class: "c-button c-button--primary will-animate fadeInDown", "data-scrollto" => true
 
             -# .c-panel_buttons.will-animate.fadeIn{"data-wow-delay" => "1s"}
             -#   = link_to "Get in touch", "#contact", class: "c-button c-button--primary"
