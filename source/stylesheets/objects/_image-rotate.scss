@@ -1,45 +1,14 @@
-.o-image-rotate {
+.o-image-right {
   display: none;
 
   @include media( $desktop ) {
     display: block;
-    width: 40%;
     overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-
-    img {
-      display: block;
-      transform: rotate(15deg);
-      width: auto;
-      max-width: none;
-      margin-left: 25%;
-      margin-top: -5%;
-      height: 140%;
-    }
+    height: 100%;
+    max-width: none;
   }
 }
-
-// .o-image-offset {
-//   display: block;
-//   height: 100%;
-
-//   @include media( $tablet ) {
-//     // width: 60%;
-//     overflow: hidden;
-//     position: absolute;
-//     right: 0;
-//     bottom: 0;
-
-//     img {
-//       display: block;
-//       width: auto;
-//       max-width: none;
-//       // margin-left: 25%;
-//       margin-top: 5%;
-//       height: 95%;
-//     }
-//   }
-// }

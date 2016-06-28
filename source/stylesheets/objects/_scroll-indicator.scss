@@ -2,7 +2,7 @@
   display: none;
   font-size: 3rem;
 
-  @include media( $tablet ) {
+  @include media( $desktop ) {
     display: block;
   }
 }
