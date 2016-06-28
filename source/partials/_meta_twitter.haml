@@ -2,11 +2,11 @@
 
 - image = ( defined?(current_page.data.image) ? current_page.data.image : data.site.image)
 
+- title = ( defined?(current_page.data.title) ? current_page.data.title : data.site.name + " &mdash; " + data.site.title )
+
 %meta{:name => "twitter:card", :content => "summary_large_image"}
 %meta{:name => "twitter:site", :content => "@simplbitdesign"}
 %meta{:name => "twitter:creator", :content => "@craigmdennis"}
 %meta{:name => "twitter:description", :content => description}
-%meta{:name => "twitter:image", :content => cdn_asset_path(image)}
-
-- if defined? current_page.data.title
-  %meta{:content => current_page.data.title, :name => "twitter:title"}
+%meta{:name => "twitter:image", :content => image}
+%meta{:name => "twitter:title", :content => title.html_safe}

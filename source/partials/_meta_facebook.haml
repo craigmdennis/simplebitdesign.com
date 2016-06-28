@@ -2,7 +2,7 @@
 
 - image = ( defined?(current_page.data.image) ? current_page.data.image : data.site.image)
 
-- title = ( defined?(current_page.data.title) ? current_page.data.title : "#{data.site.name} &mdash; #{data.site.title}" )
+- title = ( defined?(current_page.data.title) ? current_page.data.title : data.site.name + " &mdash; " + data.site.title )
 
 - root = data.site.url["#{config[:environment]}"]
 
@@ -10,4 +10,4 @@
 %meta{:property => "og:site_name", :content => data.site.name}
 %meta{:property => "og:description", :content => description}
 %meta{:property => "og:image", :content => image}
-%meta{:property => "og:title", :content => current_page.data.title}
+%meta{:property => "og:title", :content => title.html_safe}
