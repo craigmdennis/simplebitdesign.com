@@ -23,17 +23,10 @@
     = partial "partials/favicon"
     = partial "partials/meta_facebook"
     = partial "partials/meta_twitter"
-
-    -# Inline Critical CSS
-    -# = stylesheet_inline_tag gulp_css_path("app.css")
-
-    -# Async the rest of the CSS
-    -# = stylesheet_link_tag gulp_css_path("app.css"), rel: "preload", as:"style", onload:"this.rel='stylesheet'"
-    -# %noscript
+    = stylesheet_link_tag ("https://fonts.googleapis.com/css?family=Lora:400i,700i|Source+Sans+Pro:400,900")
     = stylesheet_link_tag gulp_css_path("app.css")
 
   %body#top{class: page_classes}
-    -# .animsition
     %a#skiplink{href: "#content", aria: {label: "Skip to main content"}} Skip to content
 
     %header

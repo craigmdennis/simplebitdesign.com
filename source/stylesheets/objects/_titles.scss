@@ -2,6 +2,7 @@
   @include height( 32px );
   font-weight: 700;
   margin-bottom: $small-spacing;
+  letter-spacing: -1px;
 
   @include media( $tablet ) {
     @include height( 56px );
