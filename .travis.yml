@@ -7,12 +7,9 @@ python:
   
 cache: pip
 
-install:
-  # Install any dependencies required for building your site here.
-  # `awscli` is required for invalidation of CloudFront distributions.
-  - pip install awscli
-
 before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
   - rvm install 2.3.1
 
 install:
