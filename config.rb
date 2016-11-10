@@ -15,6 +15,7 @@ activate :directory_indexes
 set :haml, { :attr_wrapper => '"', :format => :html5 }
 set :markdown, fenced_code_blocks: true, smartypants: true
 set :build_dir, "public"
+set :relative_links, true
 
 # Markdown options
 set :markdown_engine, :redcarpet
