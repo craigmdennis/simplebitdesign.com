@@ -37,6 +37,7 @@ deploy:
     local_dir: public
     cache_control: "max-age=21600"
     acl: public_read
+    region: $AWS_BUCKET_REGION
     on:
       branch: master
   
@@ -48,6 +49,7 @@ deploy:
     skip_cleanup: true
     local_dir: public
     acl: public_read
+    region: $AWS_BUCKET_REGION
     upload-dir: $TRAVIS_BRANCH
     on:
       all_branches: true
