@@ -57,4 +57,4 @@ after_deploy:
   # Allow `awscli` to make requests to CloudFront.
   - test $TRAVIS_BRANCH == "master" && aws configure set preview.cloudfront true
   # Invalidate every HTML object in the targeted distribution.
-  - test $TRAVIS_BRANCH == "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  - test $TRAVIS_BRANCH == "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/**/*.html"
