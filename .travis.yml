@@ -29,28 +29,26 @@ script:
   
 deploy:
   # Deploy changes to master
-  on:
-    branch: master
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: simplebitdesign.com
-  skip_cleanup: true
-  local_dir: public
-  cache_control: "max-age=21600"
-  acl: public_read
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: simplebitdesign.com
+    skip_cleanup: true
+    local_dir: public
+    cache_control: "max-age=21600"
+    acl: public_read
+    on:
+      branch: master
   
   # Deploy every push from a release branch
-  on:
-    branch:
-      - /^release-.*$/
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: dev.simplebitdesign.com
-  skip_cleanup: true
-  local_dir: public
-  acl: public_read
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: dev.simplebitdesign.com
+    skip_cleanup: true
+    local_dir: public
+    acl: public_read
+    upload-dir: $TRAVIS_BRANCH
   
 after_deploy:
   # Allow `awscli` to make requests to CloudFront.
