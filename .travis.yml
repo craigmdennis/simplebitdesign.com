@@ -27,6 +27,10 @@ script:
   - bundle exec middleman build --clean
   - bundle exec middleman build --clean
   
+before_deploy:
+  - test $TRAVIS_BRANCH == "master" && aws s3 rm simplebitdesign.com --recursive
+  - test $TRAVIS_BRANCH != "master" && aws s3 rm dev.simplebitdesign.com --recursive
+  
 deploy:
   # Deploy changes to master
   - provider: s3
@@ -50,7 +54,6 @@ deploy:
     local_dir: public
     acl: public_read
     region: $AWS_BUCKET_REGION
-    upload-dir: $TRAVIS_BRANCH
     on:
       all_branches: true
   
