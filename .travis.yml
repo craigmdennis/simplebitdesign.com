@@ -1,6 +1,16 @@
 language: node_js
 node_js:
   - "5"
+  
+python:
+  - "3.5"
+  
+cache: pip
+
+install:
+  # Install any dependencies required for building your site here.
+  # `awscli` is required for invalidation of CloudFront distributions.
+  - pip install awscli
 
 before_install:
   - rvm install 2.3.1
@@ -11,6 +21,40 @@ install:
   - npm install -g gulp-cli
   - npm install
 
-script: bundle exec middleman build --clean
-
-after_success: npm run stage
+# Run twice to remove assets generated but not revved
+# TODO: Split the removal out into a separate task
+script:
+  - bundle exec middleman build --clean
+  - bundle exec middleman build --clean
+  
+# Deploy changes to master
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: simplebitdesign.com
+  skip_cleanup: true
+  local_dir: public
+  cache_control: "max-age=21600"
+  acl: public_read
+  
+  
+# Deploy every push from a release branch
+deploy:
+  on:
+    branch: /^(?i:release)-.*$/
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: dev.simplebitdesign.com
+  skip_cleanup: true
+  local_dir: public
+  acl: public_read
+  
+after_deploy:
+  # Allow `awscli` to make requests to CloudFront.
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && aws configure set preview.cloudfront true
+  # Invalidate every HTML object in the targeted distribution.
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/**/*.html"
