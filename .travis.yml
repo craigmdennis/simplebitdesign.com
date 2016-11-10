@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "5"
+
+before_install:
+  - rvm install 2.3.1
+
+install:
+  - bundle install
+  - npm install -g lodash marked varstream node-gyp
+  - npm install -g gulp-cli
+  - npm install
+
+script: bundle exec middleman build --clean
+
+after_success: npm run stage
