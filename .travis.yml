@@ -28,8 +28,11 @@ script:
   - bundle exec middleman build --clean
   
 before_deploy:
-  - test $TRAVIS_BRANCH == "master" && aws s3 rm simplebitdesign.com --recursive
-  - test $TRAVIS_BRANCH != "master" && aws s3 rm dev.simplebitdesign.com --recursive
+  - 'if [ ${TRAVIS_BRANCH} = "master" ]; then
+      aws s3 rm simplebitdesign.com --recursive || travis_terminate 1;
+    else
+      aws s3 rm simplebitdesign.com --recursive || travis_terminate 1;
+    fi'
   
 deploy:
   # Deploy changes to master
@@ -61,4 +64,4 @@ after_deploy:
   # Allow `awscli` to make requests to CloudFront.
   - test $TRAVIS_BRANCH == "master" && aws configure set preview.cloudfront true
   # Invalidate every HTML object in the targeted distribution.
-  - test $TRAVIS_BRANCH == "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/**/*.html"
+  - test $TRAVIS_BRANCH == "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
