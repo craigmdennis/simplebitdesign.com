@@ -27,13 +27,6 @@ script:
   - bundle exec middleman build --clean
   - bundle exec middleman build --clean
   
-before_deploy:
-  - 'if [ ${TRAVIS_BRANCH} = "master" ]; then
-      aws s3 rm simplebitdesign.com --recursive || travis_terminate 1;
-    else
-      aws s3 rm dev.simplebitdesign.com --recursive || travis_terminate 1;
-    fi'
-  
 deploy:
   # Deploy changes to master
   - provider: s3
