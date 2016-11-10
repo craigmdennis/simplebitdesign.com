@@ -27,8 +27,8 @@ script:
   - bundle exec middleman build --clean
   - bundle exec middleman build --clean
   
-# Deploy changes to master
 deploy:
+  # Deploy changes to master
   on:
     branch: master
   provider: s3
@@ -40,9 +40,7 @@ deploy:
   cache_control: "max-age=21600"
   acl: public_read
   
-  
-# Deploy every push from a release branch
-deploy:
+  # Deploy every push from a release branch
   on:
     branch: /^(?i:release)-.*$/
   provider: s3
