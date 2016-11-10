@@ -49,6 +49,8 @@ deploy:
     local_dir: public
     acl: public_read
     upload-dir: $TRAVIS_BRANCH
+    on:
+      branch: *
   
 after_deploy:
   # Allow `awscli` to make requests to CloudFront.
