@@ -19,7 +19,7 @@
     .l-grid__span--6---MQtablet.l-light.l-bordered
       %form#formspree.c-form.c-form--inset{action: "https://formsubmit.io/send/3ca79782-22bb-4e80-8ae9-6db755459d5b", method: "POST"}
         %input{type: "hidden", name:"page", style:  "display:none", value: current_page.url}
-        %input{type: "text", name:"_gotcha", style:  "display:none"}
+        %input{type: "text", name:"_formsubmit_id", style:  "display:none"}
         .c-form__row.c-form__row--fill
           %label.h-accessible{for: "message"} Your message
           %textarea#message.c-form__control{name: "message", rows: 8, required: true, "aria-required" => true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
