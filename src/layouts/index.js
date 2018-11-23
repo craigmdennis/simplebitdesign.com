@@ -4,27 +4,32 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
+import Card from '../components/Card';
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'The digital design experts. Creating web and software products to help you grow your business.' },
+        { name: 'keywords', content: 'web design, design, product design, designer, app design, UI design, UX design' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
+
+    <div className="CardGroup">
+      <Card 
+        title="Megamac" 
+        text="A complete redesign of the online shop, including front-end development."
+        image="https://via.placeholder.com/240x160"
+        />
+      <Card 
+        title="Megamac" 
+        text="A complete redesign of the online shop, including front-end development."
+        image="https://via.placeholder.com/240x160"
+        />
     </div>
+
+    {children()}
   </div>
 )
 

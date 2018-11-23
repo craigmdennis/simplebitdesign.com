@@ -1,0 +1,71 @@
+.Card {
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  color: black;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  width: 272px;
+  position: relative;
+  padding: 16px;
+  overflow: hidden;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card + .Card {
+  margin-left: 8px;
+}
+
+.Card img {
+  display: block;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.Card__label {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Card__title {
+  font-family: 'Merriweather', serif;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.Card__text {
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.Card__link {
+  color: #002AFF;
+}
+
+.Card__link > span {
+  display: inline-block;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover,
+.Card:focus {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  transform: scale(1.015);
+  z-index: 1;
+}
+
+.Card:hover .Card__link span {
+  transform: translateX(4px);
+}
+
+.CardGroup {
+  display: flex;
+  padding: 32px;
+  background-color: #002AFF;
+  color: white;
+}
