@@ -1,35 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
-import Header from '../components/header'
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 import './index.css'
-import Card from '../components/Card';
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'The digital design experts. Creating web and software products to help you grow your business.' },
-        { name: 'keywords', content: 'web design, design, product design, designer, app design, UI design, UX design' },
+        { name: 'description', content: data.site.siteMetadata.description },
+        { name: 'keywords', content: data.site.siteMetadata.keywords },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       ]}
     />
-
-    <div className="CardGroup">
-      <Card 
-        title="Megamac" 
-        text="A complete redesign of the online shop, including front-end development."
-        image="https://via.placeholder.com/240x160"
-        />
-      <Card 
-        title="Megamac" 
-        text="A complete redesign of the online shop, including front-end development."
-        image="https://via.placeholder.com/240x160"
-        />
-    </div>
-
+    <Header siteTitle={data.site.siteMetadata.title} />
     {children()}
+    <Navigation />
   </div>
 )
 
@@ -44,6 +32,8 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
+        keywords
       }
     }
   }

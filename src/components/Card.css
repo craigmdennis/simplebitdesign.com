@@ -5,12 +5,13 @@
   color: black;
   cursor: pointer;
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content min-content;
   width: 272px;
   position: relative;
   padding: 16px;
   overflow: hidden;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  min-width: 272px;
 }
 
 .Card + .Card {
@@ -55,7 +56,6 @@
 .Card:hover,
 .Card:focus {
   box-shadow: 0 16px 48px rgba(0,0,0,0.25);
-  transform: scale(1.015);
   z-index: 1;
 }
 
@@ -64,8 +64,13 @@
 }
 
 .CardGroup {
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 0 24px 24px;
   display: flex;
-  padding: 32px;
-  background-color: #002AFF;
-  color: white;
+  overflow-x: auto;
+
+  & > .Card:last-child {
+    margin-right: 24px;
+  }
 }

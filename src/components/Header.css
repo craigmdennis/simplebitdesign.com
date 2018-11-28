@@ -1,0 +1,16 @@
+.Header {
+  padding: 24px;
+}
+
+.Header__title {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 16px 0;
+  font-weight:900;
+}
+
+.Header__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px 0;
+}

@@ -1,0 +1,17 @@
+.Logo {
+  color: inherit;
+  margin-bottom: 4px;
+}
+
+.Logo__image {
+  width: 24px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.Logo__text {
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}

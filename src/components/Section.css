@@ -1,0 +1,41 @@
+.Section {
+  padding: 24px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 24px;
+    right: 24px;
+    top: 0;
+    height: 1px;
+    background-color: #002AFF;
+  }
+
+  & p:last-child {
+    margin-bottom:0;
+  }
+}
+
+.Section--dark {
+  background-color: #002AFF;
+  color: white;
+
+  &:after {
+    content: none;
+  }
+}
+
+.Section__title {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 16px 0;
+
+  &--large {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 0 24px 0;
+    width: 112px;
+  }
+}

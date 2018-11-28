@@ -206,4 +206,18 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  padding-bottom: 56px;
+}
+
+h1,h2,h3 {
+  font-family: Merriweather, serif;
+}
+
+hr {
+  display: block;
+  margin-left: 24px;
+  margin-right: 24px;
+  bottom: 0;
+  height: 1px;
+  background-color: #002AFF;
 }
