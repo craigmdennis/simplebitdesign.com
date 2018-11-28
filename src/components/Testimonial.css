@@ -1,0 +1,61 @@
+.Testimonial {
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+
+  &:before {
+    content: '❛❛';
+    color: #002AFF;
+    font-family: "Merriweather", serif;
+    display: block;
+    position: absolute;
+    letter-spacing: -1px;
+    font-size: 36px;
+    top: -16px;
+    user-select: none;
+  }
+}
+
+.Testimonial + .Testimonial {
+  margin-top: 24px;
+}
+
+.Testimonial__quote {
+  color: #002AFF;
+  font-size: 28px;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  line-height: 36px;
+}
+
+.Testimonial__avatar {
+  border-radius: 100%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 24px;
+}
+
+.Testimonial__name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+}
+
+.Testimonial__jobTitle {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Testimonial__company {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  opacity: 0.5;
+}

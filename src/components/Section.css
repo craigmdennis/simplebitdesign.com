@@ -8,9 +8,14 @@
     display: block;
     left: 24px;
     right: 24px;
-    top: 0;
+    top: -1px;
     height: 1px;
     background-color: #002AFF;
+  }
+
+  & p {
+    margin-top: 0;
+    margin-bottom: 24px;
   }
 
   & p:last-child {

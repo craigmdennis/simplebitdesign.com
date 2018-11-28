@@ -1,0 +1,18 @@
+{
+  "testimonials": [
+    {
+      "quote": "Honestly redefined our expectations for remote design.",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1333682358/credits_soc_80x80.jpg",
+      "name": "Justin Maxwell",
+      "jobTitle": "Cofounder & Chief Design Officer",
+      "company": "Smith.ai"
+    },
+    {
+      "quote": "The most talented designers I've ever had the pleasure of working with.",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/921349785088602114/0yLbckuu_80x80.jpg",
+      "name": "Henry Ellis",
+      "jobTitle": "Senior Online Strategist",
+      "company": "Good Relations"
+    }
+  ]
+}

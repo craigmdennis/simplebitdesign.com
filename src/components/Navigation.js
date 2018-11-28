@@ -10,25 +10,25 @@ const Navigation = props => (
   <nav className="Navigation">
     <ul className="Navigation__menu">
       <li className="Navigation__menuItem">
-        <Link className="Navigation__link Navigation__link--isActive">
+        <Link to="#" className="Navigation__link Navigation__link--isActive">
           <HomeSVG className="Navigation__icon" />
           <span className="Navigation__label">Home</span>
         </Link>
       </li>
       <li className="Navigation__menuItem">
-        <Link className="Navigation__link">
+        <Link to="#" className="Navigation__link">
           <WorkSVG className="Navigation__icon" />
           <span className="Navigation__label">Work</span>
         </Link>
       </li>
       <li className="Navigation__menuItem">
-        <Link className="Navigation__link">
+        <Link to="#" className="Navigation__link">
           <ServicesSVG className="Navigation__icon" />
           <span className="Navigation__label">Services</span>
         </Link>
       </li>
       <li className="Navigation__menuItem">
-        <Link className="Navigation__link">
+        <Link to="#" className="Navigation__link">
           <ContactSVG className="Navigation__icon" />
           <span className="Navigation__label">Contact</span>
         </Link>

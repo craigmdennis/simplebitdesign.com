@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Merriweather:700,900');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700|Merriweather:700,700i,900');
 
 html {
   font-family: sans-serif;
@@ -220,4 +220,26 @@ hr {
   bottom: 0;
   height: 1px;
   background-color: #002AFF;
+}
+
+.LogoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
+  grid-auto-rows: minmax(124px, min-content);
+  grid-gap: 24px;
+}
+
+.ClientLogo {
+  background-color: #F8F8F8;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.fullWidthMap {
+  margin-left: -24px;
+  margin-bottom: -24px;
+  width: calc(100% + 48px);
+  height: 400px;
 }
