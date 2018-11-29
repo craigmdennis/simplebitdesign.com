@@ -1,0 +1,23 @@
+.slick-initialized .slick-slide {
+  display: flex !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide,
+.slick-slide > div {
+  height: auto !important;
+  display: inherit;
+}
+
+.slick-slider {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.slick-slide .Card {
+  margin-right: 4px;
+  margin-left: 4px;
+}

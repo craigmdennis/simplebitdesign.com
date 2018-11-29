@@ -4,9 +4,9 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   color: black;
   cursor: pointer;
-  display: grid;
-  grid-template-rows: min-content min-content;
-  width: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   padding: 16px;
   overflow: hidden;
@@ -39,9 +39,10 @@
 }
 
 .Card__text {
-  margin-top: 0;
+  margin: 0 0 16px;
   font-size: 16px;
   line-height: 20px;
+  flex: 1;
 }
 
 .Card__link {
@@ -63,7 +64,7 @@
   transform: translateX(4px);
 }
 
-.CardGroup {
+/* .CardGroup {
   margin-left: -24px;
   margin-right: -24px;
   padding: 0 24px 24px;
@@ -73,4 +74,4 @@
   & > .Card:last-child {
     margin-right: 24px;
   }
-}
+} */
