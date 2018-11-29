@@ -4,6 +4,8 @@ import Work from '../components/Work'
 import Testimonial from '../components/Testimonial'
 import staticdata from '../staticdata.json'
 
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY
+
 const IndexPage = () => (
   <div>
     <Section title="What can we do?">
@@ -40,7 +42,7 @@ const IndexPage = () => (
       <iframe
         className="fullWidthMap"
         frameBorder="0"
-        src="https://www.google.com/maps/embed/v1/place?q=Simple%20Bit%20Design%2C%20King%20Street%2C%20Maidstone%2C%20Kent"
+        src={`https://www.google.com/maps/embed/v1/place?q=Simple%20Bit%20Design%2C%20King%20Street%2C%20Maidstone%2C%20Kent&key=${GOOGLE_MAPS_API_KEY}`}
         allowFullScreen></iframe>
 
     </Section>

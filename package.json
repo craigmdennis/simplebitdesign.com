@@ -6,9 +6,11 @@
   "dependencies": {
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-config": "^1.0.7",
     "gatsby-plugin-postcss": "^2.0.1",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-svgr": "^1",
+    "nuka-carousel": "^4.4.3",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -22,6 +24,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "dotenv": "^6.1.0",
     "postcss-preset-env": "^6.4.0",
     "prettier": "^1.12.0"
   },
