@@ -1,7 +1,6 @@
 .Section {
   padding: 24px;
   position: relative;
-  overflow: hidden;
 
   &:after {
     content: '';
