@@ -46,21 +46,12 @@ enableForm = ->
 $contactForm.submit (e) ->
   e.preventDefault()
 
-  $.ajax
-    url: $(this).attr('action')
-    method: 'POST'
-    data: $(this).serialize()
-
-    beforeSend: ->
-      disableForm()
-
-    success: (data) ->
+  $('#contact').submit (e) ->
+    e.preventDefault()
+    $form = $(this)
+    $.post($form.attr('action'), $form.serialize()).then ->
       enableForm()
       $('<div class="c-notice c-notice--success c-notice--fill c-notice--large">Message sent! We\'ll be in touch soon.</div>').insertBefore $contactForm
       $contactForm.remove()
-
-    error: (err) ->
-      enableForm()
-      r = jQuery.parseJSON(data.responseText);
-      $contactForm
-        .prepend '<div class="c-notice c-notice--danger">' + r.Message + '</div>'
+      return
+    return
