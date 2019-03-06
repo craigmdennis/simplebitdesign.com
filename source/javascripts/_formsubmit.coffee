@@ -48,11 +48,8 @@ $contactForm.submit (e) ->
 
   $.ajax
     url: $(this).attr('action')
-    cache: false
-    crossDomain: false
     method: 'POST'
     data: $(this).serialize()
-    dataType: 'json'
 
     beforeSend: ->
       disableForm()
@@ -64,5 +61,6 @@ $contactForm.submit (e) ->
 
     error: (err) ->
       enableForm()
+      r = jQuery.parseJSON(data.responseText);
       $contactForm
-        .prepend '<div class="c-notice c-notice--danger">' + err + '</div>'
+        .prepend '<div class="c-notice c-notice--danger">' + r.Message + '</div>'
