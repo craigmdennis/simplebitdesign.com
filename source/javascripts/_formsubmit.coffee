@@ -23,7 +23,7 @@ opts =
   position: 'absolute'
 
 spinner = new Spinner(opts).spin()
-$contactForm = $('#formspree')
+$contactForm = $('#contact')
 $fields = $contactForm.find('input', 'textarea')
 
 disableForm = ->
@@ -45,7 +45,6 @@ enableForm = ->
 
 $contactForm.submit (e) ->
   e.preventDefault()
-  console.log $(this).attr('action')
 
   $.ajax
     url: $(this).attr('action')
@@ -66,4 +65,4 @@ $contactForm.submit (e) ->
     error: (err) ->
       enableForm()
       $contactForm
-        .prepend '<div class="c-notice c-notice--danger">Oops, there was an error. Please try again.</div>'
+        .prepend '<div class="c-notice c-notice--danger">' + err + '</div>'

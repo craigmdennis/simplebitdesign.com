@@ -17,7 +17,7 @@
             = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
     .l-grid__span--6---MQtablet.l-light.l-bordered
-      %form#formspree.c-form.c-form--inset{action: "https://formspree.io/craig@simplebitdesign.com", method: "POST"}
+      %form#contact.c-form.c-form--inset{method: "POST", "data-netlify" => true }
         %input{type: "hidden", name:"page", style:  "display:none", value: current_page.url}
         %input{type: "text", name:"_gotcha", style:  "display:none"}
         .c-form__row.c-form__row--fill
