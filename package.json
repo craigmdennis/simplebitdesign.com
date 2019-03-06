@@ -9,17 +9,13 @@
   "homepage": "http://simplebitdesign.com",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com"
+    "url": "https://github.com/craigmdennis/simplebitdesign.com"
   },
   "scripts": {
     "start": "gulp",
     "gulp": "gulp",
     "development": "gulp",
-    "production": "gulp production",
-    "sync-production": "cd public && aws s3 sync . s3://simplebitdesign.com --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --cache-control 'max-age=315360000,public' --acl public-read --exact-timestamps --delete",
-    "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --acl private --exact-timestamps --delete",
-    "deploy": "npm run sync-production; npm run invalidate-cloudfront",
-    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id E37QAYHX8MROSF --paths '/**/*.html'"
+    "production": "gulp production"
   },
   "dependencies": {
     "animate.css": "^3.7.0",
