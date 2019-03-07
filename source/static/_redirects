@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://simplebitdesign.netlify.com/* http://simplebitdesign.com/:splat 301!
