@@ -19,6 +19,7 @@
     .l-grid__span--6---MQtablet.l-light.l-bordered
       %form#contact.c-form.c-form--inset{method: "POST", "data-netlify" => true, "netlify-honeypot" => "bot-field", action: '?' }
         %input{type: "hidden", name:"page", style:  "display:none", value: current_page.url}
+        %input{type: "hidden", name:"form-name", value: "contact", style:  "display:none"}
         %input{type: "text", name:"bot-field", style:  "display:none"}
         .c-form__row.c-form__row--fill
           %label.h-accessible{for: "message"} Your message
