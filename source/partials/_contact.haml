@@ -17,9 +17,9 @@
             = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
     .l-grid__span--6---MQtablet.l-light.l-bordered
-      %form#contact.c-form.c-form--inset{method: "POST", "data-netlify" => true }
+      %form#contact.c-form.c-form--inset{method: "POST", "data-netlify" => true, "netlify-honeypot" => "bot-field", action: '?' }
         %input{type: "hidden", name:"page", style:  "display:none", value: current_page.url}
-        %input{type: "text", name:"_gotcha", style:  "display:none"}
+        %input{type: "text", name:"bot-field", style:  "display:none"}
         .c-form__row.c-form__row--fill
           %label.h-accessible{for: "message"} Your message
           %textarea#message.c-form__control{name: "message", rows: 8, required: true, "aria-required" => true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
