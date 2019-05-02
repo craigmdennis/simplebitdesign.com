@@ -47,7 +47,7 @@ $contactForm.submit (e) ->
   e.preventDefault()
   
   $form = $(this)
-  $.post($form.attr('action'), $form.serialize()).then ->
+  $.post('?', $form.serialize()).then ->
     enableForm()
     $('<div class="c-notice c-notice--success c-notice--fill c-notice--large">Message sent! We\'ll be in touch soon.</div>').insertBefore $contactForm
     $contactForm.remove()
