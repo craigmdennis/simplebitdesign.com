@@ -1,5 +1,5 @@
 {
-  "name": "middleman-gulp-starter",
+  "name": "simplebitdesign",
   "version": "2.0.11",
   "description": "UI & UX Specialists",
   "engines": {
@@ -9,37 +9,39 @@
   "homepage": "http://simplebitdesign.com",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/simplebitdesign/simplebitdesign.com"
+    "url": "https://github.com/craigmdennis/simplebitdesign.com"
   },
   "scripts": {
     "start": "gulp",
     "gulp": "gulp",
     "development": "gulp",
-    "production": "gulp production",
-    "sync-production": "cd public && aws s3 sync . s3://simplebitdesign.com --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --cache-control 'max-age=315360000,public' --acl public-read --exact-timestamps --delete",
-    "stage": "cd public && aws s3 sync . s3://dev.simplebitdesign.com --acl private --exact-timestamps --delete",
-    "deploy": "npm run sync-production; npm run invalidate-cloudfront",
-    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id E37QAYHX8MROSF --paths '/**/*.html'"
+    "production": "gulp production"
   },
   "dependencies": {
-    "animate.css": "^3.5.1",
+    "animate.css": "^3.7.0",
+    "animateCSS": "git://github.com/craigmdennis/animateCSS",
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.4",
+    "breakpoint-sass": "^2.6.1",
     "fastclick": "^1.0.6",
     "imagesloaded": "^4.1.0",
     "jquery": "^2.2.2",
     "jquery-scrollto": "^1.4.4",
-    "picturefill": "^3.0.2",
+    "normalize-css": "^2.3.1",
+    "picturefill": "^3.0.3",
     "rwdcss": "^3.0.0",
     "sass-height": "^2.1.0",
     "spin.js": "^2.3.2",
-    "svg4everybody": "^2.0.3",
-    "timeago": "^1.5.2",
-    "twitter-fetcher": "^15.0.2",
+    "svg4everybody": "^2.1.9",
+    "timeago": "^1.6.5",
+    "twitter-fetcher": "^18.0.2",
+    "typeplate-starter-kit": "^3.0.2",
     "what-input": "^2.0.1",
     "wow": "git://github.com/matthieua/WOW.git#amd"
   },
   "devDependencies": {
+    "svgeezy": "git://github.com/benhowdle89/svgeezy",
+    "modernizr": "~3.0.0",
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.7.5",

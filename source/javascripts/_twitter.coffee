@@ -2,7 +2,7 @@ require 'twitter-fetcher'
 
 domId = 'tweet'
 
-config =
+configList =
   "id": '708613649645113344'
   "domId": domId
   "maxTweets": 1
@@ -15,4 +15,4 @@ config =
   "showInteraction": false
 
 if $('#' + domId).length
-  twitterFetcher.fetch(config)
+  twitterFetcher.fetch(configList)

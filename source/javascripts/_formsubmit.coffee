@@ -23,7 +23,7 @@ opts =
   position: 'absolute'
 
 spinner = new Spinner(opts).spin()
-$contactForm = $('#formspree')
+$contactForm = $('#contactform')
 $fields = $contactForm.find('input', 'textarea')
 
 disableForm = ->
@@ -35,35 +35,11 @@ disableForm = ->
     .text('Sending...')
     .append spinner.el
 
-enableForm = ->
-  $fields.removeAttr 'readonly'
-  $contactForm
-    .find('button[type="submit"]')
-    .removeClass('has-icon')
-    .attr('disabled', false)
-    .text 'Send'
-
 $contactForm.submit (e) ->
   e.preventDefault()
-  console.log $(this).attr('action')
+  disableForm()
 
-  $.ajax
-    url: $(this).attr('action')
-    cache: false
-    crossDomain: false
-    method: 'POST'
-    data: $(this).serialize()
-    dataType: 'json'
-
-    beforeSend: ->
-      disableForm()
-
-    success: (data) ->
-      enableForm()
-      $('<div class="c-notice c-notice--success c-notice--fill c-notice--large">Message sent! We\'ll be in touch soon.</div>').insertBefore $contactForm
-      $contactForm.remove()
-
-    error: (err) ->
-      enableForm()
-      $contactForm
-        .prepend '<div class="c-notice c-notice--danger">Oops, there was an error. Please try again.</div>'
+  $form = $(this)
+  $.post($form.attr('action'), $form.serialize()).then ->
+    $('<div class="c-notice c-notice--success c-notice--fill c-notice--large">Message sent! We\'ll be in touch soon.</div>').insertBefore $contactForm
+    $contactForm.remove()
