@@ -21,10 +21,10 @@
                 #{service.summary}
 
             - if nextID
-              = link_to "##{nextID}", class: "o-scroll-indicator will-animate fadeInDown", "data-scrollto" => true do
+              = link_to "##{nextID}", class: "o-scroll-indicator will-animate fadeInDown" do
                 = sprite "arrow-down"
             - else
-              = link_to "Get in touch", "#contact", class: "c-button c-button--primary will-animate fadeInDown", "data-scrollto" => true
+              = link_to "Get in touch", "#contact", class: "c-button c-button--primary will-animate fadeInDown"
 
             -# .c-panel_buttons.will-animate.fadeIn{"data-wow-delay" => "1s"}
             -#   = link_to "Get in touch", "#contact", class: "c-button c-button--primary"
