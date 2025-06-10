@@ -1,0 +1,210 @@
+.container {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 100px var(--size-4);
+  text-align: center;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+
+  h1 {
+    font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 1;
+    font-weight: var(--font-weight-extra-bold);
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: var(--size-4);
+    color: var(--brand-teal);
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 36px;
+    }
+  }
+
+  .heroBreak {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  p {
+    font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+    font-size: var(--font-size-h4);
+    line-height: normal;
+    font-weight: var(--font-weight-regular);
+    font-style: normal;
+    letter-spacing: -0.42px;
+    color: #1a4a48;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.scalingSection {
+  padding: var(--size-12) var(--size-4);
+}
+
+.scalingContent {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--size-8);
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--size-6);
+  }
+}
+
+.scalingText {
+  background: var(--brand-cream);
+  padding: var(--size-8);
+  border-radius: var(--radius-2);
+
+  h2 {
+    font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: var(--font-weight-extra-bold);
+    font-style: normal;
+    letter-spacing: var(--letter-spacing-tight);
+    color: #1a4a48;
+    margin-bottom: var(--size-4);
+    max-inline-size: none;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    font-family: var(--font-lora), Georgia, serif;
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-auto);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--gray-7);
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-h4);
+    }
+  }
+}
+
+.highlight {
+  color: var(--brand-orange);
+  font-weight: var(--font-weight-5);
+}
+
+.highlightBlue {
+  color: var(--blue-6);
+  font-weight: var(--font-weight-5);
+}
+
+.scalingImage {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.imagePlaceholder {
+  width: 300px;
+  height: 100%;
+  min-height: 400px;
+  background: var(--brand-orange);
+  border-radius: var(--radius-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.personImage {
+  width: 200px;
+  height: 200px;
+  background: var(--gray-8);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.howWeWork {
+  background: var(--gray-9);
+  color: var(--gray-0);
+  padding: var(--size-12) var(--size-4);
+  /* Remove any overflow hidden that might break sticky */
+  overflow: visible;
+  position: sticky;
+  top: 500px;
+}
+
+.howWeWorkContent {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  /* Create a flex layout instead of grid for better sticky behavior */
+  display: flex;
+  gap: var(--size-8);
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: var(--size-6);
+  }
+}
+
+.howWeWorkText {
+  flex: 1;
+  /* Make this sticky within the flex container */
+  position: sticky;
+  top: var(--size-12);
+  height: fit-content;
+
+  @media (max-width: 768px) {
+    position: static;
+  }
+
+  h2 {
+    font-family: var(--font-lora), Georgia, serif;
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-auto);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: var(--size-4);
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-h3);
+    }
+  }
+
+  p {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-auto);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: var(--size-4);
+    color: var(--gray-3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.howWeWorkSteps {
+  flex: 1;
+  /* This will be the tall container that creates scroll space */
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
+}

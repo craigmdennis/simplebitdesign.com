@@ -1,0 +1,81 @@
+@use "open-props/style";
+@use "open-props/normalize";
+
+:root {
+  --background: #fff9f5;
+  --foreground: #171717;
+  --content-max-width: 1200px;
+  --brand-teal: #2d5a5a;
+  --brand-orange: #ff5722;
+  --brand-light-bg: #f8f9fa;
+  --brand-cream: #f9ece4;
+
+  // Custom type scale
+  --font-size-giant: 88px;
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 36px;
+  --font-size-h4: 28px;
+  --font-size-h5: 20px;
+  --font-size-body: 16px;
+  --font-size-small: 12px;
+  --font-size-tiny: 9px;
+
+  // Line heights
+  --line-height-h1: 72px;
+  --line-height-auto: 1.5;
+
+  // Font families
+  --font-sans: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+
+  // Font weights
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+
+  // Letter spacing (-1.5% from Figma)
+  --letter-spacing-tight: -0.015em;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background: #0a0a0a;
+//     --foreground: #ededed;
+//   }
+// }
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-plus-jakarta-sans), system-ui, -apple-system,
+    sans-serif;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-auto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
