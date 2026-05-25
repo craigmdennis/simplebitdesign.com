@@ -1,24 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // For static export to Netlify
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true, // Required for static export
-  },
-  // Enable SCSS
-  sassOptions: {
-    includePaths: ["./src/styles"],
-  },
-  // Enable SVG imports as React components with Turbopack
-  turbopack: {
-    rules: {
-      "*.svg": {
-        loaders: ["@svgr/webpack"],
-        as: "*.js",
-      },
-    },
-  },
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
 };
 
-module.exports = nextConfig;
+export default nextConfig;
