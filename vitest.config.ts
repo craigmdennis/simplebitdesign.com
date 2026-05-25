@@ -12,6 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "content-collections": path.resolve(__dirname, "./.content-collections/generated"),
     },
   },
 });
