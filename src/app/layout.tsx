@@ -19,6 +19,9 @@ const serif = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://simplebitdesign.com"
+  ),
   title: {
     default: "Simple Bit Design · design judgement for AI products",
     template: "%s · Simple Bit Design",
