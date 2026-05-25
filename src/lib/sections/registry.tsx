@@ -9,6 +9,10 @@ import { About } from "@/components/sections/About";
 import { Offer } from "@/components/sections/Offer";
 import { CTA } from "@/components/sections/CTA";
 
+// Each section component accepts only its own discriminated-union variant, so the
+// registry values can't share a single precise prop type; the SectionRenderer
+// re-narrows by `type` at the call site.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnySection = ComponentType<any>;
 export const registry: Record<Section["type"], AnySection> = {
   hero: Hero,
