@@ -1,7 +1,52 @@
 ---
-title: Home
-slug: home
-seoTitle: Simple Bit Design
-seoDescription: Design judgment for AI products.
-sections: []
+title: "Home"
+slug: "home"
+seoTitle: "Simple Bit Design · design judgement for AI products"
+seoDescription: "Product design for AI products: the human judgement that makes people understand, trust, and stick with them. Start with an AI Product Teardown."
+sections:
+  - type: "hero"
+    headline: "AI got you to 70%. I bring the 30% it can't."
+    sub: "Product design for AI products: the human judgement that makes people understand, trust, and stick with them."
+    ctaLabel: "Start with a teardown"
+    secondaryLabel: "See the work"
+  - type: "problem"
+    title: "Your AI product works. People still bounce."
+    body: "The demo lands and the tech is real. But users hesitate, misread what the AI is doing, or quietly leave; and you are left guessing which part lost them. That gap is not an engineering problem. It is a design one."
+    bullets:
+      - "New users can't tell what to do first."
+      - "People misread what the AI will and won't do."
+      - "Support answers the same questions your product should."
+      - "Adoption lags the demo, and you can't see where."
+  - type: "pointOfView"
+    title: "AI gets you to 70%. The last 30% is judgement."
+    body: "AI gets any team to about 70%: functional, shipped, demo-ready. The last 30% is clarity, trust, and knowing what to build and why people bounce. That is product design, and it is the part AI can't hand you. I bring that 30%; the judgement that makes an AI product something people understand the first time, trust enough to rely on, and keep using."
+  - type: "process"
+    title: "How I work: judgement delivered as a working redesign."
+    steps:
+      - label: "Diagnose"
+        body: "I find where people actually lose the thread; the moments they hesitate, misread the AI, or give up."
+      - label: "Prioritise"
+        body: "I rank the fixes by impact, so the first thing we change is the thing that moves adoption most."
+      - label: "Design"
+        body: "I redesign the highest-impact flow so people understand and trust what the AI is doing."
+      - label: "Prototype"
+        body: "Where it helps, I build the fix as a working prototype; you get the redesigned product, not a deck of problems."
+      - label: "Validate"
+        body: "I check the change against real behaviour, so we know it landed before you ship it wide."
+  - type: "work"
+    title: "Selected work"
+    caseStudySlugs:
+      - "ai-quality-score"
+      - "voice-receptionist-onboarding"
+  - type: "about"
+    title: "About"
+    body: "I'm Craig Dennis. I design AI products people actually understand and trust. Most recently I was Head of Product Design at Smith.ai, an AI phone-services company, where I led design for the AI voice receptionist and the conversational-quality work behind it. Simple Bit Design is my studio; you work directly with me, not a layer of account managers."
+  - type: "offer"
+    title: "Start with an AI Product Teardown"
+    price: "$4,000 fixed"
+    body: "A focused, one-to-two-week diagnosis of why your AI product isn't clicking, plus the redesigned direction; and where it helps, a working prototype of the single highest-impact fix. Judgement made concrete. It's a low-commitment first step that usually leads to larger work."
+    ctaLabel: "Start with a teardown"
+  - type: "cta"
+    headline: "Shipped an AI product that people don't quite get yet?"
+    ctaLabel: "Start with a teardown"
 ---
