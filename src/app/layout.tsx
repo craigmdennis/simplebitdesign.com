@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
-      <body className="bg-white text-black">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
