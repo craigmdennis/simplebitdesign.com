@@ -1,0 +1,15 @@
+# Netlify deploy config for the Next.js 16 app.
+# The official Next Runtime plugin handles serverless/SSG output and image CDN;
+# Netlify installs it automatically from the [[plugins]] entry below.
+#
+# Production env vars are set in the Netlify dashboard (not committed):
+#   NEXT_PUBLIC_BOOKING_URL  — Craig's real Cal.com booking link
+#   NEXT_PUBLIC_SITE_URL     — canonical origin, e.g. https://simplebitdesign.com
+#                              (no trailing slash; used by sitemap.ts + metadataBase)
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
