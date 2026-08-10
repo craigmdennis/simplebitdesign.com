@@ -16,7 +16,7 @@ export function Hero({ headline, sub, ctaLabel, secondaryLabel }: Props) {
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-teal-soft">{sub}</p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <BookingCTA label={ctaLabel} />
+          <BookingCTA label={ctaLabel} size="lg" />
           {secondaryLabel && (
             <a href="#work" className="text-teal underline-offset-4 hover:underline">
               {secondaryLabel}
