@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/site/Navigation";
 import { Footer } from "@/components/site/Footer";
@@ -41,6 +42,15 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* Privacy-friendly analytics by Plausible */}
+        <Script
+          src="https://plausible.io/js/pa-9-C3wR6SwW9gcbWWN5fPh.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init()`}
+        </Script>
       </body>
     </html>
   );
