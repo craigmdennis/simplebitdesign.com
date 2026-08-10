@@ -12,8 +12,17 @@
   "name": "simplebitdesign",
   "compatibility_date": "2026-08-10",
 
+  // worker.js exists only to synthesise HTTP Range (206) responses, which the
+  // ASSETS binding does not do and iOS WebKit requires before it will play the
+  // header video. See the comment at the top of worker.js.
+  "main": "./worker.js",
+
   "assets": {
-    "directory": "./snapshot"
+    "directory": "./snapshot",
+    "binding": "ASSETS",
+    // Without this, assets are served directly and the Worker never sees a
+    // request for /video/bg.mp4 — so the range handling would never run.
+    "run_worker_first": true
     // No not_found_handling: the live site has no custom 404 page, so the
     // Cloudflare default matches today's behaviour.
   }

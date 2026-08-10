@@ -2,7 +2,11 @@
   .l-highlight
     .c-section__overlay
       .o-embed.o-embed--fill
-        %video#bgvideo{role: "presentation", autoplay: true, loop: true, poster: gulp_image_path("bg.jpg")}
+        -# muted + playsinline are required for autoplay on iOS and for modern
+        -# desktop autoplay policies: an unmuted video is blocked outright, and
+        -# without playsinline iOS takes the video fullscreen instead of
+        -# playing it inline. preload="metadata" avoids pulling 15MB up front.
+        %video#bgvideo{role: "presentation", autoplay: true, muted: true, loop: true, playsinline: true, preload: "metadata", poster: gulp_image_path("bg.jpg")}
           %source{src: cdn_asset_path('video/bg.mp4'), type: "video/mp4"}
 
     .l-fullheight.l-vcenter
