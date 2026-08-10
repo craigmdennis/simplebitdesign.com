@@ -143,7 +143,7 @@ Greenfield rebuild — the existing Next 15 + Open Props/SCSS scaffold is discar
 - **Content:** MDX via `content-collections` (type-safe frontmatter with Zod) for
   landing-page copy and case studies; section components map via the MDX `components` prop.
 - **Fonts:** Lora + Plus Jakarta Sans via `next/font`.
-- **Output & deploy:** static SSG → Netlify (Vercel equally fine). Contact via a booking
+- **Output & deploy:** static SSG → Cloudflare Workers static assets. Contact via a booking
   link (e.g. Cal.com) — no form.
 - **Why this stack:** fastest path to a great-looking site (richest marketing-block
   ecosystem) and the most AI/Claude-fluent stack for a solo, AI-assisted build. Astro 6 +

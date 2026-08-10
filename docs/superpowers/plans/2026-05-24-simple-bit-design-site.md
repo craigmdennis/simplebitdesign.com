@@ -6,7 +6,7 @@
 
 **Architecture:** Greenfield Next.js 16 (App Router, static SSG). Content lives in type-safe `content-collections` entries; each landing page is an ordered `sections[]` array (a Zod discriminated union) rendered through a registry that maps each section `type` to a React component. Visual brand is encoded once as Tailwind v4 `@theme` tokens; shadcn/ui (Base UI) supplies accessible primitives and Tailark blocks seed the section visuals, all repainted to the theme.
 
-**Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui (Base UI), Tailark blocks, content-collections (+ Zod), next/font (Lora + Plus Jakarta Sans), Vitest + Testing Library, deploy to Netlify.
+**Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui (Base UI), Tailark blocks, content-collections (+ Zod), next/font (Lora + Plus Jakarta Sans), Vitest + Testing Library, deploy to Cloudflare Workers.
 
 ---
 
@@ -818,14 +818,14 @@ export default function Page({ params }: { params: { slug: string } }) {
 - [ ] **Step 2:** Per-page metadata already set; add `metadataBase`, default OG image (a warm-editorial OG via `opengraph-image.tsx` using the tokens, or a static asset).
 - [ ] **Step 3: Verify** — `npm run build`; check `/sitemap.xml` and OG tags in built HTML. **Commit:** `git add -A && git commit -m "feat: sitemap + OG + metadata"`
 
-### Task 24: Deploy to Netlify
+### Task 24: Deploy to Cloudflare
 
-**Files:** `netlify.toml`
+**Files:** `wrangler.jsonc`
 
-- [ ] **Step 1:** `netlify.toml` with `[build] command = "npm run build"`, `publish = ".next"`, and the official Next plugin (`@netlify/plugin-nextjs`). (Confirm current plugin config via Context7 `@netlify/plugin-nextjs`.)
-- [ ] **Step 2:** Set `NEXT_PUBLIC_BOOKING_URL` in Netlify env to Craig's real Cal.com link.
-- [ ] **Step 3: Deploy** — connect repo in Netlify (or `netlify deploy --build --prod`). **Ask Craig before pushing/connecting** (per `ask-before-push`).
-- [ ] **Step 4: Verify live** — all routes load, fonts/colors correct, CTAs open the booking link, Lighthouse ≥95 perf/SEO/a11y. **Commit:** `git add -A && git commit -m "feat: Netlify deploy config"`
+- [ ] **Step 1:** `output: "export"` in `next.config.ts`, and `wrangler.jsonc` serving `out/` as an assets-only Worker. Routes that are not pages (`sitemap.ts`, `opengraph-image.tsx`) need `export const dynamic = "force-static"`.
+- [ ] **Step 2:** Set `NEXT_PUBLIC_BOOKING_URL` and `NEXT_PUBLIC_SITE_URL` in the Workers Builds config.
+- [ ] **Step 3: Deploy** — `npm run deploy`, or connect the repo to Workers Builds. **Ask Craig before pushing/connecting** (per `ask-before-push`).
+- [ ] **Step 4: Verify live** — all routes load, fonts/colors correct, CTAs open the booking link, Lighthouse ≥95 perf/SEO/a11y.
 
 ---
 
