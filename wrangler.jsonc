@@ -17,6 +17,20 @@
   // header video. See the comment at the top of worker.js.
   "main": "./worker.js",
 
+  // Keep the workers.dev URL alive as a staging target. Wrangler disables it by
+  // default when the key is absent, which silently takes the staging URL down
+  // the first time any other trigger is configured.
+  "workers_dev": true,
+
+  // Custom Domains: Cloudflare creates and manages the DNS records and the
+  // certificate itself, replacing the Netlify A records on the apex and the
+  // www CNAME. www is included deliberately — leaving it on Netlify would keep
+  // serving the old GTM build to anyone using that hostname.
+  "routes": [
+    { "pattern": "simplebitdesign.com", "custom_domain": true },
+    { "pattern": "www.simplebitdesign.com", "custom_domain": true }
+  ],
+
   "assets": {
     "directory": "./snapshot",
     "binding": "ASSETS",
