@@ -17,13 +17,14 @@
             = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
     .l-grid__span--6---MQtablet.l-light.l-bordered
-      -# NOTE: this form has no backend. It previously posted to a third-party
-      -# forms service that captured POSTs to the site; that is gone, and a POST
-      -# to "/" now returns 405. It needs a real endpoint (or removing) before
-      -# it works again.
-      %form#contactform.c-form.c-form--inset{method: "POST", action: "/", name: 'contact' }
+      -# Posts to Formspree. A real action (rather than "/") means submission
+      -# still works with JavaScript disabled; javascripts/formspree.js upgrades
+      -# it to a fetch with `Accept: application/json` so the page can stay put.
+      -# _gotcha is Formspree's honeypot field name — the old host's bot-field
+      -# name means nothing here.
+      %form#contactform.c-form.c-form--inset{method: "POST", action: "https://formspree.io/f/xnpapeer", name: 'contact' }
         %input{type: "hidden", name:"page", value: current_page.url}
-        %input{type: "hidden", name:"bot-field"}
+        %input{type: "hidden", name:"_gotcha"}
         .c-form__row.c-form__row--fill
           %label.h-accessible{for: "message"} Your message
           %textarea#message.c-form__control{name: "message", rows: 8, required: true, "aria-required" => true, placeholder: "Tell us a little about your project", data: { focus: ".c-form__row" }}
