@@ -17,7 +17,11 @@
             = link_to "Follow @simplebitdesign", "https://twitter.com/simplebitdesign", class: "c-button c-button--secondary twitter-follow-button", data: { "show-count" => false, size: "large"}
 
     .l-grid__span--6---MQtablet.l-light.l-bordered
-      %form#contactform.c-form.c-form--inset{method: "POST", action: "/", "data-netlify" => true, "netlify-honeypot" => "bot-field", name: 'contact' }
+      -# NOTE: this form has no backend. It previously posted to a third-party
+      -# forms service that captured POSTs to the site; that is gone, and a POST
+      -# to "/" now returns 405. It needs a real endpoint (or removing) before
+      -# it works again.
+      %form#contactform.c-form.c-form--inset{method: "POST", action: "/", name: 'contact' }
         %input{type: "hidden", name:"page", value: current_page.url}
         %input{type: "hidden", name:"bot-field"}
         .c-form__row.c-form__row--fill

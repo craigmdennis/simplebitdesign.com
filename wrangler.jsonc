@@ -23,9 +23,9 @@
   "workers_dev": true,
 
   // Custom Domains: Cloudflare creates and manages the DNS records and the
-  // certificate itself, replacing the Netlify A records on the apex and the
-  // www CNAME. www is included deliberately — leaving it on Netlify would keep
-  // serving the old GTM build to anyone using that hostname.
+  // certificate itself, replacing the previous host's A records on the apex and
+  // the www CNAME. www is included deliberately — leaving it pointed at the old
+  // host would keep serving the stale build to anyone using that hostname.
   "routes": [
     { "pattern": "simplebitdesign.com", "custom_domain": true },
     { "pattern": "www.simplebitdesign.com", "custom_domain": true }
