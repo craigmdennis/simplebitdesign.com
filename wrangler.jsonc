@@ -1,0 +1,20 @@
+{
+  // Cloudflare Workers static assets config for the legacy (Middleman) site.
+  //
+  // IMPORTANT: ./snapshot is a captured artifact, NOT a build output. The 2016
+  // toolchain this repo describes (Ruby 2.3.6, Node 5.9, node-sass 3.x, gulp 3.9)
+  // no longer builds, so the deployed HTML was mirrored from the running site and
+  // then had Google Tag Manager swapped for Plausible to match commit 56a25b9.
+  //
+  // Editing source/*.haml will NOT change what deploys. If this site ever needs
+  // real changes again, the toolchain has to be revived (Docker, linux/amd64)
+  // or the site rebuilt on something current.
+  "name": "simplebitdesign",
+  "compatibility_date": "2026-08-10",
+
+  "assets": {
+    "directory": "./snapshot"
+    // No not_found_handling: the live site has no custom 404 page, so the
+    // Cloudflare default matches today's behaviour.
+  }
+}
