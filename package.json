@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
-    "animateCSS": "git://github.com/craigmdennis/animateCSS",
+    "animateCSS": "git+https://github.com/craigmdennis/animateCSS.git",
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.4",
     "breakpoint-sass": "^2.6.1",
@@ -37,10 +37,10 @@
     "twitter-fetcher": "^18.0.2",
     "typeplate-starter-kit": "^3.0.2",
     "what-input": "^2.0.1",
-    "wow": "git://github.com/matthieua/WOW.git#amd"
+    "wow": "git+https://github.com/matthieua/WOW.git#amd"
   },
   "devDependencies": {
-    "svgeezy": "git://github.com/benhowdle89/svgeezy",
+    "svgeezy": "git+https://github.com/benhowdle89/svgeezy.git",
     "modernizr": "~3.0.0",
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
