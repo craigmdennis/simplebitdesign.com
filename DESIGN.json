@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-26T00:00:00Z",
+  "title": "Design System: Simple Bit Design",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#fff9f5",
+        "tonalRamp": [
+          "oklch(0.18 0.015 60)",
+          "oklch(0.28 0.015 60)",
+          "oklch(0.40 0.015 60)",
+          "oklch(0.55 0.012 60)",
+          "oklch(0.70 0.012 60)",
+          "oklch(0.82 0.010 60)",
+          "oklch(0.91 0.008 60)",
+          "oklch(0.97 0.005 60)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel Tan",
+        "canonical": "#f9ece4",
+        "tonalRamp": [
+          "oklch(0.20 0.020 55)",
+          "oklch(0.30 0.020 55)",
+          "oklch(0.42 0.020 55)",
+          "oklch(0.55 0.018 55)",
+          "oklch(0.68 0.018 55)",
+          "oklch(0.80 0.015 55)",
+          "oklch(0.90 0.012 55)",
+          "oklch(0.95 0.010 55)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#171717",
+        "tonalRamp": [
+          "oklch(0.13 0.005 60)",
+          "oklch(0.22 0.005 60)",
+          "oklch(0.32 0.005 60)",
+          "oklch(0.45 0.005 60)",
+          "oklch(0.60 0.005 60)",
+          "oklch(0.75 0.005 60)",
+          "oklch(0.88 0.005 60)",
+          "oklch(0.96 0.005 60)"
+        ]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Deep Teal",
+        "canonical": "#1a4a48",
+        "tonalRamp": [
+          "oklch(0.18 0.030 190)",
+          "oklch(0.26 0.035 190)",
+          "oklch(0.34 0.038 190)",
+          "oklch(0.45 0.035 190)",
+          "oklch(0.58 0.030 190)",
+          "oklch(0.72 0.025 190)",
+          "oklch(0.85 0.018 190)",
+          "oklch(0.94 0.010 190)"
+        ]
+      },
+      "teal-soft": {
+        "role": "secondary",
+        "displayName": "Soft Teal",
+        "canonical": "#2d5a5a",
+        "tonalRamp": [
+          "oklch(0.20 0.025 190)",
+          "oklch(0.30 0.030 190)",
+          "oklch(0.40 0.030 190)",
+          "oklch(0.50 0.028 190)",
+          "oklch(0.62 0.025 190)",
+          "oklch(0.75 0.020 190)",
+          "oklch(0.86 0.015 190)",
+          "oklch(0.95 0.008 190)"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#ff5722",
+        "tonalRamp": [
+          "oklch(0.25 0.10 32)",
+          "oklch(0.36 0.14 32)",
+          "oklch(0.48 0.18 32)",
+          "oklch(0.60 0.22 32)",
+          "oklch(0.70 0.20 32)",
+          "oklch(0.80 0.14 32)",
+          "oklch(0.90 0.08 32)",
+          "oklch(0.96 0.04 32)"
+        ]
+      },
+      "orange-cta": {
+        "role": "primary",
+        "displayName": "Burnt Orange",
+        "canonical": "#c2410c",
+        "tonalRamp": [
+          "oklch(0.22 0.10 32)",
+          "oklch(0.32 0.14 32)",
+          "oklch(0.42 0.17 32)",
+          "oklch(0.53 0.19 32)",
+          "oklch(0.65 0.18 32)",
+          "oklch(0.78 0.13 32)",
+          "oklch(0.88 0.08 32)",
+          "oklch(0.96 0.04 32)"
+        ]
+      },
+      "border-warm": {
+        "role": "neutral",
+        "displayName": "Warm Border",
+        "canonical": "oklch(0.9 0.02 60)",
+        "tonalRamp": [
+          "oklch(0.30 0.020 60)",
+          "oklch(0.45 0.020 60)",
+          "oklch(0.60 0.020 60)",
+          "oklch(0.72 0.020 60)",
+          "oklch(0.82 0.020 60)",
+          "oklch(0.90 0.020 60)",
+          "oklch(0.95 0.012 60)",
+          "oklch(0.98 0.005 60)"
+        ]
+      },
+      "destructive": {
+        "role": "primary",
+        "displayName": "Destructive Red",
+        "canonical": "oklch(0.577 0.245 27.325)",
+        "tonalRamp": [
+          "oklch(0.22 0.12 27)",
+          "oklch(0.32 0.18 27)",
+          "oklch(0.42 0.22 27)",
+          "oklch(0.52 0.24 27)",
+          "oklch(0.62 0.22 27)",
+          "oklch(0.75 0.16 27)",
+          "oklch(0.86 0.10 27)",
+          "oklch(0.95 0.04 27)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. The single largest type on the page." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles across POV, Problem, Process, Work, Offer, About, CTA." },
+      "title": { "displayName": "Title", "purpose": "Card titles and sub-section headings." },
+      "body": { "displayName": "Body", "purpose": "Paragraph body across all sections." },
+      "label": { "displayName": "Label", "purpose": "Nav links, footer text, card meta (client, date)." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "color-transition", "value": "color 0.15s ease-out, background 0.15s ease-out", "purpose": "Default link and button hover transitions. The only motion the system uses by default." },
+      { "name": "press", "value": "transform 0.15s ease-out", "purpose": "Single-pixel translateY on button :active. Confirms the press without animating layout." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The CTA. The only place full-saturation burnt orange appears on the page.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Start with a teardown</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #c2410c; color: #ffffff; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; letter-spacing: normal; padding: 0.625rem 1rem; border: 1px solid transparent; border-radius: 2px; text-decoration: none; transition: transform 0.15s ease-out; } .ds-btn-primary:hover { background: #c2410c; } .ds-btn-primary:focus-visible { outline: none; border-color: #1a4a48; box-shadow: 0 0 0 3px rgba(26, 74, 72, 0.5); } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Non-primary action. Panel Tan fill, Ink text. Used for nav controls and secondary controls.",
+      "html": "<button class=\"ds-btn-secondary\">Read more</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; background: #f9ece4; color: #171717; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0.875rem; border: 1px solid transparent; border-radius: 2px; cursor: pointer; transition: background 0.15s ease-out; } .ds-btn-secondary:hover { background: rgba(249, 236, 228, 0.7); } .ds-btn-secondary:focus-visible { outline: none; border-color: #1a4a48; box-shadow: 0 0 0 3px rgba(26, 74, 72, 0.5); }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "button-link",
+      "description": "Inline text link. Teal, underline-on-hover with 4px offset. Used for secondary actions and footer links.",
+      "html": "<a class=\"ds-link\" href=\"#\">See the work</a>",
+      "css": ".ds-link { color: #1a4a48; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 1rem; text-decoration: none; text-underline-offset: 4px; transition: color 0.15s ease-out; } .ds-link:hover { text-decoration: underline; } .ds-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(26, 74, 72, 0.5); border-radius: 2px; }"
+    },
+    {
+      "name": "Work Card",
+      "kind": "card",
+      "refersTo": "card-work",
+      "description": "Case study card on the home page Work section. Panel Tan fill on a cream surface. No shadow; hover shifts background opacity.",
+      "html": "<a class=\"ds-card-work\" href=\"#\"><div class=\"ds-card-work__client\">Smith.ai</div><h3 class=\"ds-card-work__title\">Making AI call quality visible enough to act on</h3><p class=\"ds-card-work__summary\">An AI phone service was losing customers to quality dips no one could see coming. I reframed it from a support problem to a measurement problem and designed a single quality score the whole company could act on.</p><p class=\"ds-card-work__outcome\">Quality dips became recoverable instead of ending in cancellations &rarr;</p></a>",
+      "css": ".ds-card-work { display: block; background: #f9ece4; color: #171717; border-radius: 2px; padding: 1.5rem; text-decoration: none; transition: background 0.2s ease-out; } .ds-card-work:hover { background: rgba(249, 236, 228, 0.75); } .ds-card-work__client { color: #1a4a48; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; } .ds-card-work__title { margin: 0.25rem 0 0; font-family: \"Lora\", Georgia, serif; font-weight: 500; font-size: 1.5rem; line-height: 1.2; color: #171717; } .ds-card-work__summary { margin: 0.5rem 0 0; color: rgba(23, 23, 23, 0.8); font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 1rem; line-height: 1.625; } .ds-card-work__outcome { margin: 1rem 0 0; color: #1a4a48; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-weight: 500; }"
+    },
+    {
+      "name": "Offer Block",
+      "kind": "card",
+      "refersTo": "card-offer",
+      "description": "Signature component. Teal block on a cream section carrying the studio's offer (teardown). Cream text on Deep Teal; the only place teal is used as a full background.",
+      "html": "<div class=\"ds-offer\"><h2 class=\"ds-offer__title\">Start with an AI Product Teardown</h2><p class=\"ds-offer__price\">$4,000 fixed</p><p class=\"ds-offer__body\">A focused, one-to-two-week diagnosis of why your AI product isn't clicking, plus the redesigned direction; and where it helps, a working prototype of the single highest-impact fix.</p><a class=\"ds-btn-primary ds-offer__cta\" href=\"#\">Start with a teardown</a></div>",
+      "css": ".ds-offer { background: #1a4a48; color: #fff9f5; border-radius: 2px; padding: 2rem; max-width: 48rem; } .ds-offer__title { margin: 0; font-family: \"Lora\", Georgia, serif; font-weight: 500; font-size: 2rem; line-height: 1.1; color: inherit; } .ds-offer__price { margin: 0.5rem 0 0; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 1.5rem; font-weight: 600; color: inherit; } .ds-offer__body { margin: 1rem 0 0; color: rgba(255, 249, 245, 0.85); font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 1.125rem; line-height: 1.625; } .ds-offer__cta { display: inline-flex; margin: 2rem 0 0; align-items: center; justify-content: center; background: #c2410c; color: #ffffff; font-family: \"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; padding: 0.625rem 1rem; border: 1px solid transparent; border-radius: 2px; text-decoration: none; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "The standard section title across the site. Lora 500, fluid sized, slight negative tracking.",
+      "html": "<h2 class=\"ds-section-heading\">How I work: judgement delivered as a working redesign.</h2>",
+      "css": ".ds-section-heading { font-family: \"Lora\", Georgia, serif; font-weight: 500; font-size: clamp(1.875rem, 3vw, 3rem); line-height: 1.1; letter-spacing: -0.01em; color: #171717; max-width: 56rem; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Plain Page",
+    "overview": "The Plain Page is print-magazine restraint applied to a digital consulting site. The discipline is to leave things out so the words can carry. Generous margins, sparse ornament, type as the principal voice. The page IS the design.\n\nThis is the visual counterpart to PRODUCT.md's 'Plainspoken, never performative' principle. Where a SaaS landing would reach for a gradient, this system reaches for a comma. Where an agency template would reach for a parallax scene, this system trusts a paragraph. The reader is treated as a senior peer, not an audience that needs to be wowed.\n\nColours are warm but quiet: cream paper, ink, a deep teal as the considered voice, a burnt orange used sparingly when the page asks the reader to act. There are no shadows. Depth comes from background colour shifting between sections, not from elevation.",
+    "keyCharacteristics": [
+      "Flat surfaces, tonal layering (cream, then panel, then teal, then ink).",
+      "Editorial type pairing: Lora serif for display and headlines, Plus Jakarta Sans for body.",
+      "Sharp 2px corners across all components. Type, not shape, carries identity.",
+      "One accent (burnt orange) used only on the primary CTA. Teal carries weight everywhere else.",
+      "No shadows, no gradients, no glass. No motion beyond colour transitions on links."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Burnt orange (#c2410c) is used only on the primary CTA fill. It is never used for headings, links, decoration, or hover states. Its job is to mark the one place the reader is asked to act. Repeating it anywhere dilutes the signal.", "section": "colors" },
+      { "name": "The No-Black Rule", "body": "#000 is forbidden. All 'blacks' use Ink (#171717), which carries a faint warmth that belongs on cream. Pure black on cream reads as harsh and breaks the editorial-warm tone.", "section": "colors" },
+      { "name": "The Teal-Carries-Voice Rule", "body": "Teal, not orange, is the studio's spoken voice on the page. Links, the POV block, the offer block, primary text accents: all teal. Orange is action; teal is thought.", "section": "colors" },
+      { "name": "The Body-Has-Air Rule", "body": "Body copy uses normal letter-spacing and line-height: 1.625. The tight tracking that makes display type sing makes body type cramp. Negative tracking is permitted only on Display and Headline; never on Body, never globally on the <body> element.", "section": "typography" },
+      { "name": "The One Serif Rule", "body": "Lora is the only serif. Plus Jakarta is the only sans. No third typeface. No mono. No icon font. If a heading needs to feel different, change its size or weight, not its family.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "box-shadow is forbidden on every component (buttons, cards, callouts, navigation). Depth is communicated by background colour and adjacency, never by drop shadow, inner shadow, or border glow.", "section": "elevation" },
+      { "name": "The Tonal-Layering Rule", "body": "Section sequence creates rhythm: cream, panel, teal (where the voice carries), cream, panel. Adjacent sections never share the exact same background colour. The colour break IS the section break.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Ink (#171717), not #000, for every 'black' on the page.",
+      "Do reserve Burnt Orange (#c2410c) for the primary CTA fill only. Anywhere else is a violation of The One Accent Rule.",
+      "Do use teal for the studio's voice: links, the POV block, the offer block, list numbering, focus rings.",
+      "Do set body copy at line-height: 1.625 with normal letter-spacing. Tight tracking belongs on Display and Headline only.",
+      "Do keep buttons and cards at 2px corners. Type carries identity; shape stays quiet.",
+      "Do convey depth through background-colour shifts between sections, not through shadow or elevation.",
+      "Do keep paragraph line length within 65 to 75 characters per line."
+    ],
+    "donts": [
+      "Don't apply negative letter-spacing globally on <body>. It cramps every paragraph on the page. Scope tight tracking to Display and Headline classes only.",
+      "Don't use box-shadow on any component. No card shadows, no button shadows, no hover-lift. The system is flat.",
+      "Don't make buttons or cards more than 4px rounded. Pill buttons and 12px-plus radii pull the system back toward generic SaaS.",
+      "Don't reach for gradient text, background-clip: text, or any decorative gradient. Single solid colors only.",
+      "Don't use a third typeface, an icon font, or a mono font. Lora and Plus Jakarta are the entire type system.",
+      "Don't ship the Generic SaaS landing reflex: centered hero with gradient text, icon-and-stat card grid, 'trusted by' logo wall, parallax scenes.",
+      "Don't ship the 'AI startup' reflex: neon-on-black, terminal vibe, dark mode by default, glowing-orb illustrations. The site is about AI products; the design is not.",
+      "Don't ship the Agency template reflex: parallax everything, glassmorphism, oversized motion, scroll-jacking, 'creative studio' bravado.",
+      "Don't ship the Sober fintech / consultancy reflex: navy and gold, stock photography of handshakes, 'Trusted by Fortune 500' framing.",
+      "Don't add motion beyond colour transitions on links. Any future motion must honour prefers-reduced-motion."
+    ]
+  }
+}
