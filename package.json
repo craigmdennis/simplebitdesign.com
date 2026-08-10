@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "preview": "next build && wrangler dev",
+    "deploy": "next build && wrangler deploy"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -41,6 +43,7 @@
     "tailwindcss": "^4.3.0",
     "typescript": "^5",
     "vitest": "^4.1.7",
-    "vitest-axe": "^0.1.0"
+    "vitest-axe": "^0.1.0",
+    "wrangler": "^4.120.1"
   }
 }

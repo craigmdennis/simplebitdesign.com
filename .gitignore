@@ -42,3 +42,7 @@ next-env.d.ts
 
 # content-collections generated output
 .content-collections
+
+# cloudflare / wrangler
+.wrangler
+.dev.vars*

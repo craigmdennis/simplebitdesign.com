@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "simplebitdesign",
+  "compatibility_date": "2026-08-10",
+
+  // Assets-only Worker: there is no `main`, so no `binding` either. Every route
+  // in this site is prerendered by `next build` with `output: "export"`.
+  "assets": {
+    "directory": "./out",
+    // Serve the exported 404.html rather than a bare Cloudflare 404. Workers
+    // requires this to be explicit; Pages used to infer it.
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { allPages, allCaseStudies } from "content-collections";
 
+export const dynamic = "force-static";
+
 const base =
   process.env.NEXT_PUBLIC_SITE_URL || "https://simplebitdesign.com";
 

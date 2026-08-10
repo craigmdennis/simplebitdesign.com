@@ -1,0 +1,6 @@
+# Next's `opengraph-image.tsx` compiles to a route, so static export writes an
+# extensionless file at /opengraph-image. Cloudflare infers Content-Type from the
+# file extension and so sends none, which stops social platforms rendering the
+# card. Set it explicitly.
+/opengraph-image
+  Content-Type: image/png
