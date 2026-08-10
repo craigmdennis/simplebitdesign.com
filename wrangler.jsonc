@@ -1,7 +1,17 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "simplebitdesign",
+  // NOT "simplebitdesign" — that name belongs to the legacy site on master,
+  // which currently serves simplebitdesign.com and www via Custom Domains.
+  // Deploying this branch under that name would overwrite the live site.
+  // When this rebuild goes live, move the Custom Domains onto it rather than
+  // reusing the name.
+  "name": "simplebitdesign-rebuild",
   "compatibility_date": "2026-08-10",
+
+  // Pin the workers.dev URL on. Wrangler disables it by default when the key
+  // is absent, which silently took the staging URL offline on master the first
+  // time any other trigger was configured.
+  "workers_dev": true,
 
   // Assets-only Worker: there is no `main`, so no `binding` either. Every route
   // in this site is prerendered by `next build` with `output: "export"`.
